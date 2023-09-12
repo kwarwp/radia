@@ -1,2 +1,2 @@
 # radia.sara.main.py
-# Fernanda 
+# Fernanda - POO 2023 - UFRJ
