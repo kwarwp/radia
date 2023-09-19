@@ -15,7 +15,10 @@ class IlhaProibida:
          self.peao = Peao(oceano)
 class Peao:
 	def __init__(self, oceano):
-         peao = Elemento(PEAO, x=30, y=60, w=60, h=80, cena=oceano)
+         peao = Elemento(PEAO, x=30, y=60, w=60, h=80, cena=oceano, vai=self.move)
+         
+        def move(self,ev=nome):
+            self.peao.x = 150
         
           
 IlhaProibida()
