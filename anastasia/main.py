@@ -1,7 +1,7 @@
 # radia.anastasia.main.py
 #_author_vanessa
 print("alo")#escrito
-from _spy.vitollino.main import Cena, Elemento #Cena C maiusculo porque é classe  Elemento peçinhas que colocam na cena 
+from _spy.vitollino.main import Cena, Elemento, STYLE #Cena C maiusculo porque é classe  Elemento peçinhas que colocam na cena 
 STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht 
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg" #COLOCAR IMAGEM DA INTERNET 
