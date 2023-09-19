@@ -17,11 +17,10 @@ class IlhaProibida:
         portao = Elemento(PORTAO_BRONZE, x=10, y=10, w=100, h=100, cena=oceano)
         palacio = Elemento(PALACIO_CORAL, x=120, y=10, w=100, h=100, cena=oceano)
         
-        pawn = Elemento(PAWN, x=10, y=10, w=100, h=100, cena=oceano)
+        self.pawn = Peao()
         
 class Peao:
     def __init__(self):
         pawn = Elemento(PAWN, x=10, y=10, w=100, h=100, cena=oceano)
         
 IlhaProibida()
-Peao()
