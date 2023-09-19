@@ -4,7 +4,7 @@ print("alo")#escrito
 from _spy.vitollino.main import Cena, Elemento #Cena C maiusculo porque é classe  Elemento peçinhas que colocam na cena 
 STYLE["widht"] = 800 #a varios estilos, aqui selecionamos o widht 
 IMAGEM = "https://www.mafiadomergulho.com.br/wp-content/uploads/2021/04/fundo-do-mar-site-copy.jpg" #COLOCAR IMAGEM DA INTERNET 
-PORTAO_BRONZE = "https://imgur.com/bl61b7H.jpg"
+PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
 PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
 PEAO = "https://imgur.com/zO3kiRp.jpg"
 
