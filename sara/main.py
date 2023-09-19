@@ -1,11 +1,11 @@
 # radia.sara.main.py
 # Fernanda - POO 2023 - UFRJ
-from _spy.vitollino.main import Cena, Elemento
-#STYLE["width"] = 800
+from _spy.vitollino.main import Cena, Elemento, STYLE
+STYLE["width"] = 1000
 IMAGEM = 'https://dinamicambiental.com.br/wp-content/uploads/2021/06/o-oceano-e-a-nossa-sobrevivencia.jpg'
 PORTAO_BRONZE = 'https://thumbs.dreamstime.com/z/batedor-de-bronze-em-forma-uma-cabe%C3%A7a-le%C3%A3o-do-port%C3%A3o-da-catedral-col%C3%B4nia-na-alemanha-194660830.jpg?w=992'
 PALACIO_CORAL = 'https://img.freepik.com/fotos-premium/palacio-subaquatico-com-ilustracao-colorida-de-ia-generativa-de-corais-e-peixes_268722-1554.jpg?w=740'
-PEAO = 'https://img.freepik.com/vetores-premium/pecas-de-peao-de-xadrez-3d-isoladas-em-ilustracao-vetorial-transparente_345220-414.jpg?w=2000'
+PEAO = 'https://w7.pngwing.com/pngs/380/600/png-transparent-spinning-tops-desktop-spinning-top-presentation-cartoon-area.png'
 #Cena é classe e cena é atributo
 
 class IlhaProibida:
