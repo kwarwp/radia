@@ -71,3 +71,10 @@ IndentationError: expected an indented block
     STYLE["width"] = 800
 NameError: name 'STYLE' is not defined
 '''},
+{'date': 'Tue Sep 19 2023 12:38:32.625 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 20
+  def move(self,ev=nome):
+  ^
+IndentationError: unexpected indent
+'''},
