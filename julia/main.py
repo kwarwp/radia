@@ -4,7 +4,7 @@ from _spy.vitollino.main import Cena, Elemento
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
 PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
 PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
-PEAO = "https://imgur.com/Z03KiRp.png"
+PEAO = "https://imgur.com/ZO3KiRp.png"
 class IlhaProibida:
 	def __init__(self):
          oceano = Cena(IMAGEM).vai()
