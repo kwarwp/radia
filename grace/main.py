@@ -18,11 +18,10 @@ class IlhaProibida:
         palacio = Elemento(PALACIO_CORAL, x=120, y=10, w=100, h=100, cena=oceano)
         
         self.pawn = Peao()
-        self.pawn.move()
         
 class Peao:
     def __init__(self):
-        self.pawn = Elemento(PAWN, x=10, y=10, w=100, h=100, cena=oceano)
+        self.pawn = Elemento(PAWN, x=10, y=10, w=100, h=100, cena=oceano, vai=self.move)
         
     def move(self, ev=None):
         self.pawn.x = 120
