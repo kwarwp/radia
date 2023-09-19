@@ -42,3 +42,10 @@ NameError: name 'PORTAO_BRONZE' is not defined
     protao = Elemento(PORTAO_BRONZE, x=10, y=10, w=100, h=100, cena=oceano)
 NameError: name 'PORTAO_BRONZE' is not defined
 '''},
+{'date': 'Tue Sep 19 2023 12:28:42.810 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 23
+  def __init__(self
+                             ^
+SyntaxError: invalid syntax
+'''},
