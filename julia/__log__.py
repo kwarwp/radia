@@ -48,3 +48,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Tue Sep 19 2023 12:01:26.22 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 10
+  oceano = Cena(IMAGEM).vai()
+  ^
+IndentationError: expected an indented block
+'''},
