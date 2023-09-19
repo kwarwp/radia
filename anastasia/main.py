@@ -15,7 +15,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
     def __init__(self): #construcao, o primeiro parametro sempre se chama self
         oceano = Cena(IMAGEM).vai()
         portao = Elemento(PORTAO_BRONZE, x=10, y=10, w=100, h=100, tit="Portão de Bronze", cena=oceano)
-        palacio = Elemento(PALACIO_CORAL, x=130, y=10, w=100, h=100, tit="Palacio coral", cena=oceano)
-        peao = Elemento(PEAO, x=30, y=10, w=100, h=100, tit="Peao", cena=oceano)
+        palacio = Elemento(PALACIO_CORAL, x=120, y=50, w=100, h=100, tit="Palacio coral", cena=oceano)
+        peao = Elemento(PEAO, x=20, y=70, w=80, h=80, tit="Peao", cena=oceano)
         
 IlhaProibida()
