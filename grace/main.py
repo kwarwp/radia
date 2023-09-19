@@ -4,7 +4,7 @@ from _spy.vitollino.main import Cena, Elemento
 
 print("TEST")
 
-IMAGEM = "https://imgur.com/a/cJCkxeA"
+IMAGEM = "https://imgur.com/a/cJCkxeA.jpg"
 PORTAO_BRONZE = "https://imgur.com/103Lydz"
 
 class IlhaProibida:
