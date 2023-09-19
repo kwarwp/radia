@@ -9,6 +9,6 @@ PORTAO_BRONZE = "https://imgur.com/bl61b7H.jpg"
 class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem que estar intendado
     def __init__(self): #construcao, o primeiro parametro sempre se chama self
         oceano = Cena(IMAGEM).vai()
-        portao = Elemento(PORTAO_BRONZE, x=10, y=10, w=100, h=100, cena=oceano
+        portao = Elemento(PORTAO_BRONZE, x=10, y=10, w=100, h=100, cena=oceano)
         
 IlhaProibida()
