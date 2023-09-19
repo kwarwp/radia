@@ -20,7 +20,8 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
 
 class Peao:  
     def __init__(self):
-        peao = Elemento(PEAO, x=20, y=70, w=80, h=80, cena=oceano)
+        peao = Elemento(PEAO, x=20, y=70, w=80, h=80, cena=oceano, vai=self.move)
+        
     def move(self, ev=None):
         self.peao.x = 170
     
