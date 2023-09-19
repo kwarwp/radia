@@ -136,3 +136,10 @@ Traceback (most recent call last):
     STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht 
 NameError: name 'STYLE' is not defined
 '''},
+{'date': 'Tue Sep 19 2023 11:46:32.526 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 23
+  peao = Elemento(PEAO, x=20, y=70, w=80, h=80, tit="Peao", cena=oceano)
+  ^
+IndentationError: expected an indented block
+'''},
