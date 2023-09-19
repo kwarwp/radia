@@ -9,8 +9,8 @@ PALACIO_CORAL = 'https://img.freepik.com/fotos-premium/palacio-subaquatico-com-i
 class IlhaProibida:
     def __init__(self):
         oceano = Cena(IMAGEM).vai()
-        portao = Elemento(PORTAO_BRONZE, x=10, y=10, w=100, h=100, cena=oceano)
-        portao = Elemento(PALACIO_CORAL, x=110, y=10, w=100, h=100, cena=oceano)
+        portao = Elemento(PORTAO_BRONZE, x=10, y=50, w=100, h=100, cena=oceano)
+        portao = Elemento(PALACIO_CORAL, x=120, y=50, w=100, h=100, cena=oceano)
         
 
 
