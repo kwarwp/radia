@@ -116,3 +116,10 @@ NameError: name 'Elemento' is not defined
     portao = Elemento(PORTAO_BRONZE, x=10, y=10, w=100, h=100, cena=oceano) 
 NameError: name 'oceano' is not defined
 '''},
+{'date': 'Tue Sep 19 2023 10:59:43.520 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 12
+  portao = Elemento(PORTAO_BRONZE, x=10, y=50, w=100, h=100, tit='Portão de Bronze' cena=oceano)
+                                                                                     ^
+SyntaxError: invalid syntax
+'''},
