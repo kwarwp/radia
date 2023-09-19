@@ -5,7 +5,7 @@ from _spy.vitollino.main import Cena, Elemento #Cena C maiusculo porque é class
 IMAGEM = "https://www.mafiadomergulho.com.br/wp-content/uploads/2021/04/fundo-do-mar-site-copy.jpg" #COLOCAR IMAGEM DA INTERNET 
 PORTAO_BRONZE = "https://imgur.com/bl61b7H.jpg"
 PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
-PEAO = "https://imgur.com/.jpg"
+PEAO = "https://imgur.com/zO3kiRp.jpg"
 
 
 
