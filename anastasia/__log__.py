@@ -37,3 +37,10 @@ Traceback (most recent call last):
     oceano = Cena(IMAGEM).vai()
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Tue Sep 19 2023 11:02:25.396 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 5
+  IMAGEM = "https://www.mafiadomergulho.com.br/wp-content/uploads/2021/04/fundo-do-mar-site-copy.jpg'#COLOCAR IMAGEM DA INTERNET 
+                                                                                                                                 ^
+SyntaxError: EOL while scanning string literal
+'''},
