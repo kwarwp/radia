@@ -2,7 +2,7 @@
 # __author__ Finn
 from _spy.vitollino.main import Cena, Elemento, STYLE
 
-STYLE["width"] = 800
+STYLE["width"] = 900
 
 IMAGEM = "https://i.imgur.com/my9MiVU.jpeg"
 PORTAO_BRONZE = "https://i.imgur.com/103Lydz.png"
