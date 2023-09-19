@@ -44,3 +44,10 @@ TypeError: 'module' object is not callable
                                                                                                                                  ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Tue Sep 19 2023 11:09:23.869 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 12
+  portao = Elemento(PORTAO_BRONZE, x=10, y=10, w=100, h=100, cena=oceano
+                                                                                   ^
+SyntaxError: invalid syntax
+'''},
