@@ -20,7 +20,7 @@ class IlhaProibida:
         pawn = Elemento(PAWN, x=10, y=10, w=100, h=100, cena=oceano)
         
 class Peao:
-    def __init__(self
+    def __init__(self):
         pawn = Elemento(PAWN, x=10, y=10, w=100, h=100, cena=oceano)
         
 IlhaProibida()
