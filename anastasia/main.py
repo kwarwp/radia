@@ -2,8 +2,8 @@
 #_author_vanessa
 print("alo")#escrito
 from _spy.vitollino.main import Cena, Elemento #Cena C maiusculo porque é classe  Elemento peçinhas que colocam na cena 
-STYLE ["width"] = 800 #a varios estilos, aqui selecionamos o widht 
-STYLE ["height"] = "600px"
+STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht 
+STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg" #COLOCAR IMAGEM DA INTERNET 
 PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
 PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
