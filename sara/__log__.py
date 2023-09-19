@@ -171,3 +171,10 @@ NameError: name 'STYLE' is not defined
     STYLE["width"] = 500
 NameError: name 'STYLE' is not defined
 '''},
+{'date': 'Tue Sep 19 2023 11:31:08.950 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 20
+  class Peao
+             ^
+SyntaxError: invalid syntax
+'''},
