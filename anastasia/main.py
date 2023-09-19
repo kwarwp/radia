@@ -22,6 +22,6 @@ class Peao:
     def __init__(self):
         peao = Elemento(PEAO, x=20, y=70, w=80, h=80, cena=oceano)
     def move(self, ev=None):
-        self.peao.x
+        self.peao.x = 170
     
 IlhaProibida()
