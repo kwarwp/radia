@@ -24,8 +24,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
     def direita(self, tereno):
         self.terrenos.index(terreno) #achar um terreno
         return self.terreno[aqui+1] #
-        
-        
+                
 class Terreno:
     def __init__(self, local, posx, posy, cena):
         self.local = Elemento(local, x=posx, y=posy, w=100, h=100, 
@@ -36,13 +35,12 @@ class Terreno:
     def ocupa(self, peao):
         self.peao = peao #peao pertence a ele mesmo peao
         peao.mover(self.posx, terreno)
-        
-                       
+                               
 class Peao:  
     def __init__(self, ilha): #peao de posse da ilha 
         self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80,
         cena=ilha.oceano, vai=self.move) #PARAMETRO VAI CAPTURA O CLICK DO MOUSE E EXECUTA O MOVE 
-        self.terreno = mone
+        self.terreno = None
         self.ilha = ilha 
         
     def move(self, ev=None):  # Corrigir: não condizente! 
