@@ -19,18 +19,30 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc) 
         for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(oceano)
+        self.terrenos[1].ocupa(self.peao) #chamou o terreno 1 e ocupa com o peão 
         
         
 class Terreno:
     def __init__(self, local, posx, posy, cena):
-        self.local = Elemento(local, x=posx, y=posy, w=100, h=100, cena=cena)
+        self.local = Elemento(local, x=posx, y=posy, w=100, h=100, 
+        cena=cena)
+        self.peao = None
+        self.posx, self.posy = posx, posy
+        
+    def ocupa(self, peao):
+        self.peao = peao #peao pertence a ele mesmo peao
+        peao.mover(self.posx)
+        
                        
 class Peao:  
     def __init__(self, oceano):
         self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80,
         cena=oceano, vai=self.move) #PARAMETRO VAI CAPTURA O CLICK DO MOUSE E EXECUTA O MOVE 
         
-    def move(self, ev=None):
-        self.peao.x = 170
-    
+    #def move(self, ev=None):  # Corrigir: não condizente! 
+        #self.peao.x = 170
+        
+    def mover(self, x) #movimento peão no terreno
+        self.peao.x = x 
+        
 IlhaProibida()
