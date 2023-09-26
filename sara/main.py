@@ -15,8 +15,14 @@ class IlhaProibida:
         portao = Elemento(PORTAO_BRONZE, x=10, y=50, w=100, h=100, tit='Portão de Bronze', cena=oceano)
         palacio = Elemento(PALACIO_CORAL, x=120, y=50, w=100, h=100, tit='Palácio de Coral', cena=oceano)
         peao = Elemento(PEAO, x=20, y=70, w=80, h=80, tit='Palácio de Coral', cena=oceano)
+        self.peao = Peao(oceano)
         
+class Peao:
+    def __init__(self, oceano):
+        self.peao = Elemento(PEAO, x=20, y=70, w=80, h= 80, cena=oceano, vai=self.move)
         
+    def move(self, ev=None):
+        self.peao.x = 170
 
 
 IlhaProibida()
