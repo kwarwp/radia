@@ -20,7 +20,7 @@ class IlhaProibida:
         self.terrenos = []
         
         for local, position in info_terrenos:
-            self.terrenos += (Terreno(local, position, 10))
+            self.terrenos.push(Terreno(local, position, 10))
         
         self.pawn = Peao()
         
