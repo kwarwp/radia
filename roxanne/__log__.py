@@ -17,3 +17,10 @@
     self.terreno = Terreno(PORTAO_BRONZE, x=10, y=50,
 TypeError: __init__() got an unexpected keyword argument 'x'
 '''},
+{'date': 'Tue Sep 26 2023 12:10:41.679 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 16
+  cena=oceano)
+        ^
+SyntaxError: invalid syntax
+'''},
