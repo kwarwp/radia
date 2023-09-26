@@ -41,6 +41,7 @@ class Terreno:
 class Peao:
     def __init__(self, cena):
         self.pawn = Elemento(PAWN, x=10, y=10, w=100, h=100, cena=oceano, vai=self.move)
+        self.terreno = None
         
     def move(self, ev=None):
         self.pawn.x = 120
