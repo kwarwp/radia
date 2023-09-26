@@ -12,15 +12,15 @@ PAWN = "https://imgur.com/zO3kiRp.png"
 class IlhaProibida:
     def __init__(self):
         oceano = Cena(IMAGEM).vai()
-        self.terreno = Terreno(PORTAO_BRONZE, x=10, y=50,
+        self.terreno = Terreno(PORTAO_BRONZE, posx=10, posy=50,
         cena=oceano)
         palacio = Elemento(PALACIO_CORAL, x=120, y=50, w=100, h=100, cena=oceano)
         self.peao = Peao(oceano)
 
 class Terreno:
-    def __init__(self, local, posx, posy, oceano):
+    def __init__(self, local, posx, posy, cena):
         self.local = Elemento(local, x=posx, y=posy, w=100, h= 100,
-        cena=oceano)
+        cena=cena)
 
 class Peao:
     def __init__(self, oceano):
