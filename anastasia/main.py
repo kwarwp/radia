@@ -39,8 +39,8 @@ class Peao:
         self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80,
         cena=oceano, vai=self.move) #PARAMETRO VAI CAPTURA O CLICK DO MOUSE E EXECUTA O MOVE 
         
-    #def move(self, ev=None):  # Corrigir: não condizente! 
-        #self.peao.x = 170
+    def move(self, ev=None):  # Corrigir: não condizente! 
+        self.peao.x = 170
         
     def mover(self, x): #movimento peão no terreno
         self.peao.x = x 
