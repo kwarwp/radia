@@ -6,7 +6,7 @@ STYLE["width"] = 1000
 IMAGEM = 'https://dinamicambiental.com.br/wp-content/uploads/2021/06/o-oceano-e-a-nossa-sobrevivencia.jpg'
 PORTAO_BRONZE = 'https://thumbs.dreamstime.com/z/batedor-de-bronze-em-forma-uma-cabe%C3%A7a-le%C3%A3o-do-port%C3%A3o-da-catedral-col%C3%B4nia-na-alemanha-194660830.jpg?w=992'
 PALACIO_CORAL = 'https://img.freepik.com/fotos-premium/palacio-subaquatico-com-ilustracao-colorida-de-ia-generativa-de-corais-e-peixes_268722-1554.jpg?w=740'
-PEAO = 'https://o.remove.bg/downloads/d883708e-8e09-49b7-9bad-f1c634272eb2/kisspng-chess-piece-pawn-king-queen-painted-black-chess-pieces-5a80da4ed471c4.3075899115183939348702-removebg-preview.png'
+PEAO = 'https://imgur.com/zO3kiRp.png'
 #Cena é classe e cena é atributo
 
 class IlhaProibida:
@@ -17,12 +17,16 @@ class IlhaProibida:
         #peao = Elemento(PEAO, x=20, y=70, w=80, h=80, tit='Palácio de Coral', cena=oceano)
         self.peao = Peao(oceano)
         
+class Terreno:
+    def __init__(self, terreno, posx, posy, oceano):
+        self.terreno = Elemento(local, x=posx, y=posy, w=100, h=100, cena=oceano)
+
 class Peao:
     def __init__(self, oceano):
         self.peao = Elemento(PEAO, x=20, y=70, w=80, h= 80, cena=oceano, vai=self.move)
         
     def move(self, ev=None):
-        self.peao.x = 170
+        self.peao.x = 130
 
 
 IlhaProibida()
