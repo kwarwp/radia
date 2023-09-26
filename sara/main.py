@@ -21,7 +21,11 @@ class IlhaProibida:
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
         for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(oceano)
-        self.terrenos[2].ocupa(self,peao)
+        self.terrenos[2].ocupa(self.peao)
+        
+    def direita(self, terreno):
+        aqui = self.terrenos.index(terreno)
+        return.self.terreno[aqui+1]
         
 class Terreno:
     def __init__(self, local, posx, posy, cena):
@@ -37,9 +41,13 @@ class Peao:
     def __init__(self, oceano):
         self.peao = Elemento(PEAO, x=20, y=70, w=80, h= 80, cena=oceano, vai=self.move)
         self.terreno = None
+        self.ilha = ilha
         
     def move(self, ev=None):
-        self.peao.x = 130
+        #self.peao.x = 130
+        terreno_destino = self.ilha.direita(self.terreno)
+        terreno_destino.ocupa(self)
+        
     def mover(self, x, terreno):
         self.terreno = terreno
         self.peao.x = x
