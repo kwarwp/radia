@@ -38,3 +38,10 @@ SyntaxError: invalid syntax
                      ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Sep 26 2023 12:39:51.136 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 44
+  def mover(self, x)
+                     ^
+SyntaxError: invalid syntax
+'''},
