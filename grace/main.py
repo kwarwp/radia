@@ -6,6 +6,7 @@ STYLE["width"] = 800
 STYLE["height"] = "600px"
 
 IMAGEM = "https://i.imgur.com/my9MiVU.jpeg"
+
 PORTAO_BRONZE = "https://i.imgur.com/103Lydz.png"
 PALACIO_CORAL = "https://i.imgur.com/3Ywu4pe.jpg"
 
