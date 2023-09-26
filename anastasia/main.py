@@ -31,7 +31,7 @@ class Terreno:
         
     def ocupa(self, peao):
         self.peao = peao #peao pertence a ele mesmo peao
-        peao.mover(self.posx)
+        peao.mover(self.posx, terreno)
         
                        
 class Peao:  
@@ -42,7 +42,8 @@ class Peao:
     def move(self, ev=None):  # Corrigir: não condizente! 
         self.peao.x = 170
         
-    def mover(self, x): #movimento peão no terreno
+    def mover(self, x, terreno): #movimento peão no terreno
+        self.terreno = terreno
         self.peao.x = x 
         
 IlhaProibida()
