@@ -1,4 +1,4 @@
-# radia.roxanne.main.py
+# radia.lisa.main.py
 # __author__ Carlo
 from _spy.vitollino.main import Cena, Elemento, STYLE
 STYLE["width"] = 800
