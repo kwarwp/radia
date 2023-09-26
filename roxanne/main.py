@@ -11,7 +11,7 @@ PAWN = "https://imgur.com/zO3kiRp.png"
 
 class IlhaProibida:
     def __init__(self):
-        oceano = Cena(IMAGEM).vai()
+        self.oceano = oceano = Cena(IMAGEM).vai()
         #self.terreno = Terreno(PORTAO_BRONZE, posx=10, posy=50,
         #cena=oceano)
         #self.terreno1 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
@@ -19,8 +19,12 @@ class IlhaProibida:
         info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
         for px, lc in enumerate(info_terrenos)]
-        self.peao = Peao(oceano)
-        self.terrenos[2].ocupa(self.peao)
+        self.peao = Peao(self)
+        self.terrenos[1].ocupa(self.peao)
+        
+    def direita(self, terreno):
+        aqui = self.terrenos.index(terreno)
+        return self.terreno[aqui+1]
 
 class Terreno:
     def __init__(self, local, posx, posy, cena):
@@ -34,14 +38,16 @@ class Terreno:
         peao.mover(self.posx, self)
 
 class Peao:
-    def __init__(self, oceano):
+    def __init__(self, ilha):
         self.peao = Elemento(PAWN, x=20, y=70, w=80, h= 80,
-        cena=oceano, vai=self.move)
+        cena=ilha.oceano, vai=self.move)
         self.terreno = None
+        self.ilha = ilha
         
     def move(self, ev=None):  # Corrigir: não está condizente!
-        self.peao.x = 170
-        
+        terreno_destino = self.ilha.direita(self.terreno)
+        #self.peao.x = 170
+        terreno_destino.ocupa(self)        
     def mover(self, x, terreno):
         self.terreno = terreno
         self.peao.x = x
