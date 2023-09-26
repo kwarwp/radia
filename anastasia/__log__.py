@@ -312,3 +312,10 @@ Traceback (most recent call last):
     self.terreno = Terreno(local, posx, posy, oceano)
 NameError: name 'local' is not defined
 '''},
+{'date': 'Tue Sep 26 2023 12:05:28.124 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 17
+  info_terrenos= [(10, PORTAO BRONZES), (120, PALACIO_CORAL)] #PAR ORDENADOS
+                               ^
+SyntaxError: invalid syntax
+'''},
