@@ -23,7 +23,6 @@ class IlhaProibida:
         
 class Terreno:
     def __init__(self, local, posx, posy, cena):
-        print("test")
         self.local = Elemento(local, x=posx, y=posy, w=100, h=100, cena=oceano)
         
 class Peao:
