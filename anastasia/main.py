@@ -11,15 +11,19 @@ PAWN = "https://imgur.com/zO3kiRp.png"
 
 class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem que estar intendado
     def __init__(self): #construcao, o primeiro parametro sempre se chama self - tabuleiro 
-        oceano = Cena(IMAGEM).vai()
+        self.oceano = ocenao = Cena(IMAGEM).vai() #self.oceano é igual ao local oceano 
         #self.Terreno1 = Terreno(PORTAO_BRONZE, posx=10, posy=50, cena=oceano)
         #self.Terreno2 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
         #info_terrenos= [(10,PORTAO_BRONZE), (120,PALACIO_CORAL),(230,PORTAO_BRONZE)] #PAR ORDENADOS
         info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc) 
         for px, lc in enumerate(info_terrenos)]
-        self.peao = Peao(oceano)
-        self.terrenos[2].ocupa(self.peao) #chamou o terreno 1 e ocupa com o peão 
+        self.peao = Peao(self)
+        self.terrenos[2].ocupa(self.peao) #chamou o terreno 1 e ocupa com o peão
+        
+    def direita(self, tereno):
+        self.terrenos.index(terreno)
+        return self.terreno[aqui+1] 
         
         
 class Terreno:
@@ -35,11 +39,14 @@ class Terreno:
         
                        
 class Peao:  
-    def __init__(self, oceano):
+    def __init__(self, ilha): #peao de posse da ilha 
         self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80,
-        cena=oceano, vai=self.move) #PARAMETRO VAI CAPTURA O CLICK DO MOUSE E EXECUTA O MOVE 
+        cena=ilha.oceano, vai=self.move) #PARAMETRO VAI CAPTURA O CLICK DO MOUSE E EXECUTA O MOVE 
+        self.terreno = mone
+        self.ilha = ilha 
         
     def move(self, ev=None):  # Corrigir: não condizente! 
+        terreno_destino = self.ilha.direita(self.terreno) 
         self.peao.x = 170
         
     def mover(self, x, terreno): #movimento peão no terreno
