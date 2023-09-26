@@ -240,3 +240,10 @@ TypeError: __init__() got an unexpected keyword argument 'cena'
     self.terreno1 = Terreno(PORTAO_BRONZE, posx=10, posy=50, cena=oceano)
 TypeError: __init__() got an unexpected keyword argument 'cena'
 '''},
+{'date': 'Tue Sep 26 2023 12:08:57.738 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 16
+  cena=oceano)
+        ^
+SyntaxError: invalid syntax
+'''},
