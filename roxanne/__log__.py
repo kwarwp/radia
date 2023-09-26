@@ -24,3 +24,10 @@ TypeError: __init__() got an unexpected keyword argument 'x'
         ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Sep 26 2023 12:19:15.571 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 19
+  info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE)]
+                                                 ^
+SyntaxError: invalid syntax
+'''},
