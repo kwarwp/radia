@@ -12,14 +12,17 @@ PEAO = 'https://imgur.com/zO3kiRp.png'
 class IlhaProibida:
     def __init__(self):
         oceano = Cena(IMAGEM).vai()
-        portao = Elemento(PORTAO_BRONZE, x=10, y=50, w=100, h=100, tit='Portão de Bronze', cena=oceano)
-        palacio = Elemento(PALACIO_CORAL, x=120, y=50, w=100, h=100, tit='Palácio de Coral', cena=oceano)
+        #portao = Elemento(PORTAO_BRONZE, x=10, y=50, w=100, h=100, tit='Portão de Bronze', cena=oceano)
+        #palacio = Elemento(PALACIO_CORAL, x=120, y=50, w=100, h=100, tit='Palácio de Coral', cena=oceano)
         #peao = Elemento(PEAO, x=20, y=70, w=80, h=80, tit='Palácio de Coral', cena=oceano)
+        info_terrenos= [(10, PORTAO_BRONZE), (120, PALACIO_CORAL)]
+        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px, local=lc)
+        for px, lc in info_terrenos]
         self.peao = Peao(oceano)
         
 class Terreno:
-    def __init__(self, terreno, posx, posy, oceano):
-        self.terreno = Elemento(local, x=posx, y=posy, w=100, h=100, cena=oceano)
+    def __init__(self, terreno, posx, posy, cena):
+        self.terreno = Elemento(local, x=posx, y=posy, w=100, h=100, cena=cena)
 
 class Peao:
     def __init__(self, oceano):
