@@ -14,7 +14,7 @@ class IlhaProibida:
         oceano = Cena(IMAGEM).vai()
         self.terreno = Terreno(PORTAO_BRONZE, posx=10, posy=50,
         cena=oceano)
-        palacio = Elemento(PALACIO_CORAL, x=120, y=50, w=100, h=100, cena=oceano)
+        self.terreno1 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
         self.peao = Peao(oceano)
 
 class Terreno:
