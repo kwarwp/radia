@@ -17,10 +17,12 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         palacio = Elemento(PALACIO_CORAL, x=120, y=50,
         w=100, h=100, cena=oceano)
         self.peao = Peao(oceano)
+        self.terreno = Terreno(local, posx, posy, oceano)
         
 class Terreno:
     def _init_(self, local, posx, posy, oceano):
-        self.Terreno = Elemento(local, x=posx, y=posy, w=100, h=100, cena=ocenao)
+        #self.Terreno = Elemento(local, x=posx, y=posy, w=100, h=100, cena=oceano)
+        self.Terreno = Elemento(Palacio, x=posx, y=pos, w=100, h=100, cena=oceano, vai=self.move)
         
 class Peao:  
     def __init__(self, oceano):
