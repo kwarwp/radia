@@ -21,7 +21,7 @@ class IlhaProibida:
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
         for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(oceano)
-        self.terrenos[1].ocupa(self,peao)
+        self.terrenos[2].ocupa(self,peao)
         
 class Terreno:
     def __init__(self, local, posx, posy, cena):
