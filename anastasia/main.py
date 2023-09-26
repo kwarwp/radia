@@ -22,7 +22,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         
         
 class Terreno:
-    def _init_(self, local, posx, posy, cena):
+    def __init__(self, local, posx, posy, cena):
         self.local = Elemento(local, x=posx, y=posy, w=100, h=100, cena=cena)
                        
 class Peao:  
