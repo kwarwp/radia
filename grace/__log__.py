@@ -158,3 +158,10 @@ AttributeError: 'list' object has no attribute 'push'
     self.terrenos = [Terreno(l, p, i * 100 + 10, oceano) for i, l, p in enumerate(info_terrenos)]
 ValueError: need more than 2 values to unpack
 '''},
+{'date': 'Tue Sep 26 2023 12:28:00.524 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 45
+  def mover(x, y)
+                  ^
+SyntaxError: invalid syntax
+'''},
