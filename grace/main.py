@@ -19,6 +19,10 @@ class IlhaProibida:
         
         self.pawn = Peao()
         
+class Terreno:
+    def __init__(self, local, posx, posy):
+        self.local = Elemento(local, x=posx, y=posy, w=100, h=100, cena=oceano)
+        
 class Peao:
     def __init__(self):
         self.pawn = Elemento(PAWN, x=10, y=10, w=100, h=100, cena=oceano, vai=self.move)
