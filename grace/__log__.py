@@ -104,3 +104,21 @@ Traceback (most recent call last):
     self.terrenos += (Terreno(local, position, 10))
 TypeError: 'Terreno' object is not iterable
 '''},
+{'date': 'Tue Sep 26 2023 12:08:09.192 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 40
+    IlhaProibida()
+  module <module> line 23
+    self.terrenos.push(Terreno(local, position, 10))
+AttributeError: 'list' object has no attribute 'push'
+'''},
