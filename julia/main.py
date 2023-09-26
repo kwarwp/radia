@@ -29,7 +29,7 @@ class Peao:
         cena=oceano, vai=self.move)
         
     def move(self, ev=None):
-        self.peao.x = 150
+        self.peao.x = self.peao.x + 150
         
 
 IlhaProibida()
