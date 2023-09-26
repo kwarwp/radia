@@ -6,6 +6,8 @@ STYLE["width"] = 1000
 IMAGEM = 'https://dinamicambiental.com.br/wp-content/uploads/2021/06/o-oceano-e-a-nossa-sobrevivencia.jpg'
 PORTAO_BRONZE = 'https://thumbs.dreamstime.com/z/batedor-de-bronze-em-forma-uma-cabe%C3%A7a-le%C3%A3o-do-port%C3%A3o-da-catedral-col%C3%B4nia-na-alemanha-194660830.jpg?w=992'
 PALACIO_CORAL = 'https://img.freepik.com/fotos-premium/palacio-subaquatico-com-ilustracao-colorida-de-ia-generativa-de-corais-e-peixes_268722-1554.jpg?w=740'
+VALE_TENEBROSO = 'http://2.bp.blogspot.com/-lo6Hr8UD4D4/T8FDTidezEI/AAAAAAAAAD0/4zitS77Hoxg/s1600/vale+da+sombra+da+morte.bmp'
+PISTA = 'https://i0.wp.com/soepinaobasta.com/wp-content/uploads/2019/05/Heliponto.jpg?resize=1000%2C500&ssl=1'
 PEAO = 'https://imgur.com/zO3kiRp.png'
 #Cena é classe e cena é atributo
 
@@ -15,14 +17,21 @@ class IlhaProibida:
         #portao = Elemento(PORTAO_BRONZE, x=10, y=50, w=100, h=100, tit='Portão de Bronze', cena=oceano)
         #palacio = Elemento(PALACIO_CORAL, x=120, y=50, w=100, h=100, tit='Palácio de Coral', cena=oceano)
         #peao = Elemento(PEAO, x=20, y=70, w=80, h=80, tit='Palácio de Coral', cena=oceano)
-        info_terrenos= [(10, PORTAO_BRONZE), (120, PALACIO_CORAL)]
-        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px, local=lc)
-        for px, lc in info_terrenos]
+        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, VALE_TENEBROSO, PISTA]
+        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
+        for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(oceano)
+        self.terrenos[1].ocupa(self,peao)
         
 class Terreno:
-    def __init__(self, terreno, posx, posy, cena):
-        self.terreno = Elemento(local, x=posx, y=posy, w=100, h=100, cena=cena)
+    def __init__(self, local, posx, posy, cena):
+        self.local = Elemento(local, x=posx, y=posy, w=100, h=100, cena=cena)
+        self.peao = None
+        self.posx, self.posy = posx, posy
+    
+    def ocupa(self, peao):
+        self.peao = peao
+        peao.mover(self.posx)
 
 class Peao:
     def __init__(self, oceano):
@@ -30,6 +39,7 @@ class Peao:
         
     def move(self, ev=None):
         self.peao.x = 130
-
+    def mover(self, x):
+        self.peao.x = x
 
 IlhaProibida()
