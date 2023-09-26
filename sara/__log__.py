@@ -304,3 +304,10 @@ TypeError: __init__() got an unexpected keyword argument 'local'
     self.terrenos = [Terreno(cena=oceano, posy=50, posx=px, local=lc)
 TypeError: __init__() got an unexpected keyword argument 'local'
 '''},
+{'date': 'Tue Sep 26 2023 12:39:30.546 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 42
+  def mover(self, x)
+                     ^
+SyntaxError: invalid syntax
+'''},
