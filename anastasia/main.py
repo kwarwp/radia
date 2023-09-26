@@ -12,8 +12,8 @@ PAWN = "https://imgur.com/zO3kiRp.png"
 class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem que estar intendado
     def __init__(self): #construcao, o primeiro parametro sempre se chama self - tabuleiro 
         oceano = Cena(IMAGEM).vai()
-        self.Terreno1 = Terreno(PORTAO_BRONZE, posx=10, posy=50, cena=oceano)
-        self.Terreno2 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
+        #self.Terreno1 = Terreno(PORTAO_BRONZE, posx=10, posy=50, cena=oceano)
+        #self.Terreno2 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
         info_terrenos= [(10, PORTAO_BRONZE), (120, PALACIO_CORAL)] #PAR ORDENADOS
         self.terrenos = [Terrenos(cena=oceano, posy=50, posx=px, local=lc) for px, lc in info_terrenos]
         self.peao = Peao(oceano)
@@ -22,8 +22,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
 class Terreno:
     def _init_(self, local, posx, posy, cena):
         self.Terreno = Elemento(local, x=posx, y=posy, w=100, h=100, cena=cena)
-        x
-               
+                       
 class Peao:  
     def __init__(self, oceano):
         self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80,
