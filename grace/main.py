@@ -17,17 +17,17 @@ class IlhaProibida:
         oceano = Cena(IMAGEM).vai()
         info_terrenos = [(PORTAO_BRONZE, 10), (PALACIO_CORAL, 120)]
         
-        self.terrenos = [Terreno(l, p, 10) for l, p in info_terrenos]
+        self.terrenos = [Terreno(l, p, 10, oceano) for l, p in info_terrenos]
         
-        self.pawn = Peao()
+        self.pawn = Peao(oceano)
         
 class Terreno:
-    def __init__(self, local, posx, posy):
+    def __init__(self, local, posx, posy, cena):
         print("test")
         self.local = Elemento(local, x=posx, y=posy, w=100, h=100, cena=oceano)
         
 class Peao:
-    def __init__(self):
+    def __init__(self, cena):
         self.pawn = Elemento(PAWN, x=10, y=10, w=100, h=100, cena=oceano, vai=self.move)
         
     def move(self, ev=None):
