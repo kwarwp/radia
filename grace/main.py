@@ -14,8 +14,8 @@ PAWN = "https://static.vecteezy.com/system/resources/previews/021/975/110/origin
 class IlhaProibida:
     def __init__(self):
         oceano = Cena(IMAGEM).vai()
-        portao = Elemento(PORTAO_BRONZE, x=10, y=10, w=100, h=100, cena=oceano)
-        palacio = Elemento(PALACIO_CORAL, x=120, y=10, w=100, h=100, cena=oceano)
+        portao = Terreno(PORTAO_BRONZE, 10, 10)
+        palacio = Terreno(PALACIO_CORAL, 120, 10)
         
         self.pawn = Peao()
         
