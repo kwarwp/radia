@@ -28,7 +28,7 @@ class Terreno:
         
     def ocupa(self, peao):
         self.peao = peao
-        peao.mover(self.posx, terreno)
+        peao.mover(self.posx, self)
 
 class Peao:
     def __init__(self, oceano):
