@@ -395,3 +395,10 @@ Traceback (most recent call last):
     self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc) 
 TypeError: object() takes no parameters
 '''},
+{'date': 'Tue Sep 26 2023 12:38:35.542 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 45
+  def mover(self, x) #movimento peão no terreno
+                                                ^
+SyntaxError: invalid syntax
+'''},
