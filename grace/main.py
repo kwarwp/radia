@@ -42,7 +42,7 @@ class Peao:
     def move(self, ev=None):
         self.pawn.x = 120
         
-    def mover(x, y)
+    def mover(x, y):
         self.pawn.x = x
         self.pawn.y = y
         
