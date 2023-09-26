@@ -17,7 +17,7 @@ class IlhaProibida:
         oceano = Cena(IMAGEM).vai()
         info_terrenos = [(PORTAO_BRONZE, 10), (PALACIO_CORAL, 120)]
         
-        self.terrenos = [Terreno(l, p, 10, oceano) for l, p in info_terrenos]
+        self.terrenos = [Terreno(l, p, i * 100 + 10, oceano) for i, l, p in enumerate(info_terrenos)]
         
         self.pawn = Peao(oceano)
         
