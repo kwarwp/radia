@@ -401,3 +401,10 @@ NameError: name 'peao' is not defined
     self.terrenos[2].ocupa(self,peao)
 NameError: name 'peao' is not defined
 '''},
+{'date': 'Tue Sep 26 2023 13:03:48.502 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 28
+  return.self.terreno[aqui+1]
+         ^
+SyntaxError: invalid syntax
+'''},
