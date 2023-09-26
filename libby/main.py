@@ -12,7 +12,8 @@ PAWN = "https://imgur.com/zO3kiRp.png"
 class IlhaProibida:
     def __init__(self):
         oceano = Cena(IMAGEM).vai()
-        self.terreno = Terreno(PORTAO_BRONZE, x=10, y=50, cena=oceano)
+        self.terreno = Terreno(PORTAO_BRONZE, 10, 50, cena=oceano)
+        self.terreno1 = Terreno(PALACIO_CORAL, 120, 50)
         self.peao = Peao(oceano)
 
 class Terreno:
