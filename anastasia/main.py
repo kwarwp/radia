@@ -16,7 +16,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         #self.Terreno2 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
         #info_terrenos= [(10,PORTAO_BRONZE), (120,PALACIO_CORAL),(230,PORTAO_BRONZE)] #PAR ORDENADOS
         info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]
-        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px, local=lc) 
+        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc) 
         for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(oceano)
         
