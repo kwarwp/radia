@@ -14,14 +14,14 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         oceano = Cena(IMAGEM).vai()
         #self.Terreno1 = Terreno(PORTAO_BRONZE, posx=10, posy=50, cena=oceano)
         #self.Terreno2 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
-        info_terrenos= [(10, PORTAO_BRONZE), (120, PALACIO_CORAL)] #PAR ORDENADOS
+        info_terrenos= [(10, PORTAO_BRONZE), (120, PALACIO_CORAL), (230,PORTAO_BRONZE)] #PAR ORDENADOS
         self.terrenos = [Terrenos(cena=oceano, posy=50, posx=px, local=lc) for px, lc in info_terrenos]
         self.peao = Peao(oceano)
         
         
 class Terreno:
     def _init_(self, local, posx, posy, cena):
-        self.Terreno = Elemento(local, x=posx, y=posy, w=100, h=100, cena=cena)
+        self.local = Elemento(local, x=posx, y=posy, w=100, h=100, cena=cena)
                        
 class Peao:  
     def __init__(self, oceano):
