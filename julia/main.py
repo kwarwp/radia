@@ -14,9 +14,9 @@ class IlhaProibida:
         oceano = Cena(IMAGEM).vai()
         #self.terreno = Terreno(PORTAO_BRONZE, posx=10, posy=50, cena=oceano)
         #self.terreno1 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
-        info_terrenos= [(10, PORTAO_BRONZE), (120, PALACIO_CORAL), (230, PALACIO_CORAL)]
-        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px, local=lc)
-        for px, lc in info_terrenos]
+        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]
+        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
+        for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(oceano)
 
 class Terreno:
