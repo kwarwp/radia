@@ -13,7 +13,7 @@ PALACIO_CORAL2 = "https://i.imgur.com/3Ywu4pe.jpg"
 PALACIO_CORAL3 = "https://i.imgur.com/3Ywu4pe.jpg"
 PALACIO_CORAL4 = "https://i.imgur.com/3Ywu4pe.jpg"
 
-PAWN = "https://static.vecteezy.com/system/resources/previews/021/975/110/original/pawn-3d-render-icon-illustration-with-transparent-background-chess-game-png.png"
+PAWN = "https://i.imgur.com/JKNaFSN.png"
 
 class IlhaProibida:
     def __init__(self):
@@ -24,13 +24,16 @@ class IlhaProibida:
         
         self.pawn = Peao(oceano)
         
+        self.terrenos[2].ocupa(self.pawn)
+        
 class Terreno:
     def __init__(self, local, posx, posy, cena):
         self.peao = None
-        self.posx = posx
-        self.posy = posy
-        self.local = Elemento(local, x=posx, y=posy, w=100, h=100, cena=oceano, vai=self.ocupa)
-        
+        self.posx, self.posy = posx, posy
+        self.local = Elemento(
+            local, x=posx, y=posy, w=100, h=100, cena=oceano, vai=self.ocupa
+        )
+    
     def ocupa(self, peao):
         self.peao = peao
         peao.mover(self.posx, self.posy)
