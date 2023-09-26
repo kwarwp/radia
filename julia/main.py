@@ -14,15 +14,14 @@ class IlhaProibida:
         oceano = Cena(IMAGEM).vai()
         #self.terreno = Terreno(PORTAO_BRONZE, posx=10, posy=50, cena=oceano)
         #self.terreno1 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
-        info_terrenos= [(10, PORTAO_BRONZE), (120, PALACIO_CORAL)]
+        info_terrenos= [(10, PORTAO_BRONZE), (120, PALACIO_CORAL), (230, PALACIO_CORAL)]
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px, local=lc)
         for px, lc in info_terrenos]
         self.peao = Peao(oceano)
 
 class Terreno:
     def __init__(self, local, posx, posy, cena):
-        self.local = Elemento(local, x=posx, y=posy, w=100, h= 100,
-        cena=cena)
+        self.local = Elemento(local, x=posx, y=posy, w=100, h= 100, cena=cena)
 
 class Peao:
     def __init__(self, oceano):
@@ -30,7 +29,7 @@ class Peao:
         cena=oceano, vai=self.move)
         
     def move(self, ev=None):
-        self.peao.x = 170
+        self.peao.x = 150
         
 
 IlhaProibida()
