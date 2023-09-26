@@ -10,13 +10,13 @@ PEAO = "https://imgur.com/zO3kiRp.png"
 class IlhaProibida:
      def __init__(self):
         oceano = Cena(IMAGEM).vai()
-        self.terreno1 = Terreno(PORTAO_BRONZE, posx=10, posy=50, titulo="Portao de Bronze", cena=oceano)
-        self.terreno2 = Terreno(PALACIO_CORAL, posx=120, posy=50, titulo="Palacio de Coral", cena=oceano)
+        self.terreno1 = Terreno(PORTAO_BRONZE, posx=10, posy=50, cena=oceano)
+        self.terreno2 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
         self.peao = Peao(oceano)
         
 class Terreno:
-    def __init__(self, local, posx, posy, titulo, oceano):
-        self.local = Elemento(local, x=posx, y=posy, w=100, h=100, tit=titulo, cena=oceano)
+    def __init__(self, local, posx, posy, oceano):
+        self.local = Elemento(local, x=posx, y=posy, w=100, h=100, cena=oceano)
         
 class Peao:
     def __init__(self, oceano):
