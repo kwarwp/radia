@@ -31,15 +31,17 @@ class Terreno:
     
     def ocupa(self, peao):
         self.peao = peao
-        peao.mover(self.posx)
+        peao.mover(self.posx, self)
 
 class Peao:
     def __init__(self, oceano):
         self.peao = Elemento(PEAO, x=20, y=70, w=80, h= 80, cena=oceano, vai=self.move)
+        self.terreno = None
         
     def move(self, ev=None):
         self.peao.x = 130
-    def mover(self, x):
+    def mover(self, x, terreno):
+        self.terreno = terreno
         self.peao.x = x
 
 IlhaProibida()
