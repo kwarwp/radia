@@ -21,7 +21,7 @@ class IlhaProibida:
         
 class Terreno:
     def __init__(self, local, posx, posy):
-        self.local = Elemento(local, x=posx, y=posy, w=100, h=100)
+        self.local = Elemento(local, x=posx, y=posy, w=100, h=100, cena=oceano)
         
 class Peao:
     def __init__(self):
