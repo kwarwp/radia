@@ -31,7 +31,7 @@ class Terreno:
         self.peao = None
         self.posx, self.posy = posx, posy
         self.local = Elemento(
-            local, x=posx, y=posy, w=100, h=100, cena=oceano, vai=self.ocupa
+            local, x=posx, y=posy, w=100, h=100, cena=oceano
         )
     
     def ocupa(self, peao):
