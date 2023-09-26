@@ -10,15 +10,17 @@ IMAGEM = "https://i.imgur.com/my9MiVU.jpeg"
 PORTAO_BRONZE = "https://i.imgur.com/103Lydz.png"
 PALACIO_CORAL = "https://i.imgur.com/3Ywu4pe.jpg"
 PALACIO_CORAL2 = "https://i.imgur.com/3Ywu4pe.jpg"
+PALACIO_CORAL3 = "https://i.imgur.com/3Ywu4pe.jpg"
+PALACIO_CORAL4 = "https://i.imgur.com/3Ywu4pe.jpg"
 
 PAWN = "https://static.vecteezy.com/system/resources/previews/021/975/110/original/pawn-3d-render-icon-illustration-with-transparent-background-chess-game-png.png"
 
 class IlhaProibida:
     def __init__(self):
         oceano = Cena(IMAGEM).vai()
-        info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PALACIO_CORAL2]
+        info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PALACIO_CORAL2, PALACIO_CORAL3, PALACIO_CORAL4]
         
-        self.terrenos = [Terreno(l, i * 110, 10, oceano) for i, l in enumerate(info_terrenos)]
+        self.terrenos = [Terreno(l, i * 110 + 10, 10, oceano) for i, l in enumerate(info_terrenos)]
         
         self.pawn = Peao(oceano)
         
