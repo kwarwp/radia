@@ -22,8 +22,8 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         self.terrenos[2].ocupa(self.peao) #chamou o terreno 1 e ocupa com o peão
         
     def direita(self, tereno):
-        self.terrenos.index(terreno)
-        return self.terreno[aqui+1] 
+        self.terrenos.index(terreno) #achar um terreno
+        return self.terreno[aqui+1] #
         
         
 class Terreno:
@@ -47,7 +47,8 @@ class Peao:
         
     def move(self, ev=None):  # Corrigir: não condizente! 
         terreno_destino = self.ilha.direita(self.terreno) 
-        self.peao.x = 170
+        #self.peao.x = 170
+        terreno_destino.ocupa(self) #cqual o terreno a minha direta , ocupa.
         
     def mover(self, x, terreno): #movimento peão no terreno
         self.terreno = terreno
