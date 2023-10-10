@@ -15,3 +15,10 @@
     print(help(amain))
 NameError: name 'amain' is not defined
 '''},
+{'date': 'Tue Oct 10 2023 12:32:46.183 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 93
+  #IlhaProibida()
+                 ^
+IndentationError: expected an indented block
+'''},
