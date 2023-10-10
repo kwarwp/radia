@@ -27,9 +27,9 @@ PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
 PAWN = "https://imgur.com/zO3kiRp.png"
 
 class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem que estar intendado
-    """Representa a classe principal do jogo
-    Terrenos 
-    Locais onde os peões podem ficar 
+    """
+    Representa a classe principal do jogo
+    Terrenos: Locais onde os peões podem ficar 
     """
     
     def __init__(self): #construcao, o primeiro parametro sempre se chama self - tabuleiro 
@@ -63,7 +63,7 @@ class Terreno:
         peao.mover(self.posx, terreno)
                                
 class Peao:  
-"""
+    """
     Marcador usado para definir a posição do jogador nos terrenos.
     """
     def __init__(self, ilha): #peao de posse da ilha 
@@ -83,9 +83,9 @@ class Peao:
 
         
 if __name__ == "__main__": #troca o name pelo main 
-"""
+    """
     O nome do ambiente principal do programa,pode ser verificado usando a expressão
     o help busca a documentação e o print mostra essa documentação
     """
-    print ("Executed when invoked directly")
+    print (help(Peao))
     #IlhaProibida()
