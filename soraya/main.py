@@ -19,7 +19,6 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
-from julia import main as jmain
 STYLE["width"] = 800
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
@@ -46,7 +45,7 @@ class IlhaProibida:
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
         for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(self)
-        self.terrenos[1].ocupa(self.peao)
+        self.terrenos[0].ocupa(self.peao)
         
     def direita(self, terreno):
         """ Move o peão para a direita.
@@ -55,7 +54,7 @@ class IlhaProibida:
         :return: O terreno onde o peão vai
         """
         aqui = self.terrenos.index(terreno)
-        return self.terreno[aqui+1]
+        return self.terrenos[aqui+1]
 
 class Terreno:
     def __init__(self, local, posx, posy, cena):
@@ -77,6 +76,7 @@ class Peao:
         self.terreno = None
         self.ilha = ilha
         
+        
     def move(self, ev=None):  # Corrigir: não está condizente!
         terreno_destino = self.ilha.direita(self.terreno)
         #self.peao.x = 170
@@ -89,4 +89,4 @@ class Peao:
 if __name__ == "__main__":
     #print((jmain.__name__))
     #print(help(Ilha))
-    #IlhaProibida()
+    IlhaProibida()
