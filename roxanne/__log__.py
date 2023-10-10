@@ -75,3 +75,7 @@ SyntaxError: Unbalanced bracket (
        ^
 SyntaxError: Unbalanced bracket (
 '''},
+{'date': 'Tue Oct 10 2023 12:10:25.681 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: aliases is undefined>
+'''},
