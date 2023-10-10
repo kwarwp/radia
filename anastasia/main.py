@@ -24,8 +24,8 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE #Cena C maiusculo porque é classe  Elemento peçinhas que colocam na cena 
-from julia.main import IlhaProibida as Ilha #importar o pacote julia módulo main, importar apenas a classe Ilha proibida e chamar de Ilha
-from julia import main as amain #importar o pacote todo julia main, chamar de amain
+#from julia.main import IlhaProibida as Ilha #importar o pacote julia módulo main, importar apenas a classe Ilha proibida e chamar de Ilha
+#from julia import main as amain #importar o pacote todo julia main, chamar de amain
 
 STYLE["width"] = 1600 #a varios estilos, aqui selecionamos o widht 
 STYLE["height"] = "800px"
