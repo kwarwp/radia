@@ -82,6 +82,6 @@ class Peao:
         self.peao.x = x
 
         
-if __name__ == "__main__": 
-    print ("Executed when invoked directly")
+if __name__ == "__main__": #O nome do ambiente principal do programa,pode ser verificado usando a expressão 
+    print (help(IlhaProibida.direita)
     #IlhaProibida()
