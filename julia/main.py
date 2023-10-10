@@ -78,5 +78,5 @@ class Peao:
         self.peao.x = x
         
 if __name__ == "__main__":
-    print ("Executado diretamente")
-    IlhaProibida()
+    print ("Executado no modulo julia")
+    #IlhaProibida()
