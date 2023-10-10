@@ -98,10 +98,10 @@ class Peao:
         self.peao.x = x
 
         
-if __name__ == "__main__": #troca o name pelo main 
+#if __name__ == "__main__": #troca o name pelo main 
     """
     O nome do ambiente principal do programa,pode ser verificado usando a expressão
     o help busca a documentação e o print mostra essa documentação
     """
-    print (help(Peao))
+    #print (help(Peao))
     #IlhaProibida()
