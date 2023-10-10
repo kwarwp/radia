@@ -57,7 +57,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         :return
         """
         self.terrenos.index(terreno) #achar um terreno
-        return self.terreno[aqui+1] 
+        return self.terreno[2] 
                 
 class Terreno:
     def __init__(self, local, posx, posy, cena):
@@ -86,7 +86,7 @@ class Peao:
         
     def move(self, ev=None):  # Corrigir: não condizente! 
         terreno_destino = self.ilha.direita(self.terreno) 
-        #self.peao.x = 170
+        #self.peao.y = 300
         terreno_destino.ocupa(self) 
         """
         qual o terreno a minha direta , ocupa.
@@ -98,6 +98,7 @@ class Peao:
         """
         self.terreno = terreno
         self.peao.x = x
+        self.peao.y = y
 
         
 if __name__ == "__main__": #troca o name pelo main 
