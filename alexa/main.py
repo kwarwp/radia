@@ -12,6 +12,8 @@ VALE_TENEBROSO = 'http://2.bp.blogspot.com/-lo6Hr8UD4D4/T8FDTidezEI/AAAAAAAAAD0/
 PISTA = 'https://i0.wp.com/soepinaobasta.com/wp-content/uploads/2019/05/Heliponto.jpg?resize=1000%2C500&ssl=1'
 PEAO = 'https://imgur.com/zO3kiRp.png'
 
-Style["width"] = 1000
+
 Style["height"] = "600px"
+Style["width"] = 1000
+
 
