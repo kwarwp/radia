@@ -680,3 +680,10 @@ Traceback (most recent call last):
     self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc) 
 NameError: name 'oceano' is not defined
 '''},
+{'date': 'Tue Oct 10 2023 12:04:12.439 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 77
+  """
+  ^
+IndentationError: expected an indented block
+'''},
