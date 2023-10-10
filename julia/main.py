@@ -3,7 +3,7 @@
 
 """Página de entrada do jogo Ilha Proibida.
 
-.. codeauthor:: Carlo Oliveira <carlo@nce.ufrj.br>
+.. codeauthor:: Bruno Lemos Barroso <blemosb@gmail.com>
 
 Changelog
 ---------
