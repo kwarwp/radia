@@ -31,7 +31,7 @@ STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg" #IMAGEM DA INTERNET
 PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
-PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
+PALACIO_CORAL = "https://img.freepik.com/fotos-premium/palacio-real-de-esplendor-arabe-islamico-em-um-pais-das-maravilhas-da-selva-tropical_865583-219.jpg"
 PAWN = "https://imgur.com/zO3kiRp.png"
 
 class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem que estar intendado
