@@ -91,9 +91,9 @@ class Peao:
         """
         
     def mover(self, x, terreno): 
-    """
-    movimento peão no terreno
-    """
+        """
+        movimento peão no terreno
+        """
         self.terreno = terreno
         self.peao.x = x
 
