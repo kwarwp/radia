@@ -310,3 +310,10 @@ Traceback (most recent call last):
     self.terreno = terrenos[1]
 NameError: name 'terrenos' is not defined
 '''},
+{'date': 'Tue Oct 10 2023 13:07:06.893 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 44
+  px=1
+  ^
+IndentationError: unexpected indent
+'''},
