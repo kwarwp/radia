@@ -41,7 +41,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
     """
     
     def __init__(self): #construcao, o primeiro parametro sempre se chama self - tabuleiro 
-        self.oceano = ocenao = Cena(IMAGEM).vai() #self.oceano é igual ao local oceano 
+        self.oceano = oceano = Cena(IMAGEM).vai() #self.oceano é igual ao local oceano 
         #self.Terreno1 = Terreno(PORTAO_BRONZE, posx=10, posy=50, cena=oceano)
         #self.Terreno2 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
         #info_terrenos= [(10,PORTAO_BRONZE), (120,PALACIO_CORAL),(230,PORTAO_BRONZE)] #PAR ORDENADOS
@@ -82,7 +82,7 @@ class Peao:
         cena=ilha.oceano, vai=self.move) #PARAMETRO VAI CAPTURA O CLICK DO MOUSE E EXECUTA O MOVE 
         self.terreno = None
         self.ilha = ilha 
-        self.peao.vai = self.move
+        #self.peao.vai = self.move outro modo de dizer vai=self.move
         
     def move(self, ev=None):  # Corrigir: não condizente! 
         terreno_destino = self.ilha.direita(self.terreno) 
