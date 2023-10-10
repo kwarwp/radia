@@ -26,6 +26,8 @@ Changelog
 from _spy.vitollino.main import Cena, Elemento, STYLE #Cena C maiusculo porque é classe  Elemento peçinhas que colocam na cena 
 #from julia.main import IlhaProibida as Ilha #importar o pacote julia módulo main, importar apenas a classe Ilha proibida e chamar de Ilha
 #from julia import main as amain #importar o pacote todo julia main, chamar de amain
+from array import array
+import numpy as np
 
 STYLE["width"] = 1600 #a varios estilos, aqui selecionamos o widht 
 STYLE["height"] = "800px"
@@ -46,10 +48,8 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         #self.Terreno2 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
         #info_terrenos= [(10,PORTAO_BRONZE), (120,PALACIO_CORAL),(230,PORTAO_BRONZE)] #PAR ORDENADOS
         info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL,PORTAO_BRONZE]
-        info_terrenos = np.array([
-                        [0,1,0,1],
-                        [0,1,0,1],
-                        ])
+        info_terrenos = np.array([[0,1,0,1],[0,1,0,1]])
+                        
         self.terrenos = [Terreno(cena=oceano, posy=100, posx=px*110+20, local=lc) 
         for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(self)
