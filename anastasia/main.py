@@ -103,6 +103,7 @@ if __name__ == "__main__": #troca o name pelo main
     O nome do ambiente principal do programa,pode ser verificado usando a expressão
     o help busca a documentação e o print mostra essa documentação
     """
-    print (help(Peao))
+    print("teste")
+    #print (help(Peao))
     #print((amain.__name__)) este comando mostra o nome do módulo importado no caso anastasia.main   
     #IlhaProibida()
