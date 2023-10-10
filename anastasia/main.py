@@ -24,7 +24,7 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE #Cena C maiusculo porque é classe  Elemento peçinhas que colocam na cena 
-
+from julia.main import IlhaProibida as Ilha #importar pacote julia módulo main, importar apenas a classe Ilha proibida e chamar de Ilha
 STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht 
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg" #COLOCAR IMAGEM DA INTERNET 
