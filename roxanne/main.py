@@ -83,7 +83,7 @@ class Peao:
         terreno_destino = self.ilha.direita(0) #(self.terreno)
         self.peao.y = 300
         
-    def move_(self, ev=None):  # Corrigir: não está condizente!
+    def move(self, ev=None):  # Corrigir: não está condizente!
         terreno_destino = self.ilha.direita(self.terreno)
         #self.peao.x = 170
         terreno_destino.ocupa(self)        
@@ -94,5 +94,10 @@ class Peao:
         
 if __name__ == "__main__": 
     #print((amain.__name__))
-    IlhaProibida()
+    ##import antigravity as ag
+    #from __future__ import braces
+    import __phello__
+    #ag.fly()
+    
+    #IlhaProibida()
     #IlhaProibida()
