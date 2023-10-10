@@ -20,3 +20,10 @@ SyntaxError: invalid syntax
                                                                                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 10 2023 20:38:07.708 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 21
+  for px, lc in enumerate(info_terrenos)]
+                                        ^
+SyntaxError: invalid syntax
+'''},
