@@ -26,7 +26,7 @@ class IlhaProibida:
         
     def direita(self, terreno):
         aqui = self.terrenos.index(terreno)
-        return.self.terreno[aqui+1]
+        #return.self.terreno[aqui+1]
         
 class Terreno:
     def __init__(self, local, posx, posy, cena):
