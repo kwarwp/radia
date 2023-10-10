@@ -29,6 +29,9 @@ PAWN = "https://imgur.com/zO3kiRp.png"
 
 
 class IlhaProibida:
+    """ Representa a classe principal do jogo.
+       Terrenos: locais onde os peões ficam posicionados.
+    """
     def __init__(self):
         self.oceano = oceano = Cena(IMAGEM).vai()
         #self.terreno = Terreno(PORTAO_BRONZE, posx=10, posy=50,
@@ -42,6 +45,9 @@ class IlhaProibida:
         self.terrenos[1].ocupa(self.peao)
         
     def direita(self, terreno):
+        """ Move o peão para a direita
+        :param terreno: O terreno onde está o peão
+        """
         aqui = self.terrenos.index(terreno)
         return self.terreno[aqui+1]
 
@@ -70,5 +76,7 @@ class Peao:
     def mover(self, x, terreno):
         self.terreno = terreno
         self.peao.x = x
-
-IlhaProibida()
+        
+if __name__ == "__main__":
+    print ("Executado diretamente")
+    IlhaProibida()
