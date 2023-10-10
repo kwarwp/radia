@@ -22,3 +22,10 @@ NameError: name 'amain' is not defined
                  ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Tue Oct 10 2023 12:58:35.776 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 80
+  def move(self.terreno, ev=None):  
+                ^
+SyntaxError: invalid syntax
+'''},
