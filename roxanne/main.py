@@ -67,6 +67,8 @@ class Terreno:
         peao.mover(self.posx, self)
 
 class Peao:
+    """Marcador usado para definir a posição do jogador nos terrenos.
+    """
     def __init__(self, ilha):
         self.peao = Elemento(PAWN, x=20, y=70, w=80, h= 80,
         cena=ilha.oceano, vai=self.move)
@@ -74,6 +76,8 @@ class Peao:
         self.ilha = ilha
         
     def move(self, ev=None):  # Corrigir: não está condizente!
+    """
+    """
         terreno_destino = self.ilha.direita(self.terreno)
         #self.peao.x = 170
         terreno_destino.ocupa(self)        
@@ -83,5 +87,5 @@ class Peao:
 
         
 if __name__ == "__main__": #O nome do ambiente principal do programa,pode ser verificado usando a expressão 
-    print(help(IlhaProibida.direita))
+    print(help(IlhaProibida.direita)) # o help busca a documentação e o print mostra essa documentação
     #IlhaProibida()
