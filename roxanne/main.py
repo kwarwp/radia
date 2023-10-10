@@ -83,5 +83,5 @@ class Peao:
 
         
 if __name__ == "__main__": #O nome do ambiente principal do programa,pode ser verificado usando a expressão 
-    print (help(IlhaProibida.direita)
+    print(help(IlhaProibida.direita))
     #IlhaProibida()
