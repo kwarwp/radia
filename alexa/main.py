@@ -17,3 +17,4 @@ Style["height"] = "600px"
 Style["width"] = 1000
 
 
+IlhaProibida()
