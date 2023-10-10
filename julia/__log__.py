@@ -317,3 +317,10 @@ NameError: name 'terrenos' is not defined
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Tue Oct 10 2023 13:07:30.566 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 53
+  self.terrenos = [Terreno(cena=oceano, posy=py, posx=px*110+10, local=info_terrenos[i])
+                                                                                                                                                                                                                                                    ^
+SyntaxError: invalid syntax
+'''},
