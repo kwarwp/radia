@@ -52,9 +52,7 @@ class Peao:
     def mover(self, x, terreno):
         self.terreno = terreno
         self.peao.x = x
-        
-if __name__ == "__main__":
-    print(help(IlhaProibida.direita)) 
+
         
 
 IlhaProibida()
