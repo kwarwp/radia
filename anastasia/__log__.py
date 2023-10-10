@@ -1093,3 +1093,10 @@ AttributeError: 'Peao' object has no attribute 'move'
     self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80,
 AttributeError: 'Peao' object has no attribute 'move'
 '''},
+{'date': 'Tue Oct 10 2023 20:37:23.672 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 48
+  info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL,PORTAO_BRONZE
+                                                                                                                      ^
+SyntaxError: invalid syntax
+'''},
