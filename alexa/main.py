@@ -2,7 +2,7 @@
 # AA - Anderson Amorim (ouvinte)
 from _spy.vitollino.main import Cena, Elemento, STYLE
 
-IMAGEM = 'https://dinamicambiental.com.br/wp-content/uploads/2021/06/o-oceano-e-a-nossa-sobrevivencia.jpg'
+IMAGEM = 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.selecoes.com.br%2Fmedia%2Fuploads%2F2023%2F07%2Foceano-mudou-de-cor.jpg&tbnid=2at5ENGHI_BTzM&vet=12ahUKEwjfw6OUz-uBAxVarpUCHSVyBWQQMyhAegUIARD8AQ..i&imgrefurl=https%3A%2F%2Fwww.selecoes.com.br%2Fcultura-lazer%2Fo-oceano-nao-e-mais-azul-zc%2F&docid=yCZWx7_TusWa9M&w=1280&h=720&q=oceano&ved=2ahUKEwjfw6OUz-uBAxVarpUCHSVyBWQQMyhAegUIARD8AQ'
 PORTAO_BRONZE = 'https://thumbs.dreamstime.com/z/batedor-de-bronze-em-forma-uma-cabe%C3%A7a-le%C3%A3o-do-port%C3%A3o-da-catedral-col%C3%B4nia-na-alemanha-194660830.jpg?w=992'
 PALACIO_CORAL = 'https://img.freepik.com/fotos-premium/palacio-subaquatico-com-ilustracao-colorida-de-ia-generativa-de-corais-e-peixes_268722-1554.jpg?w=740'
 VALE_TENEBROSO = 'http://2.bp.blogspot.com/-lo6Hr8UD4D4/T8FDTidezEI/AAAAAAAAAD0/4zitS77Hoxg/s1600/vale+da+sombra+da+morte.bmp'
