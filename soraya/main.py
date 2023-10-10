@@ -77,7 +77,7 @@ class Peao:
         self.ilha = ilha
         
         
-    def move(self, ev=None):  # Corrigir: não está condizente!
+    def move(self, ev=None):  
         terreno_destino = self.ilha.direita(self.terreno)
         #self.peao.x = 170
         terreno_destino.ocupa(self)        
