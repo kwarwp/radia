@@ -19,7 +19,7 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
-#from julia.main import IlhaProibida as Ilha
+from julia import main as jmain
 STYLE["width"] = 800
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
@@ -35,6 +35,7 @@ class IlhaProibida:
         Locais onde os peões podem ficar.
         
     """
+    #PRECISA DESENHAR A ILHA SENDO COLUNAS DE 2, 4, 6, 6, 4, 2 TERRENOS RESPECTIVAMENTE
     def __init__(self):
         self.oceano = oceano = Cena(IMAGEM).vai()
         #self.terreno = Terreno(PORTAO_BRONZE, posx=10, posy=50,
@@ -85,6 +86,7 @@ class Peao:
         self.peao.x = x
 
         
-#if __name__ == "__main__": 
-#    print(help(Ilha))
+if __name__ == "__main__":
+    #print((jmain.__name__))
+    #print(help(Ilha))
     #IlhaProibida()
