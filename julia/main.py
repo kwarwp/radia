@@ -79,4 +79,4 @@ class Peao:
         
 if __name__ == "__main__":
     print ("Executado no modulo julia")
-    #IlhaProibida()
+    IlhaProibida()
