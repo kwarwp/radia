@@ -84,13 +84,18 @@ class Peao:
         self.ilha = ilha 
         #self.peao.vai = self.move outro modo de dizer vai=self.move
         
-    def move(self, ev=None):  # Corrigir: não condizente! 
-        terreno_destino = self.ilha.direita(self.terreno) 
-        #self.peao.y = 300
-        terreno_destino.ocupa(self) 
+    def move_(self, ev=None):  # Corrigir: não está condizente!
         """
         qual o terreno a minha direta , ocupa.
         """
+        terreno_destino = self.ilha.direita(0) #(self.terreno)
+        self.peao.y = 300
+        
+    def move_(self, ev=None):  # Corrigir: não está condizente!
+        terreno_destino = self.ilha.direita(self.terreno)
+        #self.peao.x = 170
+        terreno_destino.ocupa(self)  
+        
         
     def mover(self, x, terreno): 
         """
@@ -98,7 +103,6 @@ class Peao:
         """
         self.terreno = terreno
         self.peao.x = x
-        
 
         
 if __name__ == "__main__": #troca o name pelo main 
