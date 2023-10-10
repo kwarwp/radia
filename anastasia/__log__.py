@@ -966,3 +966,10 @@ SyntaxError: invalid syntax
                                                                                ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 10 2023 13:08:06.105 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module julia.main line 44
+  px=1
+  ^
+IndentationError: unexpected indent
+'''},
