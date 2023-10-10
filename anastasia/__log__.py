@@ -959,3 +959,10 @@ SyntaxError: invalid syntax
                                                                                ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 10 2023 13:07:50.119 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 48
+  info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL,\n,PORTAO_BRONZE]
+                                                                               ^
+SyntaxError: invalid syntax
+'''},
