@@ -19,6 +19,7 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
+from julia.main import IlhaProibida as Ilha
 STYLE["width"] = 800
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
@@ -67,8 +68,7 @@ class Terreno:
         peao.mover(self.posx, self)
 
 class Peao:
-    """
-    Marcador usado para definir a posição do jogador nos terrenos.
+    """ Marcador usado para definir a posição do jogador nos terrenos.
     """
     def __init__(self, ilha):
         self.peao = Elemento(PAWN, x=20, y=70, w=80, h= 80,
@@ -77,8 +77,6 @@ class Peao:
         self.ilha = ilha
         
     def move(self, ev=None):  # Corrigir: não está condizente!
-    """
-    """
         terreno_destino = self.ilha.direita(self.terreno)
         #self.peao.x = 170
         terreno_destino.ocupa(self)        
@@ -88,9 +86,5 @@ class Peao:
 
         
 if __name__ == "__main__": 
-    """
-    O nome do ambiente principal do programa,pode ser verificado usando a expressão
-    o help busca a documentação e o print mostra essa documentação
-    """
-    print(help(IlhaProibida.direita)) # 
+    print(help(Ilha))
     #IlhaProibida()
