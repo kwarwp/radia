@@ -28,7 +28,7 @@ from julia.main import IlhaProibida as Ilha #importar o pacote julia módulo mai
 from julia import main as amain #importar o pacote todo julia main, chamar de amain
 
 STYLE["width"] = 1600 #a varios estilos, aqui selecionamos o widht 
-STYLE["height"] = "600px"
+STYLE["height"] = "800px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg" #IMAGEM DA INTERNET
 PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
 PALACIO_CORAL = "https://img.freepik.com/fotos-premium/palacio-real-de-esplendor-arabe-islamico-em-um-pais-das-maravilhas-da-selva-tropical_865583-219.jpg"
@@ -45,7 +45,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         #self.Terreno1 = Terreno(PORTAO_BRONZE, posx=10, posy=50, cena=oceano)
         #self.Terreno2 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
         #info_terrenos= [(10,PORTAO_BRONZE), (120,PALACIO_CORAL),(230,PORTAO_BRONZE)] #PAR ORDENADOS
-        info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]
+        info_terrenos = 3*([PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],\n)
         self.terrenos = [Terreno(cena=oceano, posy=100, posx=px*110+20, local=lc) 
         for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(self)
