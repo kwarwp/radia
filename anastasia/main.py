@@ -81,6 +81,7 @@ class Peao:
         cena=ilha.oceano, vai=self.move) #PARAMETRO VAI CAPTURA O CLICK DO MOUSE E EXECUTA O MOVE 
         self.terreno = None
         self.ilha = ilha 
+        self.peao.vai = self.move
         
     def move(self, ev=None):  # Corrigir: não condizente! 
         terreno_destino = self.ilha.direita(self.terreno) 
