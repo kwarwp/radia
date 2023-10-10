@@ -63,6 +63,9 @@ class Terreno:
         peao.mover(self.posx, terreno)
                                
 class Peao:  
+"""
+    Marcador usado para definir a posição do jogador nos terrenos.
+    """
     def __init__(self, ilha): #peao de posse da ilha 
         self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80,
         cena=ilha.oceano, vai=self.move) #PARAMETRO VAI CAPTURA O CLICK DO MOUSE E EXECUTA O MOVE 
@@ -76,6 +79,13 @@ class Peao:
         
     def mover(self, x, terreno): #movimento peão no terreno
         self.terreno = terreno
-        self.peao.x = x 
+        self.peao.x = x
+
         
-IlhaProibida()
+if __name__ == "__main__": #troca o name pelo main 
+"""
+    O nome do ambiente principal do programa,pode ser verificado usando a expressão
+    o help busca a documentação e o print mostra essa documentação
+    """
+    print ("Executed when invoked directly")
+    #IlhaProibida()
