@@ -1,5 +1,22 @@
 # radia.anastasia.main.py
 #_author_vanessa
+"""Página de entrada do jogo Ilha Proibida.
+
+.. codeauthor:: Vanessa Vianna <vanessamvianna@ufrj.br>
+
+Changelog
+---------
+.. versionadded::    23.10
+    Classes Ilha, Terreno, Peao (10).
+    
+.. versionadded::    23.09
+    Versão Inicial (26).
+
+|   **Open Source Notification:** This file is part of open source program **Ilha Proibida**
+|   **Copyright © 2023  Vanessa Vianna ** <vanessamvianna@ufrj.br>,
+|   **SPDX-License-Identifier:** `GNU General Public License v3.0 or later <http://is.gd/3Udt>`_.
+|   `Labase <http://labase.selfip.org/>`_ - `NCE <https://portal.nce.ufrj.br>`_ - `UFRJ <https://ufrj.br/>`_.
+"""
 print("alo")#escrito
 from _spy.vitollino.main import Cena, Elemento, STYLE #Cena C maiusculo porque é classe  Elemento peçinhas que colocam na cena 
 STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht 
@@ -10,6 +27,11 @@ PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
 PAWN = "https://imgur.com/zO3kiRp.png"
 
 class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem que estar intendado
+    """Representa a classe principal do jogo
+    Terrenos 
+    Locais onde os peões podem ficar 
+    """
+    
     def __init__(self): #construcao, o primeiro parametro sempre se chama self - tabuleiro 
         self.oceano = ocenao = Cena(IMAGEM).vai() #self.oceano é igual ao local oceano 
         #self.Terreno1 = Terreno(PORTAO_BRONZE, posx=10, posy=50, cena=oceano)
@@ -22,8 +44,12 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         self.terrenos[2].ocupa(self.peao) #chamou o terreno 1 e ocupa com o peão
         
     def direita(self, tereno):
+        """Move o peão para a direita
+        :param terreno: O terreno onde está o peão 
+        :return
+        """
         self.terrenos.index(terreno) #achar um terreno
-        return self.terreno[aqui+1] #
+        return self.terreno[aqui+1] 
                 
 class Terreno:
     def __init__(self, local, posx, posy, cena):
