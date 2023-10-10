@@ -11,6 +11,9 @@ Changelog
     
 .. versionadded::    23.09
     Versão Inicial (26).
+    
+.. versionadded::    10.10
+    documentacao das classes, help 
 
 |   **Open Source Notification:** This file is part of open source program **Ilha Proibida**
 |   **Copyright © 2023  Vanessa Vianna ** <vanessamvianna@ufrj.br>,
