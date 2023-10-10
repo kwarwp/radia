@@ -49,7 +49,7 @@ class IlhaProibida:
         :param terreno: O terreno onde está o peão
         """
         aqui = self.terrenos.index(terreno)
-        return self.terreno[aqui+1]
+        return self.terrenos[aqui+1]
 
 class Terreno:
     def __init__(self, local, posx, posy, cena):
