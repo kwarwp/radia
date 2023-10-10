@@ -7,12 +7,14 @@
 Changelog
 ---------
 .. versionadded::    23.10
+    Versão Inicial (1).
     Classes Ilha, Terreno, Peao (10).
     
 .. versionadded::    23.09
-    Versão Inicial (26).
+    Versão Inicial (2).
     
 .. versionadded::    10.10
+    Versão Inicial (3).
     documentacao das classes, help 
 
 |   **Open Source Notification:** This file is part of open source program **Ilha Proibida**
@@ -22,6 +24,7 @@ Changelog
 """
 print("alo")#escrito
 from _spy.vitollino.main import Cena, Elemento, STYLE #Cena C maiusculo porque é classe  Elemento peçinhas que colocam na cena 
+
 STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht 
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg" #COLOCAR IMAGEM DA INTERNET 
