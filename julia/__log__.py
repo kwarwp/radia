@@ -324,3 +324,10 @@ IndentationError: unexpected indent
                                                                                                                                                                                                                                                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 10 2023 13:08:34.723 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 53
+  self.terrenos = [Terreno(cena=oceano, posy=py, posx=px*110+10, local=self.info_terrenos[i])
+                                                                                                                                                                                                                                                         ^
+SyntaxError: invalid syntax
+'''},
