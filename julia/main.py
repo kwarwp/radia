@@ -41,6 +41,7 @@ class IlhaProibida:
         info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL, 
                         PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL, 
                         PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]
+        self.terrenos=[]
         px=1
         py=50
         for i in range (0,11):
@@ -50,7 +51,7 @@ class IlhaProibida:
             if x==7:
                py = py+100
                px = 1
-            self.terrenos = [Terreno(cena=oceano, posy=py, posx=px*110+10, local=info_terrenos[i])]
+            self.terrenos += [Terreno(cena=oceano, posy=py, posx=px*110+10, local=info_terrenos[i])]
             
      #   self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
     #    for px, lc in enumerate(info_terrenos), ]
