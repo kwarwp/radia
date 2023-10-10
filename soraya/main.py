@@ -19,7 +19,7 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
-from julia.main import IlhaProibida as Ilha
+#from julia.main import IlhaProibida as Ilha
 STYLE["width"] = 800
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
@@ -85,6 +85,6 @@ class Peao:
         self.peao.x = x
 
         
-if __name__ == "__main__": 
-    print(help(Ilha))
+#if __name__ == "__main__": 
+#    print(help(Ilha))
     #IlhaProibida()
