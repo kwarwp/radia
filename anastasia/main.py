@@ -24,8 +24,8 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE #Cena C maiusculo porque é classe  Elemento peçinhas que colocam na cena 
-#from julia.main import IlhaProibida as Ilha #importar o pacote julia módulo main, importar apenas a classe Ilha proibida e chamar de Ilha
-#from julia import main as amain #importar o pacote todo julia main, chamar de amain
+from julia.main import IlhaProibida as Ilha #importar o pacote julia módulo main, importar apenas a classe Ilha proibida e chamar de Ilha
+from julia import main as amain #importar o pacote todo julia main, chamar de amain
 STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht 
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg" #IMAGEM DA INTERNET 
@@ -98,10 +98,10 @@ class Peao:
         self.peao.x = x
 
         
-#if __name__ == "__main__": #troca o name pelo main 
+if __name__ == "__main__": #troca o name pelo main 
     """
     O nome do ambiente principal do programa,pode ser verificado usando a expressão
     o help busca a documentação e o print mostra essa documentação
     """
-    #print (help(Peao))
-    #IlhaProibida()
+    print (help(Peao))
+    IlhaProibida()
