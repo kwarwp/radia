@@ -56,7 +56,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         :param terreno: O terreno onde está o peão 
         :return
         """
-        aqui = self.terrenos.index(terrenos) #achar um terreno
+        aqui = self.terrenos.index(terreno) #achar um terreno
         return self.terrenos[aqui+1]
                 
 class Terreno:
