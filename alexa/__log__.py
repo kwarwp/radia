@@ -155,3 +155,10 @@ NameError: name 'IlhaProibida' is not defined
     IlhaProibida()
 NameError: name 'IlhaProibida' is not defined
 '''},
+{'date': 'Tue Oct 10 2023 10:08:33.320 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 29
+  return.self.terreno[aqui+1]
+         ^
+SyntaxError: invalid syntax
+'''},
