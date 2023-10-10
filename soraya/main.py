@@ -34,7 +34,8 @@ class IlhaProibida:
         Locais onde os peões podem ficar.
         
     """
-    #INCREMENTAR A ILHA COM PELO MENOS 3 LINHAS DE TERRENO
+    #INCREMENTAR A ILHA 4x3 TERRENOS
+    
     def __init__(self):
         self.oceano = oceano = Cena(IMAGEM).vai()
         #self.terreno = Terreno(PORTAO_BRONZE, posx=10, posy=50,
