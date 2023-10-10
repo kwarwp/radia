@@ -68,3 +68,10 @@ IOError: File https://cdn.jsdelivr.net/npm/brython@3.4.0/builtins_docstrings.js 
         ^
 SyntaxError: Unbalanced bracket (
 '''},
+{'date': 'Tue Oct 10 2023 11:42:44.546 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 86
+  print(help(IlhaProibida.direita)
+       ^
+SyntaxError: Unbalanced bracket (
+'''},
