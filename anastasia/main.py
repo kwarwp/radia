@@ -25,10 +25,10 @@ Changelog
 
 from _spy.vitollino.main import Cena, Elemento, STYLE #Cena C maiusculo porque é classe  Elemento peçinhas que colocam na cena 
 from julia.main import IhaProibida as Ilha #importar o pacote julia módulo main, importar apenas a classe Ilha proibida e chamar de Ilha
-from julia import main as amain #importar o próprio pacote julia main, chamar de amain
+from julia import main as amain #importar o pacote todo julia main, chamar de amain
 STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht 
 STYLE["height"] = "600px"
-IMAGEM = "https://imgur.com/gVHmY2v.jpg" #COLOCAR IMAGEM DA INTERNET 
+IMAGEM = "https://imgur.com/gVHmY2v.jpg" #IMAGEM DA INTERNET 
 PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
 PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
 PAWN = "https://imgur.com/zO3kiRp.png"
@@ -73,7 +73,10 @@ class Peao:
     """
     Marcador usado para definir a posição do jogador nos terrenos.
     """
-    def __init__(self, ilha): #peao de posse da ilha 
+    def __init__(self, ilha):
+    """
+    peao de posse da ilha
+    """
         self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80,
         cena=ilha.oceano, vai=self.move) #PARAMETRO VAI CAPTURA O CLICK DO MOUSE E EXECUTA O MOVE 
         self.terreno = None
@@ -82,9 +85,15 @@ class Peao:
     def move(self, ev=None):  # Corrigir: não condizente! 
         terreno_destino = self.ilha.direita(self.terreno) 
         #self.peao.x = 170
-        terreno_destino.ocupa(self) #cqual o terreno a minha direta , ocupa.
+        terreno_destino.ocupa(self) 
+        """
+        qual o terreno a minha direta , ocupa.
+        """
         
-    def mover(self, x, terreno): #movimento peão no terreno
+    def mover(self, x, terreno): 
+    """
+    movimento peão no terreno
+    """
         self.terreno = terreno
         self.peao.x = x
 
