@@ -59,10 +59,10 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
 
 
     
-        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+20, local=lc) 
+        #self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+20, local=lc) 
         #for px, lc in enumerate(info_terrenos)]
         for i, imagem in enumerate(info_terrenos):
-        print i, imagem
+              print i, imagem
         self.peao = Peao(self)
         self.terrenos[1].ocupa(self.peao) #chamou o terreno 1 e ocupa com o peão
         
