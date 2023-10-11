@@ -45,7 +45,11 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
     Terrenos: Locais onde os peões podem ficar 
     """
     
-    def __init__(self): #construcao, o primeiro parametro sempre se chama self - tabuleiro 
+    def __init__(self): 
+    """
+    construcao, o primeiro parametro sempre se chama self - tabuleiro 
+    self.terrenos[1].ocupa(self.peao) - chama o terreno 1 e ocupa com o peão
+    """
         self.oceano = oceano = Cena(IMAGEM).vai() #self.oceano é igual ao local oceano 
         #self.Terreno1 = Terreno(PORTAO_BRONZE, posx=10, posy=50, cena=oceano)
         #self.Terreno2 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
@@ -53,7 +57,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL]
         #info_terrenos = np.array([[0,1,0,1],[0,1,0,1],[0,1,0,1]])
         lista_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, OBSERVATORIO, BOSQUE]
-        info_terrenos += random.shuffle(lista_terrenos)
+        info_terrenos = random.shuffle(lista_terrenos)
 
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
         for px, lc in enumerate(info_terrenos)]
@@ -61,11 +65,13 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         self.terrenos[1].ocupa(self.peao) #chamou o terreno 1 e ocupa com o peão
         
     def direita(self, tereno):
-        """Move o peão para a direita
+        """
+        achar um terreno
+        Move o peão para a direita
         :param terreno: O terreno onde está o peão 
         :return
         """
-        aqui = self.terrenos.index(terreno) #achar um terreno
+        aqui = self.terrenos.index(terreno) 
         return self.terrenos[aqui+1]
                 
 class Terreno:
@@ -76,7 +82,7 @@ class Terreno:
         self.posx, self.posy = posx, posy
         
     def ocupa(self, peao):
-        self.peao = peao #peao pertence a ele mesmo peao
+        self.peao = peao #o self marca que o peao pertence a ele mesmo peao
         peao.mover(self.posx, self)
                                
 class Peao:  
@@ -86,9 +92,10 @@ class Peao:
     def __init__(self, ilha):
         """
         peao de posse da ilha
+        sel.peao - PARAMETRO VAI CAPTURA O CLICK DO MOUSE E EXECUTA O MOVE 
         """
         self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80,
-        cena=ilha.oceano, vai=self.move) #PARAMETRO VAI CAPTURA O CLICK DO MOUSE E EXECUTA O MOVE 
+        cena=ilha.oceano, vai=self.move) 
         self.terreno = None
         self.ilha = ilha 
         #self.peao.vai = self.move outro modo de dizer vai=self.move
