@@ -27,7 +27,7 @@ from _spy.vitollino.main import Cena, Elemento, STYLE #Cena C maiusculo porque �
 #from julia.main import IlhaProibida as Ilha #importar o pacote julia módulo main, importar apenas a classe Ilha proibida e chamar de Ilha
 #from julia import main as amain #importar o pacote todo julia main, chamar de amain
 from array import array
-import numpy as np
+import random
 
 STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht 
 STYLE["height"] = "600px"
@@ -52,10 +52,11 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         #info_terrenos= [(10,PORTAO_BRONZE), (120,PALACIO_CORAL),(230,PORTAO_BRONZE)] #PAR ORDENADOS
         #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL]
         #info_terrenos = np.array([[0,1,0,1],[0,1,0,1],[0,1,0,1]])
-        info_terrenos= [[PORTAO_BRONZE, PORTAO_BRONZE, PORTAO_BRONZE, PORTAO_BRONZE], 
-                        [PORTAO_BRONZE, PORTAO_BRONZE, PORTAO_BRONZE, PORTAO_BRONZE]]
+        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, OBSERVATORIO, BOSQUE]
+                        lista = [a1, a2, a3, a4]
+        sorteio_terrenos = random.choice(info_terrenos)
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
-        for px, lc in enumerate(info_terrenos)]
+        for px, lc in enumerate(sorteio_terrenos)]
         self.peao = Peao(self)
         self.terrenos[1].ocupa(self.peao) #chamou o terreno 1 e ocupa com o peão
         
