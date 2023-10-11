@@ -1217,3 +1217,10 @@ AttributeError: 'Peao' object has no attribute 'move'
     self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+20, local=lc) 
 NameError: name 'index' is not defined
 '''},
+{'date': 'Tue Oct 10 2023 21:35:39.354 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 62
+  self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+20, local=lc) 
+                                                                                                                                                                               ^
+SyntaxError: invalid syntax
+'''},
