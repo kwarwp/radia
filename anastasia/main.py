@@ -53,9 +53,8 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL]
         #info_terrenos = np.array([[0,1,0,1],[0,1,0,1],[0,1,0,1]])
         info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, OBSERVATORIO, BOSQUE]
-        sorteio_terrenos = random.choice(info_terrenos)
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
-        for px, lc in enumerate(sorteio_terrenos)]
+        for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(self)
         self.terrenos[1].ocupa(self.peao) #chamou o terreno 1 e ocupa com o peão
         
