@@ -1352,3 +1352,10 @@ NameError: name 'py' is not defined
     self.terrenos = [Terreno(cena=oceano, posy=py*50, posx=px*110+20, local=lc) 
 NameError: name 'py' is not defined
 '''},
+{'date': 'Tue Oct 10 2023 21:44:55.301 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 57
+  self.terrenos = [Terreno(cena=oceano, posx=px*110+20, posy=py*110+20, local=lc) 
+                                                                                                                                               ^
+SyntaxError: invalid syntax
+'''},
