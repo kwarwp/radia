@@ -35,6 +35,8 @@ IMAGEM = "https://imgur.com/gVHmY2v.jpg" #IMAGEM DA INTERNET
 PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
 PALACIO_CORAL = "https://img.freepik.com/fotos-premium/palacio-real-de-esplendor-arabe-islamico-em-um-pais-das-maravilhas-da-selva-tropical_865583-219.jpg"
 PAWN = "https://imgur.com/zO3kiRp.png"
+OBSERVATORIO ="https://imgur.com/J5fn5ZX"
+BOSQUE = "https://imgur.com/1LoY0Bf"
 
 class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem que estar intendado
     """
@@ -49,7 +51,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         #info_terrenos= [(10,PORTAO_BRONZE), (120,PALACIO_CORAL),(230,PORTAO_BRONZE)] #PAR ORDENADOS
         #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL]
         #info_terrenos = np.array([[0,1,0,1],[0,1,0,1],[0,1,0,1]])
-        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]
+        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL, OBSERVATORIO, BOSQUE]
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
         for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(self)
