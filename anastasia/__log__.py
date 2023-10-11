@@ -1231,3 +1231,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Tue Oct 10 2023 21:36:25.834 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 65
+  print i, imagem
+        ^
+SyntaxError: missing parenthesis in call to 'print'
+'''},
