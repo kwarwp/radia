@@ -53,16 +53,9 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
            # Cada colchete aninhado representa uma dimensão do array.
            # Dois pares de colchetes - [[ ]]- indicam duas dimensões:
          """
-        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] 
-        vendedores = ["Marcus", "Amanda", "Ale", "Carol"]
-        posiçãovendas = [15, 20, 10, 30]
-
-
-    
-        #self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+20, local=lc) 
-        #for px, lc in enumerate(info_terrenos)]
-        for i, imagem in enumerate(info_terrenos):
-              print(i)
+        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]    
+        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+20, local=lc) 
+        for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(self)
         self.terrenos[1].ocupa(self.peao) #chamou o terreno 1 e ocupa com o peão
         
