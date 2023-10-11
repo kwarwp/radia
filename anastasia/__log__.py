@@ -1224,3 +1224,10 @@ NameError: name 'index' is not defined
                                                                                                                                                                                ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 10 2023 21:35:52.102 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 65
+  print i, imagem
+  ^
+IndentationError: expected an indented block
+'''},
