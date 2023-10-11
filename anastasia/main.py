@@ -33,9 +33,9 @@ STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg" #IMAGEM DA INTERNET
 PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
-PALACIO_CORAL = "https://imgur.com/STZy39Z"
-OBSERVATORIO = "https://imgur.com/J5fn5ZX"
-BOSQUE = "https://imgur.com/1LoY0Bf"
+PALACIO_CORAL = "https://imgur.com/jgDJxFF"
+OBSERVATORIO = "https://imgur.com/9KRg28l"
+BOSQUE = "https://imgur.com/XKYRlEa"
 PAWN = "https://imgur.com/zO3kiRp.png"
 
 
