@@ -27,15 +27,15 @@ from _spy.vitollino.main import Cena, Elemento, STYLE #Cena C maiusculo porque �
 #from julia.main import IlhaProibida as Ilha #importar o pacote julia módulo main, importar apenas a classe Ilha proibida e chamar de Ilha
 #from julia import main as amain #importar o pacote todo julia main, chamar de amain
 from array import array
-import random
+import numpy as np
 
 STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht 
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg" #IMAGEM DA INTERNET
 PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
-PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
-OBSERVATORIO = "https://imgur.com/9KRg28l"
-BOSQUE = "https://imgur.com/XKYRlEa"
+PALACIO_CORAL = "https://imgur.com/STZy39Z"
+OBSERVATORIO = "https://imgur.com/J5fn5ZX"
+BOSQUE = "https://imgur.com/1LoY0Bf"
 PAWN = "https://imgur.com/zO3kiRp.png"
 
 
@@ -45,33 +45,25 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
     Terrenos: Locais onde os peões podem ficar 
     """
     
-    def __init__(self): 
-    """
-    construcao, o primeiro parametro sempre se chama self - tabuleiro 
-    self.terrenos[1].ocupa(self.peao) - chama o terreno 1 e ocupa com o peão
-    """
+    def __init__(self): #construcao, o primeiro parametro sempre se chama self - tabuleiro 
         self.oceano = oceano = Cena(IMAGEM).vai() #self.oceano é igual ao local oceano 
         #self.Terreno1 = Terreno(PORTAO_BRONZE, posx=10, posy=50, cena=oceano)
         #self.Terreno2 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
         #info_terrenos= [(10,PORTAO_BRONZE), (120,PALACIO_CORAL),(230,PORTAO_BRONZE)] #PAR ORDENADOS
         #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL]
         #info_terrenos = np.array([[0,1,0,1],[0,1,0,1],[0,1,0,1]])
-        lista_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, OBSERVATORIO, BOSQUE]
-        info_terrenos = random.shuffle(lista_terrenos)
-
+        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL, OBSERVATORIO, BOSQUE]
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
         for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(self)
         self.terrenos[1].ocupa(self.peao) #chamou o terreno 1 e ocupa com o peão
         
     def direita(self, tereno):
-        """
-        achar um terreno
-        Move o peão para a direita
+        """Move o peão para a direita
         :param terreno: O terreno onde está o peão 
         :return
         """
-        aqui = self.terrenos.index(terreno) 
+        aqui = self.terrenos.index(terreno) #achar um terreno
         return self.terrenos[aqui+1]
                 
 class Terreno:
@@ -82,7 +74,7 @@ class Terreno:
         self.posx, self.posy = posx, posy
         
     def ocupa(self, peao):
-        self.peao = peao #o self marca que o peao pertence a ele mesmo peao
+        self.peao = peao #peao pertence a ele mesmo peao
         peao.mover(self.posx, self)
                                
 class Peao:  
@@ -92,10 +84,9 @@ class Peao:
     def __init__(self, ilha):
         """
         peao de posse da ilha
-        sel.peao - PARAMETRO VAI CAPTURA O CLICK DO MOUSE E EXECUTA O MOVE 
         """
         self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80,
-        cena=ilha.oceano, vai=self.move) 
+        cena=ilha.oceano, vai=self.move) #PARAMETRO VAI CAPTURA O CLICK DO MOUSE E EXECUTA O MOVE 
         self.terreno = None
         self.ilha = ilha 
         #self.peao.vai = self.move outro modo de dizer vai=self.move
