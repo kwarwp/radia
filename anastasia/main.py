@@ -23,26 +23,39 @@ Changelog
 |   `Labase <http://labase.selfip.org/>`_ - `NCE <https://portal.nce.ufrj.br>`_ - `UFRJ <https://ufrj.br/>`_.
 """
 
+"""
+importacao de diretorio / biblioteca
+"""
 from _spy.vitollino.main import Cena, Elemento, STYLE #Cena C maiusculo porque é classe  Elemento peçinhas que colocam na cena 
 #from julia.main import IlhaProibida as Ilha #importar o pacote julia módulo main, importar apenas a classe Ilha proibida e chamar de Ilha
 #from julia import main as amain #importar o pacote todo julia main, chamar de amain
 from array import array
 import numpy as np
 
+"""
+IMAGENS
+"""
 STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht 
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg" #IMAGEM DA INTERNET
-PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
-PALACIO_CORAL = "https://imgur.com/STZy39Z"
-OBSERVATORIO = "https://imgur.com/J5fn5ZX"
-BOSQUE = "https://imgur.com/1LoY0Bf"
+P = "https://imgur.com/BL6lB7H.jpg" #PORTAO_BRONZE 
+C = "https://imgur.com/STZy39Z" #PALACIO_CORAL 
+O = "https://imgur.com/J5fn5ZX" #OBSERVATORIO
+B = "https://imgur.com/1LoY0Bf" #BOSQUE
 PAWN = "https://imgur.com/zO3kiRp.png"
+T = "https://i.imgur.com/DuyTTha.jpg" #TEMPLO
+A = "https://imgur.com/iCrJ46A"
+M = "https://imgur.com/a/KYT6HiQ"
+F = "https://imgur.com/xYv9YdG"
+D = "https://i.imgur.com/OHmUIhz.jpg" 
+
 
 
 class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem que estar intendado
     """
     Representa a classe principal do jogo
     Terrenos: Locais onde os peões podem ficar 
+    MONTAGEM DO JOGO
     """
     
     def __init__(self): #construcao, o primeiro parametro sempre se chama self - tabuleiro 
@@ -52,7 +65,8 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         #info_terrenos= [(10,PORTAO_BRONZE), (120,PALACIO_CORAL),(230,PORTAO_BRONZE)] #PAR ORDENADOS
         #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL]
         #info_terrenos = np.array([[0,1,0,1],[0,1,0,1],[0,1,0,1]])
-        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL, OBSERVATORIO, BOSQUE]
+        info_terrenos= list("MFCOBTAMFD"*3)
+        shuffle(info_terrenos)
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
         for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(self)
