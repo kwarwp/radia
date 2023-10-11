@@ -47,13 +47,13 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         #self.Terreno1 = Terreno(PORTAO_BRONZE, posx=10, posy=50, cena=oceano)
         #self.Terreno2 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
         #info_terrenos= [(10,PORTAO_BRONZE), (120,PALACIO_CORAL),(230,PORTAO_BRONZE)] #PAR ORDENADOS
-        info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL]
-        info_terrenos = np.array([[0,1,0,1],[0,1,0,1],[0,1,0,1]])
+        #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL]
+        #info_terrenos = np.array([[0,1,0,1],[0,1,0,1],[0,1,0,1]])
         """# Array bidimensional4x3
            # Cada colchete aninhado representa uma dimensão do array.
            # Dois pares de colchetes - [[ ]]- indicam duas dimensões:
          """
-                        
+        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]              
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+20, local=lc) 
         for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(self)
@@ -121,7 +121,7 @@ if __name__ == "__main__": #troca o name pelo main
     #print((amain.__name__))
     ##import antigravity as ag
     #from __future__ import braces
-    import __phello__
+    #import __phello__
     #ag.fly()
     
     
