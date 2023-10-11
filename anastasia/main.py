@@ -54,7 +54,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
            # Dois pares de colchetes - [[ ]]- indicam duas dimensões:
          """
         info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]    
-        self.terrenos = [Terreno(cena=oceano, posx=px*110+20, posy=py*110+20, local=lc) 
+        self.terrenos = [Terreno(cena=oceano, posx=px*110+20, posy=py*110+20, local=lc)] 
         for px, py, lc in enumerate(info_terrenos)
         self.peao = Peao(self)
         self.terrenos[1].ocupa(self.peao) #chamou o terreno 1 e ocupa com o peão
