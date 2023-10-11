@@ -1359,3 +1359,10 @@ NameError: name 'py' is not defined
                                                                                                                                                ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 10 2023 21:45:09.202 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 58
+  for px, py, lc in enumerate(info_terrenos)
+                                             ^
+SyntaxError: invalid syntax
+'''},
