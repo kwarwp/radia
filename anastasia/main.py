@@ -29,8 +29,8 @@ from _spy.vitollino.main import Cena, Elemento, STYLE #Cena C maiusculo porque �
 from array import array
 import numpy as np
 
-STYLE["width"] = 1600 #a varios estilos, aqui selecionamos o widht 
-STYLE["height"] = "800px"
+STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht 
+STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg" #IMAGEM DA INTERNET
 PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
 PALACIO_CORAL = "https://img.freepik.com/fotos-premium/palacio-real-de-esplendor-arabe-islamico-em-um-pais-das-maravilhas-da-selva-tropical_865583-219.jpg"
@@ -47,14 +47,14 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         #self.Terreno1 = Terreno(PORTAO_BRONZE, posx=10, posy=50, cena=oceano)
         #self.Terreno2 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
         #info_terrenos= [(10,PORTAO_BRONZE), (120,PALACIO_CORAL),(230,PORTAO_BRONZE)] #PAR ORDENADOS
-        terrenos_lista = [PORTAO_BRONZE, PALACIO_CORAL]
+        info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL]
         info_terrenos = np.array([[0,1,0,1],[0,1,0,1],[0,1,0,1]])
         """# Array bidimensional4x3
            # Cada colchete aninhado representa uma dimensão do array.
            # Dois pares de colchetes - [[ ]]- indicam duas dimensões:
          """
                         
-        self.terrenos = [Terreno(cena=oceano, posy=100, posx=px*110+20, local=lc) 
+        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+20, local=lc) 
         for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(self)
         self.terrenos[1].ocupa(self.peao) #chamou o terreno 1 e ocupa com o peão
@@ -102,9 +102,7 @@ class Peao:
     def move_(self, ev=None):  # Corrigir: não está condizente!
         terreno_destino = self.ilha.direita(self.terreno)
         #self.peao.x = 170
-        terreno_destino.ocupa(self)  
-        
-        
+        terreno_destino.ocupa(self)          
     def mover(self, x, terreno): 
         """
         movimento peão no terreno
@@ -120,4 +118,12 @@ if __name__ == "__main__": #troca o name pelo main
     """
     #print (help(Peao))
     #print((amain.__name__)) este comando mostra o nome do módulo importado no caso anastasia.main   
+    #print((amain.__name__))
+    ##import antigravity as ag
+    #from __future__ import braces
+    import __phello__
+    #ag.fly()
+    
+    
+    
     IlhaProibida()
