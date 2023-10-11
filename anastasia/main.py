@@ -53,8 +53,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL]
         #info_terrenos = np.array([[0,1,0,1],[0,1,0,1],[0,1,0,1]])
         lista_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, OBSERVATORIO, BOSQUE]
-        lista_nomes = ['Maria', 'João', 'Pedro', 'Cláudia']
-        info_terrenos = random.shuffle(lista_terrenos)
+        info_terrenos += random.shuffle(lista_terrenos)
 
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
         for px, lc in enumerate(info_terrenos)]
