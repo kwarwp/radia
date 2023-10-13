@@ -1780,3 +1780,10 @@ UnboundLocalError: local variable 'info_terrenos' referenced before assignment
     shuffle(info_terrenos)
 NameError: name 'shuffle' is not defined
 '''},
+{'date': 'Fri Oct 13 2023 11:13:10.290 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 77
+  """
+  ^
+IndentationError: expected an indented block
+'''},
