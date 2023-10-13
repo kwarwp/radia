@@ -74,10 +74,10 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         self.terrenos[1].ocupa(self.peao) #chamou o terreno 1 e ocupa com o peão
 
     def CriarCartas():
-    """
-    Define a função CriarCartas
-    função para colocar as cartas no tabuleiro
-    """
+        """
+        Define a função CriarCartas 
+        para colocar as cartas no tabuleiro
+        """
         tabuleiro = [i for i in range(1, 24)] #Gera uma lista de cartas com números de 1 a 24, representando as cartas
         random.shuffle(tabuleiro) #Embaralha a lista de cartas (tabuleiro)
         for i in range(1): #sorteia 1 vez, 2 cartas  
