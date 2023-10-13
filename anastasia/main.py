@@ -26,11 +26,12 @@ Changelog
 """
 importacao de diretorio / biblioteca
 """
-from _spy.vitollino.main import Cena, Elemento, STYLE #Cena C maiusculo porque é classe  Elemento peçinhas que colocam na cena 
+from _spy.vitollino.main import Cena, Elemento, STYLE #Cena C maiusculo porque é classe  Elemento pecinhas que colocam na cena 
 #from julia.main import IlhaProibida as Ilha #importar o pacote julia módulo main, importar apenas a classe Ilha proibida e chamar de Ilha
 #from julia import main as amain #importar o pacote todo julia main, chamar de amain
-from array import array
-import numpy as np
+#from array import array
+#import numpy as np
+import random # Importa o módulo random do Python
 
 """
 IMAGENS
@@ -71,6 +72,24 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(self)
         self.terrenos[1].ocupa(self.peao) #chamou o terreno 1 e ocupa com o peão
+
+    def CriarCartas():
+    """
+    Define a função CriarCartas
+    função para colocar as cartas no tabuleiro
+    """
+        tabuleiro = [i for i in range(1, 24)] #Gera uma lista de cartas com números de 1 a 24, representando as cartas
+        random.shuffle(tabuleiro) #Embaralha a lista de cartas (tabuleiro)
+        for i in range(1): #sorteia 1 vez, 2 cartas  
+            print(tabuleiro[i:i+2]) 
+        for i in range(1): #sorteia 1 vez, 4 cartas  
+            print(tabuleiro[i:i+4]) 
+        for i in range(2): #sorteia 2 vezes, 6 cartas  
+            print(tabuleiro[i:i+6]) 
+        for i in range(1): #sorteia 1 vez, 4 cartas  
+            print(tabuleiro[i:i+4]) 
+        for i in range(1): #sorteia 1 vez, 2 cartas  
+            print(tabuleiro[i:i+2]) 
         
     def direita(self, tereno):
         """Move o peão para a direita
