@@ -39,16 +39,12 @@ IMAGENS
 STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht 
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg" #IMAGEM DA INTERNET
-P = "https://imgur.com/BL6lB7H.jpg" #PORTAO_BRONZE 
-C = "https://imgur.com/STZy39Z" #PALACIO_CORAL 
-O = "https://imgur.com/J5fn5ZX" #OBSERVATORIO
-B = "https://imgur.com/1LoY0Bf" #BOSQUE
-PAWN = "https://imgur.com/zO3kiRp.png"
-T = "https://i.imgur.com/DuyTTha.jpg" #TEMPLO
-A = "https://imgur.com/iCrJ46A"
-M = "https://imgur.com/a/KYT6HiQ"
-F = "https://imgur.com/xYv9YdG"
-D = "https://i.imgur.com/OHmUIhz.jpg" 
+PORTAO_BRONZE  = "https://imgur.com/BL6lB7H.jpg" #PORTAO_BRONZE 
+PALACIO_CORAL  = "https://imgur.com/STZy39Z" #PALACIO_CORAL 
+OBSERVATORIO = "https://imgur.com/J5fn5ZX" #OBSERVATORIO
+BOSQUE = "https://imgur.com/1LoY0Bf" #BOSQUE
+
+PAWN = "https://imgur.com/zO3kiRp.png" #PINO
 
 
 
@@ -78,7 +74,8 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         Define a função CriarCartas 
         para colocar as cartas no tabuleiro
         """
-        tabuleiro = [i for i in range(1, 24)] #Gera uma lista de cartas com números de 1 a 24, representando as cartas
+        #tabuleiro = [i for i in range(1, 24)] #Gera uma lista de cartas com números de 1 a 24, representando as cartas
+        tabuleiro = [PORTAO_BRONZE, PALACIO_CORAL, OBSERVATORIO, BOSQUE] 
         random.shuffle(tabuleiro) #Embaralha a lista de cartas (tabuleiro)
         for i in range(1): #sorteia 1 vez, 2 cartas  
             print(tabuleiro[i:i+2]) 
