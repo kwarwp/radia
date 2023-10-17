@@ -75,3 +75,10 @@ AttributeError: 'StringIO' object has no attribute '__exit__'
     avt.seek(0)
 NameError: name 'avt' is not defined
 '''},
+{'date': 'Tue Oct 17 2023 16:32:24.323 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 11
+  Jb = {local=[3,0], tit="Vamos desembarcar do navio", texto="Desembarcar!", foi=".i.bote"}
+                                                                                           ^
+SyntaxError: invalid syntax
+'''},
