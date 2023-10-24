@@ -57,7 +57,7 @@ class IlhaProibida:
         self.terrenos = [Terreno(cena=self.oceano, posy=px//6,
                          posx=((px%6)+int(abs(2.5-px//6))), local=lc, ilha=self)
                          for px, lc in enumerate(info_terrenos) if px%6 < 6-int(abs(2.5-px//6))*2]
-        self.terreno[4].afunda()
+        self.terrenos[4].afunda()
         
     def desocupa_e_vai_para(self, terreno_destino):
         self.peao.move(terreno_destino)
