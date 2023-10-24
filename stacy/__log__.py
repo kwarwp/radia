@@ -35,3 +35,10 @@ IndexError: list index out of range
     self.terrenos[10].ocupa(self.peao)
 IndexError: list index out of range
 '''},
+{'date': 'Tue Oct 24 2023 10:11:41.240 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 92
+  def direita(self, terreno):
+  ^
+IndentationError: unexpected indent
+'''},
