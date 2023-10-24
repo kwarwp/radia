@@ -642,3 +642,10 @@ NameError: free variable 'px' referenced before assignment in enclosing scope
     self.terrenos = [[Terreno(cena=oceano, posy=py*110+50, posx=px*110+10, local=lc)
 NameError: free variable 'px' referenced before assignment in enclosing scope
 '''},
+{'date': 'Tue Oct 24 2023 11:17:01.463 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 59
+  if px*py >2
+  ^
+IndentationError: unexpected indent
+'''},
