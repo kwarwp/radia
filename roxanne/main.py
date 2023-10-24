@@ -58,6 +58,9 @@ class IlhaProibida:
                          posx=((px%6)+int(abs(2.5-px//6))), local=lc, ilha=self)
                          for px, lc in enumerate(info_terrenos) if px%6 < 6-int(abs(2.5-px//6))*2]
         
+    def desocupa_e_vai_para(terreno_destino):
+        self.peao.move(terreno_destino)
+        
     def direita(self, terreno):
         """ Move o peão para a direita.
         
@@ -78,6 +81,15 @@ class Terreno:
     def vai(self, ev=0):
         self.ilha.peao.mover(self)
         
+    def desocupa_e_vai_para(terreno_destino):
+        def contiguos(origem, destino):
+            if not origem:
+                return True
+            return True # fazer a conta aqui
+        peao_pode_ir = contiguos(self, terreno_destino)
+        # executar o movimento do peao agora que foi autorizado pelo pode ir
+        self.peao.move(terreno_destino)
+        
     def ocupa(self, peao):
         self.peao = peao
         peao.mover(self.posx, self)
@@ -87,8 +99,8 @@ class Peao:
     """
     def __init__(self, ilha):
         self.peao = Elemento(PAWN, x=20, y=70, w=80, h= 80,
-        cena=ilha.oceano, vai=self.move)
-        self.terreno = None
+        cena=ilha.oceano)
+        self.terreno = ilha # era None mas o peão agora nasce na ilha
         self.ilha = ilha
         #self.peao.vai = self.move
         
@@ -96,13 +108,11 @@ class Peao:
         terreno_destino = self.ilha.direita(0) #(self.terreno)
         self.peao.y = 300
         
-    def move(self, ev=None):  # Corrigir: não está condizente!
-        terreno_destino = self.ilha.direita(self.terreno)
-        #self.peao.x = 170
-        terreno_destino.ocupa(self)        
-    def mover(self, terreno):
+    def move(self, terreno):  # Corrigir: não está condizente!
         self.terreno = terreno
         self.peao.x, self.peao.y = terreno.posx*110+10, terreno.posy*110 + 50
+    def mover(self, terreno_destino):
+        self.terreno.desocupa_e_vai_para(terreno_destino)
 
         
 if __name__ == "__main__": 
