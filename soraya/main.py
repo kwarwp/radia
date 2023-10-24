@@ -72,6 +72,14 @@ class Terreno:
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
         self.local.vai = self.vai
+        
+    def desocupa_e_vai_para(terreno_destino):
+        def contiguos(origem, destino):
+            if not origem:
+                return True
+            return True
+        peao_pode_ir = contiguos(self, terreno_destino)
+        #executar o movimento do peao
     
     def vai(self,ev=0):
         self.ilha.peao.mover(self)
