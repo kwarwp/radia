@@ -56,7 +56,7 @@ class IlhaProibida:
         self.terrenos = [[Terreno(cena=oceano, posy=py*110+50, posx=px*110+10, local=lc)
                          for px, lc in enumerate(info_terrenos)]
                          	for py, lc in enumerate(info_terrenos)
-                            	if px*py >2]
+                         if px*py >2]
         
     def direita(self, terreno):
         """ Move o peão para a direita.
