@@ -1989,3 +1989,10 @@ SyntaxError: invalid syntax
         ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 24 2023 10:56:01.469 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 95
+  def create(self):
+  ^
+IndentationError: unexpected indent
+'''},
