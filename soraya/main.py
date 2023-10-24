@@ -18,10 +18,9 @@ Changelog
 |   `Labase <http://labase.selfip.org/>`_ - `NCE <https://portal.nce.ufrj.br>`_ - `UFRJ <https://ufrj.br/>`_.
 """
 
+
 from _spy.vitollino.main import Cena, Elemento, STYLE
-from julia.main import IlhaProibida as Ilha
-from julia import main as jmain
-from anastasia import main as amain
+#from anastasia import main as amain
 STYLE["width"] = 800
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
@@ -43,7 +42,7 @@ class IlhaProibida:
         #cena=oceano)
         #self.terreno1 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
         #info_terrenos= [(10, PORTAO_BRONZE), (120, PALACIO_CORAL), (230, PORTAO_BRONZE)]
-        #self.terrenos = []
+        self.terrenos = []
         self.monta_tabuleiro_oceano()
         self.peao = Peao(self)
         self.terrenos[1].ocupa(self.peao)
@@ -52,9 +51,18 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
-        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE]
-        self.terrenos = [[Terreno(cena=oceano, posy=py*110+50, posx=px*110+10, local=lc)
-                         for px, lc in enumerate(info_terrenos)] for py, lc in enumerate(info_terrenos)]
+        matriz = [ [0,0,1,1,0,0], [0,1,1,1,1,0], [1,1,1,1,1,1], [1,1,1,1,1,1], [0,1,1,1,1,0], [0,0,1,1,0,0]]
+        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
+        py=50;
+        px=1;
+        for i in range(6):
+            for j in range(6):
+                if matriz[i][j] == 1:
+                    self.terrenos = [Terreno(local=info_terrenos[i*j], posy=py, posx=px*110+10,cena=oceano)]
+                px = px+1
+            py = py + 110
+            px = 1
+                    
         
     def direita(self, terreno):
         """ Move o peão para a direita.
