@@ -127,3 +127,10 @@ NameError: name 'info_terrenos' is not defined
                                                                                                                   ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 24 2023 10:21:27.135 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 56
+  self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
+                                                                                                            ^
+SyntaxError: invalid syntax
+'''},
