@@ -28,7 +28,7 @@ class IlhaProibida:
         self.terreno10 = Terreno(BOSQUE, posx=10, posy=410, cena=oceano)
         self.terreno11 = Terreno(PALACIO_CORAL, posx=120, posy=410, cena=oceano)
         self.terreno12 = Terreno(PALACIO_CORAL, posx=230, posy=410, cena=oceano)
-        self.terreno13 = Terreno(PANTANO, posx=230, posy=410, cena=oceano)
+        self.terreno13 = Terreno(PANTANO, posx=340, posy=410, cena=oceano)
         #Os próximos 8 terrenos
         self.terreno14 = Terreno(BOSQUE, posx=450, posy=50, cena=oceano)
         self.terreno15 = Terreno(PALACIO_CORAL, posx=450, posy=170, cena=oceano)
