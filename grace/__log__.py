@@ -453,3 +453,10 @@ TypeError: monta_tabuleiro_oceano() takes 1 positional argument but more were gi
     self.terrenos[1,1].ocupa(self.peao)
 TypeError: list indices must be integer, not tuple
 '''},
+{'date': 'Tue Oct 24 2023 10:21:42.795 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 80
+  peao.mover(self.posx + 10, self.posy + 10 self)
+                                             ^
+SyntaxError: invalid syntax
+'''},
