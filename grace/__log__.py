@@ -285,3 +285,10 @@ TypeError: mover() takes 2 positional arguments but more were given
     peao.mover(self.posx, self.posy)
 TypeError: mover() takes 2 positional arguments but more were given
 '''},
+{'date': 'Mon Oct 23 2023 21:35:27.273 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 46
+  info_terrenos = 
+                   ^
+SyntaxError: invalid syntax
+'''},
