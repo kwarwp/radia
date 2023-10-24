@@ -46,7 +46,8 @@ class IlhaProibida:
         self.terrenos = []
         self.monta_tabuleiro_oceano()
         self.peao = Peao(self)
-        self.terrenos[1].ocupa(self.peao)
+        self.peao.mover(self.terreno[0])
+        #self.terrenos[1].ocupa(self.peao)
         
     def monta_tabuleiro_oceano(self):
         """ Montar o tabuleiro em forma de diamante.
