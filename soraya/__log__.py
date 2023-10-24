@@ -1007,3 +1007,10 @@ IndexError: list index out of range
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Tue Oct 24 2023 11:47:09.274 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 55
+  self.terrenos = [Terreno(cena=oceano, posy=px//6*110 + 50, posx=((px%6)+int(abs(2.5-px//6)))*110+10, local=lc)
+  ^
+IndentationError: unexpected indent
+'''},
