@@ -74,10 +74,14 @@ class Terreno:
         cena=cena)
         self.peao = None
         self.posx, self.posy = posx, posy
+        self.local.vai = self.vai
         
     def ocupa(self, peao):
         self.peao = peao
         peao.mover(self.posx + 10, self.posy + 10, self)
+        
+    def vai(self, ev=None):
+        self.ilha.peao.move(terreno)
 
 class Peao:
     """ Marcador usado para definir a posição do jogador nos terrenos.
@@ -93,10 +97,9 @@ class Peao:
         terreno_destino = self.ilha.direita(0) #(self.terreno)
         self.peao.y = 300
         
-    def move(self, ev=None):  # Corrigir: não está condizente!
-        terreno_destino = self.ilha.direita(self.terreno)
-        #self.peao.x = 170
-        terreno_destino.ocupa(self)        
+    def move(self, terreno, ev=None):  # Corrigir: não está condizente!
+        terreno.ocupa(self)   
+        
     def mover(self, x, y, terreno):
         self.terreno = terreno
         self.peao.x = x
