@@ -154,3 +154,10 @@ NameError: name 'py' is not defined
     self.terrenos = [Terreno(cena=oceano, posy=(px*110+10)%px*7*110, posx=px*110+10, local=lc)
 ZeroDivisionError: integer division or modulo by zero
 '''},
+{'date': 'Tue Oct 24 2023 10:10:35.933 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 53
+  self.terrenos = [Terreno(cena=oceano, posy=py*110+10, posx=(px*110+10)%(6*110+10), local=lc)
+                                                                                                                                                                           ^
+SyntaxError: invalid syntax
+'''},
