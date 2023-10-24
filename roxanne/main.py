@@ -43,17 +43,15 @@ class IlhaProibida:
         #cena=oceano)
         #self.terreno1 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
         #info_terrenos= [(10, PORTAO_BRONZE), (120, PALACIO_CORAL), (230, PORTAO_BRONZE)]
-        self.terrenos = []
-        self.monta_tabuleiro_oceano()
+        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]
+        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
+        for px, lc in enumerate(info_terrenos)]
         self.peao = Peao(self)
         self.terrenos[1].ocupa(self.peao)
         
-    def monta_tabuleiro_oceano(self)
-        """ Montar o tabuleiro em forma de diamante.
-        
-        """
-        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 6
-        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
+    def monta_tabuleiro_oceano(self):
+        info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]
+        self.terrenos = [Terreno(cena = oceano, posy = 50, posx = px*110+10, local=lc)
                          for px, lc in enumerate(info_terrenos)]
         
     def direita(self, terreno):
@@ -106,5 +104,5 @@ if __name__ == "__main__":
     import __phello__
     #ag.fly()
     
-    #IlhaProibida()
+    IlhaProibida()
     #IlhaProibida()
