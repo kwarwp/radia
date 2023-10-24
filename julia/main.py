@@ -58,7 +58,7 @@ class IlhaProibida:
         for i in range(6):
             for j in range(6):
                 if matriz[i][j] == 1:
-                    self.terrenos = [Terreno(local=lc, posy=py, posx=px*110+10,cena=oceano)]
+                    self.terrenos = [Terreno(local=info_terrenos[i*j], posy=py, posx=px*110+10,cena=oceano)]
                 px = px+1
             py = py + 110
             px = 1
