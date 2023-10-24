@@ -55,8 +55,8 @@ class IlhaProibida:
         info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 6
         py=50;
         px=1;
-        for i in range(5):
-            for j in range(5):
+        for i in range(6):
+            for j in range(6):
                 if matriz[i][j] == 1:
                     self.terrenos = [Terreno(cena=oceano, posy=py, posx=px*110+10, local=lc)
                          for px, lc in enumerate(info_terrenos)]
