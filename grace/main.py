@@ -56,7 +56,7 @@ class IlhaProibida:
             [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
             [PORTAO_BRONZE, PALACIO_CORAL],
         ]
-        self.terrenos = [Terreno(cena=oceano, posy=py*110 + 10, posx=(6-len(row))*55 + px*110+10, local=lc)
+        self.terrenos = [Terreno(ilha=self, cena=oceano, posy=py*110 + 10, posx=(6-len(row))*55 + px*110+10, local=lc)
             for py, row in enumerate(info_terrenos) for px, lc in enumerate(row)]
         
     def direita(self, terreno):
@@ -69,11 +69,12 @@ class IlhaProibida:
         return self.terrenos[aqui+1]
 
 class Terreno:
-    def __init__(self, local, posx, posy, cena):
+    def __init__(self, local, posx, posy, cena, ilha):
         self.local = Elemento(local, x=posx, y=posy, w=100, h= 100,
         cena=cena)
         self.peao = None
         self.posx, self.posy = posx, posy
+        self.ilha = ilha
         self.local.vai = self.vai
         
     def ocupa(self, peao):
