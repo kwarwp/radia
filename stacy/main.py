@@ -49,21 +49,12 @@ PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
 PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
 PAWN = "https://imgur.com/zO3kiRp.png"
 
-class IlhaProibida:
-    def __init__(self):
-        from _spy.vitollino.main import Cena, Elemento, STYLE
 
-STYLE["width"] = 800
-STYLE["height"] = "600px"
 
 class IlhaProibida:
     def __init__(self):
         from _spy.vitollino.main import Cena, Elemento, STYLE
 
-STYLE["width"] = 800
-STYLE["height"] = "600px"
-
-class IlhaProibida:
     def __init__(self):
         self.oceano = oceano = Cena("https://imgur.com/gVHmY2v.jpg").vai()
         
@@ -73,7 +64,6 @@ class IlhaProibida:
             [1, 1, 1, 1, 1, 1],
         ]
         
-        # Create a deep copy of the original matrix to keep it unchanged
         original_matrix = [row[:] for row in matriz]
         
         for i in range(3):
@@ -86,12 +76,10 @@ class IlhaProibida:
                 terreno.x = 110 * j + 10
                 terreno.y = 100 * i + 50
         
-        # Invert the matrix
-        matriz.reverse()  # Invert the order of the rows
+        #matriz.reverse()  
         for i in range(3):
-            matriz[i].reverse()  # Invert the order of the elements in each row
+            matriz[i].reverse()  
         
-        # Append the inverted matrix to the original
         matriz += original_matrix
 
 
