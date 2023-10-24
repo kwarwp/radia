@@ -49,14 +49,14 @@ class IlhaProibida:
         
     def monta_tabuleiro_oceano(self):
         info_terrenos = [
-            [PORTAO_BRONZE, PALACIO_CORAL],
-            [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
+            [NONE, NONE, PORTAO_BRONZE, PALACIO_CORAL, NONE, NONE],
+            [NONE, PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL, NONE],
             [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
             [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
-            [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
-            [PORTAO_BRONZE, PALACIO_CORAL],
+            [NONE, PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL, NONE],
+            [NONE, NONE, PORTAO_BRONZE, PALACIO_CORAL, NONE, NONE]
         ]
-        self.terrenos = [Terreno(cena=oceano, posy=py*110 + 10, posx=(6-len(row))*55 + px*110+10, local=lc)
+        self.terrenos = [Terreno(cena=oceano, posy=py*110 + 10, posx=px*110+10, local=lc)
             for py, row in enumerate(info_terrenos) for px, lc in enumerate(row)]
         
     def direita(self, terreno):
