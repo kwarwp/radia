@@ -49,7 +49,7 @@ class IlhaProibida:
         self.terrenos[1].ocupa(self.peao)
         
     """def monta_tabuleiro_oceano(self):
-        """ Montar o tabuleiro em forma de diamante."""
+        """ Montar o tabuleiro em forma de diamante"""
         
         """
 def monta_tabuleiro_oceano(self):
