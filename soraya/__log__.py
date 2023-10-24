@@ -1140,3 +1140,10 @@ TypeError: mover() takes 2 positional arguments but more were given
     peao.mover(self.posx, self)
 TypeError: mover() takes 2 positional arguments but more were given
 '''},
+{'date': 'Tue Oct 24 2023 13:04:06.893 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 25
+  Ilha()
+  ^
+IndentationError: unexpected indent
+'''},
