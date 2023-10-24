@@ -51,17 +51,9 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
-        matriz = [ [0,0,1,1,0,0], [0,1,1,1,1,0], [1,1,1,1,1,1], [1,1,1,1,1,1], [0,1,1,1,1,0], [0,0,1,1,0,0]]
         info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
-        py=50;
-        px=1;
-        for i in range(6):
-            for j in range(6):
-                if matriz[i][j] == 1:
-                    self.terrenos = [Terreno(local=info_terrenos[i*j], posy=py, posx=px*110+10,cena=oceano)]
-                px = px+1
-            py = py + 110
-            px = 1
+        self.terrenos = [Terreno(cena=oceano, posy=px//6*110 + 50, posx=((px%6)+int(abs(2.5-px//6)))*110+10, local=lc)
+                         for px, lc in enumerate(info_terrenos) if px%6 < 6-int(abs(2.5-px//6))*2]
                     
         
     def direita(self, terreno):
