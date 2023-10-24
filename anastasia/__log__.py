@@ -1982,3 +1982,10 @@ SyntaxError: invalid syntax
                                                                                                                                                                                                                              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 24 2023 10:52:34.805 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 83
+  lc = for i in range(1): #sorteia 1 vez, 2 cartas  
+        ^
+SyntaxError: invalid syntax
+'''},
