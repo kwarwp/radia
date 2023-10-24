@@ -13,7 +13,7 @@ Changelog
     Versão Inicial (26).
 
 |   **Open Source Notification:** This file is part of open source program **Ilha Proibida**
-|   **Copyright © 2023  Carlo Oliveira** <carlo@nce.ufrj.br>,
+|   **Copyright © 2023  Leonardo Cesar** <leonardocesarc@gmail.com>,
 |   **SPDX-License-Identifier:** `GNU General Public License v3.0 or later <http://is.gd/3Udt>`_.
 |   `Labase <http://labase.selfip.org/>`_ - `NCE <https://portal.nce.ufrj.br>`_ - `UFRJ <https://ufrj.br/>`_.
 """
@@ -53,7 +53,9 @@ class IlhaProibida:
         
         """
         info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 6
+        \n
         info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 5
+        \n
         info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 4
         info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 3
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
