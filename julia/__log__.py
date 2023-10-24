@@ -566,3 +566,23 @@ Traceback (most recent call last):
   module <module> line 24
     from julia import main as jmain
 '''},
+{'date': 'Tue Oct 24 2023 11:08:00.646 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 117
+    IlhaProibida()
+  module <module> line 46
+    self.monta_tabuleiro_oceano()
+  module <module> line 61
+    self.terrenos = [Terreno(cena=oceano, posy=py, posx=px*110+10, local=lc)]
+NameError: name 'lc' is not defined
+'''},
