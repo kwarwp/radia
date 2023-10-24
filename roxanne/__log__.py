@@ -306,3 +306,10 @@ Traceback (most recent call last):
   module julia.main line 23
     from julia.main import IlhaProibida as Ilha
 '''},
+{'date': 'Tue Oct 24 2023 10:24:56.352 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 111
+  print([abs(2-int(1.5x*0.6)//4) for x in range(24)])
+                       ^
+SyntaxError: invalid syntax
+'''},
