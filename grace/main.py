@@ -45,7 +45,7 @@ class IlhaProibida:
         #info_terrenos= [(10, PORTAO_BRONZE), (120, PALACIO_CORAL), (230, PORTAO_BRONZE)]
         self.monta_tabuleiro_oceano()
         self.peao = Peao(self)
-        self.terrenos[1].ocupa(self.peao)
+        self.terrenos[1][1].ocupa(self.peao)
         
     def monta_tabuleiro_oceano(self):
         info_terrenos = [
