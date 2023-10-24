@@ -43,17 +43,19 @@ class IlhaProibida:
         #cena=oceano)
         #self.terreno1 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
         #info_terrenos= [(10, PORTAO_BRONZE), (120, PALACIO_CORAL), (230, PORTAO_BRONZE)]
+        self.monta_tabuleiro_oceano()
+        self.peao = Peao(self)
+        self.terrenos[1].ocupa(self.peao)
+        
+    def monta_tabuleiro_oceano(self):
         info_terrenos = [
             [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
             [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
             [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
             [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]
         ]
-        print(info_terrenos)
         self.terrenos = [Terreno(cena=oceano, posy=py*110 + 10, posx=px*110+10, local=lc)
             for py, row in enumerate(info_terrenos) for px, lc in enumerate(row)]
-        self.peao = Peao(self)
-        self.terrenos[1].ocupa(self.peao)
         
     def direita(self, terreno):
         """ Move o peão para a direita.
