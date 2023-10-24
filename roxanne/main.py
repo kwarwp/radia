@@ -54,8 +54,8 @@ class IlhaProibida:
         
         """
         info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
-        self.terrenos = [Terreno(cena=self.oceano, posy=px//6*110 + 50,
-                         posx=((px%6)+int(abs(2.5-px//6)))*110+10, local=lc, ilha=self)
+        self.terrenos = [Terreno(cena=self.oceano, posy=px//6,
+                         posx=((px%6)+int(abs(2.5-px//6))), local=lc, ilha=self)
                          for px, lc in enumerate(info_terrenos) if px%6 < 6-int(abs(2.5-px//6))*2]
         
     def direita(self, terreno):
@@ -69,7 +69,7 @@ class IlhaProibida:
 
 class Terreno:
     def __init__(self, local, posx, posy, cena, ilha):
-        self.local = Elemento(local, x=posx, y=posy, w=100, h= 100,
+        self.local = Elemento(local, x=posx*110+10, y=posy*110 + 50, w=100, h= 100,
         cena=cena)
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
@@ -102,7 +102,7 @@ class Peao:
         terreno_destino.ocupa(self)        
     def mover(self, terreno):
         self.terreno = terreno
-        self.peao.x, self.peao.y = terreno.posx, terreno.posy
+        self.peao.x, self.peao.y = terreno.posx*110+10, terreno.posy*110 + 50
 
         
 if __name__ == "__main__": 
