@@ -31,7 +31,7 @@ class IlhaProibida:
         self.terreno13 = Terreno(PANTANO, posx=230, posy=410, cena=oceano)
         #Os próximos 8 terrenos
         self.terreno14 = Terreno(BOSQUE, posx=450, posy=50, cena=oceano)
-        self.terreno15 = Terreno(PALACIO_CORAL, posx=570, posy=170, cena=oceano)
+        self.terreno15 = Terreno(PALACIO_CORAL, posx=450, posy=170, cena=oceano)
         info_terrenos= [(10, PORTAO_BRONZE), (120, PALACIO_CORAL), (230, PORTAO_BRONZE)]
         info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
