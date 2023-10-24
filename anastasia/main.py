@@ -38,9 +38,9 @@ IMAGENS
 """
 STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht 
 STYLE["height"] = "600px"
-IMAGEM = "https://imgur.com/gVHmY2v.jpg" #IMAGEM DA INTERNET
+IMAGEM = "https:https://imgur.com/gVHmY2v.jpg" #IMAGEM DA INTERNET
 PORTAO_BRONZE  = "https://imgur.com/BL6lB7H.jpg" #PORTAO_BRONZE 
-PALACIO_CORAL  = "https://imgur.com/STZy39Z" #PALACIO_CORAL 
+PALACIO_CORAL  = "https://imgur.com/tLDbzd2.jpg" #PALACIO_CORAL 
 OBSERVATORIO = "https://imgur.com/J5fn5ZX" #OBSERVATORIO
 BOSQUE = "https://imgur.com/1LoY0Bf" #BOSQUE
 
@@ -62,31 +62,34 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         #info_terrenos= [(10,PORTAO_BRONZE), (120,PALACIO_CORAL),(230,PORTAO_BRONZE)] #PAR ORDENADOS
         #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL]
         #info_terrenos = np.array([[0,1,0,1],[0,1,0,1],[0,1,0,1]])
-        info_terrenos= list("MFCOBTAMFD"*3)
-        shuffle(info_terrenos)
-        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
-        for px, lc in enumerate(info_terrenos)]
+        #info_terrenos= list("MFCOBTAMFD"*3)
+       # shuffle(info_terrenos)
+        #self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
+        self.terrenos = []
+         self.monta_tabuleiro_oceano()
         self.peao = Peao(self)
-        self.terrenos[1].ocupa(self.peao) #chamou o terreno 1 e ocupa com o peão
+        self.terrenos[1].ocupa(self.peao)#chamou o terreno 1 e ocupa com o peão
+        #for px, lc in enumerate(info_terrenos)]
 
-    def CriarCartas():
+    def monta_tabuleiro_oceano(self):
         """
-        Define a função CriarCartas 
-        para colocar as cartas no tabuleiro
+        Montar o tabuleiro em forma de diamant
         """
+        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 6
+        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
+                         for px, lc in enumerate(info_terrenos)]
         #tabuleiro = [i for i in range(1, 24)] #Gera uma lista de cartas com números de 1 a 24, representando as cartas
-        tabuleiro = [PORTAO_BRONZE, PALACIO_CORAL, OBSERVATORIO, BOSQUE] 
-        random.shuffle(tabuleiro) #Embaralha a lista de cartas (tabuleiro)
+        random.shuffle(info_terrenos) #Embaralha a lista de cartas (tabuleiro)
         for i in range(1): #sorteia 1 vez, 2 cartas  
-            print(tabuleiro[i:i+2]) 
+            print(info_terrenos[i:i+2]) 
         for i in range(1): #sorteia 1 vez, 4 cartas  
-            print(tabuleiro[i:i+4]) 
+            print(info_terrenos[i:i+4]) 
         for i in range(2): #sorteia 2 vezes, 6 cartas  
-            print(tabuleiro[i:i+6]) 
+            print(info_terrenos[i:i+6]) 
         for i in range(1): #sorteia 1 vez, 4 cartas  
-            print(tabuleiro[i:i+4]) 
+            print(info_terrenos[i:i+4]) 
         for i in range(1): #sorteia 1 vez, 2 cartas  
-            print(tabuleiro[i:i+2]) 
+            print(info_terrenos[i:i+2]) 
         
     def direita(self, tereno):
         """Move o peão para a direita
