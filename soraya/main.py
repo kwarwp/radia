@@ -66,7 +66,7 @@ class IlhaProibida:
         return self.terrenos[aqui+1]
 
 class Terreno:
-    def __init__(self, local, posx, posy, cena):
+    def __init__(self, local, posx, posy, cena, ilha):
         self.local = Elemento(local, x=posx*110+10, y=posy*110+50, w=100, h= 100,
         cena=cena)
         self.peao, self.ilha = None, ilha
