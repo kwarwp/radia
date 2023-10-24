@@ -98,7 +98,7 @@ class Peao:
         terreno_destino = self.ilha.direita(self.terreno)
         #self.peao.x = 170
         terreno_destino.ocupa(self)        
-    def mover(self, x, terreno):
+    def mover(self, terreno):
         self.terreno = terreno
         self.peao.x, self.peao.y = terreno.posx*110+10, terreno.posy*110+50
 
