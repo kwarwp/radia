@@ -189,3 +189,10 @@ NameError: name 'Self' is not defined
     Self.terreno5 = Terreno(BOSQUE, posx=340, posy=170, cena=oceano)
 NameError: name 'Self' is not defined
 '''},
+{'date': 'Tue Oct 24 2023 12:19:07.960 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 28
+  self.terreno10 = Terreno(BOSQUE, posx=10, posy=410, cena=oceano
+                                                                           ^
+SyntaxError: invalid syntax
+'''},
