@@ -20,7 +20,7 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
-from julia.main import IlhaProibida as Ilha
+#from julia.main import IlhaProibida as Ilha
 from julia import main as jmain
 from anastasia import main as amain
 STYLE["width"] = 800
