@@ -75,8 +75,7 @@ class IlhaProibida:
 
 class Terreno:
     def __init__(self, local, posx, posy, cena):
-        self.local = Elemento(local, x=posx, y=posy, w=100, h= 100,
-        cena=cena)
+        self.local = Elemento(local, x=posx, y=posy, w=100, h= 100, cena=cena)
         self.peao = None
         self.posx, self.posy = posx, posy
         
@@ -88,8 +87,8 @@ class Peao:
     """ Marcador usado para definir a posição do jogador nos terrenos.
     """
     def __init__(self, ilha):
-        self.peao = Elemento(PAWN, x=20, y=70, w=80, h= 80,cena=ilha.oceano, vai=self.mover)
-        self.terreno = None
+        self.terreno = self.terrenos.index(1)
+        self.peao = Elemento(PAWN, x=self.terreno.posx, y=self.terreno.posy, w=80, h= 80,cena=ilha.oceano, vai=self.mover)
         self.ilha = ilha
         #self.peao.vai = self.move
         
