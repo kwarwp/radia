@@ -92,8 +92,15 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
             #print(info_terrenos[i:i+2]) 
         info_terrenos = self.sprite("terreno", 0, 0)
         info_terrenos.frame = 2  # este número seleciona o ladrilho que vai ser colocado
-        info_terrenos = self.sprite("ladrilho", 0, 0)  # mude a posição do ladrilho
-        info_terrenos.frame = 4  # troque o ladrilho!
+        info_terrenos = self.sprite("terreno", 0, 0)
+        info_terrenos.frame = 4  # este número seleciona o ladrilho que vai ser colocado
+        info_terrenos = self.sprite("terreno", 0, 0)
+        info_terrenos.frame = 6  # este número seleciona o ladrilho que vai ser colocado
+        info_terrenos = self.sprite("terreno", 0, 0)
+        info_terrenos.frame = 4  # este número seleciona o ladrilho que vai ser colocado
+        info_terrenos = self.sprite("terreno", 0, 0)
+        info_terrenos.frame = 2  # este número seleciona o ladrilho que vai ser colocado
+        
        
     def direita(self, terreno):
         """Move o peão para a direita
