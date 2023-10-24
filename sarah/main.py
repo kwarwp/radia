@@ -25,17 +25,7 @@ class IlhaProibida:
         self.terreno7 = Terreno(BOSQUE, posx=120, posy=290, cena=oceano)
         self.terreno8 = Terreno(PALACIO_CORAL, posx=230, posy=290, cena=oceano)
         self.terreno9 = Terreno(PALACIO_CORAL, posx=340, posy=290, cena=oceano)
-        self.terreno10 = Terreno(BOSQUE, posx=10, posy=410, cena=oceano)
-        self.terreno11 = Terreno(PALACIO_CORAL, posx=120, posy=410, cena=oceano)
-        self.terreno12 = Terreno(PALACIO_CORAL, posx=230, posy=410, cena=oceano)
-        self.terreno13 = Terreno(PANTANO, posx=340, posy=410, cena=oceano)
-        #Os próximos 8 terrenos
-        self.terreno14 = Terreno(BOSQUE, posx=450, posy=50, cena=oceano)
-        self.terreno15 = Terreno(PALACIO_CORAL, posx=450, posy=170, cena=oceano)
-        self.terreno16 = Terreno(PANTANO, posx=560, posy=50, cena=oceano)
-        self.terreno17 = Terreno(PORTAO_BRONZE, posx=560, posy=170, cena=oceano)
-        self.terreno18 = Terreno(PANTANO, posx=450, posy=290, cena=oceano)
-        self.terreno19 = Terreno(BOSQUE, posx=560, posy=290, cena=oceano)
+        self.terreno10 = Terreno(BOSQUE, posx=10, posy=410, cena=oceano
         info_terrenos= [(10, PORTAO_BRONZE), (120, PALACIO_CORAL), (230, PORTAO_BRONZE)]
         info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
