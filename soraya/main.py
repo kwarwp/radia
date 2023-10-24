@@ -52,10 +52,10 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
-        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL,PORTAO_BRONZE, PALACIO_CORAL]
+        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE]
         self.terrenos = [[Terreno(cena=oceano, posy=py*110+50, posx=px*110+10, local=lc)
                          for px, lc in enumerate(info_terrenos)]
-                         	for py in range(6)]
+                         	for py in range(3)]
         
     def direita(self, terreno):
         """ Move o peão para a direita.
