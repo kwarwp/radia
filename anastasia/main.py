@@ -134,15 +134,16 @@ class Peao:
     """
     Marcador usado para definir a posição do jogador nos terrenos.
     """
-    def __init__(self, ilha):
+    def __init__(self, ilha, frame, x, y):
         """
         peao de posse da ilha
         """
-        self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80,
+        self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80, #elemento vai por cima da cena 
         cena=ilha.oceano, vai=self.move) #PARAMETRO VAI CAPTURA O CLICK DO MOUSE E EXECUTA O MOVE 
         self.terreno = None
         self.ilha = ilha 
         #self.peao.vai = self.move outro modo de dizer vai=self.move
+      
         
     def move_(self, ev=None):  # Corrigir: não está condizente!
         """
@@ -162,6 +163,9 @@ class Peao:
         self.terreno = terreno
         self.peao.x = x
         self.peao.y = y
+       
+
+
 
         
 if __name__ == "__main__": #troca o name pelo main 
