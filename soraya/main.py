@@ -67,10 +67,11 @@ class IlhaProibida:
 
 class Terreno:
     def __init__(self, local, posx, posy, cena):
-        self.local = Elemento(local, x=posx, y=posy, w=100, h= 100,
+        self.local = Elemento(local, x=posx*110+10, y=posy*110+50, w=100, h= 100,
         cena=cena)
-        self.peao = None
+        self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
+        self.local.vai = self.vai
         
     def ocupa(self, peao):
         self.peao = peao
@@ -96,7 +97,7 @@ class Peao:
         terreno_destino.ocupa(self)        
     def mover(self, x, terreno):
         self.terreno = terreno
-        self.peao.x = x
+        self.peao.x, self.peao.y = terreno.posx*110+10, terreno.posy*110+50
 
         
 if __name__ == "__main__": 
