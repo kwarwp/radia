@@ -1,5 +1,5 @@
 # radia.roxanne.main.py
-# __author__ Carlo
+# __author__ Finn
 """Página de entrada do jogo Ilha Proibida.
 
 .. codeauthor:: Finn Kockelke
