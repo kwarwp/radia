@@ -32,6 +32,7 @@ from _spy.vitollino.main import Cena, Elemento, STYLE #Cena C maiusculo porque √
 #from array import array
 #import numpy as np
 import random # Importa o m√≥dulo random do Python
+from _spy.circus.game import Circus
 
 """
 IMAGENS
