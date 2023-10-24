@@ -80,18 +80,22 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
                          for px, lc in enumerate(info_terrenos)]
         #tabuleiro = [i for i in range(1, 24)] #Gera uma lista de cartas com números de 1 a 24, representando as cartas
-        for i in range(1): #sorteia 1 vez, 2 cartas  
-            print(info_terrenos[i:i+2]) 
-        for i in range(1): #sorteia 1 vez, 4 cartas  
-            print(info_terrenos[i:i+4]) 
-        for i in range(2): #sorteia 2 vezes, 6 cartas  
-            print(info_terrenos[i:i+6]) 
-        for i in range(1): #sorteia 1 vez, 4 cartas  
-            print(info_terrenos[i:i+4]) 
-        for i in range(1): #sorteia 1 vez, 2 cartas  
-            print(info_terrenos[i:i+2]) 
-        
-    def direita(self, tereno):
+        #for i in range(1): #sorteia 1 vez, 2 cartas  
+            #print(info_terrenos[i:i+2]) 
+        #for i in range(1): #sorteia 1 vez, 4 cartas  
+            #print(info_terrenos[i:i+4]) 
+        #for i in range(2): #sorteia 2 vezes, 6 cartas  
+            #print(info_terrenos[i:i+6]) 
+        #for i in range(1): #sorteia 1 vez, 4 cartas  
+            #print(info_terrenos[i:i+4]) 
+        #for i in range(1): #sorteia 1 vez, 2 cartas  
+            #print(info_terrenos[i:i+2]) 
+        info_terrenos = self.sprite("terreno", 0, 0)
+        info_terrenos.frame = 2  # este número seleciona o ladrilho que vai ser colocado
+        info_terrenos = self.sprite("ladrilho", 0, 0)  # mude a posição do ladrilho
+        info_terrenos.frame = 4  # troque o ladrilho!
+       
+    def direita(self, t ereno):
         """Move o peão para a direita
         :param terreno: O terreno onde está o peão 
         :return
