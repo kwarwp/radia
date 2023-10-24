@@ -58,7 +58,7 @@ class IlhaProibida:
                          posx=((px%6)+int(abs(2.5-px//6))), local=lc, ilha=self)
                          for px, lc in enumerate(info_terrenos) if px%6 < 6-int(abs(2.5-px//6))*2]
         
-    def desocupa_e_vai_para(terreno_destino):
+    def desocupa_e_vai_para(self, terreno_destino):
         self.peao.move(terreno_destino)
         
     def direita(self, terreno):
@@ -81,7 +81,7 @@ class Terreno:
     def vai(self, ev=0):
         self.ilha.peao.mover(self)
         
-    def desocupa_e_vai_para(terreno_destino):
+    def desocupa_e_vai_para(self, terreno_destino):
         def contiguos(origem, destino):
             if not origem:
                 return True
