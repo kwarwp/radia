@@ -52,7 +52,7 @@ class IlhaProibida:
         info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 6
         for y in range(6):
             for x, lc in enumerate(info_terrenos):
-                self.terrenos.append(Terreno(cena=oceano, posy=y*110+10, posx=(x*110+10)%(4*110+10), local=lc)
+                self.terrenos.append(Terreno(cena=oceano, posy=y*110+10, posx=x*110+10, local=lc)
         
     def direita(self, terreno):
         """ Move o peão para a direita.
