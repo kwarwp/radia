@@ -77,7 +77,7 @@ class Terreno:
         
     def ocupa(self, peao):
         self.peao = peao
-        peao.mover(self.posx + 10, self.posy + 10 self)
+        peao.mover(self.posx + 10, self.posy + 10, self)
 
 class Peao:
     """ Marcador usado para definir a posição do jogador nos terrenos.
