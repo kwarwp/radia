@@ -58,6 +58,13 @@ STYLE["height"] = "600px"
 
 class IlhaProibida:
     def __init__(self):
+        from _spy.vitollino.main import Cena, Elemento, STYLE
+
+STYLE["width"] = 800
+STYLE["height"] = "600px"
+
+class IlhaProibida:
+    def __init__(self):
         self.oceano = oceano = Cena("https://imgur.com/gVHmY2v.jpg").vai()
         
         matriz = [
@@ -65,6 +72,9 @@ class IlhaProibida:
             [0, 1, 1, 1, 1, 0],
             [1, 1, 1, 1, 1, 1],
         ]
+        
+        # Create a deep copy of the original matrix to keep it unchanged
+        original_matrix = [row[:] for row in matriz]
         
         for i in range(3):
             for j in range(6):
@@ -76,14 +86,13 @@ class IlhaProibida:
                 terreno.x = 110 * j + 10
                 terreno.y = 100 * i + 50
         
-        # Transformações
-        matriz.reverse()  # Inverte a ordem das linhas
+        # Invert the matrix
+        matriz.reverse()  # Invert the order of the rows
         for i in range(3):
-            matriz[i].reverse()  # Inverte a ordem dos elementos em cada linha
+            matriz[i].reverse()  # Invert the order of the elements in each row
         
-        # Imprime a matriz transformada
-        for row in matriz:
-            print(row)
+        # Append the inverted matrix to the original
+        matriz += original_matrix
 
 
         
