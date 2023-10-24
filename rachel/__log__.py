@@ -161,3 +161,10 @@ ZeroDivisionError: integer division or modulo by zero
                                                                                                                                                                            ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 24 2023 10:15:27.484 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 56
+  self.terrenos.append(Terreno(cena=oceano, posy=y*110+10, posx=(x*110+10)%(4*110+10), local=lc)
+                                                                                                               ^
+SyntaxError: invalid syntax
+'''},
