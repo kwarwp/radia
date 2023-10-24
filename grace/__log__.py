@@ -292,3 +292,10 @@ TypeError: mover() takes 2 positional arguments but more were given
                    ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon Oct 23 2023 21:36:06.265 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 52
+  self.terrenos = [Terreno(cena=oceano, posy=py*110 + 10, posx=px*110+10, local=lc)
+                                                                                                                                      ^
+SyntaxError: invalid syntax
+'''},
