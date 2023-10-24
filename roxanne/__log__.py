@@ -199,3 +199,10 @@ AttributeError: 'module' object has no attribute 'fly'
                                    ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 24 2023 09:56:09.350 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 51
+  def monta_tabuleiro_oceano(self)
+                                   ^
+SyntaxError: invalid syntax
+'''},
