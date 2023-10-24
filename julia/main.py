@@ -75,7 +75,7 @@ class IlhaProibida:
 
 class Terreno:
     def __init__(self, local, posx, posy, cena):
-        self.local = Elemento(local, x=posx, y=posy, w=100, h= 100, cena=cena)
+        self.local = Elemento(local, x=posx, y=posy, w=100, h= 100, cena=cena, vai=self.ocupa)
         self.peao = None
         self.posx, self.posy = posx, posy
         
