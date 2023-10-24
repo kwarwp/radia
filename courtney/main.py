@@ -1,10 +1,8 @@
 # radia.courtney.main.py
-# radia.roxanne.main.py
 # __author__Glaucio
 """Página de entrada do jogo Ilha Proibida.
 
 .. codeauthor:: Glaucio Santos <glaucio75@ufrj.br>
-
 
 Changelog
 ---------
@@ -45,13 +43,15 @@ class IlhaProibida:
         #cena=oceano)
         #self.terreno1 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
         #info_terrenos= [(10, PORTAO_BRONZE), (120, PALACIO_CORAL), (230, PORTAO_BRONZE)]
-        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]
-        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
-        for px, lc in enumerate(info_terrenos)]
+        self.terrenos = []
+        self.monta_tabuleiro_oceano[]
         self.peao = Peao(self)
         self.terrenos[1].ocupa(self.peao)
         
     def monta_tabuleiro_oceano(self):
+        """ Montar tabuleiro em forma de diamente.
+        
+        """
         info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 6
         self.terrenos = [Terreno(cena = oceano, posy = 50, posx = px*110+10, local=lc) 
                          for px, lc in enumerate(info_terrenos)]
