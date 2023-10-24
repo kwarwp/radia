@@ -88,7 +88,7 @@ class Peao:
     """
     def __init__(self, ilha):
         self.peao = Elemento(PAWN, x=20, y=70, w=80, h= 80,
-        cena=ilha.oceano, vai=self.move)
+        cena=ilha.oceano, vai=self.mover)
         self.terreno = None
         self.ilha = ilha
         #self.peao.vai = self.move
@@ -103,7 +103,7 @@ class Peao:
         terreno_destino.ocupa(self)        
     def mover(self, x, terreno):
         self.terreno = terreno
-        self.peao.x = x
+        self.peao.x = terreno.posx
 
         
 if __name__ == "__main__": 
