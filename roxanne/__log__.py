@@ -192,3 +192,10 @@ AttributeError: 'module' object has no attribute 'fly'
     ag.fly()
 AttributeError: 'module' object has no attribute 'fly'
 '''},
+{'date': 'Tue Oct 24 2023 09:55:43.830 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 52
+  def monta_tabuleiro_oceano(self)
+                                   ^
+SyntaxError: invalid syntax
+'''},
