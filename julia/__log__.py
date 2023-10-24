@@ -935,3 +935,10 @@ IndexError: list index out of range
     self.terrenos[1].ocupa(self.peao)
 IndexError: list index out of range
 '''},
+{'date': 'Tue Oct 24 2023 12:21:36.8 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 54
+  info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
+  ^
+IndentationError: unexpected indent
+'''},
