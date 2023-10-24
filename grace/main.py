@@ -56,7 +56,7 @@ class IlhaProibida:
             [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
             [PORTAO_BRONZE, PALACIO_CORAL],
         ]
-        self.terrenos = [Terreno(cena=oceano, posy=py*110 + 10, posx=(6-len(row))*50 + px*110+10, local=lc)
+        self.terrenos = [Terreno(cena=oceano, posy=py*110 + 10, posx=(6-len(row))*60 + px*110+10, local=lc)
             for py, row in enumerate(info_terrenos) for px, lc in enumerate(row)]
         
     def direita(self, terreno):
