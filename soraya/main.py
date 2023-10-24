@@ -72,6 +72,9 @@ class Terreno:
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
         self.local.vai = self.vai
+    
+    def vai(self,ev=0):
+        self.ilha.peao.mover(self)
         
     def ocupa(self, peao):
         self.peao = peao
