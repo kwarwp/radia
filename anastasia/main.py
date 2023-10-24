@@ -157,6 +157,7 @@ class Peao:
         """
         self.terreno = terreno
         self.peao.x = x
+        self.peao.y = y
 
         
 if __name__ == "__main__": #troca o name pelo main 
