@@ -354,3 +354,7 @@ SyntaxError: invalid syntax
     self.terrenos = [Terreno(cena=oceano, posy=(px//6) * 110 + 50, posx=int(abs(2.5-x//6))*110+10, local=lc)
 NameError: name 'x' is not defined
 '''},
+{'date': 'Tue Oct 24 2023 10:59:30.238 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read properties of undefined (reading 'type')>
+'''},
