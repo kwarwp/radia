@@ -61,7 +61,7 @@ class IlhaProibida:
                     self.terrenos = [Terreno(cena=oceano, posy=py, posx=px*110+10, local=lc)
                          for px, lc in enumerate(info_terrenos)]
                 px = px+1
-            py = py + 125
+            py = py + 110
             px = 1
                     
         
