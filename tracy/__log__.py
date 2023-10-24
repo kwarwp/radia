@@ -20,3 +20,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Tue Oct 24 2023 10:34:10.401 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 67
+  """def direita(self, terreno):
+  ^
+IndentationError: unexpected indent
+'''},
