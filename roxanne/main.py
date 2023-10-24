@@ -46,7 +46,7 @@ class IlhaProibida:
         self.terrenos = []
         self.monta_tabuleiro_oceano()
         self.peao = Peao(self)
-        self.peao.mover(self.terreno[0])
+        self.peao.mover(self.terrenos[0])
         #self.terrenos[1].ocupa(self.peao)
         
     def monta_tabuleiro_oceano(self):
@@ -73,6 +73,7 @@ class Terreno:
         cena=cena)
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
+        self.local.vai = self.vai
         
     def vai(self, ev=0):
         self.ilha.peao.mover(self)
