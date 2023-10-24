@@ -1900,3 +1900,10 @@ Traceback (most recent call last):
     self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80,
 AttributeError: 'Peao' object has no attribute 'move'
 '''},
+{'date': 'Tue Oct 24 2023 10:47:02.463 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 79
+  self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
+                                                                                                                                                                                                                                                                              ^
+SyntaxError: invalid syntax
+'''},
