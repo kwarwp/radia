@@ -461,3 +461,10 @@ Traceback (most recent call last):
   module julia.main line 23
     from julia.main import IlhaProibida as Ilha
 '''},
+{'date': 'Tue Oct 24 2023 09:59:28.144 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 52
+  def monta_tabuleiro_oceano(self)
+                                   ^
+SyntaxError: invalid syntax
+'''},
