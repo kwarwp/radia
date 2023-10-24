@@ -51,23 +51,40 @@ PAWN = "https://imgur.com/zO3kiRp.png"
 
 class IlhaProibida:
     def __init__(self):
-        self.oceano = oceano = Cena(IMAGEM).vai()
-        info_terrenos = [
-            [PALACIO_CORAL],
-            [PALACIO_CORAL, PALACIO_CORAL],
-            [PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
-            [PALACIO_CORAL, PALACIO_CORAL],
-            [PALACIO_CORAL]
+        from _spy.vitollino.main import Cena, Elemento, STYLE
+
+STYLE["width"] = 800
+STYLE["height"] = "600px"
+
+class IlhaProibida:
+    def __init__(self):
+        self.oceano = oceano = Cena("https://imgur.com/gVHmY2v.jpg").vai()
+        
+        matriz = [
+            [0, 0, 1, 1, 0, 0],
+            [0, 1, 1, 1, 1, 0],
+            [1, 1, 1, 1, 1, 1],
         ]
-        self.terrenos = []
-        for i, terreno_info in enumerate(info_terrenos):
-            x = (len(info_terrenos) - len(terreno_info)) // 2
-            for j, terreno in enumerate(terreno_info):
-                posx = 10 + j * 110 + x * 110
-                posy = 50 + i * 100
-                self.terrenos.append(Terreno(cena=oceano, posx=posx, posy=posy, local=terreno))
-        self.peao = Peao(self)
-        self.terrenos[10].ocupa(self.peao)
+        
+        for i in range(3):
+            for j in range(6):
+                if matriz[i][j] == 1:
+                    terreno = Elemento("https://imgur.com/tLDbzd2.jpg")
+                else:
+                    terreno = Elemento("https://imgur.com/BL6lB7H.jpg")
+                terreno.entra(oceano)
+                terreno.x = 110 * j + 10
+                terreno.y = 100 * i + 50
+        
+        # Transformações
+        matriz.reverse()  # Inverte a ordem das linhas
+        for i in range(3):
+            matriz[i].reverse()  # Inverte a ordem dos elementos em cada linha
+        
+        # Imprime a matriz transformada
+        for row in matriz:
+            print(row)
+
 
         
     def direita(self, terreno):
