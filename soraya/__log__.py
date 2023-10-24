@@ -730,3 +730,10 @@ AttributeError: 'list' object has no attribute 'ocupa'
     self.terrenos[1].ocupa(self.peao)
 AttributeError: 'list' object has no attribute 'ocupa'
 '''},
+{'date': 'Tue Oct 24 2023 11:30:39.573 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 56
+  self.terrenos = [[Terreno(cena=oceano, posy=py*110+50, posx=px*110+10, local=lc)
+                                                                                                                                                   ^
+SyntaxError: invalid syntax
+'''},
