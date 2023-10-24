@@ -77,8 +77,10 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         """
         info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]
         random.shuffle(info_terrenos) #Embaralha a lista de cartas (tabuleiro)
-        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
-                         for px, lc in enumerate(info_terrenos)]
+        #self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
+                         #for px, lc in enumerate(info_terrenos)]
+        self.terrenos = [Terreno(cena=oceano, posy=py*110+10, posx=(6-len(row))*55, posx=px*110+10,
+             for py, row in enumerate(info_terrenos) for px, lc in enumerate(row)]
         #tabuleiro = [i for i in range(1, 24)] #Gera uma lista de cartas com números de 1 a 24, representando as cartas
         #for i in range(1): #sorteia 1 vez, 2 cartas  
             #print(info_terrenos[i:i+2]) 
