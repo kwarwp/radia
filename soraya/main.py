@@ -43,7 +43,7 @@ class IlhaProibida:
         #cena=oceano)
         #self.terreno1 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
         #info_terrenos= [(10, PORTAO_BRONZE), (120, PALACIO_CORAL), (230, PORTAO_BRONZE)]
-        #self.terrenos = []
+        self.terrenos = []
         self.monta_tabuleiro_oceano()
         self.peao = Peao(self)
         self.terrenos[1].ocupa(self.peao)
@@ -52,7 +52,7 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
-        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE]
+        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE]
         self.terrenos = [[Terreno(cena=oceano, posy=py*110+50, posx=px*110+10, local=lc)
                          for px, lc in enumerate(info_terrenos)]
                          	for py, lc in enumerate(info_terrenos)]
