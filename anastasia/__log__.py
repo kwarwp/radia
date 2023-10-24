@@ -1961,3 +1961,10 @@ SyntaxError: invalid syntax
                                                                                                                                  ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 24 2023 10:49:52.988 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 81
+  for i in range(1): #sorteia 1 vez, 2 cartas  
+  ^
+IndentationError: unexpected indent
+'''},
