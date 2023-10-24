@@ -29,15 +29,17 @@ class IlhaProibida:
         self.terrenos = []
         self.monta_tabuleiro_oceano()
         self.peao = Peao(self)
-        self.terrenos[1].ocupa(self.peao)
+        self.peao.mover(self.terreno[0])
+        #self.terrenos[1].ocupa(self.peao)
         
     def monta_tabuleiro_oceano(self):
         """ Montar o tabuleiro em forma de diamante.
         
         """
-        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 2
-        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
-                         for px, lc in enumerate(info_terrenos)]
+        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
+        self.terrenos = [Terreno(cena=self.oceano, posy=px//6*110 + 50,
+                         posx=((px%6)+int(abs(2.5-px//6)))*110+10, local=lc, ilha=self)
+                         for px, lc in enumerate(info_terrenos) if px%6 < 6-int(abs(2.5-px//6))*2]
         
     def direita(self, terreno):
         """ Move o peão para a direita.
@@ -49,11 +51,14 @@ class IlhaProibida:
         return self.terrenos[aqui+1]
 
 class Terreno:
-    def __init__(self, local, posx, posy, cena):
+    def __init__(self, local, posx, posy, cena, ilha):
         self.local = Elemento(local, x=posx, y=posy, w=100, h= 100,
         cena=cena)
-        self.peao = None
+        self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
+        
+    def vai(self, ev=0):
+        self.ilha.peao.mover(self)
         
     def ocupa(self, peao):
         self.peao = peao
@@ -77,9 +82,9 @@ class Peao:
         terreno_destino = self.ilha.direita(self.terreno)
         #self.peao.x = 170
         terreno_destino.ocupa(self)        
-    def mover(self, x, terreno):
+    def mover(self, terreno):
         self.terreno = terreno
-        self.peao.x = x
+        self.peao.x, self.peao.y = terreno.posx, terreno.posy
 
         
 if __name__ == "__main__": 
@@ -89,5 +94,6 @@ if __name__ == "__main__":
     import __phello__
     #ag.fly()
     
-    IlhaProibida()
     #IlhaProibida()
+    IlhaProibida()
+    #print([(px, int(abs(2.5-px//6))) for px in range(36)])
