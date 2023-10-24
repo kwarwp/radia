@@ -73,13 +73,13 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
 
     def monta_tabuleiro_oceano(self):
         """
-        Montar o tabuleiro em forma de diamant
+        Montar o tabuleiro em forma de diamante
         """
-        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 6
+        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]
+        random.shuffle(info_terrenos) #Embaralha a lista de cartas (tabuleiro)
         self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
                          for px, lc in enumerate(info_terrenos)]
         #tabuleiro = [i for i in range(1, 24)] #Gera uma lista de cartas com números de 1 a 24, representando as cartas
-        random.shuffle(info_terrenos) #Embaralha a lista de cartas (tabuleiro)
         for i in range(1): #sorteia 1 vez, 2 cartas  
             print(info_terrenos[i:i+2]) 
         for i in range(1): #sorteia 1 vez, 4 cartas  
