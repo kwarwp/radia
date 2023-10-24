@@ -78,10 +78,11 @@ class Terreno:
         self.local.vai = self.vai
         
     def ocupa(self, peao):
-        self.peao = peao
+        #self.peao = peao
         peao.mover(self.posx + 10, self.posy + 10, self)
         
     def vai(self, ev=None):
+        print("HALLO")
         self.ilha.peao.move(terreno)
 
 class Peao:
