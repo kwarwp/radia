@@ -445,3 +445,10 @@ NameError: name 'info_terrenos' is not defined
                                                                                                                                                                                                                                            ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 24 2023 10:42:32.553 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 57
+  info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE]
+  ^
+IndentationError: expected an indented block
+'''},
