@@ -16,6 +16,10 @@ Changelog
 .. versionadded::    10.10
     Versão Inicial (3).
     documentacao das classes, help 
+    
+.. versionadded::    24.10
+    Versão Inicial (4).
+    montagem do tabuleiro, movimentação do peao 
 
 |   **Open Source Notification:** This file is part of open source program **Ilha Proibida**
 |   **Copyright © 2023  Vanessa Vianna ** <vanessamvianna@ufrj.br>,
