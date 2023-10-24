@@ -95,7 +95,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         info_terrenos = self.sprite("ladrilho", 0, 0)  # mude a posição do ladrilho
         info_terrenos.frame = 4  # troque o ladrilho!
        
-    def direita(self, t ereno):
+    def direita(self, terreno):
         """Move o peão para a direita
         :param terreno: O terreno onde está o peão 
         :return
