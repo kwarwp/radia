@@ -2192,3 +2192,10 @@ ImportError: cannot import name 'Circus'
     info_terrenos = self.sprite("terreno", 0, 0)
 AttributeError: 'IlhaProibida' object has no attribute 'sprite'
 '''},
+{'date': 'Tue Oct 24 2023 11:43:34.521 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 78
+  info_terrenos = [
+  ^
+IndentationError: unexpected indent
+'''},
