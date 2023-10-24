@@ -49,6 +49,7 @@ class IlhaProibida:
             [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
             [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]
         ]
+        print(info_terrenos)
         self.terrenos = [Terreno(cena=oceano, posy=py*110 + 10, posx=px*110+10, local=lc)
             for px, lc in enumerate(row) for py, row in enumerate(info_terrenos)]
         self.peao = Peao(self)
