@@ -49,9 +49,9 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
-        info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 6
-        for y in range(6):
-            for x, lc in enumerate(info_terrenos):
+        info_terrenos= [[PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 6]
+        for y, ilc in enumerate(info_terrnos):
+            for x, lc in enumerate(ilc):
                 self.terrenos.append(Terreno(cena=oceano, posy=y*110+10, posx=x*110+10, local=lc))
         
     def direita(self, terreno):
