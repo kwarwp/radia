@@ -20,8 +20,6 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
-#from julia.main import IlhaProibida as Ilha
-#from julia import main as jmain
 from anastasia import main as amain
 STYLE["width"] = 800
 STYLE["height"] = "600px"
@@ -53,9 +51,19 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
+        matriz = [ [0,0,1,1,0,0], [0,1,1,1,1,0], [1,1,1,1,1,1], [1,1,1,1,1,1], [0,1,1,1,1,0], [0,0,1,1,0,0]]
         info_terrenos= [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 6
-        self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
+        py=50;
+        px=1;
+        for i in range(5):
+            for j in range(5):
+                if matriz[i][j] != 0:
+                    self.terrenos = [Terreno(cena=oceano, posy=py, posx=px*110+10, local=lc)
                          for px, lc in enumerate(info_terrenos)]
+                px = px+1
+            py = py + 100
+            
+                    
         
     def direita(self, terreno):
         """ Move o peão para a direita.
