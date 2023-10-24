@@ -89,7 +89,7 @@ class Peao:
     """
     def __init__(self, ilha):
         self.peao = Elemento(PAWN, x=50, y=20, w=80, h= 80,
-        cena=ilha.oceano, vai=self.move)
+        cena=ilha.oceano)
         self.terreno = None
         self.ilha = ilha
         #self.peao.vai = self.move
@@ -98,7 +98,7 @@ class Peao:
         terreno_destino = self.ilha.direita(0) #(self.terreno)
         self.peao.y = 300
         
-    def move(self, terreno, ev=None):  # Corrigir: não está condizente!
+    def move(self, terreno):  # Corrigir: não está condizente!
         terreno.ocupa(self)   
         
     def mover(self, x, y, terreno):
