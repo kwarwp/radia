@@ -438,3 +438,10 @@ AttributeError: 'list' object has no attribute 'ocupa'
     self.terrenos = [[Terreno(cena=oceano, posy=py*110+50, posx=px*110+10, local=lc)
 NameError: name 'info_terrenos' is not defined
 '''},
+{'date': 'Tue Oct 24 2023 10:41:45.773 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 57
+  self.terrenos = [[Terreno(cena=oceano, posy=py*110+50, posx=px*110+10, local=lc)
+                                                                                                                                                                                                                                           ^
+SyntaxError: invalid syntax
+'''},
