@@ -94,7 +94,7 @@ class Peao:
         self.peao.y = 300
         
     def move(self, ev=None):  # Corrigir: não está condizente!
-        terreno_destino = self.ilha.next(self.terreno)
+        terreno_destino = self.ilha.direita(self.terreno)
         #self.peao.x = 170
         terreno_destino.ocupa(self)        
     def mover(self, x, terreno):
