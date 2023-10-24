@@ -49,6 +49,11 @@ class IlhaProibida:
         self.peao = Peao(self)
         self.terrenos[1].ocupa(self.peao)
         
+    def monta_tabuleiro_oceano(self)
+        info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL]
+        self.terrenos = [Terreno(cena = oceano, posy = 50, posx = px*110+10, local=lc)
+                         for px, lc in enumerate(info_terrenos)]
+        
     def direita(self, terreno):
         """ Move o peão para a direita.
         
