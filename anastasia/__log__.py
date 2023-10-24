@@ -1907,3 +1907,10 @@ AttributeError: 'Peao' object has no attribute 'move'
                                                                                                                                                                                                                                                                               ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 24 2023 10:47:02.675 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 79
+  self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
+                                                                                                                                                                                                                                                                              ^
+SyntaxError: invalid syntax
+'''},
