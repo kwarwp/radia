@@ -20,7 +20,7 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
-from anastasia import main as amain
+#from anastasia import main as amain
 STYLE["width"] = 800
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
