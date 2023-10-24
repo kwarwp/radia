@@ -2003,3 +2003,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Tue Oct 24 2023 10:56:08.722 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 95
+  def create(self):
+  ^
+IndentationError: unexpected indent
+'''},
