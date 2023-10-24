@@ -64,7 +64,6 @@ def monta_tabuleiro_oceano(self):
         self.terrenos = [Terreno(cena=oceano, posy=py*110 + 10, posx=(6-len(row))*55 + px*110+10, local=lc)
             for py, row in enumerate(info_terrenos) for px, lc in enumerate(row)]
         
-    """def direita(self, terreno):"""
         """ Move o peão para a direita.
         
         :param terreno: O terreno onde está o peão
