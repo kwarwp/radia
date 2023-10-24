@@ -1,8 +1,8 @@
 # radia.roxanne.main.py
-# __author__ Carlo
+# __author__ Leonardo
 """Página de entrada do jogo Ilha Proibida.
 
-.. codeauthor:: Carlo Oliveira <carlo@nce.ufrj.br>
+.. codeauthor:: Leonardo Cesar <leonardocesarc@gmail.com>
 
 Changelog
 ---------
