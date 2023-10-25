@@ -456,3 +456,29 @@ TypeError: desocupa_e_vai_para() takes 1 positional argument but more were given
     self.terreno[4].afunda()
 AttributeError: 'IlhaProibida' object has no attribute 'terreno'
 '''},
+{'date': 'Wed Oct 25 2023 13:59:56.297 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 142
+    IlhaProibida()
+  module <module> line 45
+    self.peao.mover(self.terrenos[0])
+  module <module> line 137
+    self.terreno.desocupa_e_vai_para(terreno_destino)
+  module <module> line 58
+    self.peao.move(terreno_destino)
+  module <module> line 134
+    terreno.adentra(self)
+  module <module> line 97
+    peao_requerente.entra()
+TypeError: entra() missing 1 positional argument: terreno
+'''},
