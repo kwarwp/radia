@@ -233,3 +233,10 @@ IndexError: pop index out of range
     tit.elt.text = local.nome #"UM LOCAL QUALQUER"
 AttributeError: 'str' object has no attribute 'nome'
 '''},
+{'date': 'Mon Oct 30 2023 16:53:04.271 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 128
+  elemt = Elemento(f"https://i.imgur.com/{tipo}.png", top=2*LADO//3 w=LADO//3, h=LADO//3, cena=self.local, style=style)
+                                                                     ^
+SyntaxError: invalid syntax
+'''},
