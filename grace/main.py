@@ -95,7 +95,10 @@ class Terreno:
         def contiguos(origem, destino):
             if not origem:
                 return True
-            return abs(origem.posx - destino.posx) <= 1 and abs(origem.posy - destino.posy) <= 1 and (origem.posy == destino.posy or origem.posx == destino.posx)
+            return 
+                abs(origem.posx - destino.posx) <= 1 
+                and abs(origem.posy - destino.posy) <= 1 
+                and (origem.posy == destino.posy or origem.posx == destino.posx)
 
         peao_pode_ir = contiguos(self, terreno_destino)
         # executar o movimento do peão agora que foi autorizado pelo pode ir
