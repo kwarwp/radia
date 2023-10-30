@@ -25,6 +25,12 @@ IMAGEM = "https://imgur.com/gVHmY2v.jpg"
 PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
 PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
 VALE_TENEBROSO = "https://i.imgur.com/OZE1myn.jpg"
+PORTAO_OURO = "https://i.imgur.com/PvkZSQP.jpg"
+PORTAO_COBRE = "https://i.imgur.com/45aU3nf.jpg"
+ATALAIA = "https://i.imgur.com/sdJ4W5O.jpg"
+JARDIM_SUSSUROS = "https://i.imgur.com/pjVcyoy.jpg"
+PISTA_POUSO = "https://i.imgur.com/CU3TLYh.png"
+JARDIM_UIVOS = "https://i.imgur.com/ZNuPWqZ.jpg"
 PAWN = "https://imgur.com/zO3kiRp.png"
 
 
@@ -47,10 +53,10 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
-        info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, VALE_TENEBROSO] * 9
+        info_terrenos = [PORTAO_OURO, PALACIO_CORAL, PORTAO_BRONZE, VALE_TENEBROSO, PORTAO_COBRE, ATALAIA, PISTA_POUSO] * 9
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
                                  posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
-                         for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
+                         for px, lc in enumerate(info_terrenos[:36]) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
         #self.terrenos[4].afundar()
 
 
@@ -69,7 +75,7 @@ class Terreno:
                               cena=cena)
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
-        self.local.vai = self.vai
+        #self.local.vai = self.vai
         self.afunda = False
 
 
