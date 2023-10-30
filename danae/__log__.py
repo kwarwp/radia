@@ -287,3 +287,10 @@ TypeError: Population must be a sequence or set.  For dicts, use list(d).
     lc, ln, tf_ = locais[loc].nome
 ValueError: too many values to unpack (expected 3)
 '''},
+{'date': 'Mon Oct 30 2023 17:25:22.811 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 94
+  print(spl, "=> ",list(range(1,24))
+                                              ^
+SyntaxError: invalid syntax
+'''},
