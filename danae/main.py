@@ -109,6 +109,9 @@ class Terreno:
         local = f"https://i.imgur.com/{local}.jpg"
         self.local = Elemento(local, x=posx * FOLGA + 10, y=posy * FOLGA + 50, w=LADO, h=LADO,
                               cena=cena)
+        style = {'background-color': '#333', 'font-size': '10px', 'text-align': 'center'}
+        tit = Elemento('', w=LADO, h=LADO//6, cena=self.local, style=style)
+        tit.elt.text = "UM LOCAL QUALQUER"
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
         #self.local.vai = self.vai
