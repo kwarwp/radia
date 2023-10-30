@@ -89,8 +89,9 @@ class IlhaProibida:
         PORTAO_COBRE, ATALAIA, PISTA_POUSO, JARDIM_UIVOS, TEMPLO_SOL, TEMPLO_LUA, LAGOA_PERDIDA]"""
         it = LINKS[:]
         nm = NOMES[:]
-        locais = [Cah(nome=nm.pop(), link=it.pop(), elemento=None) for _ in range(len(it))]
+        locais = [Cah(nome=nm.pop(0), link=it.pop(0), elemento=None) for _ in range(len(it))]
         spl = sample(list(range(1,24)), 8)
+        # print(spl, "=> ",list(range(1,24)), locais[0])
         tfavs = zip(spl,TFAVS *2)
         for loc, elt_ in tfavs:
             #lc, ln, tf_ = locais[loc].nome
