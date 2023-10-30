@@ -480,3 +480,10 @@ SyntaxError: invalid syntax
     self.terrenos = [Terreno(ilha=self, cena=oceano, posy=py*110 + 10, posx=(6-len(row))*55 + px*110+10, local=lc)
 NameError: name 'oceano' is not defined
 '''},
+{'date': 'Mon Oct 30 2023 19:56:02.135 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 99
+  abs(origem.posx - destino.posx) <= 1 
+  ^
+IndentationError: unexpected indent
+'''},
