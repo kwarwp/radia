@@ -137,3 +137,10 @@ TypeError: sequence item 0: expected str instance, list found
     ln = " ".join([ln.split() for ln in loc.split("\n") if ln]) # for t in ln if t])
 TypeError: sequence item 0: expected str instance, list found
 '''},
+{'date': 'Mon Oct 30 2023 13:16:05.292 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  "PALACIO_MARES PENHASCO_ABANDONO BOSQUE_CARMESIM DUNAS_ENGANO PONTE_SUSPENSA LAGOA_PERDIDA")
+   ^
+SyntaxError: invalid syntax
+'''},
