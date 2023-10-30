@@ -98,7 +98,7 @@ class IlhaProibida:
                          #for px, lc in enumerate(info_terrenos[:36]) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
         #self.terrenos[4].afundar()
         from random import sample
-        spl = sample(8, list(range(25))
+        spl = sample(8, list(range(24)))
         tfavs = zip(spl,TFAVS *2)
         [self.terrenos[loc].elemento(tfav) for loc, tfav in tfavs]
 
