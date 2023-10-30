@@ -21,13 +21,15 @@ from _spy.vitollino.main import Cena, Elemento, STYLE
 
 STYLE["width"] = 800
 STYLE["height"] = "600px"
-PORTA_OURO = "https://i.imgur.com/J6ow4jR.jpg"
+PORTAO_OURO = "https://i.imgur.com/J6ow4jR.jpg"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
 PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
 PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
 VALE_TENEBROSO = "https://i.imgur.com/OZE1myn.jpg"
-PORTAO_OURO = "https://i.imgur.com/PvkZSQP.jpg"
+PORTA_OURO = "https://i.imgur.com/PvkZSQP.jpg"
+PORTAO_PRATA = "https://i.imgur.com/v0g7eGm.jpg"
 PORTAO_COBRE = "https://i.imgur.com/45aU3nf.jpg"
+PORTAO_FERRO = "https://i.imgur.com/yKU6ngz.jpg"
 ATALAIA = "https://i.imgur.com/sdJ4W5O.jpg"
 JARDIM_SUSSUROS = "https://i.imgur.com/pjVcyoy.jpg"
 PISTA_POUSO = "https://i.imgur.com/CU3TLYh.png"
@@ -67,10 +69,10 @@ class IlhaProibida:
         
         """
         info_terrenos = it = [
-        PORTAO_OURO, PALACIO_CORAL, PORTAO_BRONZE, VALE_TENEBROSO, CAVERNA_LAVA,
+        PORTAO_OURO, PALACIO_CORAL, PORTAO_BRONZE, VALE_TENEBROSO, CAVERNA_LAVA, PORTAO_FERRO,
         CAVERNA_SOMBRAS, OBSERVATORIO, PANTANO_BRUMAS, ROCHA_FANTASMA, PALACIO_MARES,
-        PENHASCO_ABANDONO, BOSQUE_CARMESIM, DUNAS_ENGANO, PONTE_SUSPENSA,
-        PORTAO_COBRE, ATALAIA, PISTA_POUSO, JARDIM_UIVOS, TEMPLO_SOL, TEMPLO_LUA] * 4
+        PENHASCO_ABANDONO, BOSQUE_CARMESIM, DUNAS_ENGANO, PONTE_SUSPENSA, PORTAO_PRATA,
+        PORTAO_COBRE, ATALAIA, PISTA_POUSO, JARDIM_UIVOS, TEMPLO_SOL, TEMPLO_LUA] * 2
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
                                  posx=((px % 6) + int(abs(2.5 - px // 6))), local=it.pop(), ilha=self)
                          for px, lc in enumerate(info_terrenos[:36]) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
