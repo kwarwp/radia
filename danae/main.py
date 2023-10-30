@@ -27,12 +27,12 @@ PORTA_OURO = "https://i.imgur.com/PvkZSQP.jpg"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
 TFAV = "https://i.imgur.com/VivubQG.png"
 TFAVS = "KXZXTei LK4p1xG rUNsKEH qp5Zbn8".split()
-NOMES = ("PORTAO_BRONZE PALACIO_CORAL VALE_TENEBROSO PORTAO_OURO PORTAO_PRATA PORTAO_COBRE "
-"PORTAO_FERRO ATALAIA JARDIM_SUSSUROS PISTA_POUSO JARDIM_UIVOS TEMPLO_SOL "
+NOMES = ("PISTA_POUSO PORTAO_BRONZE PALACIO_CORAL VALE_TENEBROSO PORTAO_OURO PORTAO_PRATA PORTAO_COBRE "
+"PORTAO_FERRO ATALAIA JARDIM_SUSSUROS JARDIM_UIVOS TEMPLO_SOL "
 "TEMPLO_LUA CAVERNA_LAVA CAVERNA_SOMBRAS OBSERVATORIO PANTANO_BRUMAS ROCHA_FANTASMA "
 "PALACIO_MARES PENEDO_BALDIO BOSQUE_CARMESIM DUNAS_ENGANO PONTE_SUSPENSA LAGOA_PERDIDA").split()
-LINKS = ("BL6lB7H tLDbzd2 OZE1myn J6ow4jR v0g7eGm 45aU3nf "
-"yKU6ngz sdJ4W5O pjVcyoy CU3TLYh ZNuPWqZ O0OSVFt "
+LINKS = ("CU3TLYh BL6lB7H tLDbzd2 OZE1myn J6ow4jR v0g7eGm 45aU3nf "
+"yKU6ngz sdJ4W5O pjVcyoy ZNuPWqZ O0OSVFt "
 "J160xpm 2j1IAyf b4xtltc E9MflTP NDioDZg TCmLjeT "
 "rYxQaTa MvN7kTU Uni02EK cG5UYCf GC8V8CQ 7o1qq10").split()
 loc = """PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"#
@@ -60,7 +60,7 @@ DUNAS_ENGANO = "https://i.imgur.com/cG5UYCf.jpg"#
 PONTE_SUSPENSA = "https://i.imgur.com/GC8V8CQ.jpg"#
 LAGOA_PERDIDA = "https://i.imgur.com/7o1qq10.png"#"""
 PAWN = "https://imgur.com/zO3kiRp.png"
-Cah = namedtuple("Cah", "nome link")
+Cah = namedtuple("Cah", "nome link elemento")
 
 class IlhaProibida:
     """ Representa a classe principal do Jogo.
@@ -81,7 +81,7 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
-        from random import shuffle
+        from random import shuffle, sample
         """info_terrenos = it = [
         PORTAO_OURO, PALACIO_CORAL, PORTAO_BRONZE, VALE_TENEBROSO, CAVERNA_LAVA, PORTAO_FERRO,
         CAVERNA_SOMBRAS, OBSERVATORIO, PANTANO_BRUMAS, ROCHA_FANTASMA, PALACIO_MARES, JARDIM_SUSSUROS,
@@ -89,7 +89,13 @@ class IlhaProibida:
         PORTAO_COBRE, ATALAIA, PISTA_POUSO, JARDIM_UIVOS, TEMPLO_SOL, TEMPLO_LUA, LAGOA_PERDIDA]"""
         it = LINKS[:]
         nm = NOMES[:]
-        locais = [Cah(nome=nm.pop(), link=it.pop()) for _ in range(len(it))]
+        locais = [Cah(nome=nm.pop(), link=it.pop(), elemento=None) for _ in range(len(it))]
+        spl = sample(list(range(1,24)), 8)
+        tfavs = zip(spl,TFAVS *2)
+        for loc, elt_ in tfavs:
+            lc, ln, tf_ = locais[loc].nome
+            locais[loc] = Cah(nome=locais[loc].nome, link=locais[loc].link, elemento=elt_)
+        [self.terrenos[loc].elemento(tfav) for loc, tfav in tfavs]
         shuffle(locais)
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
                                  posx=((px % 6) + int(abs(2.5 - px // 6))), local=locais.pop(), ilha=self)
@@ -97,10 +103,6 @@ class IlhaProibida:
                                  #posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
                          #for px, lc in enumerate(info_terrenos[:36]) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
         #self.terrenos[4].afundar()
-        from random import sample
-        spl = sample(8, list(range(24)))
-        tfavs = zip(spl,TFAVS *2)
-        [self.terrenos[loc].elemento(tfav) for loc, tfav in tfavs]
 
 
 class Terreno:
