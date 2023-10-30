@@ -1,8 +1,8 @@
 # radia.roxanne.main.py
-# __author__ Carlo
+# __author__ Finn
 """Página de entrada do jogo Ilha Proibida.
 
-.. codeauthor:: Carlo Oliveira <carlo@nce.ufrj.br>
+.. codeauthor:: Finn Kockelke <finn_kockelke@gmx.net>
 
 Changelog
 ---------
@@ -47,16 +47,11 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
-        info_terrenos = [
-            [PORTAO_BRONZE, PALACIO_CORAL],
-            [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
-            [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
-            [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
-            [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
-            [PORTAO_BRONZE, PALACIO_CORAL],
-        ]
-        self.terrenos = [Terreno(ilha=self, cena=oceano, posy=py*110 + 10, posx=(6-len(row))*55 + px*110+10, local=lc)
-            for py, row in enumerate(info_terrenos) for px, lc in enumerate(row)]
+        info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
+        self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
+                                 posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
+                         for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
+        self.terrenos[4].afundar()
 
     def desocupa_e_vai_para(self, terreno_destino):
         self.peao.move(terreno_destino)
