@@ -21,6 +21,7 @@ from _spy.vitollino.main import Cena, Elemento, STYLE
 
 STYLE["width"] = 800
 STYLE["height"] = "600px"
+PORTA_OURO = "https://i.imgur.com/J6ow4jR.jpg"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
 PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
 PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
@@ -39,6 +40,10 @@ OBSERVATORIO = "https://i.imgur.com/E9MflTP.jpg"
 PANTANO_BRUMAS = "https://i.imgur.com/NDioDZg.jpg"
 ROCHA_FANTASMA = "https://i.imgur.com/TCmLjeT.png"
 PALACIO_MARES = "https://i.imgur.com/rYxQaTa.png"
+PENHASCO_ABANDONO = "https://i.imgur.com/MvN7kTU.jpg"
+BOSQUE_CARMESIM = "https://i.imgur.com/Uni02EK.jpg"
+DUNAS_ENGANO = "https://i.imgur.com/cG5UYCf.jpg"
+PONTE_SUSPENSA = "https://i.imgur.com/GC8V8CQ.jpg"
 PAWN = "https://imgur.com/zO3kiRp.png"
 
 
@@ -61,13 +66,16 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
-        info_terrenos = [
+        info_terrenos = it = [
         PORTAO_OURO, PALACIO_CORAL, PORTAO_BRONZE, VALE_TENEBROSO, CAVERNA_LAVA,
         CAVERNA_SOMBRAS, OBSERVATORIO, PANTANO_BRUMAS, ROCHA_FANTASMA, PALACIO_MARES,
+        PENHASCO_ABANDONO, BOSQUE_CARMESIM, DUNAS_ENGANO, PONTE_SUSPENSA,
         PORTAO_COBRE, ATALAIA, PISTA_POUSO, JARDIM_UIVOS, TEMPLO_SOL, TEMPLO_LUA] * 4
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
-                                 posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
+                                 posx=((px % 6) + int(abs(2.5 - px // 6))), local=it.pop(), ilha=self)
                          for px, lc in enumerate(info_terrenos[:36]) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
+                                 #posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
+                         #for px, lc in enumerate(info_terrenos[:36]) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
         #self.terrenos[4].afundar()
 
 
