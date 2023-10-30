@@ -97,7 +97,10 @@ class IlhaProibida:
                                  #posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
                          #for px, lc in enumerate(info_terrenos[:36]) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
         #self.terrenos[4].afundar()
-        self.terrenos[0].elemento(TFAVS[0])
+        from random import sample
+        spl = sample(8, list(range(25))
+        tfavs = zip(spl,TFAVS *2)
+        [self.terrenos[loc].elemento(tfav) for loc, tfav in tfavs]
 
 
 class Terreno:
@@ -125,7 +128,7 @@ class Terreno:
         
     def elemento(self, tipo):
         style = {'bottom': '0px', 'left': '0px'}
-        elemt = Elemento("https://i.imgur.com/{tipo}.png", w=LADO//3, h=LADO//3, cena=self.local, style=style)
+        elemt = Elemento(f"https://i.imgur.com/{tipo}.png", y=LADO//5, x=-5, w=LADO//2, h=4*LADO//5+5, cena=self.local, style=style)
         #tit.elt.text = local.nome.replace('_',' ') #"UM LOCAL QUALQUER"
     
 
