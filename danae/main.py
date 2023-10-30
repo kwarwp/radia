@@ -22,13 +22,13 @@ from collections import namedtuple
 
 STYLE["width"] = 800
 STYLE["height"] = "600px"
-LADO = 80
+LADO = 85
 PORTA_OURO = "https://i.imgur.com/PvkZSQP.jpg"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
 NOMES = ("PORTAO_BRONZE PALACIO_CORAL VALE_TENEBROSO PORTAO_OURO PORTAO_PRATA PORTAO_COBRE "
 "PORTAO_FERRO ATALAIA JARDIM_SUSSUROS PISTA_POUSO JARDIM_UIVOS TEMPLO_SOL "
 "TEMPLO_LUA CAVERNA_LAVA CAVERNA_SOMBRAS OBSERVATORIO PANTANO_BRUMAS ROCHA_FANTASMA "
-"PALACIO_MARES PENHASCO_ABANDONO BOSQUE_CARMESIM DUNAS_ENGANO PONTE_SUSPENSA LAGOA_PERDIDA").split()
+"PALACIO_MARES PENEDO_BALDIO BOSQUE_CARMESIM DUNAS_ENGANO PONTE_SUSPENSA LAGOA_PERDIDA").split()
 LINKS = ("BL6lB7H tLDbzd2 OZE1myn J6ow4jR v0g7eGm 45aU3nf "
 "yKU6ngz sdJ4W5O pjVcyoy CU3TLYh ZNuPWqZ O0OSVFt "
 "J160xpm 2j1IAyf b4xtltc E9MflTP NDioDZg TCmLjeT "
@@ -109,12 +109,12 @@ class Terreno:
 
     def __init__(self, local, posx, posy, cena, ilha):
         FOLGA = LADO + 10
-        local = f"https://i.imgur.com/{local.link}.jpg"
-        self.local = Elemento(local, x=posx * FOLGA + 10, y=posy * FOLGA + 50, w=LADO, h=LADO,
+        link = f"https://i.imgur.com/{local.link}.jpg"
+        self.local = Elemento(link, x=posx * FOLGA + 10, y=posy * FOLGA + 30, w=LADO, h=LADO,
                               cena=cena)
-        style = {'background-color': '#333', 'font-size': '10px', 'text-align': 'center'}
+        style = {'background-color': '#222', 'font-size': '10px', 'text-align': 'center', 'color': '#FFF'}
         tit = Elemento('', w=LADO, h=LADO//6, cena=self.local, style=style)
-        tit.elt.text = local.nome #"UM LOCAL QUALQUER"
+        tit.elt.text = local.nome.replace('_',' ') #"UM LOCAL QUALQUER"
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
         #self.local.vai = self.vai
