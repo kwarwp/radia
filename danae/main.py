@@ -18,6 +18,7 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
+from collections import namedtuple
 
 STYLE["width"] = 800
 STYLE["height"] = "600px"
@@ -57,7 +58,7 @@ DUNAS_ENGANO = "https://i.imgur.com/cG5UYCf.jpg"#
 PONTE_SUSPENSA = "https://i.imgur.com/GC8V8CQ.jpg"#
 LAGOA_PERDIDA = "https://i.imgur.com/7o1qq10.png"#"""
 PAWN = "https://imgur.com/zO3kiRp.png"
-
+Cah = namedtuple("Cah", "nome link")
 
 class IlhaProibida:
     """ Representa a classe principal do Jogo.
@@ -85,9 +86,11 @@ class IlhaProibida:
         PENHASCO_ABANDONO, BOSQUE_CARMESIM, DUNAS_ENGANO, PONTE_SUSPENSA, PORTAO_PRATA,
         PORTAO_COBRE, ATALAIA, PISTA_POUSO, JARDIM_UIVOS, TEMPLO_SOL, TEMPLO_LUA, LAGOA_PERDIDA]"""
         it = LINKS[:]
-        shuffle(it)
+        nm = NOMES[:]
+        locais = [Cah(nome=nm.pop(), link=it.pop()) for _ in range(len(it))]
+        shuffle(locais)
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
-                                 posx=((px % 6) + int(abs(2.5 - px // 6))), local=it.pop(), ilha=self)
+                                 posx=((px % 6) + int(abs(2.5 - px // 6))), local=locais.pop(), ilha=self)
                          for px in range(36) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
                                  #posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
                          #for px, lc in enumerate(info_terrenos[:36]) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
@@ -106,12 +109,12 @@ class Terreno:
 
     def __init__(self, local, posx, posy, cena, ilha):
         FOLGA = LADO + 10
-        local = f"https://i.imgur.com/{local}.jpg"
+        local = f"https://i.imgur.com/{local.link}.jpg"
         self.local = Elemento(local, x=posx * FOLGA + 10, y=posy * FOLGA + 50, w=LADO, h=LADO,
                               cena=cena)
         style = {'background-color': '#333', 'font-size': '10px', 'text-align': 'center'}
         tit = Elemento('', w=LADO, h=LADO//6, cena=self.local, style=style)
-        tit.elt.text = "UM LOCAL QUALQUER"
+        tit.elt.text = local.nome #"UM LOCAL QUALQUER"
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
         #self.local.vai = self.vai
