@@ -240,3 +240,10 @@ AttributeError: 'str' object has no attribute 'nome'
                                                                      ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon Oct 30 2023 17:02:30.785 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 101
+  spl = sample(8, list(range(25))
+                                           ^
+SyntaxError: invalid syntax
+'''},
