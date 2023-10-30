@@ -25,6 +25,8 @@ STYLE["height"] = "600px"
 LADO = 85
 PORTA_OURO = "https://i.imgur.com/PvkZSQP.jpg"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
+TFAV = "https://i.imgur.com/VivubQG.png"
+TFAVS = "KXZXTei LK4p1xG rUNsKEH qp5Zbn8".split()
 NOMES = ("PORTAO_BRONZE PALACIO_CORAL VALE_TENEBROSO PORTAO_OURO PORTAO_PRATA PORTAO_COBRE "
 "PORTAO_FERRO ATALAIA JARDIM_SUSSUROS PISTA_POUSO JARDIM_UIVOS TEMPLO_SOL "
 "TEMPLO_LUA CAVERNA_LAVA CAVERNA_SOMBRAS OBSERVATORIO PANTANO_BRUMAS ROCHA_FANTASMA "
@@ -95,6 +97,7 @@ class IlhaProibida:
                                  #posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
                          #for px, lc in enumerate(info_terrenos[:36]) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
         #self.terrenos[4].afundar()
+        self.terrenos[0].elemento(TFAVS[0])
 
 
 class Terreno:
@@ -119,6 +122,12 @@ class Terreno:
         self.posx, self.posy = posx, posy
         #self.local.vai = self.vai
         self.afunda = False
+        
+    def elemento(self, tipo):
+        style = {'bottom': '0px', 'left': '0px'}
+        elemt = Elemento("https://i.imgur.com/{tipo}.png", w=LADO//3, h=LADO//3, cena=self.local, style=style)
+        #tit.elt.text = local.nome.replace('_',' ') #"UM LOCAL QUALQUER"
+    
 
 def util():
     # ln = " ".join([ln for ln in loc.split("\n") if ln]) # for t in ln if t])
