@@ -460,3 +460,23 @@ TypeError: list indices must be integer, not tuple
                                              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon Oct 30 2023 19:44:42.629 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 139
+    IlhaProibida()
+  module <module> line 42
+    self.monta_tabuleiro_oceano()
+  module <module> line 58
+    self.terrenos = [Terreno(ilha=self, cena=oceano, posy=py*110 + 10, posx=(6-len(row))*55 + px*110+10, local=lc)
+NameError: name 'oceano' is not defined
+'''},
