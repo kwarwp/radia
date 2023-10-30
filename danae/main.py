@@ -51,7 +51,26 @@ class IlhaProibida:
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
                                  posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
                          for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
-        self.terrenos[4].afundar()
+        #self.terrenos[4].afundar()
+
+
+class Terreno:
+    """ Local onde um peão pode ficar.
+
+    :param local: Imagem do terreno
+    :param posx: Coordenada x do terreno.
+    :param posy: Coordenada y do terreno.
+    :param cena: Cena do local.
+    :param ilha: Referência ao tabuleiro.
+    """
+
+    def __init__(self, local, posx, posy, cena, ilha):
+        self.local = Elemento(local, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
+                              cena=cena)
+        self.peao, self.ilha = None, ilha
+        self.posx, self.posy = posx, posy
+        self.local.vai = self.vai
+        self.afunda = False
 
 
 if __name__ == "__main__":
