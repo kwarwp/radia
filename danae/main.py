@@ -31,6 +31,14 @@ ATALAIA = "https://i.imgur.com/sdJ4W5O.jpg"
 JARDIM_SUSSUROS = "https://i.imgur.com/pjVcyoy.jpg"
 PISTA_POUSO = "https://i.imgur.com/CU3TLYh.png"
 JARDIM_UIVOS = "https://i.imgur.com/ZNuPWqZ.jpg"
+TEMPLO_SOL = "https://i.imgur.com/O0OSVFt.jpg"
+TEMPLO_LUA = "https://i.imgur.com/J160xpm.jpg"
+CAVERNA_LAVA = "https://i.imgur.com/2j1IAyf.jpg"
+CAVERNA_SOMBRAS = "https://i.imgur.com/b4xtltc.png"
+OBSERVATORIO = "https://i.imgur.com/E9MflTP.jpg"
+PANTANO_BRUMAS = "https://i.imgur.com/NDioDZg.jpg"
+ROCHA_FANTASMA = "https://i.imgur.com/TCmLjeT.png"
+PALACIO_MARES = "https://i.imgur.com/rYxQaTa.png"
 PAWN = "https://imgur.com/zO3kiRp.png"
 
 
@@ -53,7 +61,10 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
-        info_terrenos = [PORTAO_OURO, PALACIO_CORAL, PORTAO_BRONZE, VALE_TENEBROSO, PORTAO_COBRE, ATALAIA, PISTA_POUSO] * 9
+        info_terrenos = [
+        PORTAO_OURO, PALACIO_CORAL, PORTAO_BRONZE, VALE_TENEBROSO, CAVERNA_LAVA,
+        CAVERNA_SOMBRAS, OBSERVATORIO, PANTANO_BRUMAS, ROCHA_FANTASMA, PALACIO_MARES,
+        PORTAO_COBRE, ATALAIA, PISTA_POUSO, JARDIM_UIVOS, TEMPLO_SOL, TEMPLO_LUA] * 4
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
                                  posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
                          for px, lc in enumerate(info_terrenos[:36]) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
