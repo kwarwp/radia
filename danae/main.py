@@ -24,7 +24,15 @@ STYLE["height"] = "600px"
 LADO = 80
 PORTA_OURO = "https://i.imgur.com/PvkZSQP.jpg"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
-PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"#
+NOMES = "PORTAO_BRONZE PALACIO_CORAL VALE_TENEBROSO PORTAO_OURO PORTAO_PRATA PORTAO_COBRE"
+"PORTAO_FERRO ATALAIA JARDIM_SUSSUROS PISTA_POUSO JARDIM_UIVOS TEMPLO_SOL"
+"TEMPLO_LUA CAVERNA_LAVA CAVERNA_SOMBRAS OBSERVATORIO PANTANO_BRUMAS ROCHA_FANTASMA"
+"PALACIO_MARES PENHASCO_ABANDONO BOSQUE_CARMESIM DUNAS_ENGANO PONTE_SUSPENSA LAGOA_PERDIDA")
+LINKS = ("BL6lB7H tLDbzd2 OZE1myn J6ow4jR v0g7eGm 45aU3nf"
+"yKU6ngz sdJ4W5O pjVcyoy CU3TLYh ZNuPWqZ O0OSVFt"
+"J160xpm 2j1IAyf b4xtltc E9MflTP NDioDZg TCmLjeT"
+"rYxQaTa MvN7kTU Uni02EK cG5UYCf GC8V8CQ 7o1qq10")
+loc = """PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"#
 PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"#
 VALE_TENEBROSO = "https://i.imgur.com/OZE1myn.jpg"#
 PORTAO_OURO = "https://i.imgur.com/J6ow4jR.jpg"#
@@ -47,7 +55,7 @@ PENHASCO_ABANDONO = "https://i.imgur.com/MvN7kTU.jpg"#
 BOSQUE_CARMESIM = "https://i.imgur.com/Uni02EK.jpg"#
 DUNAS_ENGANO = "https://i.imgur.com/cG5UYCf.jpg"#
 PONTE_SUSPENSA = "https://i.imgur.com/GC8V8CQ.jpg"#
-LAGOA_PERDIDA = "https://i.imgur.com/7o1qq10.png"#
+LAGOA_PERDIDA = "https://i.imgur.com/7o1qq10.png"#"""
 PAWN = "https://imgur.com/zO3kiRp.png"
 
 
@@ -76,6 +84,7 @@ class IlhaProibida:
         CAVERNA_SOMBRAS, OBSERVATORIO, PANTANO_BRUMAS, ROCHA_FANTASMA, PALACIO_MARES, JARDIM_SUSSUROS,
         PENHASCO_ABANDONO, BOSQUE_CARMESIM, DUNAS_ENGANO, PONTE_SUSPENSA, PORTAO_PRATA,
         PORTAO_COBRE, ATALAIA, PISTA_POUSO, JARDIM_UIVOS, TEMPLO_SOL, TEMPLO_LUA, LAGOA_PERDIDA]
+        it = LINKS[:]
         shuffle(it)
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
                                  posx=((px % 6) + int(abs(2.5 - px // 6))), local=it.pop(), ilha=self)
@@ -97,6 +106,7 @@ class Terreno:
 
     def __init__(self, local, posx, posy, cena, ilha):
         FOLGA = LADO + 10
+        local = f"https://i.imgur.com/{local}.jpg"
         self.local = Elemento(local, x=posx * FOLGA + 10, y=posy * FOLGA + 50, w=LADO, h=LADO,
                               cena=cena)
         self.peao, self.ilha = None, ilha
@@ -104,7 +114,12 @@ class Terreno:
         #self.local.vai = self.vai
         self.afunda = False
 
-
+def util():
+    # ln = " ".join([ln for ln in loc.split("\n") if ln]) # for t in ln if t])
+    ln = " ".join([ln.split()[0] for ln in loc.split("\n") if ln])
+    print(ln)
+    ln = " ".join([ln.split()[-1].split("/")[-1][:-6] for ln in loc.split("\n") if ln])
+    print(ln)
+    
 if __name__ == "__main__":
-    # IlhaProibida()
     IlhaProibida()
