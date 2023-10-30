@@ -93,7 +93,7 @@ class IlhaProibida:
         spl = sample(list(range(1,24)), 8)
         tfavs = zip(spl,TFAVS *2)
         for loc, elt_ in tfavs:
-            lc, ln, tf_ = locais[loc].nome
+            #lc, ln, tf_ = locais[loc].nome
             locais[loc] = Cah(nome=locais[loc].nome, link=locais[loc].link, elemento=elt_)
         [self.terrenos[loc].elemento(tfav) for loc, tfav in tfavs]
         shuffle(locais)
@@ -126,9 +126,12 @@ class Terreno:
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
         #self.local.vai = self.vai
+        self.elemento(local.elemento)
         self.afunda = False
         
     def elemento(self, tipo):
+        if not tipo:
+            return
         style = {'bottom': '0px', 'left': '0px'}
         elemt = Elemento(f"https://i.imgur.com/{tipo}.png", y=LADO//5, x=-5, w=LADO//2, h=4*LADO//5+5, cena=self.local, style=style)
         #tit.elt.text = local.nome.replace('_',' ') #"UM LOCAL QUALQUER"
