@@ -21,6 +21,7 @@ from _spy.vitollino.main import Cena, Elemento, STYLE
 
 STYLE["width"] = 800
 STYLE["height"] = "600px"
+LADO = 80
 PORTA_OURO = "https://i.imgur.com/PvkZSQP.jpg"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
 PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"#
@@ -69,14 +70,16 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
+        from random import shuffle
         info_terrenos = it = [
         PORTAO_OURO, PALACIO_CORAL, PORTAO_BRONZE, VALE_TENEBROSO, CAVERNA_LAVA, PORTAO_FERRO,
         CAVERNA_SOMBRAS, OBSERVATORIO, PANTANO_BRUMAS, ROCHA_FANTASMA, PALACIO_MARES, JARDIM_SUSSUROS,
         PENHASCO_ABANDONO, BOSQUE_CARMESIM, DUNAS_ENGANO, PONTE_SUSPENSA, PORTAO_PRATA,
-        PORTAO_COBRE, ATALAIA, PISTA_POUSO, JARDIM_UIVOS, TEMPLO_SOL, TEMPLO_LUA, LAGOA_PERDIDA] * 2
+        PORTAO_COBRE, ATALAIA, PISTA_POUSO, JARDIM_UIVOS, TEMPLO_SOL, TEMPLO_LUA, LAGOA_PERDIDA]
+        shuffle(it)
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
                                  posx=((px % 6) + int(abs(2.5 - px // 6))), local=it.pop(), ilha=self)
-                         for px, lc in enumerate(info_terrenos[:36]) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
+                         for px in range(36) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
                                  #posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
                          #for px, lc in enumerate(info_terrenos[:36]) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
         #self.terrenos[4].afundar()
@@ -93,7 +96,8 @@ class Terreno:
     """
 
     def __init__(self, local, posx, posy, cena, ilha):
-        self.local = Elemento(local, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
+        FOLGA = LADO + 10
+        self.local = Elemento(local, x=posx * FOLGA + 10, y=posy * FOLGA + 50, w=LADO, h=LADO,
                               cena=cena)
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
