@@ -64,19 +64,6 @@ class IlhaProibida:
             for py, row in enumerate(info_terrenos) for px, lc in enumerate(row)
         ]
         
-        info_terrenos = [
-            (PORTAO_BRONZE, "Portão Bronze"), 
-            (PALACIO_CORAL, "Palacio Coral")
-        ] * 18
-        self.terrenos = [
-            Terreno(
-                ilha=self, cena=self.oceano, 
-                posy=px // 6, posx=((px % 6) + int(abs(2.5 - px // 6))), 
-                local=lc[0], name=lc[1]
-            )
-            for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2
-        ]
-        
         self.terrenos[4].afundar()
 
 
