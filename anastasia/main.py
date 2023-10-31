@@ -42,7 +42,8 @@ Elemento pecinhas que colocam na cena
 collections, namedtuple: criar classe em uma linha
 """
 from _spy.vitollino.main import Cena, Elemento, STYLE 
-import collections import namedtuple 
+import collections import namedtuple
+ter = namedtuple('Ter', nome, imagem, tafv) #classe Ter - par ordenado que eu nomeio cada um 
 
 """
 IMAGENS
@@ -130,7 +131,7 @@ class Terreno:
         def contiguos(origem, destino): #mover verificar direçao se esta no sentido x e no sentido y 
             if not origem:
                 return True
-            return (abs(origem.posx - destino.posx) <= 1 and #xor é o código operador para duas variaveis ou exclusivo 
+            return (abs(origem.posx - destino.posx) <= 1 and # xor é o código operador para duas variaveis ou exclusivo 
             abs(origem.posy - destino.posy) <= 1)  
 
         peao_pode_ir = contiguos(self, terreno_destino)
@@ -183,7 +184,8 @@ if __name__ == "__main__": #troca o name pelo main
     #from __future__ import braces
     #import __phello__
     #ag.fly()
-    ata = Ter(nome="atalaia", imagem'imgur/xyz', tafv=none) #instancia da classe terra (TER) #par ordenado que eu nomeio cada um 
+    ata = Ter(nome="atalaia", imagem'imgur/xyz', tafv=none) #instancia com argumentos de Ter
+    
     ata.nome = "pista"
     
     
