@@ -49,7 +49,8 @@ class IlhaProibida:
         """
         info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
-                                 posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
+                                 posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self
+                                 name="Hallo")
                          for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
         self.terrenos[4].afundar()
 
@@ -76,9 +77,12 @@ class Terreno:
     :param ilha: Referência ao tabuleiro.
     """
 
-    def __init__(self, local, posx, posy, cena, ilha):
+    def __init__(self, local, posx, posy, cena, ilha, name):
         self.local = Elemento(local, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
                               cena=cena)
+        estilo = {'background-color': '#343', 'color': 'white'}
+        letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
+        letreiro.elt.text = name
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
         self.local.vai = self.vai
