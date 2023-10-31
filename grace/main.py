@@ -95,7 +95,7 @@ class Terreno:
 
     def __init__(self, local, posx, posy, cena, ilha, name):
         self.local = Elemento(
-            "https://imgur.com/" + local + ".jpg", 
+            f"https://imgur.com/{local}.jpg"
             x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
             cena=cena
         )
