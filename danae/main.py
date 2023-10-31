@@ -20,6 +20,7 @@ Changelog
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
 from collections import namedtuple
+from random import shuffle
 Ter = namedtuple("Ter", "nome imagem tafv")
 STYLE["width"] = 800
 STYLE["height"] = "600px"
@@ -37,6 +38,8 @@ LINKS = ("CU3TLYh BL6lB7H tLDbzd2 OZE1myn J6ow4jR v0g7eGm 45aU3nf "
 "J160xpm 2j1IAyf b4xtltc E9MflTP NDioDZg TCmLjeT "
 "rYxQaTa MvN7kTU Uni02EK cG5UYCf GC8V8CQ 7o1qq10").split()
 
+info_terrenos = [(nome, "https://imgur.com/"+link+".jpg") for nome, link in zip(NOMES, LINKS)]
+shuffle(info_terrenos)
 
 class IlhaProibida:
     """ Representa a classe principal do Jogo.
@@ -59,8 +62,7 @@ class IlhaProibida:
         """
         from random import shuffle
         # Agora info_terrenos será uma lista de Ter -> Como criar?
-        info_terrenos = [Ter(nome=NOMES[px], imagem=local, tafv=None) for px, local in enumerate(info_terrenos)]
-        
+        info_terrenos = [Terreno(cena=self.oceano, posy=px // 6, posx=((px % 6) + int(abs(2.5 - px // 6))), local=Ter(nome=lc[0], imagem=lc[1], tafv=None), ilha=self) for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
         shuffle(info_terrenos)
         # Cada terreno realmente criado "puxa" um terreno da lista de "Ter's
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
