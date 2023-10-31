@@ -55,7 +55,6 @@ class IlhaProibida:
             [(PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral"), (PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral")],
             [(PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral")],
         ]
-        info_terrenos[[(PORTAO_BRONZE, "Portão Bronze")]]
         for py, row in enumerate(info_terrenos):
             for px, lc in enumerate(row):
                 self.terrenos += Terreno(
