@@ -1,7 +1,8 @@
 # radia.sarah.main.py
 # __author__ Filipe Marçal
 from _spy.vitollino.main import Cena, Elemento, STYLE
-
+from collections import namedtuple
+Ter = namedtuple("Ter", "nome imagem tafv")
 STYLE["width"] = 800
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
@@ -29,7 +30,11 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
+        from random import shuffle
+        # Agora info_terrenos será uma lista de Ter -> Como criar?
         info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
+        shuffle(info_terrenos)
+        # Cada terreno realmente criado "puxa" um terreno da lista de "Ter's
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
                                  posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
                          for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
@@ -58,9 +63,15 @@ class Terreno:
     :param ilha: Referência ao tabuleiro.
     """
 
-    def __init__(self, local, posx, posy, cena, ilha):
+    def __init__(self, local: Ter, posx, posy, cena, ilha):
+        #img = local.imagem
+        #self.local = Elemento(img
         self.local = Elemento(local, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
                               cena=cena)
+        estilo = {'background-color': 'slategray', 'color': 'white'}
+        letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
+        letreiro.elt.text = "UM TERRENO" # local.nome
+        #tafv = Elemento(local.tafv, ....)
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
         self.local.vai = self.vai
@@ -77,7 +88,9 @@ class Terreno:
         def contiguos(origem, destino):
             if not origem:
                 return True
-            return abs(origem.posx - destino.posx) <= 1 and abs(origem.posy - destino.posy) <= 1
+            from operator import xor
+            return xor(abs(origem.posx - destino.posx) == 1,
+            abs(origem.posy - destino.posy) == 1) and not destino.afunda
 
         peao_pode_ir = contiguos(self, terreno_destino)
         # executar o movimento do peão agora que foi autorizado pelo pode ir
@@ -114,4 +127,7 @@ class Peao:
 if __name__ == "__main__":
     # IlhaProibida()
     IlhaProibida()
+    ata = Ter(nome="atalaia", imagem='imgur/xyz', tafv=None)
+    #ata.nome = "pista"
+    #print(ata.nome, ata.tafv)
     # print([(px, int(abs(2.5-px//6))) for px in range(36)])
