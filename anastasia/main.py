@@ -45,8 +45,8 @@ Elemento pecinhas que colocam na cena
 collections, namedtuple: criar classe em uma linha
 """
 from _spy.vitollino.main import Cena, Elemento, STYLE 
-from collections import NamedTuple
-Ter = namedtuple("Ter", "nome imagem tafv") #classe Ter - par ordenado que eu nomeio cada um 
+from collections import namedtuple
+Ter = namedtuple("Ter", "nome imagem tafv") #classe Ter - par ordenado que eu nomeio cada um. criar parametros com os itens divididos por espaço
 
 """
 IMAGENS
@@ -59,6 +59,10 @@ PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
 PAWN = "https://imgur.com/zO3kiRp.png" #PINO
 OBSERVATORIO = "https://imgur.com/J5fn5ZX" #OBSERVATORIO
 BOSQUE = "https://imgur.com/1LoY0Bf" #BOSQUE
+
+tafv = ("xxx").split()
+NOMES = ("PISTA_POUSO PORTA_BRONZE PALACIO_CORAL OBSERVATORIO BOSQUE").split() 
+LINKS = ("gVHmY2v BL6lB7H tLDbzd2 zO3kiRp J5fn5ZX 1LoY0Bf").split()
 
 
 
