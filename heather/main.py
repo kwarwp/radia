@@ -1,7 +1,6 @@
 # radia.roxanne.main.py
 from _spy.vitollino.main import Cena, Elemento, STYLE
 from collections import namedtuple
-Ter = namedtuple("Ter", "nome imagem tafv")
 STYLE["width"] = 800
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
