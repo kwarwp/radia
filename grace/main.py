@@ -47,14 +47,18 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
-        
+        info_terrenos = [
+            (PORTAO_BRONZE, "Portão Bronze"), 
+            (PALACIO_CORAL, "Palacio Coral")
+        ] * 18
         self.terrenos = [
             Terreno(
                 ilha=self, cena=self.oceano, 
-                posx=200, posy= 300,
-                local=PORTAO_BRONZE, name="TEST"
+                posy=px // 6, posx=((px % 6) + int(abs(2.5 - px // 6))), 
+                local=lc[0], name=lc[1]
             )
-        ] * 5
+            for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2
+        ]
         
         self.terrenos[4].afundar()
 
