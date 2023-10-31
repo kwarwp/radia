@@ -109,7 +109,7 @@ class Terreno:
         if local.tafv:
             self.tafv = Elemento(
                 f"https://imgur.com/{local.tafv}.jpg", 
-                x=posx * 110 + 60, y=posy * 110 + 100, w=60, h=60,
+                x=posx * 110 + 55, y=posy * 110 + 95, w=60, h=60,
                 cena=cena
             )
         self.peao, self.ilha = None, ilha
