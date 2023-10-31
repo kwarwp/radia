@@ -33,6 +33,7 @@ class IlhaProibida:
         from random import shuffle
         # Agora info_terrenos será uma lista de Ter -> Como criar?
         info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
+        Ter = [info_terrenos]
         shuffle(info_terrenos)
         # Cada terreno realmente criado "puxa" um terreno da lista de "Ter's
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
