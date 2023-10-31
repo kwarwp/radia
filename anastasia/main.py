@@ -68,19 +68,11 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
     
     def __init__(self): #construcao, o primeiro parametro sempre se chama self - tabuleiro 
         self.oceano = oceano = Cena(IMAGEM).vai() #self.oceano é igual ao local oceano 
-        #self.Terreno1 = Terreno(PORTAO_BRONZE, posx=10, posy=50, cena=oceano)
-        #self.Terreno2 = Terreno(PALACIO_CORAL, posx=120, posy=50, cena=oceano)
-        #info_terrenos= [(10,PORTAO_BRONZE), (120,PALACIO_CORAL),(230,PORTAO_BRONZE)] #PAR ORDENADOS
-        #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL]
-        #info_terrenos = np.array([[0,1,0,1],[0,1,0,1],[0,1,0,1]])
-        #info_terrenos= list("MFCOBTAMFD"*3)
-        # shuffle(info_terrenos)
-        #self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
         self.terrenos = []
         self.monta_tabuleiro_oceano()
         self.peao = Peao(self)
-        self.terrenos[1].ocupa(self.peao)#chamou o terreno 1 e ocupa com o peão
-        #for px, lc in enumerate(info_terrenos)]
+        self.peao.mover(self.terrenos[0])
+     
 
     def monta_tabuleiro_oceano(self):
         """ Montar o tabuleiro em forma de diamante.
