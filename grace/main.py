@@ -54,10 +54,9 @@ class IlhaProibida:
         self.terrenos = [
             Terreno(
                 ilha=self, cena=self.oceano, 
-                posy=px // 6, posx=((px % 6) + int(abs(2.5 - px // 6))), 
-                local=lc[0], name=lc[1]
+                posy=200, posx=200, 
+                local=PORTAO_BRONZE, name="TEst"
             )
-            for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2
         ]
         
         self.terrenos[4].afundar()
