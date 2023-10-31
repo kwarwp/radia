@@ -20,7 +20,6 @@ Changelog
 
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
-from julia import main as jmain
 
 STYLE["width"] = 800
 STYLE["height"] = "600px"
@@ -122,6 +121,10 @@ class Peao:
     """
 
     def __init__(self, ilha):
+    # O self é sempre obrigatório no método, nesse caso, ilha é o primeiro parâmetro e se refere à classe IlhaProibida
+    # Na classe IlhaProibida é setado um atributo peao que recebe uma instância da classe Peao
+    # Naquele caso,o self se refere a IlhaProibida(O self sempre se refere à classe onde ele está declarado)
+
         """
         """
         self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80,
