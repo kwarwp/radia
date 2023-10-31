@@ -108,7 +108,6 @@ class Terreno:
     """
     def __init__(self, local: Ter, posx, posy, cena, ilha): #Ter anotação, tem que passar aqui um cara ter
         img = local.imagem
-        self.local = Elemento(img
         self.local = Elemento(local, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
                               cena=cena)
         estilo = {'background-color': '#343', 'color': 'white'}
