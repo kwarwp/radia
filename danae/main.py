@@ -65,6 +65,14 @@ class IlhaProibida:
         aqui = self.terrenos.index(terreno)
         return self.terrenos[aqui + 1]
 
+NOMES_TERRENOS = [
+    "Floresta do Crepúsculo", "Praia do Zéfiro", "Praia da Lagoa de Cobre", "Praia do Mar de Prata", 
+    "Palácio de Coral", "Palácio das Marés", "Palácio da Lua Crescente", "Palácio do Sol Poente", 
+    "Templo do Sol", "Templo da Lua", "Templo da Terra", "Templo do Fogo", 
+    "Caverna das Sombras", "Caverna do Vento", "Caverna da Emanação", "Caverna da Névoa",
+    "Ponte dos Abismos", "Ponte das Faias", "Ponte de Pedra", "Ponte de Bronze",
+    "Observatório", "Altar do Vento", "Altar da Pedra", "Altar da Lua"
+]
 
 class Terreno:
     """ Local onde um peão pode ficar.
@@ -79,6 +87,9 @@ class Terreno:
     def __init__(self, local, posx, posy, cena, ilha):
         self.local = Elemento(local, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
                               cena=cena)
+        estilo = {'background-color': '#343', 'color': 'white'}
+        letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
+        letreiro.elt.text = NOMES_TERRENOS[posx + posy * 6]  # Aqui alteramos para usar a lista
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
         self.local.vai = self.vai
