@@ -1,5 +1,5 @@
 # radia.roxanne.main.py
-# __author__ Felipe Nunes
+# __author__ Carlo
 """Página de entrada do jogo Ilha Proibida.
 
 .. codeauthor:: Carlo Oliveira <carlo@nce.ufrj.br>
@@ -19,16 +19,15 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
-from random import shuffle
 from collections import namedtuple
 Ter = namedtuple("Ter", "nome imagem tafv")
-
 STYLE["width"] = 800
-STYLE["height"] = "600px"
+STYLE["height"] = "800px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
-PORTAO_BRONZE = Ter("Portão Bronze", "https://imgur.com/BL6lB7H.jpg", None)  # Exemplo de uso da namedtuple
-PALACIO_CORAL = Ter("Palácio Coral", "https://imgur.com/tLDbzd2.jpg", None)
+PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
+PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
 PAWN = "https://imgur.com/zO3kiRp.png"
+
 
 class IlhaProibida:
     """ Representa a classe principal do Jogo.
@@ -49,11 +48,14 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
-        info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 6  # 24 terrenos no total
+        from random import shuffle
+        # Agora info_terrenos será uma lista de Ter -> Como criar?
+        info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
         shuffle(info_terrenos)
-        
-        self.terrenos = [Terreno(cena=self.oceano, posy=px // 6, posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc.imagem, ilha=self) for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6) * 2)]
-    
+        # Cada terreno realmente criado "puxa" um terreno da lista de "Ter's
+        self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
+                                 posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
+                         for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
         self.terrenos[4].afundar()
 
     def desocupa_e_vai_para(self, terreno_destino):
@@ -68,14 +70,6 @@ class IlhaProibida:
         aqui = self.terrenos.index(terreno)
         return self.terrenos[aqui + 1]
 
-NOMES_TERRENOS = [
-    "Floresta do Crepúsculo", "Praia do Zéfiro", "Praia da Lagoa de Cobre", "Praia do Mar de Prata", 
-    "Palácio de Coral", "Palácio das Marés", "Palácio da Lua Crescente", "Palácio do Sol Poente", 
-    "Templo do Sol", "Templo da Lua", "Templo da Terra", "Templo do Fogo", 
-    "Caverna das Sombras", "Caverna do Vento", "Caverna da Emanação", "Caverna da Névoa",
-    "Ponte dos Abismos", "Ponte das Faias", "Ponte de Pedra", "Ponte de Bronze",
-    "Observatório", "Altar do Vento", "Altar da Pedra", "Altar da Lua"
-]
 
 class Terreno:
     """ Local onde um peão pode ficar.
@@ -87,12 +81,15 @@ class Terreno:
     :param ilha: Referência ao tabuleiro.
     """
 
-    def __init__(self, local, posx, posy, cena, ilha):
+    def __init__(self, local: Ter, posx, posy, cena, ilha):
+        #img = local.imagem
+        #self.local = Elemento(img
         self.local = Elemento(local, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
                               cena=cena)
-        estilo = {'background-color': '#343', 'color': 'white', 'font-size': '10px', 'text-align': 'center'}
+        estilo = {'background-color': 'slategray', 'color': 'white'}
         letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
-        letreiro.elt.text = NOMES_TERRENOS[posx + posy * 6]  # Aqui alteramos para usar a lista
+        letreiro.elt.text = "UM TERRENO" # local.nome
+        #tafv = Elemento(local.tafv, ....)
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
         self.local.vai = self.vai
@@ -109,18 +106,10 @@ class Terreno:
         def contiguos(origem, destino):
             if not origem:
                 return True
-            # Verifica se os terrenos estao na horizontal ou vertical um do outro mas nao na diagonal
-            horizontal = abs(origem.posx - destino.posx) == 1 and origem.posy == destino.posy
-            vertical = abs(origem.posy - destino.posy) == 1 and origem.posx == destino.posx
-            
-            sao_contiguos = horizontal or vertical
-            
-            # Verifica se o terreno destino nao esta fundado 
-            nao_afundado = not destino.afunda
-            
-            #Retorna True se os terrenos sao contiguos e o destino nao esta afundando 
-            return sao_contiguos and nao_afundado
-            
+            from operator import xor
+            return xor(abs(origem.posx - destino.posx) == 1,
+            abs(origem.posy - destino.posy) == 1) and not destino.afunda
+
         peao_pode_ir = contiguos(self, terreno_destino)
         # executar o movimento do peão agora que foi autorizado pelo pode ir
         self.peao.move(terreno_destino) if peao_pode_ir else None
@@ -156,4 +145,7 @@ class Peao:
 if __name__ == "__main__":
     # IlhaProibida()
     IlhaProibida()
+    ata = Ter(nome="atalaia", imagem='imgur/xyz', tafv=None)
+    #ata.nome = "pista"
+    #print(ata.nome, ata.tafv)
     # print([(px, int(abs(2.5-px//6))) for px in range(36)])
