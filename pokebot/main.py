@@ -12,7 +12,6 @@ Changelog
 |   **Copyright © 2023  Raphaella Freitas**,
 |   **SPDX-License-Identifier:** `GNU General Public License v3.0 or later <http://is.gd/3Udt>`_.
 """
-from browser import document, window
 from html.parser import HTMLParser
 
 class Pokebot(HTMLParser):
@@ -22,17 +21,21 @@ class Pokebot(HTMLParser):
             self.last = tag
             print("Encountered a start tag:", tag, attrs)
         if self.last == "h3" and tag == "span" and "mw-headline" in str(attrs):
-            #self.pokedex[tag] = attrs[1][1] #(tag, attrs)
+            #tem que ser um span precedido por "h3" e a classe tem que ser "mw-headline"
             self.gera = attrs[1][1]
+            # o atributo gera é usado para definir a geração corrente até que outra tag span mude para a próxima
             self.last = tag
         if tag in "img a":
             #self.pokedex[tag] = (tag, attrs)
-            #print(str(attrs))
             if tag == "img":
+                print(self.last) # ('a', [('href', '/pt-br/wiki/Chikorita'), ('title', 'Chikorita')])
+                # como foi guardado na tupla last: queremos [1]->lista de atributos [1]-> atributo title [1] -> valor de title
                 self.pokedex[self.last[1][1][1]] = self.gera
+                # a tag que importa é uma que precede uma tag "img"
             else:
                 if "'href', '/pt-br/wiki/" in  str(attrs):
                     self.last = (tag, attrs)
+                    #guarda os atributos de tags to tipo "a" para ver depois se define um pokemon
 
 
     def handle_endtag(self, tag):
