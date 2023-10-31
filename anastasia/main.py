@@ -87,18 +87,13 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         """ Montar o tabuleiro em forma de diamante.
         
         """
-        info_terrenos = [
-            [PORTAO_BRONZE, PALACIO_CORAL],
-            [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
-            [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
-            [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
-            [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL],
-            [PORTAO_BRONZE, PALACIO_CORAL],
+         info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
+        self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
+                                 posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
+                         for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
+        self.terrenos[4].afundar()
         ]
         #random.shuffle(info_terrenos) #Embaralha a lista de cartas (tabuleiro)
-        self.terrenos = [Terreno(cena=oceano, posy=py*110 + 10, posx=(6-len(row))*55 + px*110+10, local=lc)
-            for py, row in enumerate(info_terrenos) for px, lc in enumerate(row)]
-        self.terrenos[4].afundar()
         #tabuleiro = [i for i in range(1, 24)] #Gera uma lista de cartas com números de 1 a 24, representando as cartas
         #for i in range(1): #sorteia 1 vez, 2 cartas  
             #print(info_terrenos[i:i+2]) 
