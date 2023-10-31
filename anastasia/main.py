@@ -83,39 +83,17 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
                                  posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
                          for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
         self.terrenos[4].afundar()
-        ]
-        #random.shuffle(info_terrenos) #Embaralha a lista de cartas (tabuleiro)
-        #tabuleiro = [i for i in range(1, 24)] #Gera uma lista de cartas com números de 1 a 24, representando as cartas
-        #for i in range(1): #sorteia 1 vez, 2 cartas  
-            #print(info_terrenos[i:i+2]) 
-        #for i in range(1): #sorteia 1 vez, 4 cartas  
-            #print(info_terrenos[i:i+4]) 
-        #for i in range(2): #sorteia 2 vezes, 6 cartas  
-            #print(info_terrenos[i:i+6]) 
-        #for i in range(1): #sorteia 1 vez, 4 cartas  
-            #print(info_terrenos[i:i+4]) 
-        #for i in range(1): #sorteia 1 vez, 2 cartas  
-            #print(info_terrenos[i:i+2]) 
-        #info_terrenos = self.sprite("terreno", 0, 0)
-        #info_terrenos.frame = 2  # este número seleciona o ladrilho que vai ser colocado
-        #info_terrenos = self.sprite("terreno", 0, 0)
-        #info_terrenos.frame = 4  # este número seleciona o ladrilho que vai ser colocado
-        #info_terrenos = self.sprite("terreno", 0, 0)
-        #info_terrenos.frame = 6  # este número seleciona o ladrilho que vai ser colocado
-        #info_terrenos = self.sprite("terreno", 0, 0)
-        #info_terrenos.frame = 4  # este número seleciona o ladrilho que vai ser colocado
-        #info_terrenos = self.sprite("terreno", 0, 0)
-        #info_terrenos.frame = 2  # este número seleciona o ladrilho que vai ser colocado
+       
     def desocupa_e_vai_para(self, terreno_destino):
         self.peao.move(terreno_destino)     
        
     def direita(self, terreno):
         """Move o peão para a direita
         :param terreno: O terreno onde está o peão 
-        :return
+        :return: O terreno onde o peão vai
         """
         aqui = self.terrenos.index(terreno) #achar um terreno
-        return self.terrenos[aqui+1]
+        return self.terrenos[aqui + 1]
                 
 class Terreno:
     """ Local onde um peão pode ficar.
@@ -160,7 +138,7 @@ class Peao:
     Marcador usado para definir a posição do jogador nos terrenos.
     :param ilha: Referência ao tabuleiro.
     """
-    def __init__(self, ilha, frame, x, y):
+    def __init__(self, ilha):
         """
         peao de posse da ilha
         """
@@ -179,7 +157,7 @@ class Peao:
         terreno.peao = self
         self.peao.x, self.peao.y = terreno.posx * 110 + 10, terreno.posy * 110 + 50
           
-    def mover(self, x, terreno_destino): 
+    def mover(self, terreno_destino): 
         """
         movimento peão no terreno
         """
