@@ -125,7 +125,8 @@ class Peao:
         self.terreno = ilha  # era None, mas o peão agora nasce na ilha
         self.ilha = ilha
 
-    def move(self, terreno):  # Corrigir: não está condizente!
+    def move(self, terreno):
+        self.terreno.peao = None
         self.terreno = terreno
         terreno.peao = self
         self.peao.x, self.peao.y = terreno.posx * 110 + 10, terreno.posy * 110 + 50
