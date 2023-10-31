@@ -53,7 +53,7 @@ class IlhaProibida:
             [(PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral"), (PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral"), (PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral")],
             [(PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral"), (PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral"), (PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral")],
             [(PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral"), (PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral")],
-            [(PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral")],
+            [(PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral")]
         ]
         self.terrenos = [
             Terreno(
