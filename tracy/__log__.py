@@ -392,3 +392,10 @@ SyntaxError: EOL while scanning string literal
                                            ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Tue Oct 31 2023 12:12:32.475 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 23
+  Ter = namedtuple("Ter", "nome imagem tafv
+                                           ^
+SyntaxError: EOL while scanning string literal
+'''},
