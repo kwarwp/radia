@@ -23,9 +23,15 @@ from _spy.vitollino.main import Cena, Elemento, STYLE
 STYLE["width"] = 800
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
-PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
-PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
 PAWN = "https://imgur.com/zO3kiRp.png"
+NOMES = ("PISTA_POUSO PORTAO_BRONZE PALACIO_CORAL VALE_TENEBROSO PORTAO_OURO PORTAO_PRATA PORTAO_COBRE "
+"PORTAO_FERRO ATALAIA JARDIM_SUSSUROS JARDIM_UIVOS TEMPLO_SOL "
+"TEMPLO_LUA CAVERNA_LAVA CAVERNA_SOMBRAS OBSERVATORIO PANTANO_BRUMAS ROCHA_FANTASMA "
+"PALACIO_MARES PENEDO_BALDIO BOSQUE_CARMESIM DUNAS_ENGANO PONTE_SUSPENSA LAGOA_PERDIDA").split()
+LINKS = ("CU3TLYh BL6lB7H tLDbzd2 OZE1myn J6ow4jR v0g7eGm 45aU3nf "
+"yKU6ngz sdJ4W5O pjVcyoy ZNuPWqZ O0OSVFt "
+"J160xpm 2j1IAyf b4xtltc E9MflTP NDioDZg TCmLjeT "
+"rYxQaTa MvN7kTU Uni02EK cG5UYCf GC8V8CQ 7o1qq10").split()
 
 
 class IlhaProibida:
@@ -48,10 +54,9 @@ class IlhaProibida:
         
         """
         from random import shuffle
-        info_terrenos = [
-            (PORTAO_BRONZE, "Portão Bronze"), 
-            (PALACIO_CORAL, "Palacio Coral")
-        ] * 18
+        
+        
+        info_terrenos = list(zip(LINKS, NOMES))
         shuffle(info_terrenos)
         
         self.terrenos = [
@@ -90,7 +95,7 @@ class Terreno:
     """
 
     def __init__(self, local, posx, posy, cena, ilha, name):
-        self.local = Elemento(local, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
+        self.local = Elemento("https://imgur.com/" + local + ".jpg", x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
                               cena=cena)
         estilo = {'background-color': '#343', 'color': 'white'}
         letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
