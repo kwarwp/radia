@@ -2435,3 +2435,10 @@ AttributeError: 'IlhaProibida' object has no attribute 'desocupa_e_vai'
                                                                                                                                                                                                  ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 10:50:59.363 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 130
+  return xor(abs(origem.posx - destino.posx) == 1 # xor é o código operador para duas variaveis ou exclusivo 
+                                                                                                                           ^
+SyntaxError: invalid syntax
+'''},
