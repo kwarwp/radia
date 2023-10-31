@@ -87,7 +87,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         """ Montar o tabuleiro em forma de diamante.
         
         """
-         info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
+        info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
                                  posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
                          for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
