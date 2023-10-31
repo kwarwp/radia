@@ -535,3 +535,10 @@ NameError: name 'Null' is not defined
     if not self.terreno == None and not self.terreno.peao == Null:
 NameError: name 'Null' is not defined
 '''},
+{'date': 'Tue Oct 31 2023 10:54:15.638 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 51
+  self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
+                                                                                                                                                                                             ^
+SyntaxError: invalid syntax
+'''},
