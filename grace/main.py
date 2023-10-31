@@ -99,6 +99,7 @@ class Terreno:
                 abs(origem.posx - destino.posx) <= 1 
                 and abs(origem.posy - destino.posy) <= 1 
                 and (origem.posy == destino.posy or origem.posx == destino.posx)
+                and not destino.afunda
             )
 
         peao_pode_ir = contiguos(self, terreno_destino)
