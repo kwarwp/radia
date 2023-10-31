@@ -17,3 +17,10 @@
     ppp = window.puppeteer
 AttributeError: no attribute puppeteer for [object Window]
 '''},
+{'date': 'Tue Oct 31 2023 15:46:39.163 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 32
+  with urllib.request.urlopen(url) as _fp
+                                          ^
+SyntaxError: invalid syntax
+'''},
