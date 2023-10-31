@@ -127,8 +127,8 @@ class Terreno:
             if not origem:
                 return True
             from operator import xor
-            return xor(abs(origem.posx - destino.posx) == 1, # xor é o código operador para duas variaveis ou exclusivo 
-            abs(origem.posy - destino.posy) == 1  and notdestinoa.funda
+            return (abs(origem.posx - destino.posx) <= 1 and # xor é o código operador para duas variaveis ou exclusivo 
+            abs(origem.posy - destino.posy) <= 1)  
 
         peao_pode_ir = contiguos(self, terreno_destino)
         # executar o movimento do peão agora que foi autorizado pelo pode ir
