@@ -27,7 +27,7 @@ IMAGEM = "https://imgur.com/gVHmY2v.jpg"
 PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
 PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
 PAWN = "https://imgur.com/zO3kiRp.png"
-TFAVS = "KXZXTei LK4p1xG rUNsKEH qp5Zbn8".split()
+TAFVS = "KXZXTei LK4p1xG rUNsKEH qp5Zbn8".split()
 NOMES = ("PISTA_POUSO PORTAO_BRONZE PALACIO_CORAL VALE_TENEBROSO PORTAO_OURO PORTAO_PRATA PORTAO_COBRE "
 "PORTAO_FERRO ATALAIA JARDIM_SUSSUROS JARDIM_UIVOS TEMPLO_SOL "
 "TEMPLO_LUA CAVERNA_LAVA CAVERNA_SOMBRAS OBSERVATORIO PANTANO_BRUMAS ROCHA_FANTASMA "
@@ -58,10 +58,9 @@ class IlhaProibida:
         
         """
         from random import shuffle
-        tafv = [None]*16+TAFV*2
+        tafv = [None]*16+TAFVS*2
         info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
-            tafv=tafv.pop()) for _ in range(24)
-        ]
+        tafv=tafv.pop()) for _ in range(24)]
         # como introduzir os elementos no info_terrenos?
         # Agora info_terrenos é uma lista de Ter -> Como criar?
         #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
