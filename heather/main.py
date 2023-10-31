@@ -1,13 +1,14 @@
 # radia.roxanne.main.py
 from _spy.vitollino.main import Cena, Elemento, STYLE
 from collections import namedtuple
+Ter = namedtuple("Ter", "nome imagem tafv")
 STYLE["width"] = 800
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
+PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
+PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
 PAWN = "https://imgur.com/zO3kiRp.png"
-
 TFAVS = "KXZXTei LK4p1xG rUNsKEH qp5Zbn8".split()
-
 NOMES = ("PISTA_POUSO PORTAO_BRONZE PALACIO_CORAL VALE_TENEBROSO PORTAO_OURO PORTAO_PRATA PORTAO_COBRE "
 "PORTAO_FERRO ATALAIA JARDIM_SUSSUROS JARDIM_UIVOS TEMPLO_SOL "
 "TEMPLO_LUA CAVERNA_LAVA CAVERNA_SOMBRAS OBSERVATORIO PANTANO_BRUMAS ROCHA_FANTASMA "
@@ -38,15 +39,17 @@ class IlhaProibida:
         
         """
         from random import shuffle
-        # Agora info_terrenos será uma lista de Ter -> Como criar?
-        info_terrenos = []
-        for terreno, link in zip(NOMES, LINKS):
-            info_terrenos.append(("https://imgur.com/" + link, terreno))
+        tafv = [None]*16+TAFV*2
+        info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
+        tafv=tafv.pop() for _ in range(24)]
+        # como introduzir os elementos no info_terrenos?
+        # Agora info_terrenos é uma lista de Ter -> Como criar?
+        #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
         shuffle(info_terrenos)
         # Cada terreno realmente criado "puxa" um terreno da lista de "Ter's
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
-                                 posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc[0], ilha=self)
-                         for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
+                                 posx=((px % 6) + int(abs(2.5 - px // 6))), local=it.pop(0), ilha=self)
+                         for px in range(36) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
         self.terrenos[4].afundar()
 
     def desocupa_e_vai_para(self, terreno_destino):
@@ -75,11 +78,12 @@ class Terreno:
     def __init__(self, local: Ter, posx, posy, cena, ilha):
         #img = local.imagem
         #self.local = Elemento(img
-        self.local = Elemento(local, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
+        img = f"https://imgur.com/{local.imagem}.jpg"
+        self.local = Elemento(img, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
                               cena=cena)
         estilo = {'background-color': 'slategray', 'color': 'white'}
         letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
-        letreiro.elt.text = lc
+        letreiro.elt.text = local.nome
         #tafv = Elemento(local.tafv, ....)
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
@@ -134,7 +138,9 @@ class Peao:
 
 
 if __name__ == "__main__":
-    #IlhaProibida()
-    info_terrenos = []
-    for terreno, link in zip(NOMES, LINKS):
-        info_terrenos.append(("https://imgur.com/" + link, terreno))
+    # IlhaProibida()
+    IlhaProibida()
+    ata = Ter(nome="atalaia", imagem='imgur/xyz', tafv=None)
+    #ata.nome = "pista"
+    #print(ata.nome, ata.tafv)
+    # print([(px, int(abs(2.5-px//6))) for px in range(36)])
