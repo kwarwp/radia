@@ -42,7 +42,7 @@ Elemento pecinhas que colocam na cena
 collections, namedtuple: criar classe em uma linha
 """
 from _spy.vitollino.main import Cena, Elemento, STYLE 
-import collections import namedtuple
+from collections import namedtuple
 ter = namedtuple('Ter', nome, imagem, tafv) #classe Ter - par ordenado que eu nomeio cada um 
 
 """
