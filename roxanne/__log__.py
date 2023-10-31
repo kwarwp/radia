@@ -482,3 +482,10 @@ AttributeError: 'IlhaProibida' object has no attribute 'terreno'
     peao_requerente.entra()
 TypeError: entra() missing 1 positional argument: terreno
 '''},
+{'date': 'Tue Oct 31 2023 10:00:26.652 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 98
+  return abs(origem.posx - destino.posx) <= 1 and
+                                                  ^
+SyntaxError: invalid syntax
+'''},
