@@ -55,7 +55,6 @@ class IlhaProibida:
         """
         from random import shuffle
         
-        
         info_terrenos = list(zip(LINKS, NOMES))
         shuffle(info_terrenos)
         
