@@ -513,3 +513,10 @@ NameError: free variable 'info_terrenos' referenced before assignment in enclosi
     info_terrenos = [Ter(nome=NOMES[px], imagem=local, tafv=None) for px, local in enumerate(info_terrenos)]
 NameError: free variable 'info_terrenos' referenced before assignment in enclosing scope
 '''},
+{'date': 'Tue Oct 31 2023 12:06:49.349 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 60
+  """ Montar o tabuleiro em forma de diamante.
+  ^
+IndentationError: expected an indented block
+'''},
