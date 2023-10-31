@@ -33,3 +33,10 @@ NameError: name 'shuffle' is not defined
     def __init__(self, local: Ter, posx, posy, cena, ilha):
 NameError: name 'Ter' is not defined
 '''},
+{'date': 'Tue Oct 31 2023 12:28:23.667 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 43
+  info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
+                                                                                                              ^
+SyntaxError: invalid syntax
+'''},
