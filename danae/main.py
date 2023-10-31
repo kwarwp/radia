@@ -19,23 +19,16 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
+from random import shuffle
+from collections import namedtuple
+Ter = namedtuple("Ter", "nome imagem tafv")
 
 STYLE["width"] = 800
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
-PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
-PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
+PORTAO_BRONZE = Ter("Portão Bronze", "https://imgur.com/BL6lB7H.jpg", None)  # Exemplo de uso da namedtuple
+PALACIO_CORAL = Ter("Palácio Coral", "https://imgur.com/tLDbzd2.jpg", None)
 PAWN = "https://imgur.com/zO3kiRp.png"
-
-info_terrenos = [
-    PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL,  # repetindo para preencher
-    PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL,
-    PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL,
-    PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL,
-    PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL,
-    PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL
-]
-
 
 class IlhaProibida:
     """ Representa a classe principal do Jogo.
@@ -56,7 +49,10 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
-        self.terrenos = [Terreno(cena=self.oceano, posy=px // 6, posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self) for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6) * 2)]
+        info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 6  # 24 terrenos no total
+        shuffle(info_terrenos)
+        
+        self.terrenos = [Terreno(cena=self.oceano, posy=px // 6, posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc.imagem, ilha=self) for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6) * 2)]
     
         self.terrenos[4].afundar()
 
