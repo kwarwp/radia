@@ -519,3 +519,10 @@ SyntaxError: invalid syntax
     ata.nome = "pista"
 AttributeError: 'list' object has no attribute 'nome'
 '''},
+{'date': 'Tue Oct 31 2023 12:10:57.125 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 67
+  self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
+                                                                                                                                                                                                    ^
+SyntaxError: invalid syntax
+'''},
