@@ -106,3 +106,10 @@ TypeError: __init__() missing 1 positional argument: url
     self. rawdata=self. rawdata+data
 AttributeError: 'Pokebot' object has no attribute 'rawdata'
 '''},
+{'date': 'Tue Oct 31 2023 17:24:09.534 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 43
+  self.state = "h3 span
+                       ^
+SyntaxError: EOL while scanning string literal
+'''},
