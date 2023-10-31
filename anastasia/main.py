@@ -24,7 +24,10 @@ Changelog
 
 .. versionadded::    31.10
     Versão Inicial (5).
-    movimentação do peao - apenas em um e nao na diagonal - double dispatch 
+    movimentação do peao - apenas em x ou y e nao na diagonal
+    double dispatch
+    colocação de título nas imagens 
+    sorteio dos terrenos 
   
     
     
@@ -43,7 +46,7 @@ collections, namedtuple: criar classe em uma linha
 """
 from _spy.vitollino.main import Cena, Elemento, STYLE 
 from collections import NamedTuple
-ter = namedtuple('Ter', nome, imagem, tafv) #classe Ter - par ordenado que eu nomeio cada um 
+ter = namedtuple("Ter", "nome imagem tafv") #classe Ter - par ordenado que eu nomeio cada um 
 
 """
 IMAGENS
