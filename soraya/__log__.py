@@ -1194,3 +1194,20 @@ SyntaxError: invalid syntax
 'error': '''
 Exception: <TypeError: Cannot read properties of undefined (reading '__qualname__')>
 '''},
+{'date': 'Mon Oct 30 2023 23:42:11.326 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''['Cena', 'Elemento', 'IMAGEM', 'IlhaProibida', 'PALACIO_CORAL', 'PAWN', 'PORTAO_BRONZE', 'Peao', 'STYLE', 'Terreno', '__bases__', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__file__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__initializing__', '__le__', '__loader__', '__lt__', '__name__', '__ne__', '__new__', '__package__', '__repr__', '__setattr__', '__spec__', '__str__', '__subclasshook__']
+Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 136
+    print(jmain._name_)
+AttributeError: 'module' object has no attribute '_name_'
+'''},
