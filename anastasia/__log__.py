@@ -2401,3 +2401,10 @@ TypeError: __init__ missing 1 positional argument: 'ilha'
     self.terrenos = [Terreno(cena=oceano, posy=py*110 + 10, posx=(6-len(row))*55 + px*110+10, local=lc)
 TypeError: __init__ missing 1 positional argument: 'ilha'
 '''},
+{'date': 'Tue Oct 31 2023 10:19:30.648 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 90
+  info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
+  ^
+IndentationError: unexpected indent
+'''},
