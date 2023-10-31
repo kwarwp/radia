@@ -654,3 +654,10 @@ SyntaxError: invalid syntax
                                                                                                                                                                                                                                                 ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 11:52:13.488 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 49
+  self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
+                                                                                                                                                                                                    ^
+SyntaxError: invalid syntax
+'''},
