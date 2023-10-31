@@ -2442,3 +2442,10 @@ SyntaxError: invalid syntax
                                                                                                                            ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 11:28:13.764 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 45
+  import collections import namedtuple
+                      ^
+SyntaxError: invalid syntax
+'''},
