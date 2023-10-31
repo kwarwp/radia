@@ -62,7 +62,7 @@ class IlhaProibida:
         shuffle(tafv)
         tafv = [None] + tafv
         info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
-        tafv=tafv.pop()) for _ in range(24)]
+        tafv=tafv.pop(0)) for _ in range(24)]
         # como introduzir os elementos no info_terrenos?
         # Agora info_terrenos é uma lista de Ter -> Como criar?
         #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
