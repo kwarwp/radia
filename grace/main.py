@@ -57,7 +57,7 @@ class IlhaProibida:
                 posy=200, posx=200, 
                 local=PORTAO_BRONZE, name="TEst"
             )
-        ]
+        ] * 20
         
         self.terrenos[4].afundar()
 
