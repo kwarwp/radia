@@ -57,7 +57,8 @@ class IlhaProibida:
         ]
         self.terrenos = [
             Terreno(
-                ilha=self, cena=self.oceano, posy=py*110 + 10, posx=(6-len(row))*55 + px*110+10, 
+                ilha=self, cena=self.oceano, 
+                posy=py*110 + 10, posx=(6-len(row))*55 + px*110+10, 
                 local=lc[0], name=lc[1]
             )
             for py, row in enumerate(info_terrenos) for px, lc in enumerate(row)
@@ -69,9 +70,9 @@ class IlhaProibida:
         ] * 18
         self.terrenos = [
             Terreno(
-                ilha=self, cena=self.oceano, posy=px // 6,
-                posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc[0],
-                name=lc[1]
+                ilha=self, cena=self.oceano, 
+                posy=px // 6, posx=((px % 6) + int(abs(2.5 - px // 6))), 
+                local=lc[0], name=lc[1]
             )
             for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2
         ]
