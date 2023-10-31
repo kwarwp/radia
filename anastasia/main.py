@@ -74,7 +74,7 @@ LINKS = ("CU3TLYh BL6lB7H tLDbzd2 OZE1myn J6ow4jR v0g7eGm 45aU3nf "
 
 
 
-class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem que estar intendado
+class IlhaProibida:  #significa inicio de um bloco então posteriormente tem que estar intendado
     """
     Representa a classe principal do jogo
     Terrenos: Locais onde os peões podem ficar 
@@ -103,10 +103,10 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
                                  posx=((px % 6) + int(abs(2.5 - px // 6))), local=it.pop(0), ilha=self)
                          for px in range(36) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
         self.terrenos[4].afundar()
-       
+
     def desocupa_e_vai_para(self, terreno_destino):
         self.peao.move(terreno_destino)     
-       
+
     def direita(self, terreno):
         """Move o peão para a direita
         :param terreno: O terreno onde está o peão 
@@ -125,8 +125,9 @@ class Terreno:
     :param ilha: Referência ao tabuleiro.
     """
     def __init__(self, local: Ter, posx, posy, cena, ilha): #Ter anotação, tem que passar aqui um cara ter
-        img = local.imagem
-        self.local = Elemento (local, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
+        #img = local.imagem
+        img = f"https://imgur.com/{local.imagem}.jpg"
+        self.local = Elemento (img, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
                               cena=cena)
         estilo = {'background-color': '#343', 'color': 'white'}
         letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
