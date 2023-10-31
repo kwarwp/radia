@@ -58,7 +58,9 @@ class IlhaProibida:
         
         """
         from random import shuffle
-        tafv = [None]*16+TAFVS*2
+        tafv = [None]*15+TAFVS*2
+        shuffle(tafv)
+        tafv = [None] + tafv
         info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
         tafv=tafv.pop()) for _ in range(24)]
         # como introduzir os elementos no info_terrenos?
