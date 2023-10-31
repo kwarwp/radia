@@ -63,7 +63,8 @@ class IlhaProibida:
             )
             for py, row in enumerate(info_terrenos) for px, lc in enumerate(row)
         ]
-        self.terrenos = [Terreno(
+        self.terrenos = [
+            Terreno(
                 ilha=self, cena=self.oceano, 
                 posx=200, posy= 300,
                 local=PORTAO_BRONZE, name="TEST"
