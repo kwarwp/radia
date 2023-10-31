@@ -489,3 +489,10 @@ TypeError: entra() missing 1 positional argument: terreno
                                                   ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 10:33:41.303 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 102
+  return (abs(origem.posx - destino.posx) == 1 xor
+                                                ^
+SyntaxError: invalid syntax
+'''},
