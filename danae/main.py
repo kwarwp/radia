@@ -62,12 +62,19 @@ class IlhaProibida:
         """
         from random import shuffle
         # Agora info_terrenos será uma lista de Ter -> Como criar?
-        info_terrenos = [Terreno(cena=self.oceano, posy=px // 6, posx=((px % 6) + int(abs(2.5 - px // 6))), local=Ter(nome=lc[0], imagem=lc[1], tafv=None), ilha=self) for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
+        info_terrenos_local = [Terreno(cena=self.oceano, posy=px // 6, posx=((px % 6) + int(abs(2.5 - px // 6))), local=Ter(nome=lc[0], imagem=lc[1], tafv=None), ilha=self) for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
         shuffle(info_terrenos)
         # Cada terreno realmente criado "puxa" um terreno da lista de "Ter's
+        info_terrenos_local = [Terreno(cena=self.oceano, posy=px // 6, 
+                                       posx=((px % 6) + int(abs(2.5 - px // 6))), 
+                                       local=Ter(nome=lc[0], imagem=lc[1], tafv=None), ilha=self) 
+                               for px, lc in enumerate(info_terrenos) 
+                               if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
+
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
                                  posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
-                         for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
+                         for px, lc in enumerate(info_terrenos_local) 
+                         if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
         self.terrenos[4].afundar()
 
     def desocupa_e_vai_para(self, terreno_destino):
