@@ -783,3 +783,10 @@ SyntaxError: invalid syntax
                                     ^
 SyntaxError: non-keyword arg after keyword arg
 '''},
+{'date': 'Tue Oct 31 2023 12:30:13.839 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 63
+  tafv=tafv.pop() for a in range(24))
+                                    ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
