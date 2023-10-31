@@ -762,3 +762,10 @@ IndexError: list index out of range
     self.terrenos = [
 AttributeError: 'list' object has no attribute 'peak'
 '''},
+{'date': 'Tue Oct 31 2023 12:18:21.317 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 97
+  self.local = Elemento(
+                                                                                   ^
+SyntaxError: invalid syntax
+'''},
