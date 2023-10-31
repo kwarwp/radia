@@ -131,8 +131,10 @@ class Terreno:
         def contiguos(origem, destino): #mover verificar direçao se esta no sentido x e no sentido y 
             if not origem:
                 return True
-            return (abs(origem.posx - destino.posx) <= 1 and #xor e o codigo operador para duas variaveis ou exclusivo 
-            abs(origem.posy - destino.posy) <= 1)  
+            return (
+                abs(origem.posx - destino.posx) == 1 
+                and not destino.afunda
+            )
 
         peao_pode_ir = contiguos(self, terreno_destino)
         # executar o movimento do peão agora que foi autorizado pelo pode ir
