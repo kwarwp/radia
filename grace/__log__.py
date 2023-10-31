@@ -769,3 +769,10 @@ AttributeError: 'list' object has no attribute 'peak'
                                                                                    ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 12:29:15.614 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 62
+  info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
+                                                                                                              ^
+SyntaxError: invalid syntax
+'''},
