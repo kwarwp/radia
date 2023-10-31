@@ -238,3 +238,10 @@ SyntaxError: invalid syntax
                   ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 09:36:45.844 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 117
+  self.peao.move(terreno_destino) = None
+                                  ^
+SyntaxError: can't assign to function call 
+'''},
