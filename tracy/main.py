@@ -19,7 +19,7 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
-
+Ter = namedtuple("Ter","nome image tafv")
 STYLE["width"] = 800
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
