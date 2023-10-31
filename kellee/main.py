@@ -102,7 +102,7 @@ class Terreno:
         self.peao.move(terreno_destino) if peao_pode_ir else None
 
     def ocupa(self, peao):
-    print(13)
+        print(13)
         self.peao = peao
         peao.mover(self.posx, self)
 
