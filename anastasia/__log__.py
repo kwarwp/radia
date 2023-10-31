@@ -2529,3 +2529,10 @@ SyntaxError: invalid syntax
                                                                          ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 12:35:43.290 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 98
+  info_terrenos = [Ter(nome=NOME.pop(0), imagem=LINKS.pop(0), tafv=none)tafv=tafv.pop() for _ in range(24)]#Agora info_terrenos é uma lista de Ter #pop elimina o último
+                                                                         ^
+SyntaxError: invalid syntax
+'''},
