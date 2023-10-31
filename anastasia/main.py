@@ -204,3 +204,4 @@ if __name__ == "__main__": #troca o name pelo main
     
     
     IlhaProibida()
+    ata = Ter(nome="atalaia", imagem='imgur/xyz', tafv=None)
