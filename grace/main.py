@@ -57,11 +57,11 @@ class IlhaProibida:
         ]
         for py, row in enumerate(info_terrenos):
             for px, lc in enumerate(row):
-                self.terrenos += Terreno(
+                self.terrenos.append(Terreno(
                     ilha=self, cena=self.oceano, 
                     posy= py*110 + 10, posx=(6-len(row))*55 + px*110+10, 
                     local=lc[0], name=lc[1]
-                )
+                ))
         self.terrenos[0].afundar()
 
 
