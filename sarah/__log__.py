@@ -633,3 +633,10 @@ AttributeError: 'function' object has no attribute 'randint'
     sortea = random.randint(1,35)
 AttributeError: 'function' object has no attribute 'randint'
 '''},
+{'date': 'Tue Oct 31 2023 11:51:08.303 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 49
+  self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
+                                                                                                                                                                                                    ^
+SyntaxError: invalid syntax
+'''},
