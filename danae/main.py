@@ -56,8 +56,8 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
-        self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self) for px, lc in enumerate(info_terrenos) if 6-int(abs(2.5-px//6)*2) > px % 6]
-        
+        self.terrenos = [Terreno(cena=self.oceano, posy=px // 6, posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self) for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6) * 2)]
+    
         self.terrenos[4].afundar()
 
     def desocupa_e_vai_para(self, terreno_destino):
