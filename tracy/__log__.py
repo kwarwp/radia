@@ -378,3 +378,10 @@ Traceback (most recent call last):
   module <module> line 24
     from anastasia import main as amain
 '''},
+{'date': 'Tue Oct 31 2023 11:54:31.941 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 23
+  Ter = namedtuple("Ter", "nome imagem tafv
+                                           ^
+SyntaxError: EOL while scanning string literal
+'''},
