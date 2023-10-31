@@ -383,3 +383,7 @@ IndexError: list index out of range
     self.peao.mover(self.terrenos[0])
 IndexError: list index out of range
 '''},
+{'date': 'Tue Oct 31 2023 11:01:32.194 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: self is undefined>
+'''},
