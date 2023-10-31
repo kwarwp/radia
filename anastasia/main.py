@@ -74,7 +74,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL]
         #info_terrenos = np.array([[0,1,0,1],[0,1,0,1],[0,1,0,1]])
         #info_terrenos= list("MFCOBTAMFD"*3)
-       # shuffle(info_terrenos)
+        # shuffle(info_terrenos)
         #self.terrenos = [Terreno(cena=oceano, posy=50, posx=px*110+10, local=lc)
         self.terrenos = []
         self.monta_tabuleiro_oceano()
