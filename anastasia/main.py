@@ -84,7 +84,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         #for px, lc in enumerate(info_terrenos)]
 
     def monta_tabuleiro_oceano(self):
-    """ Montar o tabuleiro em forma de diamante.
+        """ Montar o tabuleiro em forma de diamante.
         
         """
         info_terrenos = [
