@@ -62,8 +62,7 @@ class IlhaProibida:
             )
             for py, row in enumerate(info_terrenos) for px, lc in enumerate(row)
         ]
-       
-        #self.terrenos[4].afundar()
+        self.terrenos[4].afundar()
 
     def desocupa_e_vai_para(self, terreno_destino):
         self.peao.move(terreno_destino)
