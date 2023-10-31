@@ -40,8 +40,8 @@ class IlhaProibida:
         self.oceano = Cena(IMAGEM).vai()
         self.terrenos = []
         self.monta_tabuleiro_oceano()
-        #self.peao = Peao(self)
-        #self.peao.mover(self.terrenos[0])
+        self.peao = Peao(self)
+        self.peao.mover(self.terrenos[0])
 
     def monta_tabuleiro_oceano(self):
         """ Montar o tabuleiro em forma de diamante.
@@ -69,8 +69,8 @@ class IlhaProibida:
         ] * 18
         self.terrenos = [
             Terreno(
-                cena=self.oceano, posy=px // 6,
-                posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc[0], ilha=self,
+                ilha=self, cena=self.oceano, posy=px // 6,
+                posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc[0],
                 name=lc[1]
             )
             for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2
