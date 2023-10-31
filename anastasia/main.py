@@ -107,6 +107,9 @@ class Terreno:
     def __init__(self, local, posx, posy, cena, ilha):
         self.local = Elemento(local, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
                               cena=cena)
+        estilo = {'background-color': '#343', 'color': 'white'}
+        letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
+        letreiro.elt.text = "UM TERRENO"
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
         self.local.vai = self.vai
@@ -120,10 +123,12 @@ class Terreno:
         self.local.o = 0.2
 
     def desocupa_e_vai_para(self, terreno_destino):
-        def contiguos(origem, destino):
+        def contiguos(origem, destino): #mover verificar direçao se esta no sentido x e no sentido y 
             if not origem:
                 return True
-            return abs(origem.posx - destino.posx) <= 1 and abs(origem.posy - destino.posy) <= 1
+            from operator import xor
+            return xor(abs(origem.posx - destino.posx) == 1, # xor é o código operador para duas variaveis ou exclusivo 
+            abs(origem.posy - destino.posy) == 1  and notdestinoa.funda
 
         peao_pode_ir = contiguos(self, terreno_destino)
         # executar o movimento do peão agora que foi autorizado pelo pode ir
