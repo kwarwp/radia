@@ -67,7 +67,7 @@ LINKS = ("CU3TLYh BL6lB7H tLDbzd2 OZE1myn J6ow4jR v0g7eGm 45aU3nf "
 "J160xpm 2j1IAyf b4xtltc E9MflTP NDioDZg TCmLjeT "
 "rYxQaTa MvN7kTU Uni02EK cG5UYCf GC8V8CQ 7o1qq10").split()
 
-ata = Ter(nome= NOMES[1], imagem= LINK[1], tafv=TFAVS[1]) #instancia com argumentos de Ter
+#instancia com argumentos de Ter
 
     
 
