@@ -36,14 +36,13 @@ Changelog
 """
 
 """
-importacao de diretorio / biblioteca
+importacao de modulos
+Cena C maiusculo porque é classe  
+Elemento pecinhas que colocam na cena 
+collections, namedtuple: criar classe em uma linha
 """
-from _spy.vitollino.main import Cena, Elemento, STYLE #Cena C maiusculo porque é classe  Elemento pecinhas que colocam na cena 
-#from julia.main import IlhaProibida as Ilha #importar o pacote julia módulo main, importar apenas a classe Ilha proibida e chamar de Ilha
-#from julia import main as amain #importar o pacote todo julia main, chamar de amain
-#from array import array
-#import numpy as np
-import random # Importa o módulo random do Python
+from _spy.vitollino.main import Cena, Elemento, STYLE 
+import collections import namedtuple 
 
 """
 IMAGENS
@@ -78,6 +77,7 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         """ Montar o tabuleiro em forma de diamante.
         
         """
+        from random import shuffle
         info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
                                  posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
@@ -104,12 +104,15 @@ class Terreno:
     :param cena: Cena do local.
     :param ilha: Referência ao tabuleiro.
     """
-    def __init__(self, local, posx, posy, cena, ilha):
+    def __init__(self, local: Ter, posx, posy, cena, ilha): #Ter anotação, tem que passar aqui um cara ter
+        img = local.imagem
+        self.local = Elemento(img
         self.local = Elemento(local, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
                               cena=cena)
         estilo = {'background-color': '#343', 'color': 'white'}
         letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
-        letreiro.elt.text = "UM TERRENO"
+        letreiro.elt.text = "UM TERRENO" #local.nome
+        tafv = Elemento(local.tafv,...)
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
         self.local.vai = self.vai
@@ -180,7 +183,8 @@ if __name__ == "__main__": #troca o name pelo main
     #from __future__ import braces
     #import __phello__
     #ag.fly()
-    
+    ata = Ter(nome="atalaia", imagem'imgur/xyz', tafv=none) #instancia da classe terra (TER) #par ordenado que eu nomeio cada um 
+    ata.nome = "pista"
     
     
     IlhaProibida()
