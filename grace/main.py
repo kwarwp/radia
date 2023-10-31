@@ -103,8 +103,10 @@ class Terreno:
             )
 
         peao_pode_ir = contiguos(self, terreno_destino)
+        peao = self.peao
+        self.peao = None
         # executar o movimento do peão agora que foi autorizado pelo pode ir
-        self.peao.move(terreno_destino) if peao_pode_ir else None
+        peao.move(terreno_destino) if peao_pode_ir else None
 
     def ocupa(self, peao):
         self.peao = peao
@@ -126,8 +128,6 @@ class Peao:
         self.ilha = ilha
 
     def move(self, terreno):
-        if not self.terreno == None and not self.terreno.peao == Null:
-            self.terreno.peao = None
         self.terreno = terreno
         terreno.peao = self
         self.peao.x, self.peao.y = terreno.posx * 110 + 10, terreno.posy * 110 + 50
