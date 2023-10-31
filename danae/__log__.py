@@ -520,3 +520,10 @@ NameError: free variable 'info_terrenos' referenced before assignment in enclosi
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Tue Oct 31 2023 12:07:00.410 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 60
+  """ Montar o tabuleiro em forma de diamante.
+  ^
+IndentationError: expected an indented block
+'''},
