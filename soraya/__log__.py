@@ -1190,3 +1190,7 @@ IndexError: list index out of range
           ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon Oct 30 2023 23:39:22.3 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read properties of undefined (reading '__qualname__')>
+'''},
