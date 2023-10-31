@@ -647,3 +647,10 @@ SyntaxError: invalid syntax
                                                                                                                                         ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 11:51:58.197 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 42
+  info_terrenos = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0), tafv=None)
+                                                                                                                                                                                                                                                ^
+SyntaxError: invalid syntax
+'''},
