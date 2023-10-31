@@ -2354,3 +2354,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Tue Oct 31 2023 10:15:02.179 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 151
+  def vai(self, _=0):
+  ^
+IndentationError: unexpected indent
+'''},
