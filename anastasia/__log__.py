@@ -2319,3 +2319,10 @@ AttributeError: 'Peao' object has no attribute 'move'
     self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80,
 AttributeError: 'Peao' object has no attribute 'move'
 '''},
+{'date': 'Tue Oct 31 2023 10:14:09.20 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 87
+  """ Montar o tabuleiro em forma de diamante.
+  ^
+IndentationError: expected an indented block
+'''},
