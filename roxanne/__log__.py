@@ -588,3 +588,10 @@ SyntaxError: invalid syntax
     tafv = [None]*16+TAFV*2
 NameError: name 'TAFV' is not defined
 '''},
+{'date': 'Tue Oct 31 2023 12:38:47.908 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 62
+  info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
+                                                                                                              ^
+SyntaxError: invalid syntax
+'''},
