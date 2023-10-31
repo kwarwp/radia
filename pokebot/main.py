@@ -12,29 +12,27 @@ Changelog
 |   **Copyright © 2023  Raphaella Freitas**,
 |   **SPDX-License-Identifier:** `GNU General Public License v3.0 or later <http://is.gd/3Udt>`_.
 """
-
-import urllib
-
 from browser import document, window
 from html.parser import HTMLParser
 
 class Pokebot(HTMLParser):
     def handle_starttag(self, tag, attrs):
         if tag in "h3":
-            #self.pokedex[tag] = (tag, attrs)
+            #procura a tag que define o nome da geração
             self.last = tag
             print("Encountered a start tag:", tag, attrs)
         if self.last == "h3" and tag == "span" and "mw-headline" in str(attrs):
-            self.pokedex[tag] = (tag, attrs)
+            #self.pokedex[tag] = attrs[1][1] #(tag, attrs)
+            self.gera = attrs[1][1]
             self.last = tag
-        if tag in "td a":
+        if tag in "img a":
             #self.pokedex[tag] = (tag, attrs)
             #print(str(attrs))
-            if self.last == "td43%" and "'href', '/pt-br/wiki/" in  str(attrs):
-                self.pokedex[tag] = (tag, attrs)
+            if tag == "img":
+                self.pokedex[self.last[1][1][1]] = self.gera
             else:
-                if "43%" in   str(attrs):
-                    self.last = tag+"43%"
+                if "'href', '/pt-br/wiki/" in  str(attrs):
+                    self.last = (tag, attrs)
 
 
     def handle_endtag(self, tag):
@@ -54,6 +52,7 @@ class Pokebot(HTMLParser):
         super().__init__()
         self.state = "h3 span"
         self.pokedex = {}
+        self.gera = None
         self.last = None
 
         
