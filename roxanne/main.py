@@ -21,6 +21,7 @@ Changelog
 from _spy.vitollino.main import Cena, Elemento, STYLE
 from collections import namedtuple
 Ter = namedtuple("Ter", "nome imagem tafv")
+LADO = 90
 STYLE["width"] = 800
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
@@ -98,11 +99,14 @@ class Terreno:
         #img = local.imagem
         #self.local = Elemento(img
         img = f"https://imgur.com/{local.imagem}.jpg"
-        self.local = Elemento(img, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
+        self.local = Elemento(img, x=posx * LADO + 10, y=posy * LADO + 50, w=LADO-5, h=LADO-5,
                               cena=cena)
         estilo = {'background-color': 'slategray', 'color': 'white'}
         letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
         letreiro.elt.text = local.nome
+        img = f"https://imgur.com/{local.tafv}.png" if local.tafv else ""
+        
+        tafv = Elemento(img, w=40, h=50, x=0, tit=img, y=50, cena=self.local)
         #tafv = Elemento(local.tafv, ....)
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
@@ -142,7 +146,7 @@ class Peao:
     def __init__(self, ilha):
         """
         """
-        self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80,
+        self.peao = Elemento(PAWN, x=10, y=15, w=LADO-20, h=LADO-20,
                              cena=ilha.oceano)
         self.terreno = ilha  # era None, mas o peão agora nasce na ilha
         self.ilha = ilha
@@ -150,7 +154,8 @@ class Peao:
     def move(self, terreno):  # Corrigir: não está condizente!
         self.terreno = terreno
         terreno.peao = self
-        self.peao.x, self.peao.y = terreno.posx * 110 + 10, terreno.posy * 110 + 50
+        self.peao.entra(terreno.local)
+        #self.peao.x, self.peao.y = terreno.posx * LADO + 10, terreno.posy * LADO + 50
 
     def mover(self, terreno_destino):
         self.terreno.desocupa_e_vai_para(terreno_destino)
