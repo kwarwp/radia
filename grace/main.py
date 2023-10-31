@@ -103,7 +103,7 @@ class Terreno:
             )
 
         if contiguos(self, terreno_destino):
-            peao.move(terreno_destino)
+            self.peao.move(terreno_destino)
             self.peao = None
 
     def ocupa(self, peao):
