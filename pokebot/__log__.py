@@ -31,3 +31,10 @@ SyntaxError: invalid syntax
                                           ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 15:47:44.3 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 33
+  _data = _fp.read()
+  ^
+IndentationError: expected an indented block
+'''},
