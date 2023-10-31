@@ -126,8 +126,8 @@ class Peao:
         self.ilha = ilha
 
     def move(self, terreno):
-        print(self.terreno.peao)
-        #self.terreno.peao = None
+        if self.terreno:
+            self.terreno.peao = None
         self.terreno = terreno
         terreno.peao = self
         self.peao.x, self.peao.y = terreno.posx * 110 + 10, terreno.posy * 110 + 50
