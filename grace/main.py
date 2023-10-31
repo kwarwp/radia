@@ -102,11 +102,10 @@ class Terreno:
                 and not destino.afunda
             )
 
-        peao_pode_ir = contiguos(self, terreno_destino)
-        peao = self.peao
-        self.peao = None
-        # executar o movimento do peão agora que foi autorizado pelo pode ir
-        peao.move(terreno_destino) if peao_pode_ir else None
+        if contiguos(self, terreno_destino):
+            peao = self.peao
+            self.peao = None
+            peao.move(terreno_destino)
 
     def ocupa(self, peao):
         self.peao = peao
