@@ -64,3 +64,7 @@ Exception: <NetworkError: A network error occurred.>
     _fp = urllib.request.urlopen(src)
 NameError: name 'src' is not defined
 '''},
+{'date': 'Tue Oct 31 2023 15:52:48.462 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <NetworkError: A network error occurred.>
+'''},
