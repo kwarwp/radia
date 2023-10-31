@@ -80,7 +80,7 @@ class Terreno:
                               cena=cena)
         estilo = {'background-color': 'slategray', 'color': 'white'}
         letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
-        letreiro.elt.text = lc[1]
+        letreiro.elt.text = lc
         #tafv = Elemento(local.tafv, ....)
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
@@ -135,14 +135,7 @@ class Peao:
 
 
 if __name__ == "__main__":
-    # IlhaProibida()
-    IlhaProibida()
+    #IlhaProibida()
     info_terrenos = []
     for terreno, link in zip(NOMES, LINKS):
         info_terrenos.append(("https://imgur.com/" + link, terreno))
-    print(info_terrenos)
-    print(len(info_terrenos))
-    #ata = Ter(nome="atalaia", imagem='imgur/xyz', tafv=None)
-    #ata.nome = "pista"
-    #print(ata.nome, ata.tafv)
-    # print([(px, int(abs(2.5-px//6))) for px in range(36)])
