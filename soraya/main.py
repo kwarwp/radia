@@ -46,8 +46,12 @@ class IlhaProibida:
         self.peao.mover(self.terrenos[0])
         # self.nomedavariavel sem () trata-se de um atributo ou variável dentro da classe
         # self.nomedafuncao() trata-se de um método da classe
-        # Convenção de encapsulamento dos "underline underline" (__init__), 2 é privado, 1 é protegido e nenhum é público
-
+        
+        # Convenção de Níveis de encapsulamento, ou seja, dos "underline underline". Ex.: __init__
+        # Público (sem underline): qualquer um chama de dentro ou fora da classe e vai na herança
+        # Protegido (1 underline): só pode ser chamado de dentro da classe o método ou o atributo e vai na herança
+        # Privado (2 underline): só pode ser chamado de dentro da classe o método ou o atributo mas NÃO vai na herança
+        
     def monta_tabuleiro_oceano(self):
         """ Montar o tabuleiro em forma de diamante.
         
