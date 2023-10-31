@@ -776,3 +776,10 @@ SyntaxError: invalid syntax
                                                                                                               ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 12:30:03.240 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 63
+  tafv=tafv.pop() for _ in range(24))
+                                    ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
