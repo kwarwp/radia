@@ -284,3 +284,10 @@ SyntaxError: invalid syntax
                          ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 09:42:03.837 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 116
+  def verificaroterreno:
+                        ^
+SyntaxError: invalid syntax
+'''},
