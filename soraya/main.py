@@ -132,7 +132,7 @@ class Peao:
 
 if __name__ == "__main__":
     import os
-    print(os.listdir("."))
+    print(os.listdir(".."))
     # IlhaProibida()
     #IlhaProibida()
     # print([(px, int(abs(2.5-px//6))) for px in range(36)])
