@@ -127,7 +127,7 @@ class Peao:
 
     def move(self, terreno):
         self.terreno.peao = None
-        self.terreno = None
+        #self.terreno = None
         self.terreno = terreno
         terreno.peao = self
         self.peao.x, self.peao.y = terreno.posx * 110 + 10, terreno.posy * 110 + 50
