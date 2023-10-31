@@ -2449,3 +2449,10 @@ SyntaxError: invalid syntax
                       ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 11:29:38.427 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 111
+  self.local = Elemento(img
+                                     ^
+SyntaxError: invalid syntax
+'''},
