@@ -263,3 +263,10 @@ SyntaxError: can't assign to function call
     if(self.afunda == True):
 AttributeError: 'GUI' object has no attribute 'afunda'
 '''},
+{'date': 'Tue Oct 31 2023 09:39:16.191 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 116
+  def verificar_o_terreno:
+                          ^
+SyntaxError: invalid syntax
+'''},
