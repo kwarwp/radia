@@ -47,10 +47,13 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
+        from random import shuffle
         info_terrenos = [
             (PORTAO_BRONZE, "Portão Bronze"), 
             (PALACIO_CORAL, "Palacio Coral")
         ] * 18
+        shuffle(info_terrenos)
+        
         self.terrenos = [
             Terreno(
                 ilha=self, cena=self.oceano, 
