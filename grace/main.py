@@ -103,7 +103,9 @@ class Terreno:
         estilo = {'background-color': 'slategray', 'color': 'white'}
         letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
         letreiro.elt.text = local.nome
-        #tafv = Elemento(local.tafv, ....)
+        tafv = Elemento(f"https://imgur.com/{local.tafv}.jpg", 
+            x=posx * 110 + 80, y=posy * 110 + 80, w=20, h=20,
+            cena=cena)
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
         self.local.vai = self.vai
