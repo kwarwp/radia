@@ -96,8 +96,7 @@ class Terreno:
             if not origem:
                 return True
             return (
-                abs(origem.posx - destino.posx) + abs(origem.posy - destino.posy) == 1 
-                and (origem.posy == destino.posy or origem.posx == destino.posx)
+                abs(origem.posx - destino.posx) + abs(origem.posy - destino.posy) == 1
                 and not destino.afunda
             )
 
