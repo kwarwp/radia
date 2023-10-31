@@ -38,3 +38,7 @@ SyntaxError: invalid syntax
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Tue Oct 31 2023 15:48:02.853 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <NetworkError: A network error occurred.>
+'''},
