@@ -2456,3 +2456,10 @@ SyntaxError: invalid syntax
                                      ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 11:30:38.438 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 188
+  ata = Ter(nome="atalaia", imagem'imgur/xyz', tafv=none) #instancia com argumentos de Ter
+                                   ^
+SyntaxError: invalid syntax
+'''},
