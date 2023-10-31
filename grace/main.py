@@ -47,22 +47,7 @@ class IlhaProibida:
         """ Montar o tabuleiro em forma de diamante.
         
         """
-        info_terrenos = [
-            [(PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral")],
-            [(PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral"), (PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral")],
-            [(PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral"), (PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral"), (PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral")],
-            [(PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral"), (PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral"), (PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral")],
-            [(PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral"), (PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral")],
-            [(PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral")],
-        ]
-        self.terrenos = [
-            Terreno(
-                ilha=self, cena=self.oceano, 
-                posx=(6-len(row))*55 + px*110+10, posy= py*110 + 10,
-                local=lc[0], name=lc[1]
-            )
-            for py, row in enumerate(info_terrenos) for px, lc in enumerate(row)
-        ]
+        
         self.terrenos = [
             Terreno(
                 ilha=self, cena=self.oceano, 
