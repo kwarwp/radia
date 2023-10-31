@@ -294,3 +294,10 @@ ValueError: too many values to unpack (expected 3)
                                               ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 10:24:12.327 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 105
+  nao_afundado = not.destino.afunda
+                     ^
+SyntaxError: invalid syntax
+'''},
