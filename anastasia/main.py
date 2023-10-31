@@ -95,8 +95,8 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         """
         from random import shuffle
         tafv = [None]*16+TAFV*2
-        info_terrenos = [Ter(nome=NOME.pop(0), imagem=LINKS.pop(0), tafv=none)# Agora info_terrenos é uma lista de Ter #pop elimina o último
-        tafv=tafv.pop() for _ in range(24)]
+        info_terrenos = [Ter(nome=NOME.pop(0), imagem=LINKS.pop(0), tafv=none)tafv=tafv.pop() for _ in range(24)]#Agora info_terrenos é uma lista de Ter #pop elimina o último
+        
         #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
         suffle(info_terrenos)
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
