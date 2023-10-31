@@ -270,3 +270,10 @@ AttributeError: 'GUI' object has no attribute 'afunda'
                           ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 09:39:26.18 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 116
+  def verificar_oterreno:
+                         ^
+SyntaxError: invalid syntax
+'''},
