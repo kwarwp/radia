@@ -87,7 +87,7 @@ class Terreno:
     def __init__(self, local, posx, posy, cena, ilha):
         self.local = Elemento(local, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
                               cena=cena)
-        estilo = {'background-color': '#343', 'color': 'white'}
+        estilo = {'background-color': '#343', 'color': 'white', 'font-size': '10px', 'text-align': 'center'}
         letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
         letreiro.elt.text = NOMES_TERRENOS[posx + posy * 6]  # Aqui alteramos para usar a lista
         self.peao, self.ilha = None, ilha
