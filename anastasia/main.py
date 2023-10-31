@@ -53,7 +53,7 @@ Ter = namedtuple("Ter", "nome imagem tafv") #classe Ter - par ordenado que eu no
 IMAGENS
 """
 STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht 
-STYLE["height"] = "600px"
+STYLE["height"] = "800px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
 PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
 PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
