@@ -526,3 +526,10 @@ AttributeError: 'list' object has no attribute 'nome'
                                                                                                                                                                                                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 12:15:23.103 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 67
+  self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
+                                                                                                                                                                                                ^
+SyntaxError: invalid syntax
+'''},
