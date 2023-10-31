@@ -496,3 +496,10 @@ SyntaxError: invalid syntax
                                                 ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 10:34:48.265 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 102
+  return (abs(origem.posx - destino.posx) == 1 xor
+                                                ^
+SyntaxError: invalid syntax
+'''},
