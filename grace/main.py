@@ -55,6 +55,7 @@ class IlhaProibida:
             [(PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral"), (PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral")],
             [(PORTAO_BRONZE, "Portão Bronze"), (PALACIO_CORAL, "Palacio Coral")],
         ]
+        print("Hallo!")
         self.terrenos = [
             Terreno(
                 ilha=self, cena=self.oceano, 
