@@ -149,7 +149,7 @@ class Peao:
     def move(self, terreno):
         self.terreno = terreno
         terreno.peao = self
-        self.peao.x, self.peao.y = terreno.posx * 110 + 20, terreno.posy * 110 + 80
+        self.peao.x, self.peao.y = terreno.posx * 110 + 20, terreno.posy * 110 + 50
 
     def mover(self, terreno_destino):
         self.terreno.desocupa_e_vai_para(terreno_destino)
