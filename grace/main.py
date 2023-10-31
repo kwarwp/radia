@@ -126,7 +126,7 @@ class Peao:
         self.ilha = ilha
 
     def move(self, terreno):
-        if self.terreno != None:
+        if self.terreno and self.terreno.peao:
             self.terreno.peao = None
         self.terreno = terreno
         terreno.peao = self
