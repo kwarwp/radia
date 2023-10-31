@@ -1183,3 +1183,10 @@ IndexError: list index out of range
     self.terrenos[1].ocupa(self.peao)
 IndexError: list index out of range
 '''},
+{'date': 'Mon Oct 30 2023 23:36:01.49 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 134
+  Import os
+          ^
+SyntaxError: invalid syntax
+'''},
