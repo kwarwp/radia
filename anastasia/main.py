@@ -50,13 +50,12 @@ IMAGENS
 """
 STYLE["width"] = 800 #a varios estilos, aqui selecionamos o widht 
 STYLE["height"] = "600px"
-IMAGEM = "https:https://imgur.com/gVHmY2v.jpg" #IMAGEM DA INTERNET
-PORTAO_BRONZE  = "https://imgur.com/BL6lB7H.jpg" #PORTAO_BRONZE 
-PALACIO_CORAL  = "https://imgur.com/tLDbzd2.jpg" #PALACIO_CORAL 
+IMAGEM = "https://imgur.com/gVHmY2v.jpg"
+PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
+PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
+PAWN = "https://imgur.com/zO3kiRp.png" #PINO
 OBSERVATORIO = "https://imgur.com/J5fn5ZX" #OBSERVATORIO
 BOSQUE = "https://imgur.com/1LoY0Bf" #BOSQUE
-
-PAWN = "https://imgur.com/zO3kiRp.png" #PINO
 
 
 
