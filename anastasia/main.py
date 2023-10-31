@@ -28,6 +28,7 @@ Changelog
     double dispatch
     colocação de título nas imagens 
     sorteio dos terrenos 
+    elemento nos terrenos
   
     
     
@@ -93,9 +94,10 @@ class IlhaProibida:  # : significa inicio de um bloco então posteriormente tem 
         
         """
         from random import shuffle
-        info_terrenos = [Ter(nome=NOME.pop(0), imagem=LINKS.pop(0), tafv=none) #pop elimina o último
+        tafv = [None]*16+TAFV*2
+        info_terrenos = [Ter(nome=NOME.pop(0), imagem=LINKS.pop(0), tafv=none)# Agora info_terrenos é uma lista de Ter #pop elimina o último
+        tafv=tafv.pop() for _ in range(24)]
         #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
-        for _ in range(24)]
         suffle(info_terrenos)
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
                                  posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
@@ -129,7 +131,7 @@ class Terreno:
         estilo = {'background-color': '#343', 'color': 'white'}
         letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
         letreiro.elt.text = local.nome
-        tafv = Elemento(local.tafv,...)
+        tafv = Elemento(local.tafv, w=30, h=30, style=estilo, cena=self.local)
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
         self.local.vai = self.vai
