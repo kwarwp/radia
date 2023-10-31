@@ -527,3 +527,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Tue Oct 31 2023 12:07:09.227 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 60
+  """ Montar o tabuleiro em forma de diamante.
+  ^
+IndentationError: expected an indented block
+'''},
