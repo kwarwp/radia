@@ -2515,3 +2515,10 @@ NameError: name 'LINK' is not defined
     info_terrenos = [Ter(nome=NOME.pop(0), imagem=LINKS.pop(0), tafv=none) #pop elimina o último
 NameError: name 'NOME' is not defined
 '''},
+{'date': 'Tue Oct 31 2023 12:33:22.717 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 98
+  info_terrenos = [Ter(nome=NOME.pop(0), imagem=LINKS.pop(0), tafv=none)# Agora info_terrenos é uma lista de Ter #pop elimina o último
+                                                                                                                                                ^
+SyntaxError: invalid syntax
+'''},
