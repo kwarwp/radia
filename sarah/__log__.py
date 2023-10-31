@@ -196,3 +196,10 @@ NameError: name 'Self' is not defined
                                                                            ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 31 2023 09:24:51.672 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 49
+  if(self.move = True) and (self.terrenos[i] = self.terrenos[i].afundar()):
+                ^
+SyntaxError: invalid syntax
+'''},
