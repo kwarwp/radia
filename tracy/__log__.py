@@ -399,3 +399,10 @@ SyntaxError: EOL while scanning string literal
                                            ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Tue Oct 31 2023 12:38:22.498 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 62
+  info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
+                                                                                                              ^
+SyntaxError: invalid syntax
+'''},
