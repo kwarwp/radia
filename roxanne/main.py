@@ -58,15 +58,17 @@ class IlhaProibida:
         
         """
         from random import shuffle
-        info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0), tafv=None)
+        tafv = [None]*16+TAFV*2
+        info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
+        tafv=tafv.pop() for _ in range(24)]
+        # como introduzir os elementos no info_terrenos?
         # Agora info_terrenos é uma lista de Ter -> Como criar?
-        for _ in range(24)]
         #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
         shuffle(info_terrenos)
         # Cada terreno realmente criado "puxa" um terreno da lista de "Ter's
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
                                  posx=((px % 6) + int(abs(2.5 - px // 6))), local=it.pop(0), ilha=self)
-                         for px range(36) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
+                         for px in range(36) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
         self.terrenos[4].afundar()
 
     def desocupa_e_vai_para(self, terreno_destino):
@@ -95,7 +97,8 @@ class Terreno:
     def __init__(self, local: Ter, posx, posy, cena, ilha):
         #img = local.imagem
         #self.local = Elemento(img
-        self.local = Elemento(local.imagem, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
+        img = f"https://imgur.com/{local.imagem}.jpg"
+        self.local = Elemento(img, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
                               cena=cena)
         estilo = {'background-color': 'slategray', 'color': 'white'}
         letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
