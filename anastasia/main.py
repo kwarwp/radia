@@ -192,7 +192,7 @@ if __name__ == "__main__": #troca o name pelo main
     #from __future__ import braces
     #import __phello__
     #ag.fly()
-    ata = Ter(nome="atalaia", imagem'imgur/xyz', tafv=none) #instancia com argumentos de Ter
+    ata = Ter(nome="atalaia", imagem="imgur/xyz", tafv=none) #instancia com argumentos de Ter
     
     ata.nome = "pista"
     
