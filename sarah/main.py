@@ -3,12 +3,22 @@
 from _spy.vitollino.main import Cena, Elemento, STYLE
 from collections import namedtuple
 Ter = namedtuple("Ter", "nome imagem tafv")
+LADO = 90
 STYLE["width"] = 800
 STYLE["height"] = "600px"
 IMAGEM = "https://imgur.com/gVHmY2v.jpg"
 PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
 PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
 PAWN = "https://imgur.com/zO3kiRp.png"
+TAFVS = "KXZXTei LK4p1xG rUNsKEH qp5Zbn8".split()
+NOMES = ("PISTA_POUSO PORTAO_BRONZE PALACIO_CORAL VALE_TENEBROSO PORTAO_OURO PORTAO_PRATA PORTAO_COBRE "
+"PORTAO_FERRO ATALAIA JARDIM_SUSSUROS JARDIM_UIVOS TEMPLO_SOL "
+"TEMPLO_LUA CAVERNA_LAVA CAVERNA_SOMBRAS OBSERVATORIO PANTANO_BRUMAS ROCHA_FANTASMA "
+"PALACIO_MARES PENEDO_BALDIO BOSQUE_CARMESIM DUNAS_ENGANO PONTE_SUSPENSA LAGOA_PERDIDA").split()
+LINKS = ("CU3TLYh BL6lB7H tLDbzd2 OZE1myn J6ow4jR v0g7eGm 45aU3nf "
+"yKU6ngz sdJ4W5O pjVcyoy ZNuPWqZ O0OSVFt "
+"J160xpm 2j1IAyf b4xtltc E9MflTP NDioDZg TCmLjeT "
+"rYxQaTa MvN7kTU Uni02EK cG5UYCf GC8V8CQ 7o1qq10").split()
 
 
 class IlhaProibida:
@@ -31,15 +41,17 @@ class IlhaProibida:
         
         """
         from random import shuffle
-        Ter = []
-        # Agora info_terrenos será uma lista de Ter -> Como criar?
-        info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
-        Ter = info_terrenos
-        shuffle(Ter)
+        tafv = [None]*16+TAFVS*2
+        info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
+        tafv=tafv.pop()) for _ in range(24)]
+        # como introduzir os elementos no info_terrenos?
+        # Agora info_terrenos é uma lista de Ter -> Como criar?
+        #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
+        shuffle(info_terrenos)
         # Cada terreno realmente criado "puxa" um terreno da lista de "Ter's
         self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
-                                 posx=((px % 6) + int(abs(2.5 - px // 6))), local=lc, ilha=self)
-                         for px, lc in enumerate(info_terrenos) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
+                                 posx=((px % 6) + int(abs(2.5 - px // 6))), local=it.pop(0), ilha=self)
+                         for px in range(36) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
         self.terrenos[4].afundar()
 
     def desocupa_e_vai_para(self, terreno_destino):
@@ -68,11 +80,15 @@ class Terreno:
     def __init__(self, local: Ter, posx, posy, cena, ilha):
         #img = local.imagem
         #self.local = Elemento(img
-        self.local = Elemento(local, x=posx * 110 + 10, y=posy * 110 + 50, w=100, h=100,
+        img = f"https://imgur.com/{local.imagem}.jpg"
+        self.local = Elemento(img, x=posx * LADO + 10, y=posy * LADO + 50, w=LADO-5, h=LADO-5,
                               cena=cena)
         estilo = {'background-color': 'slategray', 'color': 'white'}
         letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
-        letreiro.elt.text = "UM TERRENO" # local.nome
+        letreiro.elt.text = local.nome
+        img = f"https://imgur.com/{local.tafv}.png" if local.tafv else ""
+        
+        tafv = Elemento(img, w=40, h=50, x=0, tit=img, y=50, cena=self.local)
         #tafv = Elemento(local.tafv, ....)
         self.peao, self.ilha = None, ilha
         self.posx, self.posy = posx, posy
@@ -112,7 +128,7 @@ class Peao:
     def __init__(self, ilha):
         """
         """
-        self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80,
+        self.peao = Elemento(PAWN, x=10, y=15, w=LADO-20, h=LADO-20,
                              cena=ilha.oceano)
         self.terreno = ilha  # era None, mas o peão agora nasce na ilha
         self.ilha = ilha
@@ -120,7 +136,8 @@ class Peao:
     def move(self, terreno):  # Corrigir: não está condizente!
         self.terreno = terreno
         terreno.peao = self
-        self.peao.x, self.peao.y = terreno.posx * 110 + 10, terreno.posy * 110 + 50
+        self.peao.entra(terreno.local)
+        #self.peao.x, self.peao.y = terreno.posx * LADO + 10, terreno.posy * LADO + 50
 
     def mover(self, terreno_destino):
         self.terreno.desocupa_e_vai_para(terreno_destino)
