@@ -2,6 +2,8 @@
 # __author__ Carlo
 """Página de entrada do jogo Ilha Proibida.
 
+LOG - http://bit.ly/Dev_Agile_23
+
 .. codeauthor:: Carlo Oliveira <carlo@nce.ufrj.br>
 
 Changelog
