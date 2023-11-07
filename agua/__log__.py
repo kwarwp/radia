@@ -28,3 +28,10 @@ AttributeError: 'Jogador' object has no attribute 'nome'
                            ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Nov 07 2023 12:22:52.295 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 45
+  def distribuir_cartas_tesouro(self)
+                                      ^
+SyntaxError: invalid syntax
+'''},
