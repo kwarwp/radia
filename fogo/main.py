@@ -32,6 +32,7 @@ Changelog
 
 from fogo.ilha import IlhaProibida as Ilha 
 from fogo.jogador import Jogador 
+from fogo.peao import Peao 
 
 
 class IlhaProibida:
