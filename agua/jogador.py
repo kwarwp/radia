@@ -23,8 +23,8 @@ Changelog
 
 class Jogador:
     def __init__(self):
-        self.mao = MaoJogador(dono=self)
         self.nome = "Navegador"
+        self.mao = MaoJogador(dono=self)
         print(f"{self.nome} se apresentando")
 
 
