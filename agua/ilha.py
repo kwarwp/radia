@@ -31,7 +31,7 @@ Changelog
 class IlhaProibida:
     def __init__(self):
         baralho_tesouro = bt = list("tafv" * 5 +"dd" + "hhh")
-        baralho_alaga = ba = "eee" 
+        baralho_alaga = ba = list("eee")
         self.cartas_tesouro = [CartaTesouro(face=carta) for carta in bt]
         # recursos do jogador para relizar capturas, drenagem e movimentos
         self.cartas_tesouro += [CartaAlagamento(face=carta) for carta in ba]
@@ -39,20 +39,23 @@ class IlhaProibida:
         self.cartas_inunda = list(range(24))
         # abaixa um terreno que fica alagado ou afunda no oceano
         print("Bemvindos à Ilha Poibida - montagem do tabuleiro")
+        print("cartas tesouro:" self.cartas_tesouro)
+        print("cartas de inundacao:" self.cartas_inunda)
+        
+    def distribuir_cartas_tesouro(self)
 
 
 class CartaTesouro:
     def __init__(self, face):
         self.face = face
-        print("Bemvindos à Ilha Poibida - montagem do tabuleiro")
+        #print("Bemvindos à Ilha Poibida - montagem do tabuleiro")
 
 
 class CartaAlagamento(CartaTesouro):
     def __init__(self, face):
         super().__init__(self, face)
-        print("Bemvindos à Ilha Poibida - montagem do tabuleiro")
-        
-        
+        #print("Bemvindos à Ilha Poibida - montagem do tabuleiro")
+            
         
         
 if __name__ == "__main__":
