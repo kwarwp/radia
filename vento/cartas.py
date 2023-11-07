@@ -26,9 +26,10 @@ class IlhaProibida:
         print("Bemvindos à Ilha Poibida - montagem do tabuleiro")
         print("cartas tesouro:", self.cartas_tesouro)
         print("cartas de inundacao:", self.cartas_inunda)
+        print("cartas distribuidas:", self.distribuir_cartas_tesouro(self.cartas_tesouro))
         
-    def distribuir_cartas_tesouro(self):
-        ...
+    def distribuir_cartas_tesouro(self,cartas):
+        return sample(cartas,2)
 
 
 class CartaTesouro:
