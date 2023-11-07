@@ -7,7 +7,7 @@ LOG - http://bit.ly/Dev_Agile_23
 
 EQUIPE FOGO 
 
-.. codeauthor:: Fernanda <xx>
+.. codeauthor:: Fernanda <fernandacsaraujo@gmail.com>
 .. codeauthor::  Finn Kockelke <finn_kockelke@gmx.net>
 .. codeauthor:: Vanessa M Vianna <vanmvianna@gmail.com>
 
