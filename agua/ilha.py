@@ -30,7 +30,7 @@ Changelog
 
 class IlhaProibida:
     def __init__(self):
-        print("Bemvindos à Ilha Poibida")
+        print("Bemvindos à Ilha Poibida - montagem do tabuleiro")
         
         
 if __name__ == "__main__":
