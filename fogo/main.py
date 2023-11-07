@@ -29,7 +29,15 @@ Changelog
 |   `Labase <http://labase.selfip.org/>`_ - `NCE <https://portal.nce.ufrj.br>`_ - `UFRJ <https://ufrj.br/>`_.
 """
 
+
 from fogo.ilha import IlhaProibida as Ilha 
+from fogo.jogador import Jogador 
+
+
 class IlhaProibida:
     def __init__(self):
-        print("Bemvindos à Ilha Poibida")
+        print("Bemvindos à Ilha Poibida - montagem do tabuleiro")
+        
+        
+if __name__ == "__main__":
+    IlhaProibida()
