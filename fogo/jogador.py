@@ -26,17 +26,19 @@ Changelog
 
 class Jogador:
     def __init__(self):
-        self.mao = MaoJogador(dono=self) 
-        self
-        print("Jogador se apresentando")
-        
+        self.mao = MaoJogador(dono=self)
+        self.nome = "Navegador"
+        print(f"{self.nome} se apresentando")
+
 
 class MaoJogador:
     def __init__(self, dono, cartas=[]):
-    self.dono = dono
-    self.cartas = cartas
-    self.cartas = []
-        print(f"A mão possui {len(self.cartas)} cartas")
+        self.dono = dono
+        self.cartas = cartas
+        print(f"A mão do {self.dono.nome} possui {len(self.cartas)} cartas")
+        
         
 if __name__ == "__main__":
-    IlhaProibida()
+    #IlhaProibida()
+    Jogador()
+    
