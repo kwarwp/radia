@@ -24,3 +24,10 @@ SyntaxError: invalid syntax
     self.terrenos[1].ocupa(self.peao)
 IndexError: list index out of range
 '''},
+{'date': 'Tue Nov 07 2023 09:50:55.826 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 2
+  ---------
+            ^
+SyntaxError: invalid syntax
+'''},
