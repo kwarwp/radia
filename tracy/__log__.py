@@ -170,3 +170,239 @@ AttributeError: 'IlhaProibida' object has no attribute 'monta_tabuleiro_oceano'
     self.monta_tabuleiro_oceano()
 AttributeError: 'IlhaProibida' object has no attribute 'monta_tabuleiro_oceano'
 '''},
+{'date': 'Tue Oct 31 2023 10:14:05.15 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 116
+    IlhaProibida()
+  module <module> line 47
+    self.monta_tabuleiro_oceano()
+AttributeError: 'IlhaProibida' object has no attribute 'monta_tabuleiro_oceano'
+'''},
+{'date': 'Tue Oct 31 2023 10:16:24.205 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 116
+    IlhaProibida()
+  module <module> line 47
+    self.monta_tabuleiro_oceano()
+AttributeError: 'IlhaProibida' object has no attribute 'monta_tabuleiro_oceano'
+'''},
+{'date': 'Tue Oct 31 2023 10:16:41.164 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 116
+    IlhaProibida()
+  module <module> line 47
+    self.monta_tabuleiro_oceano()
+AttributeError: 'IlhaProibida' object has no attribute 'monta_tabuleiro_oceano'
+'''},
+{'date': 'Tue Oct 31 2023 10:16:51.379 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 116
+    IlhaProibida()
+  module <module> line 47
+    self.monta_tabuleiro_oceano()
+AttributeError: 'IlhaProibida' object has no attribute 'monta_tabuleiro_oceano'
+'''},
+{'date': 'Tue Oct 31 2023 10:17:51.530 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 116
+    IlhaProibida()
+  module <module> line 47
+    self.monta_tabuleiro_oceano()
+AttributeError: 'IlhaProibida' object has no attribute 'monta_tabuleiro_oceano'
+'''},
+{'date': 'Tue Oct 31 2023 11:25:28.1 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 22
+    Ter = namedtuple("Ter","nome image tafv")
+NameError: name 'namedtuple' is not defined
+'''},
+{'date': 'Tue Oct 31 2023 11:36:11.916 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 24
+    from anastasia import main as amain
+ImportError: cannot import name 'main'
+
+SyntaxError
+File "anastasia.main", line 191
+    ata = Ter(nome="atalaia", imagem'imgur/xyz', tafv=none) #instancia com argumentos de Ter
+'''},
+{'date': 'Tue Oct 31 2023 11:36:37.409 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 24
+    from anastasia import main as amain
+ImportError: cannot import name 'main'
+
+SyntaxError
+File "anastasia.main", line 191
+    ata = Ter(nome="atalaia", imagem'imgur/xyz', tafv=none) #instancia com argumentos de Ter
+'''},
+{'date': 'Tue Oct 31 2023 11:36:41.58 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 24
+    from anastasia import main as amain
+ImportError: cannot import name 'main'
+
+AttributeError
+Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 268
+    action()
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 24
+    from anastasia import main as amain
+'''},
+{'date': 'Tue Oct 31 2023 11:37:46.931 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 24
+    from anastasia import main as amain
+ImportError: cannot import name 'main'
+
+AttributeError
+Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 268
+    action()
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 24
+    from anastasia import main as amain
+'''},
+{'date': 'Tue Oct 31 2023 11:54:31.941 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 23
+  Ter = namedtuple("Ter", "nome imagem tafv
+                                           ^
+SyntaxError: EOL while scanning string literal
+'''},
+{'date': 'Tue Oct 31 2023 12:08:17.233 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 23
+  Ter = namedtuple("Ter", "nome imagem tafv
+                                           ^
+SyntaxError: EOL while scanning string literal
+'''},
+{'date': 'Tue Oct 31 2023 12:12:32.475 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 23
+  Ter = namedtuple("Ter", "nome imagem tafv
+                                           ^
+SyntaxError: EOL while scanning string literal
+'''},
+{'date': 'Tue Oct 31 2023 12:38:22.498 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 62
+  info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
+                                                                                                              ^
+SyntaxError: invalid syntax
+'''},

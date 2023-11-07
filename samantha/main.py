@@ -1,8 +1,10 @@
-# radia.soraya.main.py
-# __author__ Keila
+# radia.samantha.main.py
+
+# radia.roxanne.main.py
+# __author__ Carlo
 """Página de entrada do jogo Ilha Proibida.
 
-.. codeauthor:: Keila Oliveira <keila90.if@gmail.com>
+.. codeauthor:: Carlo Oliveira <carlo@nce.ufrj.br>
 
 Changelog
 ---------
@@ -13,11 +15,10 @@ Changelog
     Versão Inicial (26).
 
 |   **Open Source Notification:** This file is part of open source program **Ilha Proibida**
-|   **Copyright © 2023  Keila Oliveira** <keila90.if@gmail.com>,
+|   **Copyright © 2023  Carlo Oliveira** <carlo@nce.ufrj.br>,
 |   **SPDX-License-Identifier:** `GNU General Public License v3.0 or later <http://is.gd/3Udt>`_.
 |   `Labase <http://labase.selfip.org/>`_ - `NCE <https://portal.nce.ufrj.br>`_ - `UFRJ <https://ufrj.br/>`_.
 """
-
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
 
@@ -43,14 +44,7 @@ class IlhaProibida:
         self.monta_tabuleiro_oceano()
         self.peao = Peao(self)
         self.peao.mover(self.terrenos[0])
-        # self.nomedavariavel sem () trata-se de um atributo ou variável dentro da classe
-        # self.nomedafuncao() trata-se de um método da classe
-        
-        # Convenção de Níveis de encapsulamento, ou seja, dos "underline underline". Ex.: __init__
-        # Público (sem underline): qualquer um chama de dentro ou fora da classe e vai na herança
-        # Protegido (1 underline): só pode ser chamado de dentro da classe o método ou o atributo e vai na herança
-        # Privado (2 underline): só pode ser chamado de dentro da classe o método ou o atributo mas NÃO vai na herança
-        
+
     def monta_tabuleiro_oceano(self):
         """ Montar o tabuleiro em forma de diamante.
         
@@ -121,10 +115,6 @@ class Peao:
     """
 
     def __init__(self, ilha):
-    # O self é sempre obrigatório no método, nesse caso, ilha é o primeiro parâmetro e se refere à classe IlhaProibida
-    # Na classe IlhaProibida é setado um atributo peao que recebe uma instância da classe Peao
-    # Naquele caso,o self se refere a IlhaProibida(O self sempre se refere à classe onde ele está declarado)
-
         """
         """
         self.peao = Elemento(PAWN, x=20, y=70, w=80, h=80,
@@ -142,6 +132,6 @@ class Peao:
 
 
 if __name__ == "__main__":
+    # IlhaProibida()
     IlhaProibida()
-    #IlhaProibida()
     # print([(px, int(abs(2.5-px//6))) for px in range(36)])

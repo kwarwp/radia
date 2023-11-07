@@ -1165,3 +1165,71 @@ IndentationError: unexpected indent
     self.terrenos[1].ocupa(self.peao)
 IndexError: list index out of range
 '''},
+{'date': 'Mon Oct 30 2023 22:54:16.27 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 116
+    IlhaProibida()
+  module <module> line 48
+    self.terrenos[1].ocupa(self.peao)
+IndexError: list index out of range
+'''},
+{'date': 'Mon Oct 30 2023 23:36:01.49 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 134
+  Import os
+          ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Mon Oct 30 2023 23:39:22.3 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read properties of undefined (reading '__qualname__')>
+'''},
+{'date': 'Mon Oct 30 2023 23:42:11.326 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''['Cena', 'Elemento', 'IMAGEM', 'IlhaProibida', 'PALACIO_CORAL', 'PAWN', 'PORTAO_BRONZE', 'Peao', 'STYLE', 'Terreno', '__bases__', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__file__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__initializing__', '__le__', '__loader__', '__lt__', '__name__', '__ne__', '__new__', '__package__', '__repr__', '__setattr__', '__spec__', '__str__', '__subclasshook__']
+Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 136
+    print(jmain._name_)
+AttributeError: 'module' object has no attribute '_name_'
+'''},
+{'date': 'Tue Oct 31 2023 00:54:16.649 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 145
+    IlhaProibida()
+  module <module> line 45
+    self.peao.mover(self.terrenos[0])
+  module <module> line 141
+    self.terreno.desocupa_e_vai_para(terreno_destino)
+  module <module> line 65
+    self.peao.move(terreno_destino)
+AttributeError: 'Peao' object has no attribute 'move'
+'''},

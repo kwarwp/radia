@@ -17,3 +17,10 @@
     portao = Terreno(PORTAO_BRONZE, x=10, y=50, w=100, h=100, tit="Portao de Bronze",cena=oceano)
 TypeError: __init__() got an unexpected keyword argument 'x'
 '''},
+{'date': 'Tue Oct 31 2023 11:45:23.843 GMt-0300 (GMT-03:00) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 105
+  print(13)
+  ^
+IndentationError: expected an indented block
+'''},

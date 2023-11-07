@@ -460,3 +460,380 @@ TypeError: list indices must be integer, not tuple
                                              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon Oct 30 2023 19:44:42.629 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 139
+    IlhaProibida()
+  module <module> line 42
+    self.monta_tabuleiro_oceano()
+  module <module> line 58
+    self.terrenos = [Terreno(ilha=self, cena=oceano, posy=py*110 + 10, posx=(6-len(row))*55 + px*110+10, local=lc)
+NameError: name 'oceano' is not defined
+'''},
+{'date': 'Mon Oct 30 2023 19:56:02.135 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 99
+  abs(origem.posx - destino.posx) <= 1 
+  ^
+IndentationError: unexpected indent
+'''},
+{'date': 'Tue Oct 31 2023 10:18:47.493 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 141
+    IlhaProibida()
+  module <module> line 44
+    self.peao.mover(self.terrenos[0])
+  module <module> line 136
+    self.terreno.desocupa_e_vai_para(terreno_destino)
+  module <module> line 57
+    self.peao.move(terreno_destino)
+  module <module> line 129
+    if not self.terreno == None and not self.terreno.peao == Null:
+NameError: name 'Null' is not defined
+'''},
+{'date': 'Tue Oct 31 2023 10:18:52.802 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 141
+    IlhaProibida()
+  module <module> line 44
+    self.peao.mover(self.terrenos[0])
+  module <module> line 136
+    self.terreno.desocupa_e_vai_para(terreno_destino)
+  module <module> line 57
+    self.peao.move(terreno_destino)
+  module <module> line 129
+    if not self.terreno == None and not self.terreno.peao == Null:
+NameError: name 'Null' is not defined
+'''},
+{'date': 'Tue Oct 31 2023 10:54:15.638 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 51
+  self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
+                                                                                                                                                                                             ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Tue Oct 31 2023 11:03:43.478 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 150
+    IlhaProibida()
+  module <module> line 42
+    self.monta_tabuleiro_oceano()
+  module <module> line 58
+    self.terrenos = [
+NameError: name 'oceano' is not defined
+'''},
+{'date': 'Tue Oct 31 2023 11:04:32.434 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 150
+    IlhaProibida()
+  module <module> line 42
+    self.monta_tabuleiro_oceano()
+  module <module> line 58
+    self.terrenos = [
+NameError: name 'oceano' is not defined
+'''},
+{'date': 'Tue Oct 31 2023 11:06:28.613 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 152
+    IlhaProibida()
+  module <module> line 42
+    self.monta_tabuleiro_oceano()
+  module <module> line 58
+    self.terrenos = [
+NameError: name 'oceano' is not defined
+'''},
+{'date': 'Tue Oct 31 2023 11:07:40.266 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 151
+    IlhaProibida()
+  module <module> line 42
+    self.monta_tabuleiro_oceano()
+  module <module> line 58
+    self.terrenos = [
+NameError: name 'oceano' is not defined
+'''},
+{'date': 'Tue Oct 31 2023 11:09:04.559 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 151
+    IlhaProibida()
+  module <module> line 42
+    self.monta_tabuleiro_oceano()
+  module <module> line 58
+    self.terrenos = [
+NameError: name 'oceano' is not defined
+'''},
+{'date': 'Tue Oct 31 2023 11:23:05.5 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 154
+    IlhaProibida()
+  module <module> line 42
+    self.monta_tabuleiro_oceano()
+  module <module> line 58
+    info_terrenos[[(PORTAO_BRONZE, "Portão Bronze")]]
+TypeError: list indices must be integer, not list
+'''},
+{'date': 'Tue Oct 31 2023 11:25:44.818 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 153
+    IlhaProibida()
+  module <module> line 42
+    self.monta_tabuleiro_oceano()
+  module <module> line 58
+    info_terrenos[[(PORTAO_BRONZE, "Portão Bronze")]]
+TypeError: list indices must be integer, not list
+'''},
+{'date': 'Tue Oct 31 2023 11:26:10.578 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 152
+    IlhaProibida()
+  module <module> line 42
+    self.monta_tabuleiro_oceano()
+  module <module> line 60
+    self.terrenos += Terreno(
+TypeError: 'Terreno' object is not iterable
+'''},
+{'date': 'Tue Oct 31 2023 11:42:48.52 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 160
+    IlhaProibida()
+  module <module> line 42
+    self.monta_tabuleiro_oceano()
+  module <module> line 73
+    self.terrenos[4].afundar()
+IndexError: list index out of range
+'''},
+{'date': 'Tue Oct 31 2023 11:47:34.866 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 149
+    IlhaProibida()
+  module <module> line 42
+    self.monta_tabuleiro_oceano()
+  module <module> line 62
+    self.terrenos[4].afundar()
+IndexError: list index out of range
+'''},
+{'date': 'Tue Oct 31 2023 11:58:57.205 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 150
+    IlhaProibida()
+  module <module> line 42
+    self.monta_tabuleiro_oceano()
+  module <module> line 54
+    self.terrenos = [
+AttributeError: 'list' object has no attribute 'peak'
+'''},
+{'date': 'Tue Oct 31 2023 12:18:21.317 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 97
+  self.local = Elemento(
+                                                                                   ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Tue Oct 31 2023 12:29:15.614 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 62
+  info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
+                                                                                                              ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Tue Oct 31 2023 12:30:03.240 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 63
+  tafv=tafv.pop() for _ in range(24))
+                                    ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
+{'date': 'Tue Oct 31 2023 12:30:13.839 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 63
+  tafv=tafv.pop() for a in range(24))
+                                    ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
+{'date': 'Tue Oct 31 2023 12:30:34.669 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 63
+  tafv=tafv.pop() for a in range(24))
+                                    ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
+{'date': 'Tue Oct 31 2023 12:30:49.492 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 162
+    IlhaProibida()
+  module <module> line 52
+    self.monta_tabuleiro_oceano()
+  module <module> line 61
+    tafv = [None]*16+TAFV*2
+NameError: name 'TAFV' is not defined
+'''},
+{'date': 'Tue Oct 31 2023 12:31:06.138 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 162
+    IlhaProibida()
+  module <module> line 52
+    self.monta_tabuleiro_oceano()
+  module <module> line 61
+    tafv = [None]*16+TAFV*2
+NameError: name 'TAFV' is not defined
+'''},

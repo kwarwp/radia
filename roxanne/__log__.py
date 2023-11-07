@@ -456,3 +456,142 @@ TypeError: desocupa_e_vai_para() takes 1 positional argument but more were given
     self.terreno[4].afunda()
 AttributeError: 'IlhaProibida' object has no attribute 'terreno'
 '''},
+{'date': 'Wed Oct 25 2023 13:59:56.297 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 142
+    IlhaProibida()
+  module <module> line 45
+    self.peao.mover(self.terrenos[0])
+  module <module> line 137
+    self.terreno.desocupa_e_vai_para(terreno_destino)
+  module <module> line 58
+    self.peao.move(terreno_destino)
+  module <module> line 134
+    terreno.adentra(self)
+  module <module> line 97
+    peao_requerente.entra()
+TypeError: entra() missing 1 positional argument: terreno
+'''},
+{'date': 'Tue Oct 31 2023 10:00:26.652 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 98
+  return abs(origem.posx - destino.posx) <= 1 and
+                                                  ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Tue Oct 31 2023 10:33:41.303 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 102
+  return (abs(origem.posx - destino.posx) == 1 xor
+                                                ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Tue Oct 31 2023 10:34:48.265 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 102
+  return (abs(origem.posx - destino.posx) == 1 xor
+                                                ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Tue Oct 31 2023 11:00:01.907 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 144
+    ata.nome = "pista"
+AttributeError: 'list' object has no attribute 'nome'
+'''},
+{'date': 'Tue Oct 31 2023 12:10:57.125 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 67
+  self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
+                                                                                                                                                                                                    ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Tue Oct 31 2023 12:15:23.103 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 67
+  self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
+                                                                                                                                                                                                ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Tue Oct 31 2023 12:16:47.246 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 67
+  self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
+                                                                                                                                                                                                    ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Tue Oct 31 2023 12:30:52.645 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 62
+  info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
+                                                                                                              ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Tue Oct 31 2023 11:54:03.830 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 62
+  info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
+                                                                                                              ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Tue Oct 31 2023 11:54:07.310 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 62
+  info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
+                                                                                                              ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Tue Oct 31 2023 12:32:12.23 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 62
+  info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
+                                                                                                              ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Tue Oct 31 2023 12:32:47.108 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 161
+    IlhaProibida()
+  module <module> line 52
+    self.monta_tabuleiro_oceano()
+  module <module> line 61
+    tafv = [None]*16+TAFV*2
+NameError: name 'TAFV' is not defined
+'''},
+{'date': 'Tue Oct 31 2023 12:38:47.908 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 62
+  info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
+                                                                                                              ^
+SyntaxError: invalid syntax
+'''},

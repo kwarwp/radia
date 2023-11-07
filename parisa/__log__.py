@@ -31,3 +31,17 @@ IndentationError: unexpected indent
     self.peao.mover(self.terreno[0])
 AttributeError: 'IlhaProibida' object has no attribute 'terreno'
 '''},
+{'date': 'Tue Oct 31 2023 12:15:12.179 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 50
+  self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
+                                                                                                                                                                                                    ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Tue Oct 31 2023 12:15:39.135 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 50
+  self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
+                                                                                                                                                                                                    ^
+SyntaxError: invalid syntax
+'''},
