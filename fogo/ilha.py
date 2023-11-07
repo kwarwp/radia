@@ -27,7 +27,6 @@ class IlhaProibida:
 class CartaTesouro:
     def __init__(self, face):
         self.face = face
-        print("Bemvindos à Ilha Poibida - montagem do tabuleiro")
 
 
 class CartaAlagamento(CartaTesouro):
