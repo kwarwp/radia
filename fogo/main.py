@@ -42,3 +42,4 @@ class IlhaProibida:
         
 if __name__ == "__main__":
     IlhaProibida()
+    Peao()
