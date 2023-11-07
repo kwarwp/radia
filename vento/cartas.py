@@ -29,7 +29,7 @@ class IlhaProibida:
         print("cartas distribuidas:", self.distribuir_cartas_tesouro(self.cartas_tesouro))
         
     def distribuir_cartas_tesouro(self,cartas):
-        return sample(cartas,2)
+        return random.sample(cartas,2)
 
 
 class CartaTesouro:
