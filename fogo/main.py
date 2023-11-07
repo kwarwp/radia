@@ -33,14 +33,9 @@ Changelog
 from fogo.ilha import IlhaProibida as Ilha 
 from fogo.jogador import Jogador 
 from fogo.peao import Peao 
-
-
-class IlhaProibida:
-    def __init__(self):
-        print("Bemvindos à Ilha Poibida - montagem do tabuleiro")
         
         
 if __name__ == "__main__":
-    IlhaProibida()
+    Ilha()
     Jogador()
     Peao()
