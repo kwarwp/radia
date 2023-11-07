@@ -59,6 +59,9 @@ class CartaAlagamento(CartaTesouro):
     def __init__(self, face):
         super().__init__(face)
         #print("Bemvindos à Ilha Poibida - montagem do tabuleiro")
+        
+    def __repr__(self):
+        return ""  # self.face 
             
         
         
