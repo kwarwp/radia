@@ -32,7 +32,7 @@ class CartaTesouro:
 
 class CartaAlagamento(CartaTesouro):
     def __init__(self, face):
-        super().__init__(self, face)
+        super(self, face)
         print("Bemvindos à Ilha Poibida - montagem do tabuleiro")
         
         
