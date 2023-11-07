@@ -39,21 +39,25 @@ class IlhaProibida:
         self.cartas_inunda = list(range(24))
         # abaixa um terreno que fica alagado ou afunda no oceano
         print("Bemvindos à Ilha Poibida - montagem do tabuleiro")
-        print("cartas tesouro:" self.cartas_tesouro)
-        print("cartas de inundacao:" self.cartas_inunda)
+        print("cartas tesouro:", self.cartas_tesouro)
+        print("cartas de inundacao:", self.cartas_inunda)
         
-    def distribuir_cartas_tesouro(self)
+    def distribuir_cartas_tesouro(self):
+        ...
 
 
 class CartaTesouro:
     def __init__(self, face):
         self.face = face
         #print("Bemvindos à Ilha Poibida - montagem do tabuleiro")
+        
+    def __repr__(self):
+        return self.face
 
 
 class CartaAlagamento(CartaTesouro):
     def __init__(self, face):
-        super().__init__(self, face)
+        super().__init__(face)
         #print("Bemvindos à Ilha Poibida - montagem do tabuleiro")
             
         
