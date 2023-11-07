@@ -16,6 +16,7 @@ Changelog
 ---------
 .. versionadded::    23.11
     Divisão de equipes (07).
+    Adicao do modulo ilha e jogador.
     
 .. versionadded::    23.10
     Classes Ilha, Terreno, Peao (10).
