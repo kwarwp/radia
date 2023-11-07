@@ -1,6 +1,6 @@
 # radia.fogo.main.py
 # radia.roxanne.main.py
-# __author__ Carlo
+# __author__ Fernanda, Finn, Vanessa
 """Página de entrada do jogo Ilha Proibida.
 
 LOG - http://bit.ly/Dev_Agile_23
