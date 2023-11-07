@@ -1,5 +1,4 @@
 # radia.fogo.main.py
-# radia.roxanne.main.py
 # __author__ Fernanda, Finn, Vanessa
 """Página de entrada do jogo Ilha Proibida.
 
