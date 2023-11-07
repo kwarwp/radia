@@ -3,10 +3,10 @@
 
 LOG - https://bit.ly/Dev_Agile_23
 
-EQUIPE Água 🌊
+EQUIPE Terra 🌎
 
-.. codeauthor:: Carlo Oliveira <carlo@nce.ufrj.br>
-.. codeauthor:: Julia Barbosa<juliabarbosa068@gmail.com>
+.. codeauthor:: Fulano <fulano@nce.ufrj.br>
+.. codeauthor:: Sicrano <Sicrano@gmail.com>
 
 Changelog
 ---------
@@ -18,17 +18,15 @@ Changelog
 |   **SPDX-License-Identifier:** `GNU General Public License v3.0 or later <http://is.gd/3Udt>`_.
 |   `Labase <http://labase.selfip.org/>`_ - `NCE <https://portal.nce.ufrj.br>`_ - `UFRJ <https://ufrj.br/>`_.
 """
-from agua.ilha import IlhaProibida as Ilha
-from agua import LG
+from terra import LG
 
 
 class IlhaProibida:
     def __init__(self):
-        LG.log(0, "Bem vindos à Ilha Proibida")
+        LG.log(0, "Bem vindos à Ilha Proibida da Equipe Terra  🌎!")
 
 
 def main():
-    Ilha()
     IlhaProibida()
 
 
