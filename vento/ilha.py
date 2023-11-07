@@ -35,6 +35,7 @@ Changelog
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
 from collections import namedtuple
+from vento.cartas import IlhaProibida as ilha
 Ter = namedtuple("Ter", "nome imagem tafv")
 LADO = 90
 STYLE["width"] = 800
@@ -178,8 +179,6 @@ class Peao:
 
 if __name__ == "__main__":
     # IlhaProibida()
-    IlhaProibida()
+    #IlhaProibida()
     ata = Ter(nome="atalaia", imagem='imgur/xyz', tafv=None)
-    #ata.nome = "pista"
-    #print(ata.nome, ata.tafv)
-    # print([(px, int(abs(2.5-px//6))) for px in range(36)])
+    ilha()
