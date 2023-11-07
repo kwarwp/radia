@@ -9,6 +9,7 @@ LOG - http://bit.ly/Dev_Agile_23
 Changelog
 ---------
 .. versionadded::    23.10
+    🌊 Montar tabuleiro diamante, move Peão (24).
     Classes Ilha, Terreno, Peao (10).
     
 .. versionadded::    23.09
