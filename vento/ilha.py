@@ -11,28 +11,6 @@ Changelog
 
 """
 
-# radia.roxanne.main.py
-# __author__ Carlo
-"""Página de entrada do jogo Ilha Proibida.
-
-LOG - http://bit.ly/Dev_Agile_23
-
-.. codeauthor:: Carlo Oliveira <carlo@nce.ufrj.br>
-
-Changelog
----------
-.. versionadded::    23.10
-    Classes Ilha, Terreno, Peao (10).
-    
-.. versionadded::    23.09
-    Versão Inicial (26).
-
-|   **Open Source Notification:** This file is part of open source program **Ilha Proibida**
-|   **Copyright © 2023  Carlo Oliveira** <carlo@nce.ufrj.br>,
-|   **SPDX-License-Identifier:** `GNU General Public License v3.0 or later <http://is.gd/3Udt>`_.
-|   `Labase <http://labase.selfip.org/>`_ - `NCE <https://portal.nce.ufrj.br>`_ - `UFRJ <https://ufrj.br/>`_.
-"""
-
 from _spy.vitollino.main import Cena, Elemento, STYLE
 from collections import namedtuple
 from vento.cartas import IlhaProibida as ilha
