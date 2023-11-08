@@ -19,7 +19,7 @@ Changelog
 |   `Labase <http://labase.selfip.org/>`_ - `NCE <https://portal.nce.ufrj.br>`_ - `UFRJ <https://ufrj.br/>`_.
 """
 from agua.ilha import IlhaProibida as Ilha
-from agua import LG
+from agua.util import LG
 
 
 class IlhaProibida:
