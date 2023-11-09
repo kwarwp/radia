@@ -3,10 +3,9 @@
 
 LOG - https://bit.ly/Dev_Agile_23
 
-EQUIPE Terra 🌎
+EQUIPE Terra 
 
-.. codeauthor:: Fulano <fulano@nce.ufrj.br>
-.. codeauthor:: Sicrano <Sicrano@gmail.com>
+.. codeauthor:: Felipe Nunes <felipenunes.7921@gmail.com>
 
 Changelog
 ---------
@@ -23,7 +22,7 @@ from terra import LG
 
 class IlhaProibida:
     def __init__(self):
-        LG.log(0, "Bem vindos à Ilha Proibida da Equipe Terra  🌎!")
+        LG.log(0, "Bem vindos à Ilha Proibida da Equipe Terra  !")
 
 
 def main():
