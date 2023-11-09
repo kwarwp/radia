@@ -1,5 +1,5 @@
 # radia.fogo.main.py
-# __author__ Fernanda, Finn, Vanessa, Anderson 
+# __authors__ Fernanda, Finn, Vanessa, Anderson 
 """Página de entrada do jogo Ilha Proibida.
 
 LOG - http://bit.ly/Dev_Agile_23
