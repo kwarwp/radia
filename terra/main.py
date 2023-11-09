@@ -6,6 +6,7 @@ LOG - https://bit.ly/Dev_Agile_23
 EQUIPE Terra 
 
 .. codeauthor:: Felipe Nunes <felipenunes.7921@gmail.com>
+.. codeauthor:: Leonardo Cesar <leonardocesarc@gmail.com>
 
 Changelog
 ---------
