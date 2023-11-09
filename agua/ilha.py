@@ -2,9 +2,16 @@
 # noinspection GrazieInspection
 """A Ilha é o módulo de estruturação e início do jogo.
 
+Classes neste módulo:
+    - :py:class:`IlhaProibida` Ponto central de Construção do jogo.
+    - :py:meth:`IlhaProibida.distribuir_cartas_tesouro` Distribuição de cartas tesouro.
+    - :py:class:`CartaTesouro` Recursos necessários para resgatar tesouros.
+    - :py:class:`CartaAlagamento` Controle ambiental de defesa da Ilha.
+
+
 LOG - https://bit.ly/Dev_Agile_23
 
-EQUIPE Água
+EQUIPE Água 🌊
 
 .. codeauthor:: Carlo Oliveira <carlo@nce.ufrj.br>
 .. codeauthor:: Julia <julia@gmail.com>
@@ -12,7 +19,8 @@ EQUIPE Água
 Changelog
 ---------
 .. versionadded::    23.11
-    Classes IlhaProibida, CartaTesouro, CartaAlagamento (07).
+   |br| Classes IlhaProibida, CartaTesouro, CartaAlagamento (07).
+   |br| Melhora a documentação do módulo (08).
 
 |   **Open Source Notification:** This file is part of open source program **Ilha Proibida**
 |   **Copyright © 2023  Carlo Oliveira** <carlo@nce.ufrj.br>,
@@ -23,6 +31,9 @@ from agua.util import LG
 
 
 class IlhaProibida:
+    """ Ponto central de Construção do jogo.
+
+    """
     def __init__(self):
         from random import shuffle
         # noinspection SpellCheckingInspection
@@ -41,10 +52,17 @@ class IlhaProibida:
         LG.log(0, "cartas de inundação:", self.cartas_inunda)
 
     def distribuir_cartas_tesouro(self):
+        """ Distribuição de cartas Tesouro no início e a cada fim de turno
+
+        :return: None
+        """
         ...
 
 
 class CartaTesouro:
+    """Recursos necessários para resgatar tesouros.
+
+    """
     def __init__(self, face):
         self.face = face
         # LG.log(0, "Bem vindos à Ilha Proibida - montagem do tabuleiro")
@@ -54,6 +72,9 @@ class CartaTesouro:
 
 
 class CartaAlagamento(CartaTesouro):
+    """ Controle ambiental de defesa da Ilha.
+
+    """
     def __init__(self, face):
         super().__init__(face)
         # LG.log(0, "Bem vindos à Ilha Proibida - montagem do tabuleiro")
