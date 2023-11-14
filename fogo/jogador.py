@@ -24,8 +24,8 @@ Changelog
 """
 
 class Jogador:
-    def __init__(self):
-        self.nome = ""
+    def __init__(self, nome="DefaultPlayer"):
+        self.nome = nome
         self.mao = MaoJogador(dono=self)
         print(f"{self.nome} se apresentando")
 

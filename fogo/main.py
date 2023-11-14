@@ -30,13 +30,11 @@ Changelog
 |   `Labase <http://labase.selfip.org/>`_ - `NCE <https://portal.nce.ufrj.br>`_ - `UFRJ <https://ufrj.br/>`_.
 """
 
+from fogo.ilha import IlhaProibida as Ilha
+from fogo.jogador import Jogador
+from fogo.peao import Peao
 
-from fogo.ilha import IlhaProibida as Ilha 
-from fogo.jogador import Jogador 
-from fogo.peao import Peao 
-        
-        
 if __name__ == "__main__":
     Ilha()
-    Jogador()
+    Jogador("John")
     Peao()
