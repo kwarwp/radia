@@ -31,7 +31,7 @@ class CartaTesouro:
 
 class CartaAlagamento(CartaTesouro):
     def __init__(self, face):
-        super(self, face)
+        super().__init__(face)
         
         
         
