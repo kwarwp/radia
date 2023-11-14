@@ -4,7 +4,7 @@
 LOG - https://bit.ly/Dev_Agile_23
 
 EQUIPE Terra 
-
+.. codeauthor:: Keila Lima de Oliveira <keila90.if@gmail.com>
 .. codeauthor:: Felipe Nunes <felipenunes.7921@gmail.com>
 .. codeauthor:: Leonardo Cesar <leonardocesarc@gmail.com>
 .. codeauthor:: Pedro França <pedro.franca@ufrj.br>
