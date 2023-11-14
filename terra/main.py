@@ -8,7 +8,6 @@ EQUIPE Terra
 .. codeauthor:: Felipe Nunes <felipenunes.7921@gmail.com>
 .. codeauthor:: Leonardo Cesar <leonardocesarc@gmail.com>
 .. codeauthor:: Pedro França <pedro.franca@ufrj.br>
-.. codeauthor:: Renan Parreira <renan@ufrj.br>
 
 Changelog
 ---------
