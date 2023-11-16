@@ -1,6 +1,6 @@
 # radia.fogo.ilha.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto sem descrição, (mude esta linha).
+"""Página Montagem do Tabulheiro (Ilha) do jogo Ilha Proibida Equipe Fogo.
 
 .. codeauthor:: Nome Sobrenome <mail@local.tipo>
 

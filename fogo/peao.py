@@ -1,4 +1,4 @@
-"""Página de entrada do jogo Ilha Proibida.
+"""Página Peão do jogo Ilha Proibida Equipe Fogo.
 
 LOG - http://bit.ly/Dev_Agile_23
 
@@ -7,6 +7,7 @@ EQUIPE FOGO
 .. codeauthor:: Fernanda Araujo <fernandacsaraujo@gmail.com>
 .. codeauthor::  Finn Kockelke <finn_kockelke@gmx.net>
 .. codeauthor:: Vanessa M Vianna <vanmvianna@gmail.com>
+.. codeauthor:: Anderson Amorim da Silva <anderson.amorix@gmail.com>
 
 
 Changelog
