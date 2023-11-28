@@ -126,7 +126,7 @@ class Terreno:
         contagem = 0
     class PALACIO_CORAL:
         nome = "Palácio de Coral"
-        visual = '\U0001f3f0 '
+        visual = ' '
         contagem = 0
 
     class VALE_TENEBROSO:
@@ -201,7 +201,7 @@ class Terreno:
 
     class PALACIO_MARES:
         nome = "Palácio dos Mares"
-        visual = "\U0001f3f0 "
+        visual = ""
         contagem = 0
 
     class PENEDO_BALDIO:
