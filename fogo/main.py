@@ -38,5 +38,6 @@ if __name__ == "__main__":
     Ilha()
     Jogador("Jose")
     Jogador("Fernando")
+    Jogador("Finninho")
     Jogador("Vanessa")
     Peao()
