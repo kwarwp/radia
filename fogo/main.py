@@ -37,4 +37,5 @@ from fogo.peao import Peao
 if __name__ == "__main__":
     Ilha()
     Jogador("Jose")
+    Jogador("Fernando")
     Peao()
