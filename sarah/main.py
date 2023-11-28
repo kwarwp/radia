@@ -126,7 +126,7 @@ class Terreno:
         contagem = 0
     class PALACIO_CORAL:
         nome = "Palácio de Coral"
-        visual = 'Cr'
+        visual = ''
         contagem = 0
 
     class VALE_TENEBROSO:
@@ -196,7 +196,7 @@ class Terreno:
 
     class ROCHA_FANTASMA:
         nome = "Rocha Fantasma"
-        visual = " "
+        visual = "Λ*"
         contagem = 0
 
     class PALACIO_MARES:
@@ -216,12 +216,12 @@ class Terreno:
 
     class DUNAS_ENGANO:
         nome = "Dunas do Engano"
-        visual = "⏳"
+        visual = ""
         contagem = 0
 
     class PONTE_SUSPENSA:
         nome = "Ponte Suspensa"
-        visual = " "
+        visual = ""
         contagem = 0
 
     class LAGOA_PERDIDA:
