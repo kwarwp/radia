@@ -131,7 +131,7 @@ class Terreno:
 
     class VALE_TENEBROSO:
         nome = "Vale Tenebroso"
-        visual = ' \U0001f47b'
+        visual = ''
         contagem = 0
 
     class PORTAO_OURO:
@@ -161,7 +161,7 @@ class Terreno:
 
     class JARDIM_UIVOS:
         nome = "Jardim dos Uivos"
-        visual = '\u2698 \U0001f43a'
+        visual = '\u2698'
         contagem = 0
 
     class TEMPLO_SOL:
