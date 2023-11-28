@@ -240,8 +240,8 @@ class Ilha:
     elemento = random.choice(Ter)
     matriz[0][3] = elemento
     Ter.remove(elemento)
-    matriz[0][4] = "      "
-    matriz[0][5] = "      "
+    matriz[0][4] = "     "
+    matriz[0][5] = "     "
     matriz[1][0] = "      "
     elemento = random.choice(Ter)
     matriz[1][1] = elemento
