@@ -126,12 +126,12 @@ class Terreno:
         contagem = 0
     class PALACIO_CORAL:
         nome = "Palácio de Coral"
-        visual = ' '
+        visual = 'Cr'
         contagem = 0
 
     class VALE_TENEBROSO:
         nome = "Vale Tenebroso"
-        visual = ''
+        visual = ""
         contagem = 0
 
     class PORTAO_OURO:
@@ -232,17 +232,17 @@ class Ilha:
     Ter = [Terreno.PISTA_POUSO.visual, Terreno.PORTAO_COBRE.visual, Terreno.PORTAO_BRONZE.visual, Terreno.PALACIO_CORAL.visual, Terreno.VALE_TENEBROSO.visual, Terreno.PORTAO_OURO.visual, Terreno.PORTAO_PRATA.visual, Terreno.PORTAO_FERRO.visual, Terreno.ATALAIA.visual, Terreno.JARDIM_SUSSUROS.visual, Terreno.JARDIM_UIVOS.visual, Terreno.TEMPLO_SOL.visual, Terreno.TEMPLO_LUA.visual, Terreno.CAVERNA_LAVA.visual, Terreno.CAVERNA_SOMBRAS.visual, Terreno.OBSERVATORIO.visual, Terreno.PANTANO_BRUMAS.visual, Terreno.ROCHA_FANTASMA.visual, Terreno.PALACIO_MARES.visual, Terreno.PENEDO_BALDIO.visual, Terreno.BOSQUE_CARMESIM.visual,Terreno.DUNAS_ENGANO.visual,Terreno.PONTE_SUSPENSA.visual,Terreno.LAGOA_PERDIDA.visual]
     matriz = [["" for i in range(6)]for j in range(6)]
     #Adicionando elementos
-    matriz[0][0] = "    "
-    matriz[0][1] = "    "
+    matriz[0][0] = "      "
+    matriz[0][1] = "      "
     elemento = random.choice(Ter)
     matriz[0][2] = elemento
     Ter.remove(elemento)
     elemento = random.choice(Ter)
     matriz[0][3] = elemento
     Ter.remove(elemento)
-    matriz[0][4] = "    "
-    matriz[0][5] = "    "
-    matriz[1][0] = "    "
+    matriz[0][4] = "      "
+    matriz[0][5] = "      "
+    matriz[1][0] = "      "
     elemento = random.choice(Ter)
     matriz[1][1] = elemento
     Ter.remove(elemento)
@@ -255,7 +255,7 @@ class Ilha:
     elemento = random.choice(Ter)
     matriz[1][4] = elemento
     Ter.remove(elemento)
-    matriz[1][5]="  "
+    matriz[1][5]="    "
     elemento = random.choice(Ter)
     matriz[2][0] = elemento
     Ter.remove(elemento)
@@ -292,7 +292,7 @@ class Ilha:
     elemento = random.choice(Ter)
     matriz[3][5] = elemento
     Ter.remove(elemento)
-    matriz[4][0] = "    "
+    matriz[4][0] = "      "
     elemento = random.choice(Ter)
     matriz[4][1] = elemento
     Ter.remove(elemento)
@@ -305,17 +305,17 @@ class Ilha:
     elemento = random.choice(Ter)
     matriz[4][4] = elemento
     Ter.remove(elemento)
-    matriz[4][5] = "  "
-    matriz[5][0] = "    "
-    matriz[5][1] = "    "
+    matriz[4][5] = "      "
+    matriz[5][0] = "      "
+    matriz[5][1] = "      "
     elemento = random.choice(Ter)
     matriz[5][2] = elemento
     Ter.remove(elemento)
     elemento = random.choice(Ter)
     matriz[5][3] = elemento
     Ter.remove(elemento)
-    matriz[5][4]="  "
-    matriz[5][5]="  "
+    matriz[5][4]="      "
+    matriz[5][5]="      "
 class Descarte:
     class Tesouro:
         pass
