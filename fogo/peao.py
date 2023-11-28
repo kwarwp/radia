@@ -14,6 +14,7 @@ Changelog
 ---------
 .. versionadded::    23.11
     classe jogador e MaoJogador (07).
+.. versionadded::    23.11
 
 
 |   **Open Source Notification:** This file is part of open source program **Ilha Proibida**
