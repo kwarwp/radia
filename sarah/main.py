@@ -176,12 +176,12 @@ class Terreno:
 
     class CAVERNA_LAVA:
         nome = "Caverna de Lava"
-        visual = '  \U0001f525'
+        visual = ''
         contagem = 0
 
     class CAVERNA_SOMBRAS:
         nome = "Caverna das Sombras"
-        visual = "   "
+        visual = "Λ *"
         contagem = 0
 
     class OBSERVATORIO:
@@ -216,12 +216,12 @@ class Terreno:
 
     class DUNAS_ENGANO:
         nome = "Dunas do Engano"
-        visual = " "
+        visual = "⏳"
         contagem = 0
 
     class PONTE_SUSPENSA:
         nome = "Ponte Suspensa"
-        visual = ""
+        visual = " "
         contagem = 0
 
     class LAGOA_PERDIDA:
