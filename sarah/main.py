@@ -117,7 +117,7 @@ class Terreno:
         contagem = 0
     class PISTA_POUSO:
         nome = "Pista de Pouso"
-        visual = '\U0001f681 '
+        visual = ''
         contagem = 0
 
     class PORTAO_BRONZE:
@@ -226,7 +226,7 @@ class Terreno:
 
     class LAGOA_PERDIDA:
         nome = "Lagoa Perdida"
-        visual = " "
+        visual = ""
         contagem = 0
 class Ilha:
     Ter = [Terreno.PISTA_POUSO.visual, Terreno.PORTAO_COBRE.visual, Terreno.PORTAO_BRONZE.visual, Terreno.PALACIO_CORAL.visual, Terreno.VALE_TENEBROSO.visual, Terreno.PORTAO_OURO.visual, Terreno.PORTAO_PRATA.visual, Terreno.PORTAO_FERRO.visual, Terreno.ATALAIA.visual, Terreno.JARDIM_SUSSUROS.visual, Terreno.JARDIM_UIVOS.visual, Terreno.TEMPLO_SOL.visual, Terreno.TEMPLO_LUA.visual, Terreno.CAVERNA_LAVA.visual, Terreno.CAVERNA_SOMBRAS.visual, Terreno.OBSERVATORIO.visual, Terreno.PANTANO_BRUMAS.visual, Terreno.ROCHA_FANTASMA.visual, Terreno.PALACIO_MARES.visual, Terreno.PENEDO_BALDIO.visual, Terreno.BOSQUE_CARMESIM.visual,Terreno.DUNAS_ENGANO.visual,Terreno.PONTE_SUSPENSA.visual,Terreno.LAGOA_PERDIDA.visual]
