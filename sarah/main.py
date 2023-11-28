@@ -1,152 +1,329 @@
 # radia.sarah.main.py
 # __author__ Filipe Marçal
-from _spy.vitollino.main import Cena, Elemento, STYLE
-from collections import namedtuple
-Ter = namedtuple("Ter", "nome imagem tafv")
-LADO = 90
-STYLE["width"] = 800
-STYLE["height"] = "600px"
-IMAGEM = "https://imgur.com/gVHmY2v.jpg"
-PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
-PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
-PAWN = "https://imgur.com/zO3kiRp.png"
-TAFVS = "KXZXTei LK4p1xG rUNsKEH qp5Zbn8".split()
-NOMES = ("PISTA_POUSO PORTAO_BRONZE PALACIO_CORAL VALE_TENEBROSO PORTAO_OURO PORTAO_PRATA PORTAO_COBRE "
-"PORTAO_FERRO ATALAIA JARDIM_SUSSUROS JARDIM_UIVOS TEMPLO_SOL "
-"TEMPLO_LUA CAVERNA_LAVA CAVERNA_SOMBRAS OBSERVATORIO PANTANO_BRUMAS ROCHA_FANTASMA "
-"PALACIO_MARES PENEDO_BALDIO BOSQUE_CARMESIM DUNAS_ENGANO PONTE_SUSPENSA LAGOA_PERDIDA").split()
-LINKS = ("CU3TLYh BL6lB7H tLDbzd2 OZE1myn J6ow4jR v0g7eGm 45aU3nf "
-"yKU6ngz sdJ4W5O pjVcyoy ZNuPWqZ O0OSVFt "
-"J160xpm 2j1IAyf b4xtltc E9MflTP NDioDZg TCmLjeT "
-"rYxQaTa MvN7kTU Uni02EK cG5UYCf GC8V8CQ 7o1qq10").split()
+import random
+class Carta:
+    class Alagamento:
+        class PORTAO_COBRE:
+            nome = "Portão de Cobre"
+            contagem = 0
+        class PISTA_POUSO:
+            nome = "Pista de Pouso"
+            contagem = 0
+        class PORTAO_BRONZE:
+            nome = "Portão de Bronze"
+            contagem = 0
+        class PALACIO_CORAL:
+            nome = "Palácio de Coral"
+            contagem = 0
+        class VALE_TENEBROSO:
+            nome = "Vale Tenebroso"
+            contagem = 0
+        class PORTAO_OURO:
+            nome = "Portão de Ouro"
+            contagem = 0
+        class PORTAO_PRATA:
+            nome = "Portão de Prata"
+            contagem = 0
+        class PORTAO_FERRO:
+            nome = "Portão de Ferro"
+            contagem = 0
+        class ATALAIA:
+            nome = "Atalaia"
+            contagem = 0
+        class JARDIM_SUSSUROS:
+            nome = "Jardim dos Sussurros"
+            contagem = 0
+        class JARDIM_UIVOS:
+            nome = "Jardim dos Uivos"
+            contagem = 0
+        class TEMPLO_SOL:
+            nome = "Templo do Sol"
+            contagem = 0
+        class TEMPLO_LUA:
+            nome = "Templo da Lua"
+            contagem = 0
+        class CAVERNA_LAVA:
+            nome = "Caverna de Lava"
+            contagem = 0
+        class CAVERNA_SOMBRAS:
+            nome = "Caverna das Sombras"
+            contagem = 0
+        class OBSERVATORIO:
+            nome = "Observatório"
+            contagem = 0
+        class PANTANO_BRUMAS:
+            nome = "Pântano de Brumas"
+            contagem = 0
+        class ROCHA_FANTASMA:
+            nome = "Rocha Fantasma"
+            contagem = 0
+        class PALACIO_MARES:
+            nome = "Palácio dos Mares"
+            contagem = 0
+        class PENEDO_BALDIO:
+            nome = "Penedo Baldio"
+            contagem = 0
+        class BOSQUE_CARMESIM:
+            nome = "Bosque Carmesim"
+            contagem = 0
+        class DUNAS_ENGANO:
+            nome = "Dunas do Engano"
+            contagem = 0
+        class PONTE_SUSPENSA:
+            nome = "Ponte Suspensa"
+            contagem = 0
+        class LAGOA_PERDIDA:
+            nome = "Lagoa Perdida"
+            contagem = 0
 
+    class Tesouro:
+        class Terra:
+            nome = "A Pedra da Terra"
+            contagem = 0
+        class Vento:
+            nome = "A Estátua de Vento"
+            contagem = 0
+        class Fogo:
+            nome = "O Cristal de Fogo"
+            contagem = 0
+        class Agua:
+            nome = "O Cálice de Oceano"
+            contagem=0
 
-class IlhaProibida:
-    """ Representa a classe principal do Jogo.
-    
-    Terrenos 
-        Locais onde os peões podem ficar.
-        
-    """
+    class Aventureiro:
+        class Explorador:
+            nome = "Explorador"
+            contagem = 0
 
-    def __init__(self):
-        self.oceano = Cena(IMAGEM).vai()
-        self.terrenos = []
-        self.monta_tabuleiro_oceano()
-        self.peao = Peao(self)
-        self.peao.mover(self.terrenos[0])
+        class Piloto:
+            nome = "Piloto"
+            contagem = 0
 
-    def monta_tabuleiro_oceano(self):
-        """ Montar o tabuleiro em forma de diamante.
-        
-        """
-        from random import shuffle
-        tafv = [None]*16+TAFVS*2
-        info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
-        tafv=tafv.pop()) for _ in range(24)]
-        # como introduzir os elementos no info_terrenos?
-        # Agora info_terrenos é uma lista de Ter -> Como criar?
-        #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
-        shuffle(info_terrenos)
-        # Cada terreno realmente criado "puxa" um terreno da lista de "Ter's
-        self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
-                                 posx=((px % 6) + int(abs(2.5 - px // 6))), local=it.pop(0), ilha=self)
-                         for px in range(36) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
-        self.terrenos[4].afundar()
+        class Engenheiro:
+            nome = "Engenheiro"
+            contagem = 0
 
-    def desocupa_e_vai_para(self, terreno_destino):
-        self.peao.move(terreno_destino)
+        class Mergulhador:
+            nome = "Mergulhador"
+            contagem = 0
 
-    def direita(self, terreno):
-        """ Move o peão para a direita.
-        
-        :param terreno: O terreno onde está o peão
-        :return: O terreno onde o peão vai
-        """
-        aqui = self.terrenos.index(terreno)
-        return self.terrenos[aqui + 1]
-
-
+        class Navegador:
+            nome = "Navegador"
+            contagem = 0
 class Terreno:
-    """ Local onde um peão pode ficar.
+    class PORTAO_COBRE:
+        nome = "Portão de Cobre"
+        visual = '\u2fa8C'
+        contagem = 0
+    class PISTA_POUSO:
+        nome = "Pista de Pouso"
+        visual = ''
+        contagem = 0
 
-    :param local: Imagem do terreno
-    :param posx: Coordenada x do terreno.
-    :param posy: Coordenada y do terreno.
-    :param cena: Cena do local.
-    :param ilha: Referência ao tabuleiro.
-    """
+    class PORTAO_BRONZE:
+        nome = "Portão de Bronze"
+        visual = '\u2fa8 B'
+        contagem = 0
+    class PALACIO_CORAL:
+        nome = "Palácio de Coral"
+        visual = ''
+        contagem = 0
 
-    def __init__(self, local: Ter, posx, posy, cena, ilha):
-        #img = local.imagem
-        #self.local = Elemento(img
-        img = f"https://imgur.com/{local.imagem}.jpg"
-        self.local = Elemento(img, x=posx * LADO + 10, y=posy * LADO + 50, w=LADO-5, h=LADO-5,
-                              cena=cena)
-        estilo = {'background-color': 'slategray', 'color': 'white'}
-        letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
-        letreiro.elt.text = local.nome
-        img = f"https://imgur.com/{local.tafv}.png" if local.tafv else ""
-        
-        tafv = Elemento(img, w=40, h=50, x=0, tit=img, y=50, cena=self.local)
-        #tafv = Elemento(local.tafv, ....)
-        self.peao, self.ilha = None, ilha
-        self.posx, self.posy = posx, posy
-        self.local.vai = self.vai
-        self.afunda = False
+    class VALE_TENEBROSO:
+        nome = "Vale Tenebroso"
+        visual = ""
+        contagem = 0
 
-    def vai(self, _=0):
-        self.ilha.peao.mover(self)
+    class PORTAO_OURO:
+        nome = "Portão de Ouro"
+        visual = '\u2fa8 O'
+        contagem = 0
 
-    def afundar(self):
-        self.afunda = True
-        self.local.o = 0.2
+    class PORTAO_PRATA:
+        nome = "Portão de Prata"
+        visual = '\u2fa8 P'
+        contagem = 0
 
-    def desocupa_e_vai_para(self, terreno_destino):
-        def contiguos(origem, destino):
-            if not origem:
-                return True
-            from operator import xor
-            return xor(abs(origem.posx - destino.posx) == 1,
-            abs(origem.posy - destino.posy) == 1) and not destino.afunda
+    class PORTAO_FERRO:
+        nome = "Portão de Ferro"
+        visual = '\u2fa8 F'
+        contagem = 0
 
-        peao_pode_ir = contiguos(self, terreno_destino)
-        # executar o movimento do peão agora que foi autorizado pelo pode ir
-        self.peao.move(terreno_destino) if peao_pode_ir else None
+    class ATALAIA:
+        nome = "Atalaia"
+        visual = '\u265c '
+        contagem = 0
 
-    def ocupa(self, peao):
-        self.peao = peao
-        peao.mover(self.posx, self)
+    class JARDIM_SUSSUROS:
+        nome = "Jardim dos Sussurros"
+        visual = '\u2698 '
+        contagem = 0
 
+    class JARDIM_UIVOS:
+        nome = "Jardim dos Uivos"
+        visual = '\u2698'
+        contagem = 0
 
-class Peao:
-    """ Marcador usado para definir a posição do jogador nos terrenos.
-        
-        :param ilha: Referência ao tabuleiro.
-    """
+    class TEMPLO_SOL:
+        nome = "Templo do Sol"
+        visual = "\uf90a \u263c"
+        contagem = 0
 
-    def __init__(self, ilha):
-        """
-        """
-        self.peao = Elemento(PAWN, x=10, y=15, w=LADO-20, h=LADO-20,
-                             cena=ilha.oceano)
-        self.terreno = ilha  # era None, mas o peão agora nasce na ilha
-        self.ilha = ilha
+    class TEMPLO_LUA:
+        nome = "Templo da Lua"
+        visual = "\uf90a \u263e"
+        contagem = 0
 
-    def move(self, terreno):  # Corrigir: não está condizente!
-        self.terreno = terreno
-        terreno.peao = self
-        self.peao.entra(terreno.local)
-        #self.peao.x, self.peao.y = terreno.posx * LADO + 10, terreno.posy * LADO + 50
+    class CAVERNA_LAVA:
+        nome = "Caverna de Lava"
+        visual = ''
+        contagem = 0
 
-    def mover(self, terreno_destino):
-        self.terreno.desocupa_e_vai_para(terreno_destino)
+    class CAVERNA_SOMBRAS:
+        nome = "Caverna das Sombras"
+        visual = "Λ *"
+        contagem = 0
 
+    class OBSERVATORIO:
+        nome = "Observatório"
+        visual = "\u265c"
+        contagem = 0
 
-if __name__ == "__main__":
-    # IlhaProibida()
-    IlhaProibida()
-    ata = Ter(nome="atalaia", imagem='imgur/xyz', tafv=None)
-    #ata.nome = "pista"
-    #print(ata.nome, ata.tafv)
-    # print([(px, int(abs(2.5-px//6))) for px in range(36)])
+    class PANTANO_BRUMAS:
+        nome = "Pântano de Brumas"
+        visual = "  \u2601"
+        contagem = 0
+
+    class ROCHA_FANTASMA:
+        nome = "Rocha Fantasma"
+        visual = "Λ*"
+        contagem = 0
+
+    class PALACIO_MARES:
+        nome = "Palácio dos Mares"
+        visual = ""
+        contagem = 0
+
+    class PENEDO_BALDIO:
+        nome = "Penedo Baldio"
+        visual = "ㄱ "
+        contagem = 0
+
+    class BOSQUE_CARMESIM:
+        nome = "Bosque Carmesim"
+        visual = " ❤"
+        contagem = 0
+
+    class DUNAS_ENGANO:
+        nome = "Dunas do Engano"
+        visual = ""
+        contagem = 0
+
+    class PONTE_SUSPENSA:
+        nome = "Ponte Suspensa"
+        visual = ""
+        contagem = 0
+
+    class LAGOA_PERDIDA:
+        nome = "Lagoa Perdida"
+        visual = ""
+        contagem = 0
+class Ilha:
+    Ter = [Terreno.PISTA_POUSO.visual, Terreno.PORTAO_COBRE.visual, Terreno.PORTAO_BRONZE.visual, Terreno.PALACIO_CORAL.visual, Terreno.VALE_TENEBROSO.visual, Terreno.PORTAO_OURO.visual, Terreno.PORTAO_PRATA.visual, Terreno.PORTAO_FERRO.visual, Terreno.ATALAIA.visual, Terreno.JARDIM_SUSSUROS.visual, Terreno.JARDIM_UIVOS.visual, Terreno.TEMPLO_SOL.visual, Terreno.TEMPLO_LUA.visual, Terreno.CAVERNA_LAVA.visual, Terreno.CAVERNA_SOMBRAS.visual, Terreno.OBSERVATORIO.visual, Terreno.PANTANO_BRUMAS.visual, Terreno.ROCHA_FANTASMA.visual, Terreno.PALACIO_MARES.visual, Terreno.PENEDO_BALDIO.visual, Terreno.BOSQUE_CARMESIM.visual,Terreno.DUNAS_ENGANO.visual,Terreno.PONTE_SUSPENSA.visual,Terreno.LAGOA_PERDIDA.visual]
+    matriz = [["" for i in range(6)]for j in range(6)]
+    #Adicionando elementos
+    matriz[0][0] = "      "
+    matriz[0][1] = "      "
+    elemento = random.choice(Ter)
+    matriz[0][2] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[0][3] = elemento
+    Ter.remove(elemento)
+    matriz[0][4] = "     "
+    matriz[0][5] = "     "
+    matriz[1][0] = "      "
+    elemento = random.choice(Ter)
+    matriz[1][1] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[1][2] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[1][3] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[1][4] = elemento
+    Ter.remove(elemento)
+    matriz[1][5]="    "
+    elemento = random.choice(Ter)
+    matriz[2][0] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[2][1] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[2][2] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[2][3] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[2][4] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[2][5] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[3][0] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[3][1] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[3][2] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[3][3] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[3][4] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[3][5] = elemento
+    Ter.remove(elemento)
+    matriz[4][0] = "      "
+    elemento = random.choice(Ter)
+    matriz[4][1] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[4][2] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[4][3] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[4][4] = elemento
+    Ter.remove(elemento)
+    matriz[4][5] = "      "
+    matriz[5][0] = "      "
+    matriz[5][1] = "      "
+    elemento = random.choice(Ter)
+    matriz[5][2] = elemento
+    Ter.remove(elemento)
+    elemento = random.choice(Ter)
+    matriz[5][3] = elemento
+    Ter.remove(elemento)
+    matriz[5][4]="      "
+    matriz[5][5]="      "
+class Descarte:
+    class Tesouro:
+        pass
+    class Alagamento:
+        pass
+class Cartas:
+    Baralho = [Carta.Tesouro.Terra.nome, Carta.Tesouro.Agua.nome, Carta.Tesouro.Fogo.nome , Carta.Tesouro.Vento.nome, Carta.Aventureiro.Piloto.nome,Carta.Aventureiro.Navegador.nome, Carta.Aventureiro.Engenheiro.nome, Carta.Aventureiro.Explorador.nome, Carta.Aventureiro.Mergulhador.nome]
+#Inserir na primeira linha, coluna 3
+#Remover o valor escolhido da lista Ilha.listaTerrenos
+    for i in range(6):
+        print(Ilha.matriz[i])
