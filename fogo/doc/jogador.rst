@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Bem vindo(a) a documentacao do tabuleiro da Ilha Proibida fogo!
+Bem vindo(a) a documentacao do jogador da Ilha Proibida fogo!
 ==============================================
 
-.. automodule:: ilha
+.. automodule:: jogador
     :members:
