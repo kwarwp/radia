@@ -15,6 +15,9 @@ Changelog
 """
 
 class IlhaProibida:
+    """
+    classe ilha proibida
+    """
     def __init__(self):
         baralho_tesouro = bt = list("tafv" * 5 +"dd" + "hhh")
         baralho_alaga = ba = "eee" 
