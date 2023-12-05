@@ -160,14 +160,12 @@ class Terreno:
 
         :return: String representando o terreno.
         """
-        result = self.nome + " " + self.tafv
+        result = self.nome
         if len(self.jogadores) > 0:
             result += " " + ''.join([jog.nome[0] for jog in self.jogadores])
-        else:
-            result += " -"
 
-        faltam = 19 - len(result)
-        return result + " " * faltam
+        faltam = 18 - len(result)
+        return result + " " * faltam + self.tafv
 
     def coloquar_jogador(self, jogador):
         """
