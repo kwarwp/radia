@@ -49,6 +49,7 @@ class IlhaProibida:
         print("Bem-vindos à Ilha Poibida - montagem do tabuleiro")
         self.terrenos = []
         self.monta_tabuleiro_oceano(jogadores)
+        self.print_island_table()
 
     def monta_tabuleiro_oceano(self, jogadores):
         """
@@ -69,6 +70,16 @@ class IlhaProibida:
             self.terrenos[random.randrange(0, len(self.terrenos))].coloquar_jogador(jogador)
 
 
+    def imprimir_tabuleiro_ihla(self):
+        """
+        Imprime o tabuleiro da Ilha Proibida no console.
+
+        O tabuleiro é exibido em forma de diamante, com terrenos representados por seus nomes,
+        valores de face (tafv) e a presença de jogadores. Cada linha do tabuleiro é separada por
+        linhas horizontais, e cada coluna é delimitada por barras verticais.
+
+        :return: None
+        """
         print(" " + "-" * (__TABLE_SPACES__ * 6 + 5))
         tabuleiro = "|" + " " * __TABLE_SPACES__ + "|" + " " * __TABLE_SPACES__ + "| "
         for ter in self.terrenos[:2]:
