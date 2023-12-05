@@ -99,7 +99,7 @@ class IlhaProibida:
         tabuleiro = "|" + " " * __TABLE_SPACES__ + "| "
         for ter in self.terrenos[18:22]:
             tabuleiro += ter.string_rep() + " | "
-        tabuleiro += " " * (__TABLE_SPACES__ - 1) + "|" + " " * __TABLE_SPACES__ + "| "
+        tabuleiro += " " * (__TABLE_SPACES__ - 1) + "|"
         print(tabuleiro)
         print(("|" + "-" * __TABLE_SPACES__) * 6 + "|")
 
