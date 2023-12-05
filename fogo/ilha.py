@@ -23,6 +23,7 @@ NOMES = ("PISTA_POUSO PORTAO_BRONZE PALACIO_CORAL VALE_TENEBROSO PORTAO_OURO POR
          "TEMPLO_LUA CAVERNA_LAVA CAVERNA_SOMBRAS OBSERVATORIO PANTANO_BRUMAS ROCHA_FANTASMA "
          "PALACIO_MARES PENEDO_BALDIO BOSQUE_CARMESIM DUNAS_ENGANO PONTE_SUSPENSA LAGOA_PERDIDA").split()
 
+__TABLE_SPACES__ = 21
 
 class IlhaProibida:
     """
@@ -67,48 +68,47 @@ class IlhaProibida:
         for jogador in jogadores:
             self.terrenos[random.randrange(0, len(self.terrenos))].coloquar_jogador(jogador)
 
-        spaces = 21
 
-        print(" " + "-" * (spaces * 6 + 5))
-        tabuleiro = "|" + " " * spaces + "|" + " " * spaces + "| "
+        print(" " + "-" * (__TABLE_SPACES__ * 6 + 5))
+        tabuleiro = "|" + " " * __TABLE_SPACES__ + "|" + " " * __TABLE_SPACES__ + "| "
         for ter in self.terrenos[:2]:
             tabuleiro += ter.string_rep() + " | "
-        tabuleiro += " " * (spaces - 1) + "|" + " " * spaces + "| "
+        tabuleiro += " " * (__TABLE_SPACES__ - 1) + "|" + " " * __TABLE_SPACES__ + "| "
         print(tabuleiro)
-        print(("|" + "-" * 21) * 6 + "|")
+        print(("|" + "-" * __TABLE_SPACES__) * 6 + "|")
 
-        tabuleiro = "|" + " " * spaces + "| "
+        tabuleiro = "|" + " " * __TABLE_SPACES__ + "| "
         for ter in self.terrenos[2:6]:
             tabuleiro += ter.string_rep() + " | "
-        tabuleiro += " " * (spaces - 1) + "| "
+        tabuleiro += " " * (__TABLE_SPACES__ - 1) + "| "
         print(tabuleiro)
-        print(("|" + "-" * 21) * 6 + "|")
+        print(("|" + "-" * __TABLE_SPACES__) * 6 + "|")
 
         tabuleiro = "| "
         for ter in self.terrenos[6:12]:
             tabuleiro += ter.string_rep() + " | "
         print(tabuleiro)
-        print(("|" + "-" * 21) * 6 + "|")
+        print(("|" + "-" * __TABLE_SPACES__) * 6 + "|")
 
         tabuleiro = "| "
         for ter in self.terrenos[12:18]:
             tabuleiro += ter.string_rep() + " | "
         print(tabuleiro)
-        print(("|" + "-" * 21) * 6 + "|")
+        print(("|" + "-" * __TABLE_SPACES__) * 6 + "|")
 
-        tabuleiro = "|" + " " * spaces + "| "
+        tabuleiro = "|" + " " * __TABLE_SPACES__ + "| "
         for ter in self.terrenos[18:22]:
             tabuleiro += ter.string_rep() + " | "
-        tabuleiro += " " * (spaces - 1) + "|" + " " * spaces + "| "
+        tabuleiro += " " * (__TABLE_SPACES__ - 1) + "|" + " " * __TABLE_SPACES__ + "| "
         print(tabuleiro)
-        print(("|" + "-" * 21) * 6 + "|")
+        print(("|" + "-" * __TABLE_SPACES__) * 6 + "|")
 
-        tabuleiro = "|" + " " * spaces + "|" + " " * spaces + "| "
+        tabuleiro = "|" + " " * __TABLE_SPACES__ + "|" + " " * __TABLE_SPACES__ + "| "
         for ter in self.terrenos[22:]:
             tabuleiro += ter.string_rep() + " | "
-        tabuleiro += " " * (spaces - 1) + "|" + " " * spaces + "| "
+        tabuleiro += " " * (__TABLE_SPACES__ - 1) + "|" + " " * __TABLE_SPACES__ + "| "
         print(tabuleiro)
-        print(" " + "-" * (spaces * 6 + 5))
+        print(" " + "-" * (__TABLE_SPACES__ * 6 + 5))
 
 class CartaTesouro:
     """
@@ -164,7 +164,7 @@ class Terreno:
         if len(self.jogadores) > 0:
             result += " " + ''.join([jog.nome[0] for jog in self.jogadores])
 
-        faltam = 18 - len(result)
+        faltam = __TABLE_SPACES__ - 3 - len(result)
         return result + " " * faltam + self.tafv
 
     def coloquar_jogador(self, jogador):
