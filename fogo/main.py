@@ -2,7 +2,7 @@
 # __authors__ Fernanda, Finn, Vanessa, Anderson 
 """Página de Entrada do jogo Ilha Proibida Equipe Fogo.
 
-LOG - http://bit.ly/Dev_Agile_23
+WORKFLOWY - http://bit.ly/Dev_Agile_23
 
 EQUIPE FOGO 
 

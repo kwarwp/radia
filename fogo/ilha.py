@@ -10,10 +10,10 @@
 Changelog
 ---------
 .. versionadded::    5.12
-        Adicionar funciona montar tabuleiro
+    montagem do tabuleiro.
 
 .. versionadded::    23.11
-        Descreva o que você adicionou no código.
+    criação da ilha.py.
 
 """
 import random

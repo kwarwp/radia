@@ -2,8 +2,6 @@
 # __author__ Fernanda, Finn, Vanessa
 """Página Jogador do jogo Ilha Proibida Equipe Fogo.
 
-LOG - http://bit.ly/Dev_Agile_23
-
 EQUIPE FOGO 
 
 .. codeauthor:: Fernanda Araujo <fernandacsaraujo@gmail.com>
