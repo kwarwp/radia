@@ -69,40 +69,46 @@ class IlhaProibida:
 
         spaces = 21
 
+        print(" " + "-" * (spaces * 6 + 5))
         tabuleiro = "|" + " " * spaces + "|" + " " * spaces + "| "
         for ter in self.terrenos[:2]:
             tabuleiro += ter.string_rep() + " | "
         tabuleiro += " " * (spaces - 1) + "|" + " " * spaces + "| "
         print(tabuleiro)
+        print(("|" + "-" * 21) * 6 + "|")
 
         tabuleiro = "|" + " " * spaces + "| "
         for ter in self.terrenos[2:6]:
             tabuleiro += ter.string_rep() + " | "
         tabuleiro += " " * (spaces - 1) + "| "
         print(tabuleiro)
+        print(("|" + "-" * 21) * 6 + "|")
 
         tabuleiro = "| "
         for ter in self.terrenos[6:12]:
             tabuleiro += ter.string_rep() + " | "
         print(tabuleiro)
+        print(("|" + "-" * 21) * 6 + "|")
 
         tabuleiro = "| "
         for ter in self.terrenos[12:18]:
             tabuleiro += ter.string_rep() + " | "
         print(tabuleiro)
+        print(("|" + "-" * 21) * 6 + "|")
 
         tabuleiro = "|" + " " * spaces + "| "
         for ter in self.terrenos[18:22]:
             tabuleiro += ter.string_rep() + " | "
         tabuleiro += " " * (spaces - 1) + "|" + " " * spaces + "| "
         print(tabuleiro)
+        print(("|" + "-" * 21) * 6 + "|")
 
         tabuleiro = "|" + " " * spaces + "|" + " " * spaces + "| "
         for ter in self.terrenos[22:]:
             tabuleiro += ter.string_rep() + " | "
         tabuleiro += " " * (spaces - 1) + "|" + " " * spaces + "| "
         print(tabuleiro)
-
+        print(" " + "-" * (spaces * 6 + 5))
 
 class CartaTesouro:
     """
