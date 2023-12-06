@@ -81,20 +81,18 @@ class IlhaProibida:
 
         :return: None
         """
-        print(" " + "-" * (__TABLE_SPACES__ * 6 + 5))
-        tabuleiro = "|" + " " * __TABLE_SPACES__ + "|" + " " * __TABLE_SPACES__ + "| "
+        print(" " * (__TABLE_SPACES__ * 2 + 3) + "-" * (__TABLE_SPACES__ * 2 + 1))
+        tabuleiro = " " * (__TABLE_SPACES__ * 2 + 2) + "| "
         for ter in self.terrenos[:2]:
             tabuleiro += ter.string_rep() + " | "
-        tabuleiro += " " * (__TABLE_SPACES__ - 1) + "|" + " " * __TABLE_SPACES__ + "| "
         print(tabuleiro)
-        print(("|" + "-" * __TABLE_SPACES__) * 6 + "|")
+        print(" " * (__TABLE_SPACES__ + 2) + "-" * ( __TABLE_SPACES__ * 4 + 3))
 
-        tabuleiro = "|" + " " * __TABLE_SPACES__ + "| "
+        tabuleiro = " " * (__TABLE_SPACES__ + 1) + "| "
         for ter in self.terrenos[2:6]:
             tabuleiro += ter.string_rep() + " | "
-        tabuleiro += " " * (__TABLE_SPACES__ - 1) + "| "
         print(tabuleiro)
-        print(("|" + "-" * __TABLE_SPACES__) * 6 + "|")
+        print(" " + "-" * (__TABLE_SPACES__ * 6 + 5))
 
         tabuleiro = "| "
         for ter in self.terrenos[6:12]:
@@ -106,21 +104,19 @@ class IlhaProibida:
         for ter in self.terrenos[12:18]:
             tabuleiro += ter.string_rep() + " | "
         print(tabuleiro)
-        print(("|" + "-" * __TABLE_SPACES__) * 6 + "|")
+        print(" " + "-" * (__TABLE_SPACES__ * 6 + 5))
 
-        tabuleiro = "|" + " " * __TABLE_SPACES__ + "| "
+        tabuleiro = " " * (__TABLE_SPACES__ + 1) + "| "
         for ter in self.terrenos[18:22]:
             tabuleiro += ter.string_rep() + " | "
-        tabuleiro += " " * (__TABLE_SPACES__ - 1) + "|"
         print(tabuleiro)
-        print(("|" + "-" * __TABLE_SPACES__) * 6 + "|")
+        print(" " * (__TABLE_SPACES__ + 2) + "-" * ( __TABLE_SPACES__ * 4 + 3))
 
-        tabuleiro = "|" + " " * __TABLE_SPACES__ + "|" + " " * __TABLE_SPACES__ + "| "
+        tabuleiro = " " * (__TABLE_SPACES__ * 2 + 2) + "| "
         for ter in self.terrenos[22:]:
             tabuleiro += ter.string_rep() + " | "
-        tabuleiro += " " * (__TABLE_SPACES__ - 1) + "|" + " " * __TABLE_SPACES__ + "| "
         print(tabuleiro)
-        print(" " + "-" * (__TABLE_SPACES__ * 6 + 5))
+        print(" " * (__TABLE_SPACES__ * 2 + 3) + "-" * (__TABLE_SPACES__ * 2 + 1))
 
 class CartaTesouro:
     """
