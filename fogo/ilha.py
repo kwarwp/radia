@@ -68,7 +68,7 @@ class IlhaProibida:
         shuffle(self.terrenos)
 
         for jogador in jogadores:
-            self.terrenos[random.randrange(0, len(self.terrenos))].coloquar_jogador(jogador)
+            self.terrenos[random.randrange(0, len(self.terrenos))].colocar_jogador(jogador)
 
 
     def imprimir_tabuleiro_ilha(self):
@@ -176,7 +176,7 @@ class Terreno:
         faltam = __TABLE_SPACES__ - 3 - len(result)
         return result + " " * faltam + self.tafv
 
-    def coloquar_jogador(self, jogador):
+    def colocar_jogador(self, jogador):
         """
         Coloca um jogador no terreno.
 
