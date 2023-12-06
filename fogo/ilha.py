@@ -49,7 +49,7 @@ class IlhaProibida:
         print("Bem-vindos à Ilha Poibida - montagem do tabuleiro")
         self.terrenos = []
         self.monta_tabuleiro_oceano(jogadores)
-        self.print_island_table()
+        self.imprimir_tabuleiro_ilha()
 
     def monta_tabuleiro_oceano(self, jogadores):
         """
@@ -70,7 +70,7 @@ class IlhaProibida:
             self.terrenos[random.randrange(0, len(self.terrenos))].coloquar_jogador(jogador)
 
 
-    def imprimir_tabuleiro_ihla(self):
+    def imprimir_tabuleiro_ilha(self):
         """
         Imprime o tabuleiro da Ilha Proibida no console.
 
