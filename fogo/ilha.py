@@ -185,6 +185,9 @@ class Terreno:
         self.jogadores.append(jogador)
 
     def afundar(self):
+        """
+        Afundar o terreno.
+        """
         self.afundado = True
 
 
