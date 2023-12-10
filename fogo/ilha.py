@@ -38,18 +38,19 @@ class IlhaProibida:
         """
         if jogadores is None:
             jogadores = []
-        baralho_tesouro = bt = list("tafv" * 5 + "dd" + "hhh")
-        baralho_alaga = ba = "eee"
-        self.cartas_tesouro = [CartaTesouro(face=carta) for carta in bt]
-        # recursos do jogador para relizar capturas, drenagem e movimentos
-        self.cartas_tesouro += [CartaAlagamento(face=carta) for carta in ba]
-        # acrescido de um conjunto de cartas que causam uma enchente
-        self.cartas_inunda = list(range(24))
-        # abaixa um terreno que fica alagado ou afunda no oceano
-        print("Bem-vindos à Ilha Poibida - montagem do tabuleiro")
         self.terrenos = []
+
+        self.cartas_tesouro = [CartaTesouro(face=carta) for carta in list("tafv" * 5 + "dd" + "hhh")]
+        self.cartas_tesouro += [CartaAlagamento(face=carta) for carta in "eee"]
+
+        print("Bem-vindos à Ilha Poibida - montagem do tabuleiro")
         self.monta_tabuleiro_oceano(jogadores)
-        self.print_island_table()
+
+        # abaixa um terreno que fica alagado ou afunda no oceano
+        self.terrenos[random.randrange(0, len(self.terrenos))].afundar()
+
+        # mostra o tabuleiro
+        self.imprimir_tabuleiro_ilha()
 
     def monta_tabuleiro_oceano(self, jogadores):
         """
@@ -67,10 +68,10 @@ class IlhaProibida:
         shuffle(self.terrenos)
 
         for jogador in jogadores:
-            self.terrenos[random.randrange(0, len(self.terrenos))].coloquar_jogador(jogador)
+            self.terrenos[random.randrange(0, len(self.terrenos))].colocar_jogador(jogador)
 
 
-    def imprimir_tabuleiro_ihla(self):
+    def imprimir_tabuleiro_ilha(self):
         """
         Imprime o tabuleiro da Ilha Proibida no console.
 
@@ -80,46 +81,42 @@ class IlhaProibida:
 
         :return: None
         """
-        print(" " + "-" * (__TABLE_SPACES__ * 6 + 5))
-        tabuleiro = "|" + " " * __TABLE_SPACES__ + "|" + " " * __TABLE_SPACES__ + "| "
+        print(" " * (__TABLE_SPACES__ * 2 + 3) + "-" * (__TABLE_SPACES__ * 2 + 1))
+        tabuleiro = " " * (__TABLE_SPACES__ * 2 + 2) + "| "
         for ter in self.terrenos[:2]:
             tabuleiro += ter.string_rep() + " | "
-        tabuleiro += " " * (__TABLE_SPACES__ - 1) + "|" + " " * __TABLE_SPACES__ + "| "
         print(tabuleiro)
-        print(("|" + "-" * __TABLE_SPACES__) * 6 + "|")
+        print(" " * (__TABLE_SPACES__ + 2) + "-" * ( __TABLE_SPACES__ * 4 + 3))
 
-        tabuleiro = "|" + " " * __TABLE_SPACES__ + "| "
+        tabuleiro = " " * (__TABLE_SPACES__ + 1) + "| "
         for ter in self.terrenos[2:6]:
             tabuleiro += ter.string_rep() + " | "
-        tabuleiro += " " * (__TABLE_SPACES__ - 1) + "| "
         print(tabuleiro)
-        print(("|" + "-" * __TABLE_SPACES__) * 6 + "|")
+        print(" " + "-" * (__TABLE_SPACES__ * 6 + 5))
 
         tabuleiro = "| "
         for ter in self.terrenos[6:12]:
             tabuleiro += ter.string_rep() + " | "
         print(tabuleiro)
-        print(("|" + "-" * __TABLE_SPACES__) * 6 + "|")
+        print(" " + "-" * (__TABLE_SPACES__ * 6 + 5))
 
         tabuleiro = "| "
         for ter in self.terrenos[12:18]:
             tabuleiro += ter.string_rep() + " | "
         print(tabuleiro)
-        print(("|" + "-" * __TABLE_SPACES__) * 6 + "|")
+        print(" " + "-" * (__TABLE_SPACES__ * 6 + 5))
 
-        tabuleiro = "|" + " " * __TABLE_SPACES__ + "| "
+        tabuleiro = " " * (__TABLE_SPACES__ + 1) + "| "
         for ter in self.terrenos[18:22]:
             tabuleiro += ter.string_rep() + " | "
-        tabuleiro += " " * (__TABLE_SPACES__ - 1) + "|"
         print(tabuleiro)
-        print(("|" + "-" * __TABLE_SPACES__) * 6 + "|")
+        print(" " * (__TABLE_SPACES__ + 2) + "-" * ( __TABLE_SPACES__ * 4 + 3))
 
-        tabuleiro = "|" + " " * __TABLE_SPACES__ + "|" + " " * __TABLE_SPACES__ + "| "
+        tabuleiro = " " * (__TABLE_SPACES__ * 2 + 2) + "| "
         for ter in self.terrenos[22:]:
             tabuleiro += ter.string_rep() + " | "
-        tabuleiro += " " * (__TABLE_SPACES__ - 1) + "|" + " " * __TABLE_SPACES__ + "| "
         print(tabuleiro)
-        print(" " + "-" * (__TABLE_SPACES__ * 6 + 5))
+        print(" " * (__TABLE_SPACES__ * 2 + 3) + "-" * (__TABLE_SPACES__ * 2 + 1))
 
 class CartaTesouro:
     """
@@ -164,6 +161,7 @@ class Terreno:
         self.nome = nome
         self.tafv = tafv
         self.jogadores = []
+        self.afundado = False
 
     def string_rep(self):
         """
@@ -171,20 +169,26 @@ class Terreno:
 
         :return: String representando o terreno.
         """
-        result = self.nome
+        result = self.nome.lower() if self.afundado else self.nome
         if len(self.jogadores) > 0:
             result += " " + ''.join([jog.nome[0] for jog in self.jogadores])
 
         faltam = __TABLE_SPACES__ - 3 - len(result)
         return result + " " * faltam + self.tafv
 
-    def coloquar_jogador(self, jogador):
+    def colocar_jogador(self, jogador):
         """
         Coloca um jogador no terreno.
 
         :param jogador: Instância do jogador a ser colocado no terreno.
         """
         self.jogadores.append(jogador)
+
+    def afundar(self):
+        """
+        Afundar o terreno.
+        """
+        self.afundado = True
 
 
 if __name__ == "__main__":
