@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86eb6697-c479-49b8-9402-0ce7dd7b8525" name="Changes" comment="script de teste">
-      <change beforePath="$PROJECT_DIR$/.idea/IlhaProibida.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IlhaProibida.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fogo/ilha.py" beforeDir="false" afterPath="$PROJECT_DIR$/fogo/ilha.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fogo/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fogo/teste_cartas.py" beforeDir="false" afterPath="$PROJECT_DIR$/fogo/teste_cartas.py" afterDir="false" />
-    </list>
+    <list default="true" id="86eb6697-c479-49b8-9402-0ce7dd7b8525" name="Changes" comment="script de teste" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -322,7 +315,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702393756737</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="script de teste">
+      <option name="closed" value="true" />
+      <created>1702396877429</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702396877429</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
