@@ -2,7 +2,7 @@
 # __authors__ Fernanda, Finn, Vanessa, Anderson 
 """Página de Entrada do jogo Ilha Proibida Equipe Fogo.
 
-LOG - http://bit.ly/Dev_Agile_23
+WORKFLOWY - http://bit.ly/Dev_Agile_23
 
 EQUIPE FOGO 
 
@@ -35,9 +35,12 @@ from fogo.jogador import Jogador
 from fogo.peao import Peao
 
 if __name__ == "__main__":
-    Ilha()
-    Jogador("Jose")
-    Jogador("Fernando")
-    Jogador("Finninho")
-    Jogador("Vanessa")
+    jogadores = [
+        Jogador("Jose"),
+        Jogador("Fernando"),
+        Jogador("Igor"),
+        Jogador("Vanessa")
+    ]
+    Ilha(jogadores)
+
     Peao()
