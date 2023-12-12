@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86eb6697-c479-49b8-9402-0ce7dd7b8525" name="Changes" comment="script de teste">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fogo/test_unittest.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/fogo/teste_jogador.py" beforeDir="false" afterPath="$PROJECT_DIR$/fogo/teste_jogador.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -308,7 +308,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702388756442</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="script de teste">
+      <option name="closed" value="true" />
+      <created>1702390056533</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702390056533</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

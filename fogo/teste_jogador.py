@@ -14,5 +14,6 @@ class TestIlhaProibida(unittest.TestCase):
         # Verifique se o número de jogadores na instância do jogo é igual ao número de jogadores fornecidos
         self.assertEqual(4, len(jogadores))
 
+
 if __name__ == '__main__':
     unittest.main()
