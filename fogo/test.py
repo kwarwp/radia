@@ -20,15 +20,15 @@ Changelog
 |   `Labase <http://labase.selfip.org/>`_ - `NCE <https://portal.nce.ufrj.br>`_ - `UFRJ <https://ufrj.br/>`_.
 """
 
-from fogo.ilha import monta_tabuleiro_oceano
-
-def test_monta_tabuleiro_oceano():
+target = __import__("fogo.ilha.py")
+terrenos = terrenos.sum
+def test_terrenos():
     '''
     Define um Teste unitario para a funcao monta_tabuleiro_oceano do modulo fogo.ilha
     usando a biblioteca pytest. Por meio do comando pytest test_pytest.py no terminal é executado o teste.
     Verifica o numero_cartas em self.terrenos.
     '''
-        assert self.terrenoss == 24, f"O número de cartas sorteadas é {numero_cartas}, não 24."
+        assert terrenos == 24, f"O número de cartas sorteadas é {numero_cartas}, não 24."
 
 def test_2():
     '''
