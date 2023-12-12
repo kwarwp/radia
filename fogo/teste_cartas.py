@@ -1,11 +1,11 @@
 # teste_jogador.py
 
 import unittest
-import fogo.ilha import IlhaProibida
+from fogo.ilha import IlhaProibida
 
 class TesteCartasTabuleiro(unittest.TestCase):
 
-    def test_contacartas(self, terrenos):
+    def test_contacartas(self, terrenos= None):
         # importar de cartas de tabuleiro de IlhaProibida em uma lista
 
         self.assertEqual(24, terrenos)  # add assertion here
