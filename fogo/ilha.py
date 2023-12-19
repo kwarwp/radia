@@ -136,7 +136,6 @@ class CartaAlagamento(CartaTesouro):
     """
     Classe que representa uma carta de alagamento no jogo Ilha Proibida.
     """
-
     def __init__(self, face):
         """
         Inicializa a instância da carta de alagamento.

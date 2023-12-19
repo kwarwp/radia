@@ -1,4 +1,4 @@
-# teste_jogador.py
+# teste_cartas.py
 
 import unittest
 from fogo.ilha import IlhaProibida

@@ -85,6 +85,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+  <component name="RunManager" selected="Python tests.Python tests in teste_jogador.py">
+    <configuration name="teste_cartas" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="IlhaProibida" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11 (pythonProject)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fogo" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fogo/teste_cartas.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Sphinx Task in Sphinx Task in " type="docs" factoryName="Sphinx task" nameIsGenerated="true">
       <module name="IlhaProibida" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -144,10 +167,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;teste_jogador.TestIlhaProibida.test_numero_jogadores&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for fogo.test" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for teste_cartas.TesteCartasTabuleiro" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="IlhaProibida" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -156,14 +176,12 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;fogo.test&quot;" />
+      <option name="_new_target" value="&quot;teste_cartas.TesteCartasTabuleiro&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for fogo.test.test_terrenos" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for teste_cartas.TesteCartasTabuleiro.test_contacartas" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="IlhaProibida" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -172,14 +190,12 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;fogo.test.test_terrenos&quot;" />
+      <option name="_new_target" value="&quot;teste_cartas.TesteCartasTabuleiro.test_contacartas&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test.test_terrenos" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for teste_jogador.TestIlhaProibida.test_numero_jogadores" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="IlhaProibida" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -188,18 +204,33 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test.test_terrenos&quot;" />
+      <option name="_new_target" value="&quot;teste_jogador.TestIlhaProibida.test_numero_jogadores&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in teste_jogador.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="IlhaProibida" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fogo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/fogo/teste_jogador.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.teste_cartas" />
       <item itemvalue="Python docs.Sphinx Task in Sphinx Task in " />
       <item itemvalue="Python tests.Doctests in " />
-      <item itemvalue="Python tests.Python tests for teste_jogador.TestIlhaProibida" />
+      <item itemvalue="Python tests.Python tests in teste_jogador.py" />
+      <item itemvalue="Python tests.Python tests for teste_cartas.TesteCartasTabuleiro" />
+      <item itemvalue="Python tests.Python tests for teste_cartas.TesteCartasTabuleiro.test_contacartas" />
       <item itemvalue="Python tests.Python tests for teste_jogador.TestIlhaProibida.test_numero_jogadores" />
       <item itemvalue="Python tests.pytest for fogo.test.test_terrenos" />
       <item itemvalue="Python tests.pytest for test.test_terrenos" />
@@ -208,6 +239,10 @@
       <list>
         <item itemvalue="Python.main" />
         <item itemvalue="Python tests.Python tests for teste_jogador.TestIlhaProibida" />
+        <item itemvalue="Python tests.Python tests in teste_jogador.py" />
+        <item itemvalue="Python.teste_cartas" />
+        <item itemvalue="Python tests.Python tests for teste_cartas.TesteCartasTabuleiro" />
+        <item itemvalue="Python tests.Python tests for teste_cartas.TesteCartasTabuleiro.test_contacartas" />
         <item itemvalue="Python tests.Python tests for teste_jogador.TestIlhaProibida.test_numero_jogadores" />
         <item itemvalue="Python tests.pytest for test.test_terrenos" />
         <item itemvalue="Python tests.pytest for fogo.test.test_terrenos" />
@@ -328,6 +363,31 @@
       <updated>1702998168780</updated>
     </task>
     <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00013" summary="script de teste">
+      <option name="closed" value="true" />
+      <created>1702392223167</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702392223167</updated>
+    </task>
+    <task id="LOCAL-00014" summary="script de teste">
+      <option name="closed" value="true" />
+      <created>1702393756737</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702393756737</updated>
+    </task>
+    <task id="LOCAL-00015" summary="script de teste">
+      <option name="closed" value="true" />
+      <created>1702396877429</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702396877429</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
