@@ -18,6 +18,14 @@ class Aventureiro:
         """
         print(f"{self.nome}: {self.habilidade}")
 
+    def trocar_habilidades(self, outro_aventureiro):
+        """
+        Troca as habilidades especiais com outro aventureiro.
+
+        :param outro_aventureiro: Instância de outro aventureiro.
+        """
+        self.habilidade, outro_aventureiro.habilidade = outro_aventureiro.habilidade, self.habilidade
+
 # Exemplos de instância de cartões de aventureiro
 aventureiro1 = Aventureiro("Explorador", "Pode se mover para qualquer terreno adjacente")
 aventureiro2 = Aventureiro("Engenheiro", "Pode secar dois terrenos por ação")

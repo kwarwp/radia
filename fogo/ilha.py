@@ -189,6 +189,15 @@ class Terreno:
         """
         self.afundado = True
 
+    def trocar_terrenos(self, terreno1, terreno2):
+        """
+        Troca a posição de dois terrenos no tabuleiro.
+
+        :param terreno1: Instância de um terreno.
+        :param terreno2: Instância de outro terreno.
+        """
+        index1, index2 = self.terrenos.index(terreno1), self.terrenos.index(terreno2)
+        self.terrenos[index1], self.terrenos[index2] = self.terrenos[index2], self.terrenos[index1]
 
 if __name__ == "__main__":
     IlhaProibida()
