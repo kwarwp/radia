@@ -15,9 +15,6 @@ Changelog
 .. versionadded::    23.11
     criação da ilha.py.
 
-.. versionadded::    19.12
-    criação cartas de aventureiros, inundação e tesouro
-
 """
 import random
 
@@ -38,9 +35,6 @@ class IlhaProibida:
         Inicializa a instância do jogo Ilha Proibida.
 
         :param jogadores: Lista de jogadores.
-        :param jogadores: cria cartas de tesouro (terra (t), agua(a), fogo(f), vento(v))
-        :param jogadores: cartas de alagamento
-        :param jogadores: imprime-o no console.
         """
         if jogadores is None:
             jogadores = []
@@ -62,10 +56,7 @@ class IlhaProibida:
         """
         Monta o tabuleiro em forma de diamante.
 
-
-        :param jogadores: organiza os terrenos no tabuleiro
-        atribuindo a cada um um nome e um valor de face (tafv) de forma aleatória.
-
+        :param jogadores: Lista de jogadores.
         """
         from random import shuffle
         tafv = [" "] * 15 + list("tafv") * 2
@@ -127,18 +118,6 @@ class IlhaProibida:
         print(tabuleiro)
         print(" " * (__TABLE_SPACES__ * 2 + 3) + "-" * (__TABLE_SPACES__ * 2 + 1))
 
-    def trocar_terrenos(self, terreno1, terreno2):
-        """
-        Troca a posição de dois terrenos no tabuleiro.
-
-
-        :param terreno1: Instância de um terreno.
-        :param terreno2: Instância de outro terreno.
-        """
-        index1, index2 = self.terrenos.index(terreno1), self.terrenos.index(terreno2)
-        self.terrenos[index1], self.terrenos[index2] = self.terrenos[index2], self.terrenos[index1]
-    # Agora, quando um jogador usa a Carta de Troca de Terrenos, podemos chamar o método trocar_terrenos():
-
 class CartaTesouro:
     """
     Classe que representa uma carta de tesouro no jogo Ilha Proibida.
@@ -163,7 +142,8 @@ class CartaAlagamento(CartaTesouro):
 
         :param face: Face da carta.
         """
-        self.face = face
+        super().__init__(face)
+
 
 class Terreno:
     """
@@ -209,18 +189,6 @@ class Terreno:
         """
         self.afundado = True
 
-class CartaTrocadeTerrenos:
-    """
-    Classe que representa uma carta Troca de Terrenos
-    """
-
-    def __init__(self, face):
-        """
-        Inicializa a instância da carta de tesouro.
-
-        :param face: Face da carta.
-        """
-        self.face = face
 
 if __name__ == "__main__":
     IlhaProibida()

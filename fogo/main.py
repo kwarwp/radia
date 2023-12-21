@@ -33,6 +33,8 @@ Changelog
 from fogo.ilha import IlhaProibida as Ilha
 from fogo.jogador import Jogador
 from fogo.peao import Peao
+from fogo.aventureiro import Aventureiro
+
 
 if __name__ == "__main__":
     jogadores = [
@@ -44,3 +46,4 @@ if __name__ == "__main__":
     Ilha(jogadores)
 
     Peao()
+    Aventureiro()
