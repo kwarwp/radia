@@ -21,22 +21,54 @@ Changelog
 |   **SPDX-License-Identifier:** `GNU General Public License v3.0 or later <http://is.gd/3Udt>`_.
 |   `Labase <http://labase.selfip.org/>`_ - `NCE <https://portal.nce.ufrj.br>`_ - `UFRJ <https://ufrj.br/>`_.
 """
-
-class Jogador:
-    def __init__(self, nome="DefaultPlayer"):
-        self.nome = nome
-        self.mao = MaoJogador(dono=self)
-        print(f"{self.nome} se apresentando")
-
-
 class MaoJogador:
-    def __init__(self, dono, cartas=[]):
+    def __init__(self, dono, cartas=None):
+        if cartas is None:
+            cartas = []
         self.dono = dono
         self.cartas = cartas
         print(f"A mão do {self.dono.nome} possui {len(self.cartas)} cartas")
+
+class Jogador:
+    def __init__(self, nome="DefaultPlayer", habilidade=""):
+        self.nome = nome
+        self.habilidade = habilidade
+        self.mao = MaoJogador(dono=self)
+        print(f"{self.nome} se apresentando")
+
+    def trocar_habilidades(self, outro_Jogador):
+        """
+        Troca as habilidades especiais com outro aventureiro.
+        :param outro_aventureiro: Instância de outro aventureiro.
+        """
+        self.habilidade, outro_jogador.habilidade = outro_jogador.habilidade, self.habilidade
+
+class Carta_troca_habilidades(Jogador):
+    """
+    Classe que representa uma carta de troca de habilidades
+    """
+
+    def __init__(self, face):
+        """
+        Inicializa a instância da carta de alagamento.
+
+        :param face: Face da carta.
+        """
+        self.face = face
+
+
+# ilha.py (exemplo de uso da Carta de Troca de Habilidades)
+Jogador1 = Jogador("Explorador", "Pode se mover para qualquer terreno adjacente")
+Jogador2 = Jogador("Engenheiro", "Pode secar dois terrenos por ação")
+
+# Uso da Carta de Troca de Habilidades
+Carta_troca_habilidades(Jogador1, Jogador2)
+Jogador1.trocar_habilidades(Jogador2)
+
+
+
         
         
 if __name__ == "__main__":
-    #IlhaProibida()
     Jogador()
     
