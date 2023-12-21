@@ -15,6 +15,9 @@ Changelog
 .. versionadded::    23.11
     criação da ilha.py.
 
+.. versionadded::    21.12
+    criação da Carta de Troca de Terrenos
+
 """
 import random
 
@@ -51,6 +54,17 @@ class IlhaProibida:
 
         # mostra o tabuleiro
         self.imprimir_tabuleiro_ilha()
+
+    def trocar_terrenos(self, terreno1, terreno2):
+        """
+        Troca a posição de dois terrenos no tabuleiro.
+
+
+        :param terreno1: Instância de um terreno.
+        :param terreno2: Instância de outro terreno.
+        """
+        index1, index2 = self.terrenos.index(terreno1), self.terrenos.index(terreno2)
+        self.terrenos[index1], self.terrenos[index2] = self.terrenos[index2], self.terrenos[index1]
 
     def monta_tabuleiro_oceano(self, jogadores):
         """
@@ -143,6 +157,19 @@ class CartaAlagamento(CartaTesouro):
         :param face: Face da carta.
         """
         super().__init__(face)
+
+class Carta_Troca_Terrenos:
+    """
+    Classe que representa uma carta que troca os terrenos
+    """
+    def __init__(self, face):
+        """
+        Inicializa a instância da carta troca de terrenos
+
+        :param face: Face da carta.
+        """
+        super().__init__(face)
+
 
 
 class Terreno:

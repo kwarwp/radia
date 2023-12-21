@@ -14,7 +14,8 @@ Changelog
 ---------
 .. versionadded::    23.11
     classe jogador e MaoJogador (07).
-
+.. versionadded::    21.12
+   funcionalidade troca de habilidades do jogador (07).
 
 |   **Open Source Notification:** This file is part of open source program **Ilha Proibida**
 |   **Copyright © 2023, Fernanda Araujo** <fernandacsaraujo@gmail.com>, Finn Kockelke** <finn_kockelke@gmx.net>, Vanessa M Vianna** <vanmvianna@gmail.com>
