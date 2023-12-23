@@ -37,25 +37,13 @@ class Jogador:
         self.mao = MaoJogador(dono=self)
         print(f"{self.nome} se apresentando")
 
-    def trocar_habilidades(self, outro_Jogador):
+    def trocar_habilidades(self, outro_jogador):
         """
         Troca as habilidades especiais com outro aventureiro.
-        :param outro_aventureiro: Instância de outro aventureiro.
+
+        :param outro_jogador: Instância de outro aventureiro.
         """
         self.habilidade, outro_jogador.habilidade = outro_jogador.habilidade, self.habilidade
-
-class Carta_troca_habilidades(Jogador):
-    """
-    Classe que representa uma carta de troca de habilidades
-    """
-
-    def __init__(self, face):
-        """
-        Inicializa a instância da carta de alagamento.
-
-        :param face: Face da carta.
-        """
-        self.face = face
 
 
 # ilha.py (exemplo de uso da Carta de Troca de Habilidades)
@@ -63,7 +51,6 @@ Jogador1 = Jogador("Explorador", "Pode se mover para qualquer terreno adjacente"
 Jogador2 = Jogador("Engenheiro", "Pode secar dois terrenos por ação")
 
 # Uso da Carta de Troca de Habilidades
-Carta_troca_habilidades(Jogador1, Jogador2)
 Jogador1.trocar_habilidades(Jogador2)
 
 

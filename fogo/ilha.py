@@ -28,6 +28,7 @@ NOMES = ("PISTA_POUSO PORTAO_BRONZE PALACIO_CORAL VALE_TENEBROSO PORTAO_OURO POR
 
 __TABLE_SPACES__ = 21
 
+
 class IlhaProibida:
     """
     Classe principal que representa o jogo Ilha Proibida.
@@ -84,7 +85,6 @@ class IlhaProibida:
         for jogador in jogadores:
             self.terrenos[random.randrange(0, len(self.terrenos))].colocar_jogador(jogador)
 
-
     def imprimir_tabuleiro_ilha(self):
         """
         Imprime o tabuleiro da Ilha Proibida no console.
@@ -100,7 +100,7 @@ class IlhaProibida:
         for ter in self.terrenos[:2]:
             tabuleiro += ter.string_rep() + " | "
         print(tabuleiro)
-        print(" " * (__TABLE_SPACES__ + 2) + "-" * ( __TABLE_SPACES__ * 4 + 3))
+        print(" " * (__TABLE_SPACES__ + 2) + "-" * (__TABLE_SPACES__ * 4 + 3))
 
         tabuleiro = " " * (__TABLE_SPACES__ + 1) + "| "
         for ter in self.terrenos[2:6]:
@@ -124,13 +124,14 @@ class IlhaProibida:
         for ter in self.terrenos[18:22]:
             tabuleiro += ter.string_rep() + " | "
         print(tabuleiro)
-        print(" " * (__TABLE_SPACES__ + 2) + "-" * ( __TABLE_SPACES__ * 4 + 3))
+        print(" " * (__TABLE_SPACES__ + 2) + "-" * (__TABLE_SPACES__ * 4 + 3))
 
         tabuleiro = " " * (__TABLE_SPACES__ * 2 + 2) + "| "
         for ter in self.terrenos[22:]:
             tabuleiro += ter.string_rep() + " | "
         print(tabuleiro)
         print(" " * (__TABLE_SPACES__ * 2 + 3) + "-" * (__TABLE_SPACES__ * 2 + 1))
+
 
 class CartaTesouro:
     """
@@ -150,6 +151,7 @@ class CartaAlagamento(CartaTesouro):
     """
     Classe que representa uma carta de alagamento no jogo Ilha Proibida.
     """
+
     def __init__(self, face):
         """
         Inicializa a instância da carta de alagamento.
@@ -158,10 +160,12 @@ class CartaAlagamento(CartaTesouro):
         """
         super().__init__(face)
 
-class Carta_Troca_Terrenos:
+
+class Carta_Troca_Terrenos(CartaTesouro):
     """
     Classe que representa uma carta que troca os terrenos
     """
+
     def __init__(self, face):
         """
         Inicializa a instância da carta troca de terrenos
@@ -170,6 +174,19 @@ class Carta_Troca_Terrenos:
         """
         super().__init__(face)
 
+
+class Carta_troca_habilidades(CartaTesouro):
+    """
+    Classe que representa uma carta de troca de habilidades
+    """
+
+    def __init__(self, face):
+        """
+        Inicializa a instância da carta de troca habilidades.
+
+        :param face: Face da carta.
+        """
+        super().__init__(face)
 
 
 class Terreno:
