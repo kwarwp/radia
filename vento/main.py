@@ -24,154 +24,351 @@ Changelog
 |   **SPDX-License-Identifier:** `GNU General Public License v3.0 or later <http://is.gd/3Udt>`_.
 |   `Labase <http://labase.selfip.org/>`_ - `NCE <https://portal.nce.ufrj.br>`_ - `UFRJ <https://ufrj.br/>`_.
 """
-
-from _spy.vitollino.main import Cena, Elemento, STYLE
-from collections import namedtuple
-Ter = namedtuple("Ter", "nome imagem tafv")
-LADO = 90
-STYLE["width"] = 800
-STYLE["height"] = "600px"
-IMAGEM = "https://imgur.com/gVHmY2v.jpg"
-PORTAO_BRONZE = "https://imgur.com/BL6lB7H.jpg"
-PALACIO_CORAL = "https://imgur.com/tLDbzd2.jpg"
-PAWN = "https://imgur.com/zO3kiRp.png"
-TAFVS = "KXZXTei LK4p1xG rUNsKEH qp5Zbn8".split()
-NOMES = ("PISTA_POUSO PORTAO_BRONZE PALACIO_CORAL VALE_TENEBROSO PORTAO_OURO PORTAO_PRATA PORTAO_COBRE "
-"PORTAO_FERRO ATALAIA JARDIM_SUSSUROS JARDIM_UIVOS TEMPLO_SOL "
-"TEMPLO_LUA CAVERNA_LAVA CAVERNA_SOMBRAS OBSERVATORIO PANTANO_BRUMAS ROCHA_FANTASMA "
-"PALACIO_MARES PENEDO_BALDIO BOSQUE_CARMESIM DUNAS_ENGANO PONTE_SUSPENSA LAGOA_PERDIDA").split()
-LINKS = ("CU3TLYh BL6lB7H tLDbzd2 OZE1myn J6ow4jR v0g7eGm 45aU3nf "
-"yKU6ngz sdJ4W5O pjVcyoy ZNuPWqZ O0OSVFt "
-"J160xpm 2j1IAyf b4xtltc E9MflTP NDioDZg TCmLjeT "
-"rYxQaTa MvN7kTU Uni02EK cG5UYCf GC8V8CQ 7o1qq10").split()
-
-
-class IlhaProibida:
-    """ Representa a classe principal do Jogo.
-    
-    Terrenos 
-        Locais onde os peões podem ficar.
-        
-    """
-
-    def __init__(self):
-        self.oceano = Cena(IMAGEM).vai()
-        self.terrenos = []
-        self.monta_tabuleiro_oceano()
-        self.peao = Peao(self)
-        self.peao.mover(self.terrenos[0])
-
-    def monta_tabuleiro_oceano(self):
-        """ Montar o tabuleiro em forma de diamante.
-        
-        """
-        from random import shuffle
-        tafv = [None]*16+TAFVS*2
-        info_terrenos = it = [Ter(nome=NOMES.pop(0), imagem=LINKS.pop(0),
-        tafv=tafv.pop()) for _ in range(24)]
-        # como introduzir os elementos no info_terrenos?
-        # Agora info_terrenos é uma lista de Ter -> Como criar?
-        #info_terrenos = [PORTAO_BRONZE, PALACIO_CORAL, PORTAO_BRONZE, PALACIO_CORAL] * 9
-        shuffle(info_terrenos)
-        # Cada terreno realmente criado "puxa" um terreno da lista de "Ter's
-        self.terrenos = [Terreno(cena=self.oceano, posy=px // 6,
-                                 posx=((px % 6) + int(abs(2.5 - px // 6))), local=it.pop(0), ilha=self)
-                         for px in range(36) if px % 6 < 6 - int(abs(2.5 - px // 6)) * 2]
-        self.terrenos[4].afundar()
-
-    def desocupa_e_vai_para(self, terreno_destino):
-        self.peao.move(terreno_destino)
-
-    def direita(self, terreno):
-        """ Move o peão para a direita.
-        
-        :param terreno: O terreno onde está o peão
-        :return: O terreno onde o peão vai
-        """
-        aqui = self.terrenos.index(terreno)
-        return self.terrenos[aqui + 1]
-
+import random
+from carta import CartaTesouro, CartaEnchente, CartaSacoAreia, CartaAlagamento, CartaHelicoptero
+from jogador import Explorador, Navegador, Piloto, Engenheiro, Mensageiro, Mergulhador
+from artefato import Artefato
 
 class Terreno:
-    """ Local onde um peão pode ficar.
+    class PORTAO_COBRE:
+        nome = " Portão de Cobre   "
+        visual = '\u2fa8C'
+        contagem = 0
+        jogadores = ['explorador']
 
-    :param local: Imagem do terreno
-    :param posx: Coordenada x do terreno.
-    :param posy: Coordenada y do terreno.
-    :param cena: Cena do local.
-    :param ilha: Referência ao tabuleiro.
-    """
+    class PISTA_POUSO:
+        nome = "   Pista de Pouso  "
+        visual = '\U0001f681 '
+        contagem = 0
+        jogadores = ['piloto']
 
-    def __init__(self, local: Ter, posx, posy, cena, ilha):
-        #img = local.imagem
-        #self.local = Elemento(img
-        img = f"https://imgur.com/{local.imagem}.jpg"
-        self.local = Elemento(img, x=posx * LADO + 10, y=posy * LADO + 50, w=LADO-5, h=LADO-5,
-                              cena=cena)
-        estilo = {'background-color': 'slategray', 'color': 'white'}
-        letreiro = Elemento("", w=100, h=20, style=estilo, cena=self.local)
-        letreiro.elt.text = local.nome
-        img = f"https://imgur.com/{local.tafv}.png" if local.tafv else ""
-        
-        tafv = Elemento(img, w=40, h=50, x=0, tit=img, y=50, cena=self.local)
-        #tafv = Elemento(local.tafv, ....)
-        self.peao, self.ilha = None, ilha
-        self.posx, self.posy = posx, posy
-        self.local.vai = self.vai
-        self.afunda = False
+    class PORTAO_BRONZE:
+        nome = " Portão de Bronze"
+        visual = '\u2fa8 B'
+        contagem = 0
+        tesouro = "TESOURO AGUA"
+        jogadores = ['engenheiro']
 
-    def vai(self, _=0):
-        self.ilha.peao.mover(self)
+    class PALACIO_CORAL:
+        nome = "  Palácio de Coral"
+        visual = '\U0001f3f0 '
+        contagem = 0
+        tesouro = "TESOURO AGUA"
 
-    def afundar(self):
-        self.afunda = True
-        self.local.o = 0.2
+    class VALE_TENEBROSO:
+        nome = "   Vale Tenebroso   "
+        visual = '\U0001f332 \U0001f47b'
+        contagem = 0
 
-    def desocupa_e_vai_para(self, terreno_destino):
-        def contiguos(origem, destino):
-            if not origem:
-                return True
-            from operator import xor
-            return xor(abs(origem.posx - destino.posx) == 1,
-            abs(origem.posy - destino.posy) == 1) and not destino.afunda
+    class PORTAO_OURO:
+        nome = "   Portão de Ouro   "
+        visual = '\u2fa8 O'
+        contagem = 0
+        jogadores = ['navegador']
 
-        peao_pode_ir = contiguos(self, terreno_destino)
-        # executar o movimento do peão agora que foi autorizado pelo pode ir
-        self.peao.move(terreno_destino) if peao_pode_ir else None
+    class PORTAO_PRATA:
+        nome = "◐  Portão de Prata  "
+        visual = '\u2fa8 P'
+        contagem = 0
+        jogadores = ['mensageiro']
 
-    def ocupa(self, peao):
-        self.peao = peao
-        peao.mover(self.posx, self)
+    class PORTAO_FERRO:
+        nome = "⚫ Portão de Ferro   "
+        visual = '\u2fa8 F'
+        contagem = 0
+        jogadores = ['mergulhador']
+
+    class ATALAIA:
+        nome = "       Atalaia      "
+        visual = '\u265c '
+        contagem = 0
+
+    class JARDIM_SUSSUROS:
+        nome = "Jardim dos Sussurros"
+        visual = '\u2698 '
+        contagem = 0
+        tesouro = "TESOURO VENTO"
+
+    class JARDIM_UIVOS:
+        nome = "  Jardim dos Uivos"
+        visual = '\u2698 \U0001f43a'
+        contagem = 0
+        tesouro = "TESOURO VENTO"
+
+    class TEMPLO_SOL:
+        nome = "    Templo do Sol "
+        visual = "\uf90a \u263c"
+        contagem = 0
+        tesouro = "TESOURO TERRA"
+
+    class TEMPLO_LUA:
+        nome = "   Templo da Lua  "
+        visual = "\uf90a \u263e"
+        contagem = 0
+        tesouro = "TESOURO TERRA"
+
+    class CAVERNA_LAVA:
+        nome = "   Caverna de Lava "
+        visual = '  \U0001f525'
+        contagem = 0
+        tesouro = "TESOURO FOGO"
+
+    class CAVERNA_SOMBRAS:
+        nome = "Caverna das Sombras"
+        visual = "   "
+        contagem = 0
+        tesouro = "TESOURO FOGO"
+
+    class OBSERVATORIO:
+        nome = "    Observatório    "
+        visual = "\u265c\U0001f52d"
+        contagem = 0
+
+    class PANTANO_BRUMAS:
+        nome = "  Pântano de Brumas "
+        visual = "  \u2601"
+        contagem = 0
+
+    class ROCHA_FANTASMA:
+        nome = "   Rocha Fantasma   "
+        visual = " "
+        contagem = 0
+
+    class PALACIO_MARES:
+        nome = " Palácio dos Mares  "
+        visual = "\U0001f3f0 "
+        contagem = 0
+
+    class PENEDO_BALDIO:
+        nome = "    Penedo Baldio   "
+        visual = "ㄱ "
+        contagem = 0
+
+    class BOSQUE_CARMESIM:
+        nome = "   Bosque Carmesim  "
+        visual = " ❤"
+        contagem = 0
+
+    class DUNAS_ENGANO:
+        nome = "   Dunas do Engano  "
+        visual = " "
+        contagem = 0
+
+    class PONTE_SUSPENSA:
+        nome = "   Ponte Suspensa   "
+        visual = ""
+        contagem = 0
+
+    class LAGOA_PERDIDA:
+        nome = "    Lagoa Perdida   "
+        visual = " "
+        contagem = 0
 
 
-class Peao:
-    """ Marcador usado para definir a posição do jogador nos terrenos.
-        
-        :param ilha: Referência ao tabuleiro.
-    """
+def criar_artefatos():
+    lista_de_artefatos = []
 
-    def __init__(self, ilha):
-        """
-        """
-        self.peao = Elemento(PAWN, x=10, y=15, w=LADO-20, h=LADO-20,
-                             cena=ilha.oceano)
-        self.terreno = ilha  # era None, mas o peão agora nasce na ilha
-        self.ilha = ilha
+    # Criando os objetos da classe Artefato e adicionando à lista
+    artefato1 = Artefato("   TESOURO FOGO  ", "")
+    artefato2 = Artefato("   TESOURO ÁGUA  ", "")
+    artefato3 = Artefato("   TESOURO VENTO  ", "")
+    artefato4 = Artefato("   TESOURO TERRA  ", "")
 
-    def move(self, terreno):  # Corrigir: não está condizente!
-        self.terreno = terreno
-        terreno.peao = self
-        self.peao.entra(terreno.local)
-        #self.peao.x, self.peao.y = terreno.posx * LADO + 10, terreno.posy * LADO + 50
+    lista_de_artefatos.append(artefato1)
+    lista_de_artefatos.append(artefato2)
+    lista_de_artefatos.append(artefato3)
+    lista_de_artefatos.append(artefato4)
 
-    def mover(self, terreno_destino):
-        self.terreno.desocupa_e_vai_para(terreno_destino)
+    return lista_de_artefatos
 
 
-if __name__ == "__main__":
-    # IlhaProibida()
-    IlhaProibida()
-    ata = Ter(nome="atalaia", imagem='imgur/xyz', tafv=None)
-    #ata.nome = "pista"
-    #print(ata.nome, ata.tafv)
-    # print([(px, int(abs(2.5-px//6))) for px in range(36)])
+def setup(numero_jogadores):
+    ilha = [
+        ["                    ", "                    ", "", "", "                    ", "                    "],
+        ["                    ", "", "", "", "", "                    "],
+        ["", "", "", "", "", ""],
+        ["", "", "", "", "", ""],
+        ["                    ", "", "", "", "", "                    "],
+        ["                    ", "                    ", "", "", "                    ", "                    "],
+    ]
+
+    # definir aqui quais os terrenos em que se pode pegar o tesouro correspondente
+    terrenos_terra = []
+    terrenos_fogo = []
+    terrenos_vento = []
+    terrenos_oceano = []
+
+    jogador = ['explorador', 'mergulhador', 'piloto', 'navegador', 'engenheiro', 'mensageiro']
+    tesouros = criar_artefatos()
+    # tesouros = ["    TESOURO FOGO    ", "    TESOURO ÁGUA    ", "    TESOURO VENTO   ", "    TESOURO TERRA   "]
+    baralho_alagamento = []
+    baralho_tesouros = []
+    baralho_descarte_tesouro = []
+    baralho_descarte_alagamento = []
+    jogadores = []
+    tesouros_coletados = 0
+
+    ter = [Terreno.PISTA_POUSO.nome, Terreno.PORTAO_COBRE.nome, Terreno.PORTAO_BRONZE.nome,
+           Terreno.PALACIO_CORAL.nome, Terreno.VALE_TENEBROSO.nome, Terreno.PORTAO_OURO.nome,
+           Terreno.PORTAO_PRATA.nome, Terreno.PORTAO_FERRO.nome, Terreno.ATALAIA.nome,
+           Terreno.JARDIM_SUSSUROS.nome, Terreno.JARDIM_UIVOS.nome, Terreno.TEMPLO_SOL.nome,
+           Terreno.TEMPLO_LUA.nome, Terreno.CAVERNA_LAVA.nome, Terreno.CAVERNA_SOMBRAS.nome,
+           Terreno.OBSERVATORIO.nome, Terreno.PANTANO_BRUMAS.nome, Terreno.ROCHA_FANTASMA.nome,
+           Terreno.PALACIO_MARES.nome, Terreno.PENEDO_BALDIO.nome, Terreno.BOSQUE_CARMESIM.nome,
+           Terreno.DUNAS_ENGANO.nome, Terreno.PONTE_SUSPENSA.nome, Terreno.LAGOA_PERDIDA.nome]
+
+    # Adicionando terrenos aleatóriamente na ilha
+
+    incluir_terrenos = ter.copy()
+    for linha in range(len(ilha)):
+        for coluna in range(len(ilha[linha])):
+            if ilha[linha][coluna] == "":
+                elemento = random.choice(incluir_terrenos)
+                ilha[linha][coluna] = elemento
+                incluir_terrenos.remove(elemento)
+    # **********************************************************************************
+
+    lista_tesouros = tesouros.copy()
+    # acrescentando aleatoriamente os tesouros nas extremidades do ilha
+    tesouro = random.choice(lista_tesouros)
+    ilha[0][0] = tesouro.nome
+    lista_tesouros.remove(tesouro)
+
+    tesouro = random.choice(lista_tesouros)
+    ilha[0][5] = tesouro.nome
+    lista_tesouros.remove(tesouro)
+
+    tesouro = random.choice(lista_tesouros)
+    ilha[5][0] = tesouro.nome
+    lista_tesouros.remove(tesouro)
+
+    tesouro = random.choice(lista_tesouros)
+    ilha[5][5] = tesouro.nome
+    lista_tesouros.remove(tesouro)
+
+    # **************************************************************************************************
+
+    # Acrescentando as mãos dos jogdores no ilha
+    nomes_jogadores = ["Mão de Jogador 1", "Mão de Jogador 2", "Mão de Jogador 3", "Mão de Jogador 4"]
+    for nome in nomes_jogadores:
+        nova_linha = ["|" + " " * 18 + "|"]
+        for _ in range(5):
+            nova_linha.append("|" + " " * 18 + "|")
+        ilha.append(nova_linha)
+
+    for i, nome in enumerate(nomes_jogadores, start=len(ilha) - 4):
+        ilha[i][0] = "|" + nome.center(18) + "|"
+
+        # **********************************************************************************************
+
+        # acrescentar baralho de alagamento
+    cartas_alagamento = ter.copy()
+    for i in range(len(ter)):
+        elemento = random.choice(cartas_alagamento)
+        baralho_alagamento.append(elemento)
+        cartas_alagamento.remove(elemento)
+        # ******************************************************************************
+
+        # acrescentar baralho de tesouros
+    for tesouro in tesouros:
+        for _ in range(5):
+            baralho_tesouros.append(CartaTesouro(tesouro.nome))
+        # ******************************************************************************
+
+        # acrescentar 3 fugas de helicoptero no baralho de tesouro
+    for _ in range(3):
+        baralho_tesouros.append(CartaHelicoptero())
+    # ****************************************************************************
+
+    # Acrescentar 2 cartas saco de areia no baralho de tesouro
+    for _ in range(2):
+        baralho_tesouros.append(CartaSacoAreia())
+    # *************************************************************************************
+
+    # baralhar cartas de tesouro
+    random.shuffle(baralho_tesouros)
+    # ********************************************************
+
+    # gerar aleatoriamente os aventureiros dependendo no numero de jogadores
+    for jogador in random.sample(jogador, numero_jogadores):
+        if jogador == 'explorador':
+            jogadores.append(Explorador())
+        elif jogador == 'mergulhador':
+            jogadores.append(Mergulhador())
+        elif jogador == 'navegador':
+            jogadores.append(Navegador())
+        elif jogador == 'piloto':
+            jogadores.append(Piloto())
+        elif jogador == 'engenheiro':
+            jogadores.append(Engenheiro())
+        elif jogador == 'mensageiro':
+            jogadores.append(Mensageiro())
+        else:
+            raise ValueError('Aventureiro sinistro')
+            # *****************************************************************************
+
+            # distribuir 2 cartas tesouro a cada Jogador
+    linha = 5
+    for jogador in jogadores:
+        coluna = 1
+        linha += 1
+        while jogador.numero_mao() < 2:
+            # compra carta do baralho de tesouros
+            carta_tesouro = baralho_tesouros.pop()
+            jogador.comprar_carta(carta_tesouro)
+            ilha[linha][coluna] = str(carta_tesouro)
+            ilha[linha][0] = jogador.__repr__()
+            coluna += 1
+            #************************************************************************
+
+    # adiciona enchente agora apenas
+    for _ in range(3):
+        baralho_tesouros.append(CartaEnchente())
+    #**************************************************************************
+
+    # baralha outra vez mas com as cartas de enchente
+    random.shuffle(baralho_tesouros)
+#*******************************************************************************
+
+    # Adicionando uma linha com 6 colunas abaixo do ilha
+    ilha.extend([
+        ["|Baralho Tesouro" + str(len(baralho_tesouros)).center(5), "| Baralho Alagamento " + str(len(baralho_alagamento)).center(1) + " ", "  Descarte Tesouro"+ str(len(baralho_descarte_tesouro)).center(5),
+         "  Descarte Alagamento " + str(len(baralho_descarte_alagamento)) + "  ", " Nível de Enchente = 1".center(16) + " "]
+    ])
+
+    larguras_colunas = [2, 4, 6, 6, 6, 6, 4, 2]
+
+    while True:
+        for linha in ilha:
+            linha_formatada = [("|" + celula + " " * (20 - len(celula)) + "|") for celula in linha]
+
+            linha_para_imprimir = ""
+            for i, largura in enumerate(larguras_colunas):
+                linha_para_imprimir += "|" + "|".join(linha_formatada[:largura]) + "|"
+                linha_formatada = linha_formatada[largura:]
+
+            print(linha_para_imprimir)
+            print("-" * (sum(larguras_colunas) * 21 + 1))  # Ajusta a linha horizontal conforme o número de colunas
+
+        mover_jogador = input("Para mover um jogador, digite 'M'. Para sair, digite 'Q': ").upper()
+
+        if mover_jogador == 'Q':
+            print("Encerrando o programa...")
+            break
+
+        elif mover_jogador == 'M':
+            while True:
+                try:
+                    linha = int(input("Digite o número da linha (de 0 a 5): "))
+                    coluna = int(input("Digite o número da coluna (de 0 a 5): "))
+
+                    if 0 <= linha <= 5 and 0 <= coluna <= 5:
+                        print(f"Jogador movido para a linha {linha} e coluna {coluna}.")
+                        break
+                    else:
+                        print("Por favor, insira valores válidos para linha e coluna (de 0 a 5).")
+                except ValueError:
+                    print("Por favor, insira números inteiros para linha e coluna.")
+
+
+setup(numero_jogadores=4)
