@@ -286,3 +286,26 @@ Traceback (most recent call last):
     return random.sample(cartas,2)
 AttributeError: 'function' object has no attribute 'sample'
 '''},
+{'date': 'Sat Dec 23 2023 12:30:32.115 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''Bemvindos à Ilha Poibida - montagem do tabuleiro
+cartas tesouro: [h, v, t, h, f, f, v, v, t, t, v, f, a, , , , f, d, h, d, a, t, a, a, f, a, v, t]
+cartas de inundacao: [15, 4, 0, 16, 2, 20, 5, 8, 7, 1, 19, 14, 10, 9, 18, 21, 22, 6, 23, 13, 3, 12, 17, 11]
+Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 162
+    ilha()
+  module vento.cartas line 29
+    print("cartas distribuidas:", self.distribuir_cartas_tesouro(self.cartas_tesouro))
+  module vento.cartas line 32
+    return random.sample(cartas,2)
+AttributeError: 'function' object has no attribute 'sample'
+'''},
