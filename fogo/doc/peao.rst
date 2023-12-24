@@ -4,7 +4,5 @@ documentacao da funcionalidade peao
 
 .. automodule:: peao
    :members:
-
    :undoc-members:
-
    :show-inheritance:

@@ -7,7 +7,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../../'))
+path = os.path.abspath('../')
+sys.path.append(path)
+print(path + " TEST")
 
 project = 'Ilha Proibida fogo'
 copyright = '2023, fernanda, finn, vanessa e anderson'
