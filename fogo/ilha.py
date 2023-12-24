@@ -29,8 +29,7 @@ NOMES = ("PISTA_POUSO PORTAO_BRONZE PALACIO_CORAL VALE_TENEBROSO PORTAO_OURO POR
 __TABLE_SPACES__ = 21
 
 class IlhaProibida:
-    """
-    Classe principal que representa o jogo Ilha Proibida.
+    """Representa o tabuleiro o jogo 'Ilha Proibida'.
     """
 
     def __init__(self, jogadores=None):
@@ -38,6 +37,12 @@ class IlhaProibida:
         Inicializa a instância do jogo Ilha Proibida.
 
         :param jogadores: Lista de jogadores.
+
+        terrenos: cria uma lista
+        monta_tabuleiro_oceano(jogadores) = jogadores
+        cartas_tesouro: cria uma lista com as cartas de tesouro
+        terrenos: abaixa um terreno que fica alagado ou afunda no oceano
+        imprimir_tabuleiro_ilha: mostra o tabuleiro
         """
         if jogadores is None:
             jogadores = []

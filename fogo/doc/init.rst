@@ -7,4 +7,4 @@ Bem vindo(a) a documentacao do index da Ilha Proibida fogo!
 ==============================================
 
 .. automodule:: __init__
-    :members:
+

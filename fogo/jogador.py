@@ -2,7 +2,8 @@
 # __author__ Fernanda, Finn, Vanessa
 """Página Jogador do jogo Ilha Proibida Equipe Fogo.
 
-EQUIPE FOGO 
+EQUIPE FOGO
+---------
 
 .. codeauthor:: Fernanda Araujo <fernandacsaraujo@gmail.com>
 .. codeauthor::  Finn Kockelke <finn_kockelke@gmx.net>
@@ -22,7 +23,11 @@ Changelog
 |   **SPDX-License-Identifier:** `GNU General Public License v3.0 or later <http://is.gd/3Udt>`_.
 |   `Labase <http://labase.selfip.org/>`_ - `NCE <https://portal.nce.ufrj.br>`_ - `UFRJ <https://ufrj.br/>`_.
 """
+
 class MaoJogador:
+    """
+    Classe que representa a Mao do Jogador
+    """
     def __init__(self, dono, cartas=None):
         if cartas is None:
             cartas = []
@@ -31,6 +36,9 @@ class MaoJogador:
         print(f"A mão do {self.dono.nome} possui {len(self.cartas)} cartas")
 
 class Jogador:
+    """
+    Classe que representa um jogador
+    """
     def __init__(self, nome="DefaultPlayer", habilidade=""):
         self.nome = nome
         self.habilidade = habilidade
