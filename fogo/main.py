@@ -7,7 +7,7 @@ WORKFLOWY - http://bit.ly/Dev_Agile_23
 EQUIPE FOGO 
 
 .. codeauthor:: Fernanda Araujo <fernandacsaraujo@gmail.com>
-.. codeauthor::  Finn Kockelke <finn_kockelke@gmx.net>
+.. codeauthor:: Finn Kockelke <finn_kockelke@gmx.net>
 .. codeauthor:: Vanessa M Vianna <vanmvianna@gmail.com>
 .. codeauthor:: Anderson Amorim da Silva <anderson.amorix@gmail.com>
 
@@ -46,4 +46,4 @@ if __name__ == "__main__":
     Ilha(jogadores)
 
     Peao()
-    Aventureiro()
+    Aventureiro("Explorador", "Pode se mover para qualquer terreno adjacente")
