@@ -5,23 +5,28 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-import os
-import sys
-path = os.path.abspath('../')
-sys.path.append(path)
-print(path + " TEST")
+import sys, os
+sys.path.insert(0, os.path.abspath('../'))
+#sys.path.insert(0, os.path.abspath(os.path.join("..", "..", "fogo")))
+#sys.path.insert(0, os.path.abspath(os.path.join("..", "..")))
+#print (sys.path)
+#sys.path.insert(0, os.path.abspath(os.path.join("..", "..")))
+
+
+sys.path.append('/Samsung Lab/PycharmProjects/IlhaProibida/fogo')
 
 project = 'Ilha Proibida fogo'
 copyright = '2023, fernanda, finn, vanessa e anderson'
 author = 'fernanda, finn, vanessa e anderson'
-release = '05.11'
+release = '23.12'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.napoleon'
+    'sphinx.ext.napoleon',
+    'sphinx.ext.viewcode'
 ]
 
 templates_path = ['_templates']

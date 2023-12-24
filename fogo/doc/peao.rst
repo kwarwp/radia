@@ -1,8 +1,10 @@
-Bem vindo(a) a documentacao do peao da Ilha Proibida fogo!
+Peao
 ==============================================
-documentacao da funcionalidade peao
+
+| Pagina da documentacao do peao
 
 .. automodule:: peao
    :members:
    :undoc-members:
    :show-inheritance:
+
