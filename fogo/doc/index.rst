@@ -1,6 +1,6 @@
 Documentacao Ilha Proibida Fogo!
 ==============================================
-| Bem vindo(a) a documentacao do index da Ilha Proibida fogo!
+| Bem vindo index do jogo Ilha Proibida realizado pelo grupo fogo!
 
 .. toctree::
    :maxdepth: 2
@@ -8,7 +8,6 @@ Documentacao Ilha Proibida Fogo!
 
    init
    ilha
-   main
    jogador
    peao
 

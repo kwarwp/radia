@@ -3,8 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Bem vindo(a) a documentacao do index da Ilha Proibida fogo!
+Equipe Fogo
 ==============================================
 
 .. automodule:: __init__
+   :members:
 
+   :undoc-members:
+
+   :show-inheritance:

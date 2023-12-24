@@ -1,7 +1,5 @@
 # radia.fogo.__init__.py
-"""Utilitário da Ilha proibida Fogo para mensagens no console.
-
-LOG - https://bit.ly/Dev_Agile_23
+"""UIlha proibida Fogo para mensagens no console.
 
 EQUIPE FOGO 🔥
 
