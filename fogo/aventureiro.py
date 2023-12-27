@@ -1,6 +1,5 @@
 
 
-
 class Aventureiro:
     def __init__(self, nome, habilidade):
         """

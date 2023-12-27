@@ -1,7 +1,0 @@
-Jogador documentacao!
-==============================================
-
-.. automodule:: jogador
-   :members:
-   :undoc-members:
-   :show-inheritance:
