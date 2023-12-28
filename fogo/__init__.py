@@ -1,13 +1,12 @@
 # radia.fogo.__init__.py
-"""Utilitário da Ilha proibida para mensagens no console.
-
-LOG - https://bit.ly/Dev_Agile_23
+"""UIlha proibida Fogo para mensagens no console.
 
 EQUIPE FOGO 🔥
 
 .. codeauthor:: Fernanda Araujo <fernandacsaraujo@gmail.com>
 .. codeauthor::  Finn Kockelke <finn_kockelke@gmx.net>
 .. codeauthor:: Vanessa M Vianna <vanmvianna@gmail.com>
+.. codeauthor:: Anderson Amorim da Silva <anderson.amorix@gmail.com>
 
 Changelog
 ---------

@@ -1,13 +1,13 @@
 # radia.fogo.main.py
 # __authors__ Fernanda, Finn, Vanessa, Anderson 
-"""Página de entrada do jogo Ilha Proibida.
+"""Página de Entrada do jogo Ilha Proibida Equipe Fogo.
 
-LOG - http://bit.ly/Dev_Agile_23
+WORKFLOWY - http://bit.ly/Dev_Agile_23
 
 EQUIPE FOGO 
 
 .. codeauthor:: Fernanda Araujo <fernandacsaraujo@gmail.com>
-.. codeauthor::  Finn Kockelke <finn_kockelke@gmx.net>
+.. codeauthor:: Finn Kockelke <finn_kockelke@gmx.net>
 .. codeauthor:: Vanessa M Vianna <vanmvianna@gmail.com>
 .. codeauthor:: Anderson Amorim da Silva <anderson.amorix@gmail.com>
 
@@ -30,13 +30,20 @@ Changelog
 |   `Labase <http://labase.selfip.org/>`_ - `NCE <https://portal.nce.ufrj.br>`_ - `UFRJ <https://ufrj.br/>`_.
 """
 
+from fogo.ilha import IlhaProibida as Ilha
+from fogo.jogador import Jogador
+from fogo.peao import Peao
+from fogo.aventureiro import Aventureiro
 
-from fogo.ilha import IlhaProibida as Ilha 
-from fogo.jogador import Jogador 
-from fogo.peao import Peao 
-        
-        
+
 if __name__ == "__main__":
-    Ilha()
-    Jogador()
+    jogadores = [
+        Jogador("Jose"),
+        Jogador("Fernando"),
+        Jogador("Igor"),
+        Jogador("Vanessa")
+    ]
+    Ilha(jogadores)
+
     Peao()
+    Aventureiro("Explorador", "Pode se mover para qualquer terreno adjacente")

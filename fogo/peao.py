@@ -1,18 +1,18 @@
-"""Página de entrada do jogo Ilha Proibida.
-
-LOG - http://bit.ly/Dev_Agile_23
+"""Página Peão do jogo Ilha Proibida Equipe Fogo.
 
 EQUIPE FOGO 
 
 .. codeauthor:: Fernanda Araujo <fernandacsaraujo@gmail.com>
 .. codeauthor::  Finn Kockelke <finn_kockelke@gmx.net>
 .. codeauthor:: Vanessa M Vianna <vanmvianna@gmail.com>
+.. codeauthor:: Anderson Amorim da Silva <anderson.amorix@gmail.com>
 
 
 Changelog
 ---------
 .. versionadded::    23.11
     classe jogador e MaoJogador (07).
+.. versionadded::    23.11
 
 
 |   **Open Source Notification:** This file is part of open source program **Ilha Proibida**
